@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <NeedDef>
+    <DefName>PJ_ForcePool</DefName>
+    <needClass>ProjectJedi.Need_ForcePool</needClass>
+    <label>force pool</label>
+    <description>DESC</description>
+	<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
+    <showOnNeedList>true</showOnNeedList>
+    <minIntelligence>Humanlike</minIntelligence>
+    <baseLevel>0.50</baseLevel>
+    <seekerRisePerHour>0.12</seekerRisePerHour>
+    <seekerFallPerHour>0.04</seekerFallPerHour>
+    <listPriority>1327</listPriority>
+    <major>true</major>
+    <freezeWhileSleeping>true</freezeWhileSleeping>
+    <showForCaravanMembers>true</showForCaravanMembers>
+  </NeedDef>
+  
+  <HediffDef>
+    <defName>PJ_ForceWielderHD</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+	<isBad>false</isBad>
+    <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
+    <initialSeverity>1.0</initialSeverity>	
+    <label>force wielder</label>
+    <causesNeed>PJ_ForcePool</causesNeed>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-0</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+        <li>
+          <label>hidden</label>
+          <everVisible>false</everVisible>
+        </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

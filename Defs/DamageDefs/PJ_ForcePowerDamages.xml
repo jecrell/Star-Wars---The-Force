@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>Cut</defName>
+    <label>cut</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has been cut to death.</deathMessage>
+    <hediff>Cut</hediff>
+    <hediffSkin>Cut</hediffSkin>
+    <hediffSolid>Crack</hediffSolid>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Slice</impactSoundType>
+    <armorCategory>Sharp</armorCategory>
+  </DamageDef>
+  
+    <DamageDef>
+    <defName>PJ_ForceHealDamage</defName>
+    <label>force heal</label>
+    <workerClass>ProjectJedi.DamageWorker_ForceHeal</workerClass>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+
+    <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_FLightning</defName>
+    <label>lightning</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<armorCategory>Electric</armorCategory>
+  </DamageDef>
+  
+      <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_FStorm</defName>
+    <label>Force storm</label>
+    <externalViolence>true</externalViolence>
+    <battleWound>true</battleWound>
+    <deathMessage>{0} was caught in a force storm.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Electric</armorCategory>
+    <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+    <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+    <explosionColorEdge>(0.8, 0.7, 1.0, 0.8)</explosionColorEdge>
+    <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+    <soundExplosion>PJ_LightningSound</soundExplosion>
+  </DamageDef>
+ 
+  
+</Defs>

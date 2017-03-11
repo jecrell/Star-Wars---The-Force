@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+
+	
+<ThingDef ParentName="HatBase">
+		<defName>PJ_XennSithHood</defName>
+		<label>Xenn Sith Hood</label>
+		<description>A sith hood, made for a Xenn.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Hoods/Xenn/HoodXenn</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+      <MaxHitPoints>7500</MaxHitPoints>
+      <MarketValue>550</MarketValue>
+      <WorkToMake>500</WorkToMake>
+      <ArmorRating_Blunt>0.95</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.95</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.90</ArmorRating_Heat>
+	  <ArmorRating_Electric>0.98</ArmorRating_Electric>
+      <Insulation_Cold>-100</Insulation_Cold>
+      <Insulation_Heat>80</Insulation_Heat>
+		</statBases>
+		<costList>
+			<Cloth>20</Cloth>
+		</costList>
+		<equippedStatOffsets>
+			<ShootingAccuracy>0.25</ShootingAccuracy>
+			<PsychicSensitivity>-0.15</PsychicSensitivity>
+			<MoveSpeed>0.50</MoveSpeed>
+			<PlantWorkSpeed>0.25</PlantWorkSpeed>
+			<HarvestFailChance>-0.4</HarvestFailChance>
+			<MentalBreakThreshold>-0.2</MentalBreakThreshold>
+			<MeleeHitChance>0.35</MeleeHitChance>
+			<AimingDelayFactor>-0.3</AimingDelayFactor>
+			<RecruitPrisonerChance>0.25</RecruitPrisonerChance>
+			<SocialImpact>0.15</SocialImpact>
+			<TradePriceImprovement>0.25</TradePriceImprovement>
+			<SurgerySuccessChance>0.25</SurgerySuccessChance>
+			<HealingQuality>0.30</HealingQuality>
+			<HealingSpeed>0.3</HealingSpeed>
+			<MedicalOperationSpeed>0.3</MedicalOperationSpeed>
+			<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<worngraphicPath>Hoods/Xenn/HoodXenn</worngraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<commonality>1</commonality>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+				  <tags>
+      <li>XennMilitary</li>
+      <li>XennSoldier</li>
+    </tags>
+		</apparel>
+	</ThingDef>
+	
+</ThingDefs>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TraitDefs>
+
+  <TraitDef>
+    <defName>PJ_ForceSensitive</defName>
+    <commonality>0.05</commonality>
+    <degreeDatas>	
+      <li>
+        <label>Force Sensitive</label>
+        <description>NAME has the ability to feel the force that surrounds us.</description>
+        <degree>1</degree>		
+      </li>
+      <li>
+        <label>Force Apprentice</label>
+        <description>NAME has begun to control the force, but requires further training and guidance.</description>
+		<degree>2</degree>
+      </li>	  	  
+    </degreeDatas>
+  </TraitDef>
+  
+  <TraitDef>
+    <defName>PJ_JediTrait</defName>
+    <commonality>1.0</commonality>
+    <degreeDatas>	
+      <li>
+        <label>Jedi</label>
+        <description>NAME Has begun the journey to becoming a Jedi Knight.</description>
+		        <degree>1</degree>
+      </li>
+      <li>
+        <label>Jedi Knight</label>
+        <description>NAME has attained the rank of Knight of the Jedi Order.</description>
+		        <degree>2</degree>
+      </li>	  	  
+      <li>
+        <label>Jedi Master</label>
+        <description>NAME is among the most respected of the Jedi Order, a true Master.</description>
+		        <degree>3</degree>
+      </li>	  	  
+      <li>
+        <label>Jedi Consular</label>
+        <description>NAME is ranked among the elite Jedi, those who are fit to serve on the Coucil.</description>
+		        <degree>4</degree>
+      </li>	  	  
+    </degreeDatas>
+  </TraitDef>
+
+  <TraitDef>
+    <defName>PJ_SithTrait</defName>
+    <commonality>1.0</commonality>
+    <degreeDatas>	
+      <li>
+        <label>Sith</label>
+        <description>NAME Has begun the journey to the Dark side of the force.</description>
+		        <degree>1</degree>
+      </li>
+      <li>
+        <label>Sith Inquisitor</label>
+        <description>NAME is devoted to the dark side, spreading terror and flaring passions in their wake.</description>
+		        <degree>2</degree>
+      </li>	  	  
+      <li>
+        <label>Sith Lord</label>
+        <description>NAME is among the most feared in the galaxy, the Dark Lords of the Sith.</description>
+		        <degree>3</degree>
+      </li>	  	  
+      <li>
+        <label>Sith Master</label>
+        <description>NAME is attuned to the dark side of the force, able to tap near-limitless power.</description>
+		        <degree>4</degree>
+      </li>	  	  
+    </degreeDatas>
+  </TraitDef>  
+  
+</TraitDefs>

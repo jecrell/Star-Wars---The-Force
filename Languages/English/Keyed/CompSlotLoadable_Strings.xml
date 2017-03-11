@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+  <ExceptionSlotAlreadyFilled>{0}'s slot is already filled</ExceptionSlotAlreadyFilled>
+  <Unavailable>unavailable</Unavailable>
+  <IsDrafted>{0} is drafted.</IsDrafted>
+  <Unload>Unload</Unload>
+  <CurrentlyLoaded>Loaded</CurrentlyLoaded>
+  <Effects>Effects</Effects>
+  <ChangesPrimaryColor>Changes Primary Color</ChangesPrimaryColor>
+  <StatModifiers>Stat Modifiers</StatModifiers>
+  <NoLoadOptions>No load options available.</NoLoadOptions>
+
+</LanguageData>

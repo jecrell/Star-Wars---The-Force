@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+  <!-- ===================== Force Abilities =========================== -->
+  
+  <!-- ===================== Force Drain =============================== -->
+  
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceDrain">
+   <defName>PForceDrain</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>force drain</label>
+   <graphicData>
+		<texPath>UI/ForceUser/DrainMinor</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>PJ_ForceHealDamage</damageDef>
+		<damageAmountBase>50</damageAmountBase>
+		<speed>10</speed>
+   </projectile>
+   <IsHealer>true</IsHealer>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+  
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+   <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+   <defName>PForceDrainDamage</defName>
+   <label>force drain</label>
+   <graphicData>
+		<texPath>Weapons/Projectiles/ForceDrain</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>Laser</damageDef>
+		<damageAmountBase>2</damageAmountBase>
+		<speed>125</speed>
+   </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>2</preFiringFinalIntensity>
+    <postFiringInitialIntensity>2</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>2</preFiringDuration>
+    <postFiringDuration>63</postFiringDuration>
+    <StartFireChance>0.000</StartFireChance>
+ </ThingDef>
+
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceDrain</defName>
+    <label>Force Drain</label>
+    <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
+    <description>Drain another entity of lifeforce.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <IconGraphicPath>UI/Dark_Template</IconGraphicPath>
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>true</requiresAlignment>
+	<requiredAlignmentType>Dark</requiredAlignmentType>
+	<changesAlignment>true</changesAlignment>
+	<changedAlignmentType>Dark</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PForceDrain</projectileDef>
+		<IsDoubleProjectile>true</IsDoubleProjectile>
+		<DoubleProjectile>PForceDrainDamage</DoubleProjectile>		
+		<abilityDef>PJ_ForceDrain</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>
+
+    <!-- ===================== Force Lightning =============================== -->
+  
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+   <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+   <defName>PForceLightningProj</defName>
+   <label>force lightning</label>
+   <graphicData>
+		<texPath>Weapons/Projectiles/ForceLightningX</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>Laser</damageDef>
+		<damageAmountBase>65</damageAmountBase>
+		<speed>105</speed>
+   </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>4</preFiringFinalIntensity>
+    <postFiringInitialIntensity>4</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>2</preFiringDuration>
+    <postFiringDuration>25</postFiringDuration>
+    <StartFireChance>0.100</StartFireChance>
+ </ThingDef>
+
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceLightning</defName>
+    <label>Force Lightning</label>
+    <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
+    <description>Lash out with pure dark side energy.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <IconGraphicPath>UI/Dark_Template</IconGraphicPath>
+    <forcePoolCost>0.35</forcePoolCost>
+	<requiresAlignment>true</requiresAlignment>
+	<requiredAlignmentType>Dark</requiredAlignmentType>
+	<changesAlignment>true</changesAlignment>
+	<changedAlignmentType>Dark</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PForceLightningProj</projectileDef>	
+		<abilityDef>PJ_ForceLightning</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <range>34</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>PJ_LightningSound</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>
+
+    <!-- ===================== Force Storm ============================= -->
+  
+      <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+   <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+   <defName>PForceStormProj</defName>
+   <label>force storm</label>
+   <graphicData>
+		<texPath>Weapons/Projectiles/ForceLightningX</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<explosionRadius>7</explosionRadius>
+		<damageDef>PJ_FStorm</damageDef>
+		<damageAmountBase>65</damageAmountBase>
+		<speed>105</speed>
+   </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>4</preFiringFinalIntensity>
+    <postFiringInitialIntensity>4</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>2</preFiringDuration>
+    <postFiringDuration>25</postFiringDuration>
+    <StartFireChance>0.100</StartFireChance>
+ </ThingDef>
+  
+  
+    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceStorm</defName>
+    <label>Force Storm</label>
+    <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
+    <description>Lash out with pure dark side energy at an area, causing great damage.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <IconGraphicPath>UI/Dark_Template</IconGraphicPath>
+    <forcePoolCost>0.35</forcePoolCost>
+	<requiresAlignment>true</requiresAlignment>
+	<requiredAlignmentType>Dark</requiredAlignmentType>
+	<changesAlignment>true</changesAlignment>
+	<changedAlignmentType>Dark</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PForceStormProj</projectileDef>	
+		<abilityDef>PJ_ForceStorm</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <range>34</range>
+        <burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>PJ_LightningSound</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>
+  
+  <!-- ===================== Force Healing Self ============================= -->
+  
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceHeal">
+   <defName>PForceHeal</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>force healing</label>
+   <graphicData>
+		<texPath>UI/ForceUser/HealMinor</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>PJ_ForceHealDamage</damageDef>
+		<damageAmountBase>100</damageAmountBase>
+		<speed>10</speed>
+   </projectile>
+   <IsHealer>true</IsHealer>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+  
+ <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceHealingSelf</defName>
+    <label>Minor Selfheal</label>
+    <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
+    <description>Miraculously heal the caster.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>true</requiresAlignment>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changesAlignment>true</changesAlignment>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<abilityDef>PJ_ForceHealingSelf</abilityDef>
+		<isViolent>false</isViolent>
+        <projectileDef>PForceHeal</projectileDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>2</range>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+   	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>true</canTargetSelf>
+		</targetParams>
+    </MainVerb>
+  </ThingDef>
+  
+  <!-- ===================== Force Heal Target =============================== -->
+     <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceHealingOther</defName>
+    <label>Minor Heal</label>
+    <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
+    <description>Miraculously heal the caster.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>true</requiresAlignment>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changesAlignment>true</changesAlignment>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.10</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+		<abilityDef>PJ_ForceHealingOther</abilityDef>
+		<isViolent>false</isViolent>
+        <projectileDef>PForceHeal</projectileDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>16</range>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+		<targetParams>
+		  <canTargetPawns>true</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>true</canTargetSelf>
+		</targetParams>
+    </MainVerb>
+  </ThingDef>
+  
+  </ThingDefs>
