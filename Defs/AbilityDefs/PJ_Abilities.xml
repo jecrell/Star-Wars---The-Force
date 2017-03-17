@@ -4,6 +4,48 @@
 
   <!-- ===================== Force Abilities =========================== -->
   
+   <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <defName>PMindTrick</defName>
+   <label>Mind trick</label>
+   <graphicData>
+		<texPath>UI/ForceUser/Mindtrick</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>PJ_MindTrickDam</damageDef>
+		<damageAmountBase>10</damageAmountBase>
+		<speed>105</speed>
+   </projectile>
+ </ThingDef>
+
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_MindTrick</defName>
+    <label>Mind Trick</label>
+    <uiIconPath>UI/ForceUser/Mindtrick</uiIconPath>
+    <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
+    <thingClass>ThingWithComps</thingClass>
+    <IconGraphicPath>UI/ForceUser/Mindtrick</IconGraphicPath>
+    <forcePoolCost>0.05</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PMindTrick</projectileDef>	
+		<abilityDef>PJ_MindTrick</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <range>34</range>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>
+  
+  
+  
   <!-- ===================== Force Drain =============================== -->
   
   <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceDrain">
@@ -91,7 +133,7 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
-		<damageDef>Laser</damageDef>
+		<damageDef>PJ_FLightning</damageDef>
 		<damageAmountBase>65</damageAmountBase>
 		<speed>105</speed>
    </projectile>
@@ -136,7 +178,7 @@
 
     <!-- ===================== Force Storm ============================= -->
   
-      <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceStormProj">
+      <ThingDef ParentName="BaseGrenadeProjectile" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceStormProj">
    <thingClass>AbilityUser.Projectile_Ability</thingClass>
    <defName>PJ_PForceStormProj</defName>
    <label>force storm</label>
@@ -147,6 +189,7 @@
    <projectile>
 		<flyOverhead>true</flyOverhead>
 		<explosionRadius>7</explosionRadius>
+		<explosionDelay>3</explosionDelay>
 		<damageDef>PJ_FStorm</damageDef>
 		<damageAmountBase>65</damageAmountBase>
 		<speed>45</speed>

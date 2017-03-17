@@ -72,4 +72,32 @@
     </degreeDatas>
   </TraitDef>  
   
+  
+    <TraitDef>
+    <defName>PJ_GrayTrait</defName>
+    <commonality>1.0</commonality>
+    <degreeDatas>	
+      <li>
+        <label>Gray Padawan</label>
+        <description>NAME is exploring the balance of the Force.</description>
+		        <degree>1</degree>
+      </li>
+      <li>
+        <label>Gray Jedi</label>
+        <description>NAME is devoted to maintaining the balance of the Force.</description>
+		        <degree>2</degree>
+      </li>	  	  
+      <li>
+        <label>Gray Master</label>
+        <description>NAME is a master Jedi, devoted to the 'living Force'.</description>
+		        <degree>3</degree>
+      </li>	  	  
+      <li>
+        <label>Gray Sage</label>
+        <description>NAME is attuned to the Living Force. HECAP sees HIMself as an extension of it's will.</description>
+		        <degree>4</degree>
+      </li>	  	  
+    </degreeDatas>
+  </TraitDef>  
+
 </TraitDefs>
