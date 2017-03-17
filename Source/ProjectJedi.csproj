@@ -35,9 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Hamony19Prerelease\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Harmony19\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AbilityUser">
       <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
