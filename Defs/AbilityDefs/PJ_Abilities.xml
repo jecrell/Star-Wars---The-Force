@@ -53,7 +53,6 @@
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
     <description>Drain another entity of lifeforce.</description>
     <thingClass>ThingWithComps</thingClass>
-    <IconGraphicPath>UI/Dark_Template</IconGraphicPath>
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -110,7 +109,6 @@
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
     <description>Lash out with pure dark side energy.</description>
     <thingClass>ThingWithComps</thingClass>
-    <IconGraphicPath>UI/Dark_Template</IconGraphicPath>
     <forcePoolCost>0.35</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -167,7 +165,6 @@
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
     <description>Lash out with pure dark side energy at an area, causing great damage.</description>
     <thingClass>ThingWithComps</thingClass>
-    <IconGraphicPath>UI/Dark_Template</IconGraphicPath>
     <forcePoolCost>0.35</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
