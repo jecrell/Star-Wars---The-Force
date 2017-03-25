@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <DamageDef Name="LocalInjuryBase" Abstract="True">
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef>
+
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>Cut</defName>
     <label>cut</label>
@@ -42,8 +47,9 @@
     <deathMessage>{0} was caught in a force storm.</deathMessage>
     <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<explosionDamage>40</explosionDamage>
     <impactSoundType>Electric</impactSoundType>
-    <armorCategory>Electric</armorCategory>
+    <armorCategory>Heat</armorCategory>
     <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
     <explosionCellMote>Mote_BlastEMP</explosionCellMote>
     <explosionColorEdge>(0.8, 0.7, 1.0, 0.8)</explosionColorEdge>
@@ -51,5 +57,21 @@
     <soundExplosion>PJ_LightningSound</soundExplosion>
   </DamageDef>
  
+ 
+     <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_MindTrickDam</defName>
+    <label>Mind trick</label>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to mental force damage.</deathMessage>
+    <hediff>Crack</hediff>
+	<armorCategory>Heat</armorCategory>
+	<additionalHediffs>
+		<li>
+			<hediff>PJ_MindTrick</hediff>
+			<severityPerDamageDealt>1.50</severityPerDamageDealt>
+		</li>
+		</additionalHediffs>
+  </DamageDef>
   
 </Defs>

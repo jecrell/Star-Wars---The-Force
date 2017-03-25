@@ -35,9 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Harmony19\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Hamony19Prerelease\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AbilityUser">
       <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
@@ -45,6 +45,22 @@
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="CompActivatableEffect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompActivatableEffect\Assemblies\CompActivatableEffect.dll</HintPath>
+    </Reference>
+    <Reference Include="CompDeflector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompDeflector\Assemblies\CompDeflector.dll</HintPath>
+    </Reference>
+    <Reference Include="CompOversizedWeapon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompOversizedWeapon\Assemblies\CompOversizedWeapon.dll</HintPath>
+    </Reference>
+    <Reference Include="CompSlotLoadable, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\CompSlotLoadable\Assemblies\CompSlotLoadable.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -59,6 +75,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProjectJedi\CompForceUser.cs" />
+    <Compile Include="ProjectJedi\CompLightsaberActivatableEffect.cs" />
+    <Compile Include="ProjectJedi\CrystalSlotLoadable.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
     <Compile Include="ProjectJedi\ForceAlignmentType.cs" />

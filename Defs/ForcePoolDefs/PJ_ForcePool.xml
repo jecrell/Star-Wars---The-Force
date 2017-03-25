@@ -5,12 +5,12 @@
     <DefName>PJ_ForcePool</DefName>
     <needClass>ProjectJedi.Need_ForcePool</needClass>
     <label>force pool</label>
-    <description>DESC</description>
+    <description>Colonist's Current force pool level</description>
 	<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
     <showOnNeedList>true</showOnNeedList>
     <minIntelligence>Humanlike</minIntelligence>
     <baseLevel>0.50</baseLevel>
-    <seekerRisePerHour>0.12</seekerRisePerHour>
+    <seekerRisePerHour>0.22</seekerRisePerHour>
     <seekerFallPerHour>0.04</seekerFallPerHour>
     <listPriority>1327</listPriority>
     <major>true</major>

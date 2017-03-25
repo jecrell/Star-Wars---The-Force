@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HediffDefs>
+
+ <HediffDef>
+    <defName>PJ_MindTrick</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Mind Trick</label>
+    <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <restFallFactor>1.33</restFallFactor>
+		   <mentalStateGivers>
+			<li>
+            <mentalState>WanderConfused</mentalState>
+            <mtbDays>0.01</mtbDays>
+            </li>
+			</mentalStateGivers>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>PJ_MindtrickThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PJ_MindTrick</hediff>
+    <validWhileDespawned>true</validWhileDespawned>
+    <stages>
+      <li>
+        <label>Mind Trick</label>
+        <description>The force can have a strong effect on the weak minded.</description>
+        <baseMoodEffect>2</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+</HediffDefs>
