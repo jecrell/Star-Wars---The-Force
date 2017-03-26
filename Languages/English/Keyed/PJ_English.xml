@@ -2,6 +2,15 @@
 <LanguageData>
 
 
+<!-- ============= UI ============ -->
+<PJ_TabForce>force</PJ_TabForce>
+<PJ_Alignment>alignment</PJ_Alignment>
+<PJ_Dark>dark</PJ_Dark>
+<PJ_Gray>gray</PJ_Gray>
+<PJ_Light>light</PJ_Light>
+<PJ_Skills>skills</PJ_Skills>
+<PJ_Powers>powers</PJ_Powers>
+
 
 <!-- ========== Buttons ========== -->
 

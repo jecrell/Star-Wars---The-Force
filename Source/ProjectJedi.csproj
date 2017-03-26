@@ -75,11 +75,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ProjectJedi\CompForceUser.cs" />
-    <Compile Include="ProjectJedi\CompLightsaberActivatableEffect.cs" />
-    <Compile Include="ProjectJedi\CrystalSlotLoadable.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
     <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
+    <Compile Include="ProjectJedi\ForceCardUtility.cs" />
+    <Compile Include="ProjectJedi\HarmonyPatches.cs" />
+    <Compile Include="ProjectJedi\ITab_Pawn_Force.cs" />
     <Compile Include="ProjectJedi\Need_ForcePool.cs" />
     <Compile Include="ProjectJedi\ModInitializer.cs" />
     <Compile Include="ProjectJedi\ProjectJediDefOf.cs" />

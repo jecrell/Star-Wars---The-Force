@@ -74,6 +74,32 @@ namespace ProjectJedi
         /// </summary>
         public override void PostInitialize()
         {
+            //Make the ITab
+            if (this.abilityUser != null)
+            {
+                IEnumerable<InspectTabBase> tabs = this.abilityUser.GetInspectTabs();
+                if (tabs != null && tabs.Count<InspectTabBase>() > 0)
+                {
+                    if (tabs.FirstOrDefault((InspectTabBase x) => x is ITab_Pawn_Force) == null)
+                    {
+                        try
+                        {
+                            this.abilityUser.def.inspectorTabsResolved.Add(InspectTabManager.GetSharedInstance(typeof(ITab_Pawn_Force)));
+                        }
+                        catch (Exception ex)
+                        {
+                            Log.Error(string.Concat(new object[]
+                            {
+                    "Could not instantiate inspector tab of type ",
+                    typeof(ITab_Pawn_Force),
+                    ": ",
+                    ex
+                            }));
+                        }
+                    }
+                }
+            }
+
 
             //Set the force alignment
             this.ForceAlignmentType = ForceAlignmentType.Gray; // Default to Gray
