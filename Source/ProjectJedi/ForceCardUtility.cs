@@ -223,7 +223,7 @@ namespace ProjectJedi
             Widgets.Label(lightsaberOffenseLabel, "PJ_LightsaberOffense".Translate());
             Rect lightsaberOffensiveBoxes = new Rect(lightsaberOffenseLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
                 if (compForce.levelLightsaberOff >= i)
@@ -231,9 +231,15 @@ namespace ProjectJedi
                     Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                     continue;
                 }
-                else if (i - compForce.levelLightsaberOff == 1)
+                else if (i - compForce.levelLightsaberOff == 1 && compForce.abilityPoints > 0)
                 {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                    //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    {
+                        compForce.abilityPoints--;
+                        compForce.levelLightsaberOff++;
+                    }
+                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
                     continue;
                 }
                 else
@@ -251,7 +257,7 @@ namespace ProjectJedi
             Widgets.Label(lightsaberDefenseLabel, "PJ_LightsaberDefense".Translate());
             Rect lightsaberDefenseBoxes = new Rect(lightsaberDefenseLabel.xMax, lightsaberDefense.y, inRect.width - SkillsTextWidth, TextSize);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Rect lightsaberCheckbox = new Rect(lightsaberDefenseBoxes.x + (SkillsBoxSize * i), lightsaberDefenseBoxes.y, SkillsBoxSize, TextSize);
                 if (compForce.levelLightsaberDef >= i)
@@ -259,9 +265,14 @@ namespace ProjectJedi
                     Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                     continue;
                 }
-                else if (i - compForce.levelLightsaberDef == 1)
+                else if (i - compForce.levelLightsaberDef == 1 && compForce.abilityPoints > 0)
                 {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    {
+                        compForce.abilityPoints--;
+                        compForce.levelLightsaberDef++;
+                    }
+                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
                     continue;
                 }
                 else
@@ -279,7 +290,7 @@ namespace ProjectJedi
             Widgets.Label(lightsaberAccuracyLabel, "PJ_LightsaberAccuracy".Translate());
             Rect lightsaberAccuracyBoxes = new Rect(lightsaberAccuracyLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Rect lightsaberCheckbox = new Rect(lightsaberAccuracyBoxes.x + (SkillsBoxSize * i), lightsaberAccuracyBoxes.y, SkillsBoxSize, TextSize);
                 if (compForce.levelLightsaberAcc >= i)
@@ -287,9 +298,14 @@ namespace ProjectJedi
                     Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                     continue;
                 }
-                else if (i - compForce.levelLightsaberAcc == 1)
+                else if (i - compForce.levelLightsaberAcc == 1 && compForce.abilityPoints > 0)
                 {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    {
+                        compForce.abilityPoints--;
+                        compForce.levelLightsaberAcc++;
+                    }
+                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
                     continue;
                 }
                 else
@@ -306,7 +322,7 @@ namespace ProjectJedi
             Widgets.Label(lightsaberReflectLabel, "PJ_LightsaberReflection".Translate());
             Rect lightsaberReflectBoxes = new Rect(lightsaberReflectLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Rect lightsaberCheckbox = new Rect(lightsaberReflectBoxes.x + (SkillsBoxSize * i), lightsaberReflectBoxes.y, SkillsBoxSize, TextSize);
                 if (compForce.levelLightsaberRef >= i)
@@ -314,9 +330,14 @@ namespace ProjectJedi
                     Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                     continue;
                 }
-                else if (i - compForce.levelLightsaberRef == 1)
+                else if (i - compForce.levelLightsaberRef == 1 && compForce.abilityPoints > 0)
                 {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    {
+                        compForce.abilityPoints--;
+                        compForce.levelLightsaberRef++;
+                    }
+                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
                     continue;
                 }
                 else
@@ -333,7 +354,7 @@ namespace ProjectJedi
             Widgets.Label(forcePoolLabel, "PJ_ForcePool".Translate());
             Rect forcePoolBoxes = new Rect(forcePoolLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
 
-            for (int i = 0; i < 5; i++)
+            for (int i = 1; i <= 5; i++)
             {
                 Rect lightsaberCheckbox = new Rect(forcePoolBoxes.x + (SkillsBoxSize * i), forcePoolBoxes.y, SkillsBoxSize, TextSize);
                 if (compForce.levelForcePool >= i)
@@ -341,9 +362,14 @@ namespace ProjectJedi
                     Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                     continue;
                 }
-                else if (i - compForce.levelForcePool == 1)
+                else if (i - compForce.levelForcePool == 1 && compForce.abilityPoints > 0)
                 {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    {
+                        compForce.abilityPoints--;
+                        compForce.levelForcePool++;
+                    }
+                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
                     continue;
                 }
                 else

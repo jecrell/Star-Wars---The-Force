@@ -30,6 +30,7 @@ namespace ProjectJedi
             }
             set
             {
+                if (value > forceUserLevel) abilityPoints++;
                 forceUserLevel = value;
             }
         }
@@ -47,14 +48,21 @@ namespace ProjectJedi
             }
         }
 
+        public float XPLastLevel
+        {
+            get
+            {
+                float result = 0f;
+                if (forceUserLevel > 0) result = forceUserLevel * 600;
+                return result;
+            }
+        }
+
         public float XPTillNextLevelPercent
         {
             get
             {
-                float result = 0.01f;
-                float math = forceUserXP / ForceUserXPTillNextLevel;
-                if (math > result) return math;
-                return result;
+                return ((float)(forceUserXP - XPLastLevel) / (float)(ForceUserXPTillNextLevel - XPLastLevel));
             }
         }
 
@@ -68,10 +76,10 @@ namespace ProjectJedi
 
         public int abilityPoints = 0;
 
-        public int levelLightsaberOff = 2;
-        public int levelLightsaberDef = 0;
-        public int levelLightsaberAcc = 0;
-        public int levelLightsaberRef = 0;
+        public int levelLightsaberOff = 4;
+        public int levelLightsaberDef = 3;
+        public int levelLightsaberAcc = 2;
+        public int levelLightsaberRef = 1;
         public int levelForcePool = 0;
 
         /// <summary>
@@ -133,11 +141,19 @@ namespace ProjectJedi
             }
         }
 
+        public override void CompTick()
+        {
+            base.CompTick();
+            if (forceUserXP > ForceUserXPTillNextLevel) ForceUserLevel += 1;
+            forceUserXP++;
+        }
+
         /// <summary>
         /// Creates a force user by adding a hidden Hediff that adds their Force Pool needs.
         /// </summary>
         public override void PostInitialize()
         {
+            //PostExposeData();
             //Make the ITab
             if (this.abilityUser != null)
             {

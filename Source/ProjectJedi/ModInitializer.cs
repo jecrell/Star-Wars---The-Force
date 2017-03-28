@@ -52,9 +52,11 @@ namespace ProjectJedi
                                         delegate (Pawn p)
                                         {
                                             Log.Message("CompForceUser Added");
-                                            CompForceUser pca = new CompForceUser();
+                                            //CompForceUser pca = new CompForceUser();
+                                            ThingComp pca = (ThingComp)Activator.CreateInstance(typeof(CompForceUser));
                                             pca.parent = p;
                                             p.AllComps.Add(pca);
+                                            pca.Initialize(null);
 
                                         });
                                 });
