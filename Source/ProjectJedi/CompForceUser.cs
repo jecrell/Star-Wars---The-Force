@@ -21,11 +21,75 @@ namespace ProjectJedi
     public class CompForceUser : CompAbilityUser
     {
 
+        private int forceUserLevel = 0;
+        public int ForceUserLevel
+        {
+            get
+            {
+                return forceUserLevel;
+            }
+            set
+            {
+                forceUserLevel = value;
+            }
+        }
+
+        private int forceUserXP = 1;
+        public int ForceUserXP
+        {
+            get
+            {
+                return forceUserXP;
+            }
+            set
+            {
+                forceUserXP = value;
+            }
+        }
+
+        public float XPTillNextLevelPercent
+        {
+            get
+            {
+                float result = 0.01f;
+                float math = forceUserXP / ForceUserXPTillNextLevel;
+                if (math > result) return math;
+                return result;
+            }
+        }
+
+        public int ForceUserXPTillNextLevel
+        {
+            get
+            {
+                return (forceUserLevel + 1) * 600;
+            }
+        }
+
+        public int abilityPoints = 0;
+
+        public int levelLightsaberOff = 2;
+        public int levelLightsaberDef = 0;
+        public int levelLightsaberAcc = 0;
+        public int levelLightsaberRef = 0;
+        public int levelForcePool = 0;
+
         /// <summary>
         /// Keep track of an internal alignment.
         /// As a float value, this allows greater roleplaying possibilities.
         /// </summary>
         private float alignmentValue;
+        public float AlignmentValue
+        {
+            get
+            {
+                return alignmentValue;
+            }
+            set
+            {
+                alignmentValue = value;
+            }
+        }
 
         public ForceAlignmentType ForceAlignmentType
         { 
@@ -109,6 +173,7 @@ namespace ProjectJedi
                 {
                     if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait))
                     {
+
                         this.ForceAlignmentType = ForceAlignmentType.Light;
 
                         // !! DEBUG -- TO BE REMOVED LATER !!
@@ -252,6 +317,14 @@ namespace ProjectJedi
         {
             base.PostExposeData();
             Scribe_Values.LookValue<float>(ref alignmentValue, "alignmentValue", 0.0f);
+            Scribe_Values.LookValue<int>(ref forceUserLevel, "forceUserLevel", 0);
+            Scribe_Values.LookValue<int>(ref forceUserXP, "forceUserXP");
+            Scribe_Values.LookValue<int>(ref levelLightsaberOff, "levelLightsaberOff", 0);
+            Scribe_Values.LookValue<int>(ref levelLightsaberDef, "levelLightsaberDef", 0);
+            Scribe_Values.LookValue<int>(ref levelLightsaberAcc, "levelLightsaberAcc", 0);
+            Scribe_Values.LookValue<int>(ref levelLightsaberRef, "levelLightsaberRef", 0);
+            Scribe_Values.LookValue<int>(ref levelForcePool, "levelForcePool", 0);
+            Scribe_Values.LookValue<int>(ref abilityPoints, "abilityPoints", 0);
         }
     }
 }

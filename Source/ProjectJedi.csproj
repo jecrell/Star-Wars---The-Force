@@ -74,6 +74,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProjectJedi\Buttons.cs" />
     <Compile Include="ProjectJedi\CompForceUser.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
