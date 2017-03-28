@@ -22,7 +22,7 @@
   </ThingDef>
 
 
-  <ThingDef ParentName="BaseBion">
+  <ThingDef ParentName="BaseFGhost">
     <defName>PJ_ForceGhostR</defName>
     <label>Force ghost</label>
     <description>A force ghost</description>
