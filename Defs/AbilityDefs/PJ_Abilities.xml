@@ -9,7 +9,7 @@
    <defName>PMindTrick</defName>
    <label>Mind trick</label>
    <graphicData>
-		<texPath>UI/ForceUser/Mindtrick</texPath>
+		<texPath>UI/ForceUser/MindTrick</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
    <projectile>
@@ -23,9 +23,9 @@
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_MindTrick</defName>
     <label>Mind Trick</label>
-    <uiIconPath>UI/ForceUser/Mindtrick</uiIconPath>
+    <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
-    <thingClass>ThingWithComps</thingClass>
+<!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>false</requiresAlignment>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -93,7 +93,7 @@
     <label>Force Drain</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
     <description>Drain another entity of lifeforce.</description>
-    <thingClass>ThingWithComps</thingClass>
+<!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -149,7 +149,7 @@
     <label>Force Lightning</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
     <description>Lash out with pure dark side energy.</description>
-    <thingClass>ThingWithComps</thingClass>
+<!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -199,7 +199,7 @@
     <label>Force Storm</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
     <description>Lash out with pure dark side energy at an area, causing great damage.</description>
-    <thingClass>ThingWithComps</thingClass>
+<!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -248,7 +248,7 @@
     <label>Minor Selfheal</label>
     <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
     <description>Miraculously heal the caster.</description>
-    <thingClass>ThingWithComps</thingClass>
+<!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
@@ -282,7 +282,7 @@
     <label>Minor Heal</label>
     <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
     <description>Miraculously heal the caster.</description>
-    <thingClass>ThingWithComps</thingClass>
+<!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
@@ -468,7 +468,7 @@
     <label>Force Rage</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
     <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
-    <thingClass>ThingWithComps</thingClass>
+<thingClass>ThingWithComps</thingClass>
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>

@@ -74,6 +74,84 @@ namespace ProjectJedi
             }
         }
 
+        public List<ForceSkill> forceSkills = new List<ForceSkill>();
+        public List<ForceSkill> ForceSkills
+        {
+            get
+            {
+                if (forceSkills == null)
+                {
+                    forceSkills = new List<ForceSkill>
+                    {
+                        new ForceSkill("lightsaberOffense", 0),
+                        new ForceSkill("lightsaberDefense", 0),
+                        new ForceSkill("lightsaberAccuracy", 0),
+                        new ForceSkill("lightsaberReflection", 0),
+                        new ForceSkill("forcePool", 0)
+                    };
+                }
+                return forceSkills;
+            }
+        }
+
+        public List<ForcePower> forcePowersDark = new List<ForcePower>();
+        public List<ForcePower> ForcePowersDark
+        {
+            get
+            {
+                if (forcePowersDark == null)
+                {
+                    forcePowersDark = new List<ForcePower>
+                    {
+                        new ForcePower("forceRage", TexButton.PJTex_ForceRage, 0),
+                        new ForcePower("forceChoke", TexButton.PJTex_ForceChoke, 0),
+                        new ForcePower("forceDrain", TexButton.PJTex_ForceDrain, 0),
+                        new ForcePower("forceLightning", TexButton.PJTex_ForceLightning, 0),
+                        new ForcePower("forceStorm", TexButton.PJTex_ForceStorm, 0)
+                    };
+                }
+                return forcePowersDark;
+            }
+        }
+
+        public List<ForcePower> forcePowersGray = new List<ForcePower>();
+        public List<ForcePower> ForcePowersGray
+        {
+            get
+            {
+                if (forcePowersGray == null)
+                {
+                    forcePowersGray = new List<ForcePower>
+                    {
+                        new ForcePower("forcePush", TexButton.PJTex_ForcePush, 0),
+                        new ForcePower("forcePull", TexButton.PJTex_ForcePull, 0),
+                        new ForcePower("forceSpeed", TexButton.PJTex_ForceSpeed, 0)
+                    };
+                }
+                return forcePowersGray;
+            }
+        }
+        public List<ForcePower> forcePowersLight = new List<ForcePower>();
+        public List<ForcePower> ForcePowersLight
+        {
+            get
+            {
+                if (forcePowersLight == null)
+                {
+                    forcePowersLight = new List<ForcePower>
+                    {
+                        new ForcePower("forceHeal", TexButton.PJTex_ForceHeal, 0),
+                        new ForcePower("forceHealOther", TexButton.PJTex_ForceHealOther, 0),
+                        new ForcePower("forceDefense", TexButton.PJTex_ForceDefense, 0),
+                        new ForcePower("mindTrick", TexButton.PJTex_MindTrick, 0),
+                        new ForcePower("forceGhost", TexButton.PJTex_ForceGhost, 0)
+                    };
+                }
+                return forcePowersLight;
+            }
+        }
+
+
         public int abilityPoints = 0;
 
         public int levelLightsaberOff = 4;
@@ -141,73 +219,122 @@ namespace ProjectJedi
             }
         }
 
+        public bool firstTick = false;
+
+        public bool IsForceUser
+        {
+            get
+            {
+                if (this.abilityUser != null)
+                {
+                    if (this.abilityUser.story != null)
+                    {
+                        if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
+                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
+                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive))
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+        }
+
         public override void CompTick()
         {
-            base.CompTick();
-            if (forceUserXP > ForceUserXPTillNextLevel) ForceUserLevel += 1;
-            forceUserXP++;
+            if (Find.TickManager.TicksGame > 200)
+            {
+                if (Find.TickManager.TicksGame % 30 == 0)
+                {
+                    if (IsForceUser)
+                    {
+                        if (!firstTick) PostInitializeTick();
+                        base.CompTick();
+                        if (forceUserXP > ForceUserXPTillNextLevel) ForceUserLevel += 1;
+                        forceUserXP++;
+                    }
+                }
+            }
         }
 
         /// <summary>
         /// Creates a force user by adding a hidden Hediff that adds their Force Pool needs.
         /// </summary>
-        public override void PostInitialize()
+        public void PostInitializeTick()
+        {
+            if (this.abilityUser != null)
+            {
+                if (this.abilityUser.Spawned)
+                {
+                    if (this.abilityUser.story != null)
+                    {
+                        firstTick = true;
+                        this.Initialize();
+                        ResolveForceTab();
+                        ResolveForcePowers();
+                        ResolveForcePool();
+                    }
+                }
+            }
+        }
+
+        public void ResolveForceTab()
         {
             //PostExposeData();
             //Make the ITab
-            if (this.abilityUser != null)
+            IEnumerable<InspectTabBase> tabs = this.abilityUser.GetInspectTabs();
+            if (tabs != null && tabs.Count<InspectTabBase>() > 0)
             {
-                IEnumerable<InspectTabBase> tabs = this.abilityUser.GetInspectTabs();
-                if (tabs != null && tabs.Count<InspectTabBase>() > 0)
+                if (tabs.FirstOrDefault((InspectTabBase x) => x is ITab_Pawn_Force) == null)
                 {
-                    if (tabs.FirstOrDefault((InspectTabBase x) => x is ITab_Pawn_Force) == null)
+                    try
                     {
-                        try
+                        this.abilityUser.def.inspectorTabsResolved.Add(InspectTabManager.GetSharedInstance(typeof(ITab_Pawn_Force)));
+                    }
+                    catch (Exception ex)
+                    {
+                        Log.Error(string.Concat(new object[]
                         {
-                            this.abilityUser.def.inspectorTabsResolved.Add(InspectTabManager.GetSharedInstance(typeof(ITab_Pawn_Force)));
-                        }
-                        catch (Exception ex)
-                        {
-                            Log.Error(string.Concat(new object[]
-                            {
                     "Could not instantiate inspector tab of type ",
                     typeof(ITab_Pawn_Force),
                     ": ",
                     ex
-                            }));
-                        }
+                        }));
                     }
                 }
             }
+        }
 
-
+        public void ResolveForcePowers()
+        {
             //Set the force alignment
             this.ForceAlignmentType = ForceAlignmentType.Gray; // Default to Gray
-            if (this.abilityUser != null)
-            {
-                if (this.abilityUser.story != null)
-                {
-                    if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait))
-                    {
-
-                        this.ForceAlignmentType = ForceAlignmentType.Light;
-
-                        // !! DEBUG -- TO BE REMOVED LATER !!
-                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingSelf);
-                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingOther);
-                    }
-                    if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait))
-                    {
-                        this.ForceAlignmentType = ForceAlignmentType.Dark;
-
-                        // !! DEBUG -- TO BE REMOVED LATER !!
-                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceDrain);
-                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceLightning);
-                        this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceStorm);
-                    }
-                }
+            if (this.abilityPowerManager == null) {
+                Log.Message("Null handled");
+                this.abilityPowerManager = new AbilityPowerManager(this);
             }
+            if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait))
+            {
 
+                this.ForceAlignmentType = ForceAlignmentType.Light;
+                // !! DEBUG -- TO BE REMOVED LATER !!
+                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingSelf);
+                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingOther);
+            }
+            if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait))
+            {
+                this.ForceAlignmentType = ForceAlignmentType.Dark;
+
+                // !! DEBUG -- TO BE REMOVED LATER !!
+                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceDrain);
+                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceLightning);
+                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceStorm);
+            }
+        }
+
+        public void ResolveForcePool()
+        {
             //Add the hediff if no pool exists.
             if (ForcePool == null)
             {
@@ -332,15 +459,55 @@ namespace ProjectJedi
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue<float>(ref alignmentValue, "alignmentValue", 0.0f);
-            Scribe_Values.LookValue<int>(ref forceUserLevel, "forceUserLevel", 0);
-            Scribe_Values.LookValue<int>(ref forceUserXP, "forceUserXP");
-            Scribe_Values.LookValue<int>(ref levelLightsaberOff, "levelLightsaberOff", 0);
-            Scribe_Values.LookValue<int>(ref levelLightsaberDef, "levelLightsaberDef", 0);
-            Scribe_Values.LookValue<int>(ref levelLightsaberAcc, "levelLightsaberAcc", 0);
-            Scribe_Values.LookValue<int>(ref levelLightsaberRef, "levelLightsaberRef", 0);
-            Scribe_Values.LookValue<int>(ref levelForcePool, "levelForcePool", 0);
-            Scribe_Values.LookValue<int>(ref abilityPoints, "abilityPoints", 0);
+            Scribe_Values.LookValue<float>(ref this.alignmentValue, "alignmentValue", 0.0f);
+            Scribe_Values.LookValue<int>(ref this.forceUserLevel, "forceUserLevel", 0);
+            Scribe_Values.LookValue<int>(ref this.forceUserXP, "forceUserXP");
+            Scribe_Values.LookValue<int>(ref this.levelLightsaberOff, "levelLightsaberOff", 0);
+            Scribe_Values.LookValue<int>(ref this.levelLightsaberDef, "levelLightsaberDef", 0);
+            Scribe_Values.LookValue<int>(ref this.levelLightsaberAcc, "levelLightsaberAcc", 0);
+            Scribe_Values.LookValue<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
+            Scribe_Values.LookValue<int>(ref this.levelForcePool, "levelForcePool", 0);
+            Scribe_Values.LookValue<int>(ref this.abilityPoints, "abilityPoints", 0);
+            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep);
+            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep);
+            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep);
+
+            if (Scribe.mode == LoadSaveMode.LoadingVars)
+            {
+                if (forcePowersDark == null)
+                {
+                    forcePowersDark = new List<ForcePower>
+                    {
+                        new ForcePower("forceRage", TexButton.PJTex_ForceRage, 0),
+                        new ForcePower("forceChoke", TexButton.PJTex_ForceChoke, 0),
+                        new ForcePower("forceDrain", TexButton.PJTex_ForceDrain, 0),
+                        new ForcePower("forceLightning", TexButton.PJTex_ForceLightning, 0),
+                        new ForcePower("forceStorm", TexButton.PJTex_ForceStorm, 0)
+                    };
+                }
+                if (forcePowersGray == null)
+                {
+                    forcePowersGray = new List<ForcePower>
+                    {
+                        new ForcePower("forcePush", TexButton.PJTex_ForcePush, 0),
+                        new ForcePower("forcePull", TexButton.PJTex_ForcePull, 0),
+                        new ForcePower("forceSpeed", TexButton.PJTex_ForceSpeed, 0)
+                    };
+                }
+                if (forcePowersLight == null)
+                {
+                    forcePowersLight = new List<ForcePower>
+                    {
+                        new ForcePower("forceHeal", TexButton.PJTex_ForceHeal, 0),
+                        new ForcePower("forceHealOther", TexButton.PJTex_ForceHealOther, 0),
+                        new ForcePower("forceDefense", TexButton.PJTex_ForceDefense, 0),
+                        new ForcePower("mindTrick", TexButton.PJTex_MindTrick, 0),
+                        new ForcePower("forceGhost", TexButton.PJTex_ForceGhost, 0)
+                    };
+                }
+            }
+
+            //Log.Message("PostExposeData Called: ForceUser");
         }
     }
 }

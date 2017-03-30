@@ -65,7 +65,7 @@ namespace ProjectJedi
             Widgets.Label(rectAlignmentLight, "PJ_Light".Translate().CapitalizeFirst());
 
             //Dark                        Gray                        Light
-            Rect rectAlignment = new Rect(rect.x, rectAlignmentLabels.yMax / 1.5f, rectAlignmentLabels.width, TextSize);
+            Rect rectAlignment = new Rect(rect.x, rectAlignmentLabels.yMax / 1.5f, rectAlignmentLabels.width - 10f, TextSize);
 
             AlignmentOnGUI(rectAlignment, pawn.GetComp<CompForceUser>());
             // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
@@ -234,7 +234,7 @@ namespace ProjectJedi
                 else if (i - compForce.levelLightsaberOff == 1 && compForce.abilityPoints > 0)
                 {
                     //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
                     {
                         compForce.abilityPoints--;
                         compForce.levelLightsaberOff++;
@@ -267,7 +267,7 @@ namespace ProjectJedi
                 }
                 else if (i - compForce.levelLightsaberDef == 1 && compForce.abilityPoints > 0)
                 {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
                     {
                         compForce.abilityPoints--;
                         compForce.levelLightsaberDef++;
@@ -300,7 +300,7 @@ namespace ProjectJedi
                 }
                 else if (i - compForce.levelLightsaberAcc == 1 && compForce.abilityPoints > 0)
                 {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
                     {
                         compForce.abilityPoints--;
                         compForce.levelLightsaberAcc++;
@@ -332,7 +332,7 @@ namespace ProjectJedi
                 }
                 else if (i - compForce.levelLightsaberRef == 1 && compForce.abilityPoints > 0)
                 {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
                     {
                         compForce.abilityPoints--;
                         compForce.levelLightsaberRef++;
@@ -364,7 +364,7 @@ namespace ProjectJedi
                 }
                 else if (i - compForce.levelForcePool == 1 && compForce.abilityPoints > 0)
                 {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 2), TexButton.PJTex_SkillBoxAdd))
+                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
                     {
                         compForce.abilityPoints--;
                         compForce.levelForcePool++;
@@ -379,13 +379,33 @@ namespace ProjectJedi
                 }
             }
         }
-
         #endregion SkillsPane
 
         #region PowersDark
         public static void PowersDark(Rect inRect)
         {
+            //float currentYOffset = inRect.y;
 
+            //if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
+            //{
+            //    compForce.abilityPoints--;
+            //    compForce.levelLightsaberOff++;
+            //}
+            
+            //for (int i = 1; i <= 3; i++)
+            //{
+            //    Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
+            //    if (compForce.levelLightsaberOff >= i)
+            //    {
+            //        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
+            //        continue;
+            //    }
+            //}
         }
         #endregion PowersDark
         #region PowersGray
