@@ -21,23 +21,60 @@ namespace ProjectJedi
         public static HediffDef PJ_ForceWielderHD;
 
         //Light Side
-        public static AbilityDef PJ_ForceDefense;
-        public static AbilityDef PJ_MindTrick;
-        public static AbilityDef PJ_ForceHealingSelf;
-        public static AbilityDef PJ_ForceHealingOther;
-        public static AbilityDef PJ_ForceGhost;
+        public static AbilityDef PJ_ForceDefense_Apprentice;
+        public static AbilityDef PJ_ForceDefense_Adept;
+        public static AbilityDef PJ_ForceDefense_Master;
+
+        public static AbilityDef PJ_MindTrick_Apprentice;
+        public static AbilityDef PJ_MindTrick_Adept;
+        public static AbilityDef PJ_MindTrick_Master;
+
+        public static AbilityDef PJ_ForceHealingSelf_Apprentice;
+        public static AbilityDef PJ_ForceHealingSelf_Adept;
+        public static AbilityDef PJ_ForceHealingSelf_Master;
+
+        public static AbilityDef PJ_ForceHealingOther_Apprentice;
+        public static AbilityDef PJ_ForceHealingOther_Adept;
+        public static AbilityDef PJ_ForceHealingOther_Master;
+        
+        public static AbilityDef PJ_ForceGhost_Apprentice;
+        public static AbilityDef PJ_ForceGhost_Adept;
+        public static AbilityDef PJ_ForceGhost_Master;
 
         //Gray Powers
-        public static AbilityDef PJ_ForcePush;
-        public static AbilityDef PJ_ForcePull;
-        public static AbilityDef PJ_ForceSpeed;
+        public static AbilityDef PJ_ForcePush_Apprentice;
+        public static AbilityDef PJ_ForcePush_Adept;
+        public static AbilityDef PJ_ForcePush_Master;
+
+
+        public static AbilityDef PJ_ForcePull_Apprentice;
+        public static AbilityDef PJ_ForcePull_Adept;
+        public static AbilityDef PJ_ForcePull_Master;
+
+        public static AbilityDef PJ_ForceSpeed_Apprentice;
+        public static AbilityDef PJ_ForceSpeed_Adept;
+        public static AbilityDef PJ_ForceSpeed_Master;
 
 
         //Dark Side
-        public static AbilityDef PJ_ForceRage;
-        public static AbilityDef PJ_ForceDrain;
-        public static AbilityDef PJ_ForceChoke;
-        public static AbilityDef PJ_ForceLightning;
-        public static AbilityDef PJ_ForceStorm;
+        public static AbilityDef PJ_ForceRage_Apprentice;
+        public static AbilityDef PJ_ForceRage_Adept;
+        public static AbilityDef PJ_ForceRage_Master;
+
+        public static AbilityDef PJ_ForceDrain_Apprentice;
+        public static AbilityDef PJ_ForceDrain_Adept;
+        public static AbilityDef PJ_ForceDrain_Master;
+
+        public static AbilityDef PJ_ForceChoke_Apprentice;
+        public static AbilityDef PJ_ForceChoke_Adept;
+        public static AbilityDef PJ_ForceChoke_Master;
+
+        public static AbilityDef PJ_ForceLightning_Apprentice;
+        public static AbilityDef PJ_ForceLightning_Adept;
+        public static AbilityDef PJ_ForceLightning_Master;
+
+        public static AbilityDef PJ_ForceStorm_Apprentice;
+        public static AbilityDef PJ_ForceStorm_Adept;
+        public static AbilityDef PJ_ForceStorm_Master;
     }
 }

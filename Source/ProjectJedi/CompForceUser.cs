@@ -30,7 +30,14 @@ namespace ProjectJedi
             }
             set
             {
-                if (value > forceUserLevel) abilityPoints++;
+                if (value > forceUserLevel)
+                {
+                    abilityPoints++;
+                    if (forceUserXP < value * 600)
+                    {
+                        forceUserXP = value * 600;
+                    }
+                }
                 forceUserLevel = value;
             }
         }
@@ -83,16 +90,27 @@ namespace ProjectJedi
                 {
                     forceSkills = new List<ForceSkill>
                     {
-                        new ForceSkill("PJ_LightsaberOffense", 0),
-                        new ForceSkill("PJ_LightsaberDefense", 0),
-                        new ForceSkill("PJ_LightsaberAccuracy", 0),
-                        new ForceSkill("PJ_LightsaberReflection", 0),
-                        new ForceSkill("PJ_ForcePool", 0)
+                        new ForceSkill("PJ_LightsaberOffense", "PJ_LightsaberOffense_Desc"),
+                        new ForceSkill("PJ_LightsaberDefense", "PJ_LightsaberDefense_Desc"),
+                        new ForceSkill("PJ_LightsaberAccuracy", "PJ_LightsaberAccuracy_Desc"),
+                        new ForceSkill("PJ_LightsaberReflection", "PJ_LightsaberReflection_Desc"),
+                        new ForceSkill("PJ_ForcePool", "PJ_ForcePool_Desc")
                     };
                 }
                 return forceSkills;
             }
         }
+        public int ForceSkillLevel(string skillName)
+        {
+            int result = 0;
+            ForceSkill skillCheck = ForceSkills.FirstOrDefault((ForceSkill x) => x.label == skillName);
+            if (skillCheck != null)
+            {
+                result = skillCheck.level;
+            }
+            return result;
+        }
+
 
         public bool forcePowersInitialized = false;
         public List<ForcePower> forcePowersDark;
@@ -104,11 +122,11 @@ namespace ProjectJedi
                 {
                     forcePowersDark = new List<ForcePower>
                     {
-                        new ForcePower("forceRage", 0, ProjectJediDefOf.PJ_ForceRage),
-                        new ForcePower("forceChoke", 0, ProjectJediDefOf.PJ_ForceChoke),
-                        new ForcePower("forceDrain", 0, ProjectJediDefOf.PJ_ForceDrain),
-                        new ForcePower("forceLightning", 0, ProjectJediDefOf.PJ_ForceLightning),
-                        new ForcePower("forceStorm", 0, ProjectJediDefOf.PJ_ForceStorm)
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceRage_Apprentice, ProjectJediDefOf.PJ_ForceRage_Adept, ProjectJediDefOf.PJ_ForceRage_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceChoke_Apprentice, ProjectJediDefOf.PJ_ForceChoke_Adept, ProjectJediDefOf.PJ_ForceChoke_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceDrain_Apprentice, ProjectJediDefOf.PJ_ForceDrain_Adept, ProjectJediDefOf.PJ_ForceDrain_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceLightning_Apprentice, ProjectJediDefOf.PJ_ForceLightning_Adept, ProjectJediDefOf.PJ_ForceLightning_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceStorm_Apprentice, ProjectJediDefOf.PJ_ForceStorm_Adept, ProjectJediDefOf.PJ_ForceStorm_Master })
                     };
                 }
                 return forcePowersDark;
@@ -124,9 +142,9 @@ namespace ProjectJedi
                 {
                     forcePowersGray = new List<ForcePower>
                     {
-                        new ForcePower("forcePush", 0, ProjectJediDefOf.PJ_ForcePush),
-                        new ForcePower("forcePull", 0, ProjectJediDefOf.PJ_ForcePull),
-                        new ForcePower("forceSpeed", 0, ProjectJediDefOf.PJ_ForceSpeed)
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForcePush_Apprentice, ProjectJediDefOf.PJ_ForcePush_Adept, ProjectJediDefOf.PJ_ForcePush_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForcePull_Apprentice, ProjectJediDefOf.PJ_ForcePull_Adept, ProjectJediDefOf.PJ_ForcePull_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceSpeed_Apprentice, ProjectJediDefOf.PJ_ForceSpeed_Adept, ProjectJediDefOf.PJ_ForceSpeed_Master }),
                     };
                 }
                 return forcePowersGray;
@@ -141,11 +159,11 @@ namespace ProjectJedi
                 {
                     forcePowersLight = new List<ForcePower>
                     {
-                        new ForcePower("forceHeal", 0, ProjectJediDefOf.PJ_ForceHealingSelf),
-                        new ForcePower("forceHealOther", 0, ProjectJediDefOf.PJ_ForceHealingOther),
-                        new ForcePower("forceDefense", 0, ProjectJediDefOf.PJ_ForceDefense),
-                        new ForcePower("mindTrick", 0, ProjectJediDefOf.PJ_MindTrick),
-                        new ForcePower("forceGhost", 0, ProjectJediDefOf.PJ_ForceGhost)
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceHealingSelf_Apprentice, ProjectJediDefOf.PJ_ForceHealingSelf_Adept, ProjectJediDefOf.PJ_ForceHealingSelf_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceHealingOther_Apprentice, ProjectJediDefOf.PJ_ForceHealingOther_Adept, ProjectJediDefOf.PJ_ForceHealingOther_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceDefense_Apprentice, ProjectJediDefOf.PJ_ForceDefense_Adept, ProjectJediDefOf.PJ_ForceDefense_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_MindTrick_Apprentice, ProjectJediDefOf.PJ_MindTrick_Adept, ProjectJediDefOf.PJ_MindTrick_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceGhost_Apprentice, ProjectJediDefOf.PJ_ForceGhost_Adept, ProjectJediDefOf.PJ_ForceGhost_Master })
                     };
                 }
                 return forcePowersLight;
@@ -253,11 +271,20 @@ namespace ProjectJedi
                     {
                         if (!firstTick) PostInitializeTick();
                         base.CompTick();
-                        if (forceUserXP > ForceUserXPTillNextLevel) ForceUserLevel += 1;
+                        if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
                         forceUserXP++;
                     }
                 }
             }
+        }
+
+        public void LevelUp(bool hideNotification = false)
+        {
+            ForceUserLevel += 1;
+            if (!hideNotification) Messages.Message("PJ_LevelUp".Translate(new object[]
+            {
+                this.parent.Label
+            }), MessageSound.Benefit);
         }
 
         /// <summary>
@@ -325,32 +352,60 @@ namespace ProjectJedi
             Trait sithTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
             Trait grayTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
             Trait sensitiveTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
-
+            
             if (jediTrait != null)
             {
                 switch (jediTrait.Degree)
                 {
                     case 0:
                         this.alignmentValue = 0.7f;
+                        for (int o = 0; o < 2; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                        }
                         return;
                     case 1:
                         this.alignmentValue = 0.8f;
-                        ForcePower forceHeal = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHeal");
-                        LevelUpPower(forceHeal);
+                        for (int o = 0; o < 3; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        this.ForceUserLevel += 1;
+                        this.abilityPoints -= 1;
+                        LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
                         return;
                     case 2:
                         this.alignmentValue = 0.85f;
-                        forceHeal = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHeal");
-                        LevelUpPower(forceHeal);
-                        ForcePower forceHealOther = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHealOther");
-                        LevelUpPower(forceHealOther);
+                        for (int o = 0; o < 4; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 2; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 3:
                         this.alignmentValue = 1.0f;
-                        forceHeal = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHeal");
-                        LevelUpPower(forceHeal);
-                        forceHealOther = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHealOther");
-                        LevelUpPower(forceHealOther);
+                        for (int o = 0; o < 5; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 4; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                 }
 
@@ -359,6 +414,60 @@ namespace ProjectJedi
             if (grayTrait != null)
             {
                 this.ForceAlignmentType = ForceAlignmentType.Gray; // Default to Gray
+                this.alignmentValue = Rand.Range(0.4f, 0.6f);
+
+                switch (grayTrait.Degree)
+                {
+                    case 0:
+                        for (int o = 0; o < 2; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        return;
+                    case 1:
+                        for (int o = 0; o < 3; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        this.ForceUserLevel += 1;
+                        LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                        this.abilityPoints -= 1;
+                        return;
+                    case 2:
+                        this.alignmentValue = 0.85f;
+                        for (int o = 0; o < 4; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 2; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
+                        return;
+                    case 3:
+                        this.alignmentValue = 1.0f;
+                        for (int o = 0; o < 5; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 4; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
+                        return;
+                }
             }
 
             if (sithTrait != null)
@@ -367,27 +476,54 @@ namespace ProjectJedi
                 {
                     case 0:
                         this.alignmentValue = 0.3f;
+                        for (int o = 0; o < 2; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 1:
                         this.alignmentValue = 0.2f;
-                        ForcePower forceDrain = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceDrain");
-                        LevelUpPower(forceDrain);
+                        for (int o = 0; o < 3; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        this.ForceUserLevel += 1;
+                        LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                        this.abilityPoints -= 1;
                         return;
                     case 2:
                         this.alignmentValue = 0.15f;
-                        forceDrain = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceDrain");
-                        LevelUpPower(forceDrain);
-                        ForcePower forceLightning = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceLightning");
-                        LevelUpPower(forceLightning);
+                        for (int o = 0; o < 4; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 2; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 3:
                         this.alignmentValue = 0.0f;
-                        forceDrain = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceDrain");
-                        LevelUpPower(forceDrain);
-                        forceLightning = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceLightning");
-                        LevelUpPower(forceLightning);
-                        ForcePower forceStorm = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceStorm");
-                        LevelUpPower(forceStorm);
+                        for (int o = 0; o < 5; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 4; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                 }
             }
@@ -395,6 +531,7 @@ namespace ProjectJedi
 
         public void LevelUpPower(ForcePower power)
         {
+            this.abilityPowerManager.RemovePawnAbility(power.abilityDef);
             power.level++;
             this.abilityPowerManager.AddPawnAbility(power.abilityDef);
         }

@@ -2,6 +2,11 @@
 <LanguageData>
 
 
+<!-- =========== Messages ======== -->
+<PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
+<WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
+<DrainedForcePool>{0} needs to recover their force powers.</DrainedForcePool>	
+
 <!-- ============= UI ============ -->
 <PJ_TabForce>Force</PJ_TabForce>
 <PJ_Alignment>alignment</PJ_Alignment>
@@ -18,16 +23,17 @@
 <PJ_LightsaberReflection>Lightsaber Reflection</PJ_LightsaberReflection>
 <PJ_ForcePool>Force Pool</PJ_ForcePool>
 
+<!-- =========== Skills ========== -->
+<PJ_LightsaberOffense_Desc>Increases lightsaber damage by 20% per skill point. All force users start with half damage on lightsabers until leveling this skill. Non-force users can only deal a maximum of 10 damage.</PJ_LightsaberOffense_Desc>
+<PJ_LightsaberDefense_Desc>Increases chance to block melee attacks and deflect bullets by 15% per level.</PJ_LightsaberDefense_Desc>
+<PJ_LightsaberReflection_Desc>Increases chances of reflecting deflected bullets back at targets by 20% per level.</PJ_LightsaberReflection_Desc>
+<PJ_LightsaberAccuracy_Desc>Increases rates of landing lightsaber attacks in battle by up to 20% per point.</PJ_LightsaberAccuracy_Desc>
+<PJ_ForcePool_Desc>Increases the size of the force pool by 15% per skill point.</PJ_ForcePool_Desc>
 
 <!-- ========== Buttons ========== -->
 
 <ForceAbilityDescAlign>Required Alignment: {0}</ForceAbilityDescAlign>
 <ForceAbilityDescChange>Adjusts Alignment towards the {0} side by {1}</ForceAbilityDescChange>
 <ForceAbilityDescPoints>Force Power: {0}</ForceAbilityDescPoints>
-
-<!-- ========== WARNINGS ========== -->
-
-<WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
-<DrainedForcePool>{0} needs to recover their force powers.</DrainedForcePool>	
 	
 </LanguageData>

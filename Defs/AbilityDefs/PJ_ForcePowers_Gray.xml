@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ThingDefs>
+
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ======================== GRAY POWERS ============================ -->
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->  
+  
+    <!-- ===================== Force Pull =============================== -->
+  
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForcePull">
+   <defName>PJ_PForcePull</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>force pull</label>
+   <graphicData>
+		<texPath>UI/ForceUser/ForcePull</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>PJ_ForceHealDamage</damageDef>
+		<damageAmountBase>50</damageAmountBase>
+		<speed>10</speed>
+   </projectile>
+   <IsHealer>true</IsHealer>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+
+     <!-- ===================== Force Pull (Apprentice) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForcePull_Apprentice</defName>
+    <label>Force Pull</label>
+    <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
+    <description>Pulls people or objects towards the caster.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForcePull</projectileDef>	
+		<abilityDef>PJ_ForcePull_Apprentice</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>
+  
+     <!-- ===================== Force Pull (Adept) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForcePull_Adept</defName>
+    <label>Force Pull (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
+    <description>Pulls people or objects towards the caster.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForcePull</projectileDef>	
+		<abilityDef>PJ_ForcePull_Adept</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>
+
+     <!-- ===================== Force Pull (Master) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForcePull_Master</defName>
+    <label>Force Pull (Master)</label>
+    <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
+    <description>Pulls people or objects towards the caster.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForcePull</projectileDef>	
+		<abilityDef>PJ_ForcePull_Master</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>  
+  
+    <!-- ===================== Force Push =============================== -->
+  
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForcePush">
+   <defName>PJ_PForcePush</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>force push</label>
+   <graphicData>
+		<texPath>UI/ForceUser/ForcePush</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>PJ_ForceHealDamage</damageDef>
+		<damageAmountBase>50</damageAmountBase>
+		<speed>10</speed>
+   </projectile>
+   <IsHealer>true</IsHealer>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+
+     <!-- ===================== Force Push (Apprentice) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForcePush_Apprentice</defName>
+    <label>Force Push</label>
+    <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
+    <description>Pushes people or objects away from the caster, often knocking them down with concussive force.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForcePush</projectileDef>	
+		<abilityDef>PJ_ForcePush_Apprentice</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>  
+  
+     <!-- ===================== Force Push (Adept) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForcePush_Adept</defName>
+    <label>Force Push (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
+    <description>Pushes people or objects away from the caster, often knocking them down with concussive force.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForcePush</projectileDef>	
+		<abilityDef>PJ_ForcePush_Adept</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>  
+  
+     <!-- ===================== Force Push (Master) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForcePush_Master</defName>
+    <label>Force Push (Master)</label>
+    <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
+    <description>Pushes people or objects away from the caster, often knocking them down with concussive force.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForcePush</projectileDef>	
+		<abilityDef>PJ_ForcePush_Master</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>  
+  
+    <!-- ===================== Force Speed =============================== -->
+  
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceSpeed">
+   <defName>PJ_PForceSpeed</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>force speed</label>
+   <graphicData>
+		<texPath>UI/ForceUser/ForceSpeed</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>PJ_ForceHealDamage</damageDef>
+		<damageAmountBase>50</damageAmountBase>
+		<speed>10</speed>
+   </projectile>
+   <IsHealer>true</IsHealer>
+   <HealFailChance>0.1</HealFailChance>
+ </ThingDef>
+
+     <!-- ===================== Force Speed (Apprentice) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceSpeed_Apprentice</defName>
+    <label>Force Speed</label>
+    <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
+    <description>Increases the running speed of the caster for a short time.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForceSpeed</projectileDef>	
+		<abilityDef>PJ_ForceSpeed_Apprentice</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>    
+
+     <!-- ===================== Force Speed (Adept) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceSpeed_Adept</defName>
+    <label>Force Speed (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
+    <description>Increases the running speed of the caster for a short time.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForceSpeed</projectileDef>	
+		<abilityDef>PJ_ForceSpeed_Adept</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>    
+
+     <!-- ===================== Force Speed (Master) =============================== -->
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceSpeed_Master</defName>
+    <label>Force Speed (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
+    <description>Increases the running speed of the caster for a short time.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.5</forcePoolCost>
+	<requiresAlignment>false</requiresAlignment>
+	<changesAlignment>false</changesAlignment>	
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PJ_PForceSpeed</projectileDef>	
+		<abilityDef>PJ_ForceSpeed_Master</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <range>24</range>
+        <burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <soundCast>MessageBenefit</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+    </MainVerb>
+  </ThingDef>    
+  
+</ThingDefs>

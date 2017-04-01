@@ -40,6 +40,7 @@ namespace ProjectJedi
                 if (base.SelPawn.story != null)
                 {
                     return (base.SelPawn.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
+                        base.SelPawn.story.traits.HasTrait(ProjectJediDefOf.PJ_GrayTrait) ||
                         base.SelPawn.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
                         base.SelPawn.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive));
                 }

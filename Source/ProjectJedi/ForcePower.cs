@@ -10,9 +10,32 @@ namespace ProjectJedi
 {
     public class ForcePower : IExposable
     {
-        public string label;
+        public List<AbilityDef> abilityDefs;
         public int level;
-        public AbilityDef abilityDef;
+        public AbilityDef abilityDef
+        {
+            get
+            {
+                AbilityDef result = null;
+                if (abilityDefs != null && abilityDefs.Count > 0)
+                {
+                    result = abilityDefs[0];
+
+                    int index = level - 1;
+                    if (index > -1 && index < abilityDefs.Count) result = abilityDefs[level - 1];
+                    else if (index >= abilityDefs.Count)
+                    {
+                        result = abilityDefs[abilityDefs.Count - 1];
+                    }
+                }
+                return result;
+            }
+        }
+
+        public AbilityDef HasAbilityDef(AbilityDef defToFind)
+        {
+            return this.abilityDefs.FirstOrDefault((AbilityDef x) => x == defToFind);
+        }
 
         public ForcePower()
         {
@@ -27,22 +50,16 @@ namespace ProjectJedi
             }
         }
 
-        public ForcePower(String newLabel, int newLevel, AbilityDef newAbilityDef)
+        public ForcePower(List<AbilityDef> newAbilityDefs)
         {
-            label = newLabel;
-            level = newLevel;
-            abilityDef = newAbilityDef;
+            level = 0;
+            abilityDefs = newAbilityDefs;
         }
 
         public void ExposeData()
         {
-            Scribe_Values.LookValue<string>(ref label, "label", "default");
-
-            //Scribe_Deep.LookDeep<Texture2D>(ref this.icon, "icon", null);
-            //Scribe_References.LookReference<Texture2D>(ref this.icon, "icon");
-            //Scribe_Values.LookValue<Texture2D>(ref icon, "icon", TexButton.PJTex_MindTrick);
             Scribe_Values.LookValue<int>(ref level, "level", 0);
-            Scribe_Defs.LookDef<AbilityDef>(ref this.abilityDef, "abilityDef");
+            Scribe_Collections.LookList<AbilityDef>(ref abilityDefs, "abilityDefs", LookMode.Def, null);
         }
     }
 }

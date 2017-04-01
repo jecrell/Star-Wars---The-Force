@@ -9,6 +9,7 @@ namespace ProjectJedi
     public class ForceSkill : IExposable
     {
         public string label;
+        public string desc;
         public int level;
 
         public ForceSkill()
@@ -16,15 +17,17 @@ namespace ProjectJedi
 
         }
 
-        public ForceSkill(String newLabel, int newLevel)
+        public ForceSkill(String newLabel, String newDesc)
         {
             label = newLabel;
-            level = newLevel;
+            desc = newDesc;
+            level = 0;
         }
 
         public void ExposeData()
         {
             Scribe_Values.LookValue<string>(ref label, "label", "default");
+            Scribe_Values.LookValue<string>(ref desc, "desc", "default");
             Scribe_Values.LookValue<int>(ref level, "level", 0);
         }
     }

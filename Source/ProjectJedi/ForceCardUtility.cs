@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using Harmony;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ProjectJedi
     public class ForceCardUtility
     {
         // RimWorld.CharacterCardUtility
-        public static Vector2 ForceCardSize = new Vector2(385f, 520f);
+        public static Vector2 ForceCardSize = new Vector2(395f, 536f);
 
         public static float ButtonSize = 40f;
 
@@ -27,13 +28,15 @@ namespace ProjectJedi
 
         public static float SpacingOffset = 15f;
 
+        public static float SectionOffset = 8f;
+
         public static float ColumnSize = 245f;
 
         public static float SkillsColumnHeight = 113f;
 
         public static float SkillsColumnDivider = 114f;
 
-        public static float SkillsTextWidth = 133f;
+        public static float SkillsTextWidth = 138f;
 
         public static float SkillsBoxSize = 18f;
 
@@ -75,14 +78,14 @@ namespace ProjectJedi
             // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
             float skillsTextSize = Text.CalcSize("PJ_Skills".Translate()).x;
-            Rect rectSkillsLabel = new Rect((rectAlignmentLabels.width / 2) - skillsTextSize, rectAlignment.yMax + 3, rectAlignment.width, HeaderSize);
+            Rect rectSkillsLabel = new Rect((rectAlignmentLabels.width / 2) - skillsTextSize, rectAlignment.yMax + SectionOffset, rect.width, HeaderSize);
             Text.Font = GameFont.Medium;
             Widgets.Label(rectSkillsLabel, "PJ_Skills".Translate().CapitalizeFirst());
             Text.Font = GameFont.Small;
             
             //                               Skills
 
-            Widgets.DrawLineHorizontal(rect.x - 10, rectSkillsLabel.yMax + Padding, rectSkillsLabel.width - 15f);
+            Widgets.DrawLineHorizontal(rect.x - 10, rectSkillsLabel.yMax + Padding, rect.width - 15f);
             //---------------------------------------------------------------------
 
             Rect rectSkills = new Rect(rect.x, rectSkillsLabel.yMax + Padding, rectSkillsLabel.width, SkillsColumnHeight);
@@ -98,17 +101,17 @@ namespace ProjectJedi
             //
 
             float powersTextSize = Text.CalcSize("PJ_Powers".Translate()).x;
-            Rect rectPowersLabel = new Rect((rectSkills.width / 2) - powersTextSize, rectSkills.yMax, rectSkills.width, HeaderSize);
+            Rect rectPowersLabel = new Rect((rect.width / 2) - (powersTextSize /2), rectSkills.yMax + SectionOffset, rect.width, HeaderSize);
             Text.Font = GameFont.Medium;
             Widgets.Label(rectPowersLabel, "PJ_Powers".Translate().CapitalizeFirst());
             Text.Font = GameFont.Small;
 
             //Powers
 
-            Widgets.DrawLineHorizontal(rect.x - 10, rectPowersLabel.yMax, rectPowersLabel.width - 15f);
+            Widgets.DrawLineHorizontal(rect.x - 10, rectPowersLabel.yMax, rect.width - 15f);
             //---------------------------------------------------------------------
 
-            Rect rectPowers = new Rect(rect.x, rectPowersLabel.yMax + 3f, rectPowersLabel.width, PowersColumnHeight);
+            Rect rectPowers = new Rect(rect.x, rectPowersLabel.yMax + SectionOffset, rectPowersLabel.width, PowersColumnHeight);
             Rect rectPowersDark = new Rect(rectPowers.x, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
             Rect rectPowersGray = new Rect(rectPowers.x + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
             Rect rectPowersLight = new Rect(rectPowers.x + PowersColumnWidth + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
@@ -146,7 +149,7 @@ namespace ProjectJedi
                 num2 *= Mathf.InverseLerp(0f, 50f, rect.height);
             }
             Text.Anchor = TextAnchor.UpperLeft;
-            Rect rect3 = new Rect(rect.x, rect.y + rect.height / 2f, rect.width, rect.height);
+            Rect rect3 = new Rect(rect.x, rect.y + rect.height / 2f, rect.width - 10f, rect.height);
             rect3 = new Rect(rect3.x, rect3.y, rect3.width, rect3.height - num2);
             Widgets.FillableBar(rect3, 1.0f, TexButton.PJTex_AlignmentBar);
             float curInstantLevelPercentage = compForce.AlignmentValue;
@@ -180,13 +183,13 @@ namespace ProjectJedi
             //Level 0
 
             Rect rectPointsAvail = new Rect(inRect.x, rectLevel.yMax, inRect.width, TextSize);
-            Text.Font = GameFont.Small;
+            Text.Font = GameFont.Tiny;
             Widgets.Label(rectPointsAvail, compForce.abilityPoints + " " + "PJ_PointsAvail".Translate());
             Text.Font = GameFont.Small;
 
             //0 points available
 
-            Rect rectLevelBar = new Rect(rectPointsAvail.x, rectPointsAvail.yMax, inRect.width, HeaderSize);
+            Rect rectLevelBar = new Rect(rectPointsAvail.x, rectPointsAvail.yMax + 3f, inRect.width - 10f, HeaderSize * 0.6f);
             DrawLevelBar(rectLevelBar, compForce);
 
         }
@@ -212,7 +215,7 @@ namespace ProjectJedi
             Text.Anchor = TextAnchor.UpperLeft;
             Rect rect3 = new Rect(rect.x, rect.y + rect.height / 2f, rect.width, rect.height);
             rect3 = new Rect(rect3.x, rect3.y, rect3.width, rect3.height - num2);
-            Widgets.FillableBar(rect3, compForce.XPTillNextLevelPercent);
+            Widgets.FillableBar(rect3, compForce.XPTillNextLevelPercent, (Texture2D)AccessTools.Field(typeof(Widgets), "BarFullTexHor").GetValue(null), BaseContent.GreyTex, false);
         }
         #endregion InfoPane
 
@@ -226,6 +229,8 @@ namespace ProjectJedi
                 Rect lightsaberOffense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
                 Rect lightsaberOffenseLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
                 Widgets.Label(lightsaberOffenseLabel, skill.label.Translate());
+
+                TooltipHandler.TipRegion(lightsaberOffenseLabel, new TipSignal(() => skill.desc.Translate(), lightsaberOffenseLabel.GetHashCode()));
                 Rect lightsaberOffensiveBoxes = new Rect(lightsaberOffenseLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
 
                 for (int i = 1; i <= 5; i++)
@@ -236,7 +241,7 @@ namespace ProjectJedi
                         Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                         continue;
                     }
-                    else if (i - skill.level == 1 && compForce.abilityPoints > 0)
+                    else if (i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 4)
                     {
                         //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
                         if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
