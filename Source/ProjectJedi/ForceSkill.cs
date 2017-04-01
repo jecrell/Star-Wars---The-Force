@@ -11,6 +11,11 @@ namespace ProjectJedi
         public string label;
         public int level;
 
+        public ForceSkill()
+        {
+
+        }
+
         public ForceSkill(String newLabel, int newLevel)
         {
             label = newLabel;

@@ -26,6 +26,11 @@ namespace ProjectJedi
         public static readonly Texture2D PJTex_ForcePush = ContentFinder<Texture2D>.Get("UI/ForceUser/ForcePush", true);
         public static readonly Texture2D PJTex_ForceSpeed = ContentFinder<Texture2D>.Get("UI/ForceUser/ForceSpeed", true);
 
+        public static readonly Texture2D PJTex_ForcePointLight = ContentFinder<Texture2D>.Get("UI/ForcePointLight", true);
+        public static readonly Texture2D PJTex_ForcePointGray = ContentFinder<Texture2D>.Get("UI/ForcePointGray", true);
+        public static readonly Texture2D PJTex_ForcePointDark = ContentFinder<Texture2D>.Get("UI/ForcePointDark", true);
+        public static readonly Texture2D PJTex_ForcePointDim = ContentFinder<Texture2D>.Get("UI/ForcePointDim", true);
+
 
         //Dark Side
         public static readonly Texture2D PJTex_ForceRage = ContentFinder<Texture2D>.Get("UI/ForceUser/ForceRage", true);

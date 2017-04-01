@@ -11,9 +11,13 @@ namespace ProjectJedi
     public class ForceCardUtility
     {
         // RimWorld.CharacterCardUtility
-        public static Vector2 ForceCardSize = new Vector2(377f, 449f);
+        public static Vector2 ForceCardSize = new Vector2(385f, 520f);
 
         public static float ButtonSize = 40f;
+
+        public static float ForceButtonSize = 46f;
+
+        public static float ForceButtonPointSize = 24f;
 
         public static float HeaderSize = 32f;
 
@@ -35,7 +39,7 @@ namespace ProjectJedi
 
         public static float PowersColumnHeight = 195f;
 
-        public static float PowersColumnWidth = 103f;
+        public static float PowersColumnWidth = 123f;
 
         // RimWorld.CharacterCardUtility
         public static void DrawForceCard(Rect rect, Pawn pawn)
@@ -65,13 +69,13 @@ namespace ProjectJedi
             Widgets.Label(rectAlignmentLight, "PJ_Light".Translate().CapitalizeFirst());
 
             //Dark                        Gray                        Light
-            Rect rectAlignment = new Rect(rect.x, rectAlignmentLabels.yMax / 1.5f, rectAlignmentLabels.width - 10f, TextSize);
+            Rect rectAlignment = new Rect(rect.x, rectAlignmentLabels.yMax / 1.5f, rectAlignmentLabels.width - 20f, TextSize);
 
             AlignmentOnGUI(rectAlignment, pawn.GetComp<CompForceUser>());
             // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
             float skillsTextSize = Text.CalcSize("PJ_Skills".Translate()).x;
-            Rect rectSkillsLabel = new Rect((rectAlignment.width / 2) - skillsTextSize, rectAlignment.yMax + 3, rectAlignment.width, HeaderSize);
+            Rect rectSkillsLabel = new Rect((rectAlignmentLabels.width / 2) - skillsTextSize, rectAlignment.yMax + 3, rectAlignment.width, HeaderSize);
             Text.Font = GameFont.Medium;
             Widgets.Label(rectSkillsLabel, "PJ_Skills".Translate().CapitalizeFirst());
             Text.Font = GameFont.Small;
@@ -104,14 +108,14 @@ namespace ProjectJedi
             Widgets.DrawLineHorizontal(rect.x - 10, rectPowersLabel.yMax, rectPowersLabel.width - 15f);
             //---------------------------------------------------------------------
 
-            Rect rectPowers = new Rect(rect.x, rectPowersLabel.yMax, rectPowersLabel.width, PowersColumnHeight);
+            Rect rectPowers = new Rect(rect.x, rectPowersLabel.yMax + 3f, rectPowersLabel.width, PowersColumnHeight);
             Rect rectPowersDark = new Rect(rectPowers.x, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
             Rect rectPowersGray = new Rect(rectPowers.x + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
             Rect rectPowersLight = new Rect(rectPowers.x + PowersColumnWidth + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
 
-            PowersDark(rectPowersDark);
-            PowersGray(rectPowersGray);
-            PowersLight(rectPowersLight);
+            PowersGUIHandler(rectPowersDark, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersDark, TexButton.PJTex_ForcePointDark);
+            PowersGUIHandler(rectPowersGray, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersGray, TexButton.PJTex_ForcePointGray);
+            PowersGUIHandler(rectPowersLight, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersLight, TexButton.PJTex_ForcePointLight);
 
             GUI.EndGroup();
         }
@@ -217,209 +221,78 @@ namespace ProjectJedi
         {
             float currentYOffset = inRect.y;
 
-            //Lightsaber Offense
-            Rect lightsaberOffense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
-            Rect lightsaberOffenseLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
-            Widgets.Label(lightsaberOffenseLabel, "PJ_LightsaberOffense".Translate());
-            Rect lightsaberOffensiveBoxes = new Rect(lightsaberOffenseLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
-
-            for (int i = 1; i <= 5; i++)
+            foreach (ForceSkill skill in compForce.ForceSkills)
             {
-                Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
-                if (compForce.levelLightsaberOff >= i)
+                Rect lightsaberOffense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
+                Rect lightsaberOffenseLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
+                Widgets.Label(lightsaberOffenseLabel, skill.label.Translate());
+                Rect lightsaberOffensiveBoxes = new Rect(lightsaberOffenseLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
+
+                for (int i = 1; i <= 5; i++)
                 {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-                    continue;
-                }
-                else if (i - compForce.levelLightsaberOff == 1 && compForce.abilityPoints > 0)
-                {
-                    //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
+                    Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
+                    if (skill.level >= i)
                     {
-                        compForce.abilityPoints--;
-                        compForce.levelLightsaberOff++;
+                        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
+                        continue;
                     }
-                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
-                    continue;
-                }
-                else
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-                    continue;
-                }
-            }
-
-            currentYOffset += TextSize;
-
-            //Lightsaber Defense
-            Rect lightsaberDefense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
-            Rect lightsaberDefenseLabel = new Rect(inRect.x, lightsaberDefense.y, SkillsTextWidth, TextSize);
-            Widgets.Label(lightsaberDefenseLabel, "PJ_LightsaberDefense".Translate());
-            Rect lightsaberDefenseBoxes = new Rect(lightsaberDefenseLabel.xMax, lightsaberDefense.y, inRect.width - SkillsTextWidth, TextSize);
-
-            for (int i = 1; i <= 5; i++)
-            {
-                Rect lightsaberCheckbox = new Rect(lightsaberDefenseBoxes.x + (SkillsBoxSize * i), lightsaberDefenseBoxes.y, SkillsBoxSize, TextSize);
-                if (compForce.levelLightsaberDef >= i)
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-                    continue;
-                }
-                else if (i - compForce.levelLightsaberDef == 1 && compForce.abilityPoints > 0)
-                {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
+                    else if (i - skill.level == 1 && compForce.abilityPoints > 0)
                     {
-                        compForce.abilityPoints--;
-                        compForce.levelLightsaberDef++;
+                        //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
+                        if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
+                        {
+                            compForce.abilityPoints--;
+                            skill.level++;
+                        }
+                        //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                        continue;
                     }
-                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
-                    continue;
-                }
-                else
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-                    continue;
-                }
-            }
-
-            currentYOffset += TextSize;
-
-            //Lightsaber Accuracy
-            Rect lightsaberAccuracy = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
-            Rect lightsaberAccuracyLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
-            Widgets.Label(lightsaberAccuracyLabel, "PJ_LightsaberAccuracy".Translate());
-            Rect lightsaberAccuracyBoxes = new Rect(lightsaberAccuracyLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
-
-            for (int i = 1; i <= 5; i++)
-            {
-                Rect lightsaberCheckbox = new Rect(lightsaberAccuracyBoxes.x + (SkillsBoxSize * i), lightsaberAccuracyBoxes.y, SkillsBoxSize, TextSize);
-                if (compForce.levelLightsaberAcc >= i)
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-                    continue;
-                }
-                else if (i - compForce.levelLightsaberAcc == 1 && compForce.abilityPoints > 0)
-                {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
+                    else
                     {
-                        compForce.abilityPoints--;
-                        compForce.levelLightsaberAcc++;
+                        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
+                        continue;
                     }
-                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
-                    continue;
                 }
-                else
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-                    continue;
-                }
-            }
-            currentYOffset += TextSize;
 
-            //Lightsaber Reflection
-            Rect lightsaberReflect = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
-            Rect lightsaberReflectLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
-            Widgets.Label(lightsaberReflectLabel, "PJ_LightsaberReflection".Translate());
-            Rect lightsaberReflectBoxes = new Rect(lightsaberReflectLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
-
-            for (int i = 1; i <= 5; i++)
-            {
-                Rect lightsaberCheckbox = new Rect(lightsaberReflectBoxes.x + (SkillsBoxSize * i), lightsaberReflectBoxes.y, SkillsBoxSize, TextSize);
-                if (compForce.levelLightsaberRef >= i)
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-                    continue;
-                }
-                else if (i - compForce.levelLightsaberRef == 1 && compForce.abilityPoints > 0)
-                {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
-                    {
-                        compForce.abilityPoints--;
-                        compForce.levelLightsaberRef++;
-                    }
-                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
-                    continue;
-                }
-                else
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-                    continue;
-                }
-            }
-            currentYOffset += TextSize;
-
-            //Force Pool
-            Rect forcePool = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
-            Rect forcePoolLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
-            Widgets.Label(forcePoolLabel, "PJ_ForcePool".Translate());
-            Rect forcePoolBoxes = new Rect(forcePoolLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
-
-            for (int i = 1; i <= 5; i++)
-            {
-                Rect lightsaberCheckbox = new Rect(forcePoolBoxes.x + (SkillsBoxSize * i), forcePoolBoxes.y, SkillsBoxSize, TextSize);
-                if (compForce.levelForcePool >= i)
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-                    continue;
-                }
-                else if (i - compForce.levelForcePool == 1 && compForce.abilityPoints > 0)
-                {
-                    if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
-                    {
-                        compForce.abilityPoints--;
-                        compForce.levelForcePool++;
-                    }
-                    //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
-                    continue;
-                }
-                else
-                {
-                    Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-                    continue;
-                }
+                currentYOffset += TextSize;
             }
         }
         #endregion SkillsPane
 
-        #region PowersDark
-        public static void PowersDark(Rect inRect)
+        #region PowersGUI
+        public static void PowersGUIHandler(Rect inRect, CompForceUser compForce, List<ForcePower> forcePowers, Texture2D pointTexture)
         {
-            //float currentYOffset = inRect.y;
+            float buttonYOffset = inRect.y;
+            foreach (ForcePower power in forcePowers)
+            {
+                if (compForce.abilityPoints == 0)
+                {
+                    Widgets.DrawTextureFitted(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon, 1.0f);
+                }
+                else if(Widgets.ButtonImage(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon))
+                {
+                    compForce.LevelUpPower(power);
+                    compForce.abilityPoints--;
+                }
+                for (int i = 0; i < 3; i++)
+                {
+                    float drawXOffset = ForceButtonSize + 1f;
+                    if (i != 0) drawXOffset += (ForceButtonPointSize * i);
 
-            //if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
-            //{
-            //    compForce.abilityPoints--;
-            //    compForce.levelLightsaberOff++;
-            //}
-            
-            //for (int i = 1; i <= 3; i++)
-            //{
-            //    Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
-            //    if (compForce.levelLightsaberOff >= i)
-            //    {
-            //        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-            //        continue;
-            //    }
-            //    else
-            //    {
-            //        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-            //        continue;
-            //    }
-            //}
+                    float drawYOffset = buttonYOffset + (ForceButtonSize / 3f);
+
+                    if (power.level > i)
+                    {
+                        Widgets.DrawTextureFitted(new Rect(inRect.x + drawXOffset, drawYOffset, ForceButtonPointSize, ForceButtonPointSize), pointTexture, 1.0f);
+                    }
+                    else
+                    {
+                        Widgets.DrawTextureFitted(new Rect(inRect.x + drawXOffset, drawYOffset, ForceButtonPointSize, ForceButtonPointSize), TexButton.PJTex_ForcePointDim, 1.0f);
+                    }
+                }
+                buttonYOffset += ForceButtonSize + 1;
+            }
         }
-        #endregion PowersDark
-        #region PowersGray
-        public static void PowersGray(Rect inRect)
-        {
-
-        }
-        #endregion PowersGray
-        #region PowersLight
-        public static void PowersLight(Rect inRect)
-        {
-
-        }
-        #endregion PowersLight
-
+        #endregion PowersGUI
     }
 }

@@ -15,7 +15,7 @@
         <description>NAME has begun to control the force, but requires further training and guidance.</description>
 		<degree>2</degree>
       </li>	  	  
-    </degreeDatas>
+    </degreeDatas>	
   </TraitDef>
   
   <TraitDef>
@@ -43,6 +43,10 @@
 		        <degree>4</degree>
       </li>	  	  
     </degreeDatas>
+    <conflictingTraits>
+      <li>PJ_SithTrait</li>
+	  <li>PJ_GrayTrait</li>
+    </conflictingTraits>	
   </TraitDef>
 
   <TraitDef>
@@ -73,6 +77,10 @@
     <requiredWorkTags>
       <li>Violent</li>
     </requiredWorkTags>	
+    <conflictingTraits>
+      <li>PJ_JediTrait</li>
+	  <li>PJ_GrayTrait</li>
+    </conflictingTraits>		
   </TraitDef>  
   
   
@@ -101,6 +109,10 @@
 		        <degree>4</degree>
       </li>	  	  
     </degreeDatas>
+    <conflictingTraits>
+      <li>PJ_JediTrait</li>
+	  <li>PJ_SithTrait</li>
+    </conflictingTraits>	
   </TraitDef>  
 
 </TraitDefs>

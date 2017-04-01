@@ -74,7 +74,7 @@ namespace ProjectJedi
             }
         }
 
-        public List<ForceSkill> forceSkills = new List<ForceSkill>();
+        public List<ForceSkill> forceSkills;
         public List<ForceSkill> ForceSkills
         {
             get
@@ -83,18 +83,19 @@ namespace ProjectJedi
                 {
                     forceSkills = new List<ForceSkill>
                     {
-                        new ForceSkill("lightsaberOffense", 0),
-                        new ForceSkill("lightsaberDefense", 0),
-                        new ForceSkill("lightsaberAccuracy", 0),
-                        new ForceSkill("lightsaberReflection", 0),
-                        new ForceSkill("forcePool", 0)
+                        new ForceSkill("PJ_LightsaberOffense", 0),
+                        new ForceSkill("PJ_LightsaberDefense", 0),
+                        new ForceSkill("PJ_LightsaberAccuracy", 0),
+                        new ForceSkill("PJ_LightsaberReflection", 0),
+                        new ForceSkill("PJ_ForcePool", 0)
                     };
                 }
                 return forceSkills;
             }
         }
 
-        public List<ForcePower> forcePowersDark = new List<ForcePower>();
+        public bool forcePowersInitialized = false;
+        public List<ForcePower> forcePowersDark;
         public List<ForcePower> ForcePowersDark
         {
             get
@@ -103,18 +104,18 @@ namespace ProjectJedi
                 {
                     forcePowersDark = new List<ForcePower>
                     {
-                        new ForcePower("forceRage", TexButton.PJTex_ForceRage, 0),
-                        new ForcePower("forceChoke", TexButton.PJTex_ForceChoke, 0),
-                        new ForcePower("forceDrain", TexButton.PJTex_ForceDrain, 0),
-                        new ForcePower("forceLightning", TexButton.PJTex_ForceLightning, 0),
-                        new ForcePower("forceStorm", TexButton.PJTex_ForceStorm, 0)
+                        new ForcePower("forceRage", 0, ProjectJediDefOf.PJ_ForceRage),
+                        new ForcePower("forceChoke", 0, ProjectJediDefOf.PJ_ForceChoke),
+                        new ForcePower("forceDrain", 0, ProjectJediDefOf.PJ_ForceDrain),
+                        new ForcePower("forceLightning", 0, ProjectJediDefOf.PJ_ForceLightning),
+                        new ForcePower("forceStorm", 0, ProjectJediDefOf.PJ_ForceStorm)
                     };
                 }
                 return forcePowersDark;
             }
         }
 
-        public List<ForcePower> forcePowersGray = new List<ForcePower>();
+        public List<ForcePower> forcePowersGray;
         public List<ForcePower> ForcePowersGray
         {
             get
@@ -123,15 +124,15 @@ namespace ProjectJedi
                 {
                     forcePowersGray = new List<ForcePower>
                     {
-                        new ForcePower("forcePush", TexButton.PJTex_ForcePush, 0),
-                        new ForcePower("forcePull", TexButton.PJTex_ForcePull, 0),
-                        new ForcePower("forceSpeed", TexButton.PJTex_ForceSpeed, 0)
+                        new ForcePower("forcePush", 0, ProjectJediDefOf.PJ_ForcePush),
+                        new ForcePower("forcePull", 0, ProjectJediDefOf.PJ_ForcePull),
+                        new ForcePower("forceSpeed", 0, ProjectJediDefOf.PJ_ForceSpeed)
                     };
                 }
                 return forcePowersGray;
             }
         }
-        public List<ForcePower> forcePowersLight = new List<ForcePower>();
+        public List<ForcePower> forcePowersLight;
         public List<ForcePower> ForcePowersLight
         {
             get
@@ -140,11 +141,11 @@ namespace ProjectJedi
                 {
                     forcePowersLight = new List<ForcePower>
                     {
-                        new ForcePower("forceHeal", TexButton.PJTex_ForceHeal, 0),
-                        new ForcePower("forceHealOther", TexButton.PJTex_ForceHealOther, 0),
-                        new ForcePower("forceDefense", TexButton.PJTex_ForceDefense, 0),
-                        new ForcePower("mindTrick", TexButton.PJTex_MindTrick, 0),
-                        new ForcePower("forceGhost", TexButton.PJTex_ForceGhost, 0)
+                        new ForcePower("forceHeal", 0, ProjectJediDefOf.PJ_ForceHealingSelf),
+                        new ForcePower("forceHealOther", 0, ProjectJediDefOf.PJ_ForceHealingOther),
+                        new ForcePower("forceDefense", 0, ProjectJediDefOf.PJ_ForceDefense),
+                        new ForcePower("mindTrick", 0, ProjectJediDefOf.PJ_MindTrick),
+                        new ForcePower("forceGhost", 0, ProjectJediDefOf.PJ_ForceGhost)
                     };
                 }
                 return forcePowersLight;
@@ -154,11 +155,11 @@ namespace ProjectJedi
 
         public int abilityPoints = 0;
 
-        public int levelLightsaberOff = 4;
-        public int levelLightsaberDef = 3;
-        public int levelLightsaberAcc = 2;
-        public int levelLightsaberRef = 1;
-        public int levelForcePool = 0;
+        //public int levelLightsaberOff = 4;
+        //public int levelLightsaberDef = 3;
+        //public int levelLightsaberAcc = 2;
+        //public int levelLightsaberRef = 1;
+        //public int levelForcePool = 0;
 
         /// <summary>
         /// Keep track of an internal alignment.
@@ -178,7 +179,7 @@ namespace ProjectJedi
         }
 
         public ForceAlignmentType ForceAlignmentType
-        { 
+        {
             set
             {
                 switch (value)
@@ -231,6 +232,7 @@ namespace ProjectJedi
                     {
                         if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
                             this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
+                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_GrayTrait) ||
                             this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive))
                         {
                             return true;
@@ -308,29 +310,93 @@ namespace ProjectJedi
 
         public void ResolveForcePowers()
         {
+
             //Set the force alignment
-            this.ForceAlignmentType = ForceAlignmentType.Gray; // Default to Gray
-            if (this.abilityPowerManager == null) {
+            if (this.abilityPowerManager == null)
+            {
                 Log.Message("Null handled");
                 this.abilityPowerManager = new AbilityPowerManager(this);
             }
-            if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait))
-            {
 
-                this.ForceAlignmentType = ForceAlignmentType.Light;
-                // !! DEBUG -- TO BE REMOVED LATER !!
-                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingSelf);
-                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceHealingOther);
-            }
-            if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait))
+            if (forcePowersInitialized) return;
+            forcePowersInitialized = true;
+
+            Trait jediTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
+            Trait sithTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
+            Trait grayTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
+            Trait sensitiveTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
+
+            if (jediTrait != null)
             {
-                this.ForceAlignmentType = ForceAlignmentType.Dark;
+                switch (jediTrait.Degree)
+                {
+                    case 0:
+                        this.alignmentValue = 0.7f;
+                        return;
+                    case 1:
+                        this.alignmentValue = 0.8f;
+                        ForcePower forceHeal = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHeal");
+                        LevelUpPower(forceHeal);
+                        return;
+                    case 2:
+                        this.alignmentValue = 0.85f;
+                        forceHeal = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHeal");
+                        LevelUpPower(forceHeal);
+                        ForcePower forceHealOther = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHealOther");
+                        LevelUpPower(forceHealOther);
+                        return;
+                    case 3:
+                        this.alignmentValue = 1.0f;
+                        forceHeal = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHeal");
+                        LevelUpPower(forceHeal);
+                        forceHealOther = this.ForcePowersLight.FirstOrDefault((ForcePower x) => x.label == "forceHealOther");
+                        LevelUpPower(forceHealOther);
+                        return;
+                }
 
                 // !! DEBUG -- TO BE REMOVED LATER !!
-                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceDrain);
-                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceLightning);
-                this.abilityPowerManager.AddPawnAbility(ProjectJedi.ProjectJediDefOf.PJ_ForceStorm);
             }
+            if (grayTrait != null)
+            {
+                this.ForceAlignmentType = ForceAlignmentType.Gray; // Default to Gray
+            }
+
+            if (sithTrait != null)
+            {
+                switch (sithTrait.Degree)
+                {
+                    case 0:
+                        this.alignmentValue = 0.3f;
+                        return;
+                    case 1:
+                        this.alignmentValue = 0.2f;
+                        ForcePower forceDrain = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceDrain");
+                        LevelUpPower(forceDrain);
+                        return;
+                    case 2:
+                        this.alignmentValue = 0.15f;
+                        forceDrain = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceDrain");
+                        LevelUpPower(forceDrain);
+                        ForcePower forceLightning = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceLightning");
+                        LevelUpPower(forceLightning);
+                        return;
+                    case 3:
+                        this.alignmentValue = 0.0f;
+                        forceDrain = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceDrain");
+                        LevelUpPower(forceDrain);
+                        forceLightning = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceLightning");
+                        LevelUpPower(forceLightning);
+                        ForcePower forceStorm = this.ForcePowersDark.FirstOrDefault((ForcePower x) => x.label == "forceStorm");
+                        LevelUpPower(forceStorm);
+                        return;
+                }
+            }
+        }
+
+        public void LevelUpPower(ForcePower power)
+        {
+            power.level++;
+            this.abilityPowerManager.AddPawnAbility(power.abilityDef);
         }
 
         public void ResolveForcePool()
@@ -459,52 +525,68 @@ namespace ProjectJedi
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue<float>(ref this.alignmentValue, "alignmentValue", 0.0f);
+            Scribe_Values.LookValue<float>(ref this.alignmentValue, "alignmentValue", 0.5f);
             Scribe_Values.LookValue<int>(ref this.forceUserLevel, "forceUserLevel", 0);
             Scribe_Values.LookValue<int>(ref this.forceUserXP, "forceUserXP");
-            Scribe_Values.LookValue<int>(ref this.levelLightsaberOff, "levelLightsaberOff", 0);
-            Scribe_Values.LookValue<int>(ref this.levelLightsaberDef, "levelLightsaberDef", 0);
-            Scribe_Values.LookValue<int>(ref this.levelLightsaberAcc, "levelLightsaberAcc", 0);
-            Scribe_Values.LookValue<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
-            Scribe_Values.LookValue<int>(ref this.levelForcePool, "levelForcePool", 0);
+            Scribe_Values.LookValue<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", false);
+            //Scribe_Values.LookValue<int>(ref this.levelLightsaberOff, "levelLightsaberOff", 0);
+            //Scribe_Values.LookValue<int>(ref this.levelLightsaberDef, "levelLightsaberDef", 0);
+            //Scribe_Values.LookValue<int>(ref this.levelLightsaberAcc, "levelLightsaberAcc", 0);
+            //Scribe_Values.LookValue<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
+            //Scribe_Values.LookValue<int>(ref this.levelForcePool, "levelForcePool", 0);
             Scribe_Values.LookValue<int>(ref this.abilityPoints, "abilityPoints", 0);
-            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep);
-            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep);
-            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep);
+            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, null);
+            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, null);
+            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, null);
+            Scribe_Collections.LookList<ForceSkill>(ref this.forceSkills, "forceSkills", LookMode.Deep, null);
 
-            if (Scribe.mode == LoadSaveMode.LoadingVars)
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                if (forcePowersDark == null)
+
+                if (this.abilityPowerManager == null) this.abilityPowerManager = new AbilityPowerManager(this);
+
+                if (ForcePowersDark != null && ForcePowersDark.Count > 0)
                 {
-                    forcePowersDark = new List<ForcePower>
+                    foreach (ForcePower power in ForcePowersDark)
                     {
-                        new ForcePower("forceRage", TexButton.PJTex_ForceRage, 0),
-                        new ForcePower("forceChoke", TexButton.PJTex_ForceChoke, 0),
-                        new ForcePower("forceDrain", TexButton.PJTex_ForceDrain, 0),
-                        new ForcePower("forceLightning", TexButton.PJTex_ForceLightning, 0),
-                        new ForcePower("forceStorm", TexButton.PJTex_ForceStorm, 0)
-                    };
+                        if (power.abilityDef != null)
+                        {
+                            if (power.level > 0)
+                            {
+                                this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+                            }
+                        }
+                    }
                 }
-                if (forcePowersGray == null)
+
+                if (ForcePowersGray != null && ForcePowersGray.Count > 0)
                 {
-                    forcePowersGray = new List<ForcePower>
+                    foreach (ForcePower power in ForcePowersGray)
                     {
-                        new ForcePower("forcePush", TexButton.PJTex_ForcePush, 0),
-                        new ForcePower("forcePull", TexButton.PJTex_ForcePull, 0),
-                        new ForcePower("forceSpeed", TexButton.PJTex_ForceSpeed, 0)
-                    };
+                        if (power.abilityDef != null)
+                        {
+                            if (power.level > 0)
+                            {
+                                this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+                            }
+                        }
+                    }
                 }
-                if (forcePowersLight == null)
+
+                if (ForcePowersLight != null && ForcePowersLight.Count > 0)
                 {
-                    forcePowersLight = new List<ForcePower>
+                    foreach (ForcePower power in ForcePowersLight)
                     {
-                        new ForcePower("forceHeal", TexButton.PJTex_ForceHeal, 0),
-                        new ForcePower("forceHealOther", TexButton.PJTex_ForceHealOther, 0),
-                        new ForcePower("forceDefense", TexButton.PJTex_ForceDefense, 0),
-                        new ForcePower("mindTrick", TexButton.PJTex_MindTrick, 0),
-                        new ForcePower("forceGhost", TexButton.PJTex_ForceGhost, 0)
-                    };
+                        if (power.abilityDef != null)
+                        {
+                            if (power.level > 0)
+                            {
+                                this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+                            }
+                        }
+                    }
                 }
+
             }
 
             //Log.Message("PostExposeData Called: ForceUser");
