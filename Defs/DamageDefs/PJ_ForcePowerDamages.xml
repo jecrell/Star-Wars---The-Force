@@ -74,4 +74,20 @@
 		</additionalHediffs>
   </DamageDef>
   
+       <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_RageDam</defName>
+    <label>Force Rage</label>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to mental force damage.</deathMessage>
+    <hediff>Crack</hediff>
+	<armorCategory>Heat</armorCategory>
+	<additionalHediffs>
+		<li>
+			<hediff>PJ_Rage</hediff>
+			<severityPerDamageDealt>1.50</severityPerDamageDealt>
+		</li>
+		</additionalHediffs>
+  </DamageDef>
+  
 </Defs>
