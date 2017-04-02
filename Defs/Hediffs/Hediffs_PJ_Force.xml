@@ -40,4 +40,42 @@
     </stages>
   </ThoughtDef>
 
+   <HediffDef>
+    <defName>PJ_Rage</defName>
+    <hediffClass>HediffWithComps</hediffClass>
+    <label>Force Rage</label>
+    <defaultLabelColor>(1,0,0)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <restFallFactor>1.33</restFallFactor>
+		   <mentalStateGivers>
+			<li>
+            <mentalState>Berserk</mentalState>
+            <mtbDays>0.01</mtbDays>
+            </li>
+			</mentalStateGivers>
+        </li>
+      </stages>
+  </HediffDef>
+
+  <ThoughtDef>
+    <defName>PJ_RageThought</defName>
+    <workerClass>ThoughtWorker_Hediff</workerClass>
+    <hediff>PJ_Rage</hediff>
+    <stages>
+      <li>
+        <label>Force Rage</label>
+        <description>The force can have a strong effect on the weak minded. This discipline drives the target into an insensate rage.</description>
+        <baseMoodEffect>1</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  
 </HediffDefs>
