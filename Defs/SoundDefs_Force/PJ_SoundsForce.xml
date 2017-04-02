@@ -25,4 +25,24 @@
       </li>
     </subSounds>
   </SoundDef>    
+  
+      <SoundDef>
+    <defName>PJ_ChokeSound</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>force/choke/choke</clipPath>
+          </li>
+        </grains>        
+        <pitchRange>
+			<min>0.9152174</min>
+			<max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>   
 </DefPackage-SoundDef>
