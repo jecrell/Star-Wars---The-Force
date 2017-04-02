@@ -15,13 +15,13 @@
    <defName>PForceRage</defName>
    <label>force rage</label>
    <graphicData>
-		<texPath>UI/ForceUser/ForceRage</texPath>
+		<texPath>Weapons/Projectiles/ForceDrain</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
    <projectile>
-		<flyOverhead>false</flyOverhead>
-		<damageDef>PJ_FLightning</damageDef>
-		<damageAmountBase>65</damageAmountBase>
+		<flyOverhead>true</flyOverhead>
+		<damageDef>PJ_RageDam</damageDef>
+		<damageAmountBase>8</damageAmountBase>
 		<speed>105</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
@@ -40,7 +40,7 @@
     <defName>PJ_ForceRage_Apprentice</defName>
     <label>Force Rage</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
-    <description>Go into a wild state for a short time, increasing attack power dramatically, but sacrificing control.</description>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
@@ -56,7 +56,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -71,7 +71,7 @@
     <defName>PJ_ForceRage_Adept</defName>
     <label>Force Rage (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
-    <description>Go into a wild state for a short time, increasing attack power dramatically, but sacrificing control.</description>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
@@ -86,8 +86,8 @@
 		<abilityDef>PJ_ForceRage_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
-        <range>34</range>
-        <burstShotCount>2</burstShotCount>
+        <range>44</range>
+        <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -102,7 +102,7 @@
     <defName>PJ_ForceRage_Master</defName>
     <label>Force Rage (Master)</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
-    <description>Go into a wild state for a short time, increasing attack power dramatically, but sacrificing control.</description>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<requiresAlignment>true</requiresAlignment>
@@ -117,8 +117,8 @@
 		<abilityDef>PJ_ForceRage_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
-        <range>34</range>
-        <burstShotCount>2</burstShotCount>
+        <range>50</range>
+        <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -131,18 +131,36 @@
   <!-- ===================== Force Choke =============================== -->
   
   
+  
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PChokeStun">
+   <defName>PChokeStun</defName>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
+   <label>force drain</label>
+   <graphicData>
+		<texPath>Weapons/Projectiles/ChokeP</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+   <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>Stun</damageDef>
+		<damageAmountBase>3</damageAmountBase>
+		<speed>100</speed>
+   </projectile>
+ </ThingDef>
+  
+  
     <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PForceChoke</defName>
    <label>force choke</label>
    <graphicData>
-		<texPath>UI/ForceUser/ForceChoke</texPath>
+		<texPath>Weapons/Projectiles/ChokeP</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>PJ_FLightning</damageDef>
-		<damageAmountBase>65</damageAmountBase>
+		<damageAmountBase>5</damageAmountBase>
 		<speed>105</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
@@ -173,17 +191,19 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>	
+        <projectileDef>PForceChoke</projectileDef>
+		<IsDoubleProjectile>true</IsDoubleProjectile>
+		<DoubleProjectile>PChokeStun</DoubleProjectile>				
 		<abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+        <burstShotCount>8</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+        <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
     </MainVerb>
   </ThingDef>
   
@@ -206,17 +226,19 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>	
+        <projectileDef>PForceChoke</projectileDef>
+		<IsDoubleProjectile>true</IsDoubleProjectile>
+		<DoubleProjectile>PChokeStun</DoubleProjectile>				
 		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>PJ_LightningSound</soundCast>
+        <burstShotCount>10</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+        <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
     </MainVerb>
   </ThingDef>
 
@@ -238,17 +260,19 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>	
+        <projectileDef>PForceChoke</projectileDef>
+		<IsDoubleProjectile>true</IsDoubleProjectile>
+		<DoubleProjectile>PChokeStun</DoubleProjectile>				
 		<abilityDef>PJ_ForceChoke_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>PJ_LightningSound</soundCast>
+        <burstShotCount>15</burstShotCount>
+        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
+        <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+        <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
     </MainVerb>
   </ThingDef>
     
