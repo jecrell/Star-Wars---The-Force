@@ -369,28 +369,37 @@ namespace ProjectJedi
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                         }
+                        for (int i = 0; i < 1; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 2:
                         this.alignmentValue = 0.8f;
-                        for (int o = 0; o < 3; o++)
+                        for (int o = 0; o < 5; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        this.ForceUserLevel += 1;
-                        this.abilityPoints -= 1;
-                        LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                        for (int i = 0; i < 3; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 3:
                         this.alignmentValue = 0.85f;
-                        for (int o = 0; o < 4; o++)
+                        for (int o = 0; o < 8; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        for (int i = 0; i < 2; i++)
+                        for (int i = 0; i < 6; i++)
                         {
                             this.ForceUserLevel += 1;
                             LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
@@ -399,13 +408,13 @@ namespace ProjectJedi
                         return;
                     case 4:
                         this.alignmentValue = 0.99f;
-                        for (int o = 0; o < 5; o++)
+                        for (int o = 0; o < 10; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        for (int i = 0; i < 4; i++)
+                        for (int i = 0; i < 8; i++)
                         {
                             this.ForceUserLevel += 1;
                             LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
@@ -431,6 +440,13 @@ namespace ProjectJedi
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
+
+                        for (int i = 0; i < 1; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 2:
                         for (int o = 0; o < 3; o++)
@@ -439,19 +455,22 @@ namespace ProjectJedi
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        this.ForceUserLevel += 1;
-                        LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
-                        this.abilityPoints -= 1;
+                        for (int i = 0; i < 3; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
                         return;
                     case 3:
                         this.alignmentValue = 0.85f;
-                        for (int o = 0; o < 4; o++)
+                        for (int o = 0; o < 5; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        for (int i = 0; i < 2; i++)
+                        for (int i = 0; i < 6; i++)
                         {
                             this.ForceUserLevel += 1;
                             LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
@@ -460,13 +479,13 @@ namespace ProjectJedi
                         return;
                     case 4:
                         this.alignmentValue = 1.0f;
-                        for (int o = 0; o < 5; o++)
+                        for (int o = 0; o < 10; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        for (int i = 0; i < 4; i++)
+                        for (int i = 0; i < 8; i++)
                         {
                             this.ForceUserLevel += 1;
                             LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
@@ -483,34 +502,43 @@ namespace ProjectJedi
                     case 0:
                     case 1:
                         this.alignmentValue = 0.3f;
-                        for (int o = 0; o < 2; o++)
-                        {
-                            this.ForceUserLevel += 1;
-                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
-                            this.abilityPoints -= 1;
-                        }
-                        return;
-                    case 2:
-                        this.alignmentValue = 0.2f;
-                        for (int o = 0; o < 3; o++)
-                        {
-                            this.ForceUserLevel += 1;
-                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
-                            this.abilityPoints -= 1;
-                        }
-                        this.ForceUserLevel += 1;
-                        LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
-                        this.abilityPoints -= 1;
-                        return;
-                    case 3:
-                        this.alignmentValue = 0.15f;
                         for (int o = 0; o < 4; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        for (int i = 0; i < 2; i++)
+                        for (int i = 0; i < 1; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
+                        return;
+                    case 2:
+                        this.alignmentValue = 0.2f;
+                        for (int o = 0; o < 5; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 3; i++)
+                        {
+                            this.ForceUserLevel += 1;
+                            LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            this.abilityPoints -= 1;
+                        }
+                        return;
+                    case 3:
+                        this.alignmentValue = 0.15f;
+                        for (int o = 0; o < 6; o++)
+                        {
+                            this.ForceUserLevel += 1;
+                            this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                            this.abilityPoints -= 1;
+                        }
+                        for (int i = 0; i < 6; i++)
                         {
                             this.ForceUserLevel += 1;
                             LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
@@ -519,13 +547,13 @@ namespace ProjectJedi
                         return;
                     case 4:
                         this.alignmentValue = 0.0f;
-                        for (int o = 0; o < 5; o++)
+                        for (int o = 0; o < 10; o++)
                         {
                             this.ForceUserLevel += 1;
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                             this.abilityPoints -= 1;
                         }
-                        for (int i = 0; i < 4; i++)
+                        for (int i = 0; i < 8; i++)
                         {
                             this.ForceUserLevel += 1;
                             LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
