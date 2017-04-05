@@ -290,7 +290,7 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
-		<damageDef>PJ_ForceDrainDamage</damageDef>
+		<damageDef>PJ_FDrainDamage</damageDef>
 		<damageAmountBase>2</damageAmountBase>
 		<speed>125</speed>
    </projectile>

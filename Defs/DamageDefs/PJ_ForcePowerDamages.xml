@@ -30,19 +30,15 @@
   </DamageDef>
   
   
-    <DamageDef>
-    <defName>PJ_ForceDrainDamage</defName>
+    <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_FDrainDamage</defName>
     <label>force drain</label>
     <workerClass>ProjectJedi.DamageWorker_ForceDrain</workerClass>
-    <hasForcefulImpact>false</hasForcefulImpact>
-    <harmsHealth>false</harmsHealth>
-    <makesBlood>false</makesBlood>
     <externalViolence>true</externalViolence>
-    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>	
-    <canInterruptJobs>false</canInterruptJobs>
-    <hediff>Burn</hediff>	
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
-	<armorCategory>Electric</armorCategory>	
+	<armorCategory>Electric</armorCategory>
   </DamageDef>
   
   

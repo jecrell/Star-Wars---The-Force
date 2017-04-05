@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using RimWorld;
+using System.Linq;
 using UnityEngine;
 using Verse;
 
@@ -17,7 +18,8 @@ namespace ProjectJedi
                     if (caster != null)
                     {
                         CompForceUser victimForce = pawn.GetComp<CompForceUser>();
-                        int maxInjuries = 4;
+                        int maxInjuries = 2;
+                        int maxHeals = 0;
                         int maxPoolDamage = 30;
 
 
@@ -49,17 +51,18 @@ namespace ProjectJedi
                         }
                         foreach (BodyPartRecord rec in pawn.health.hediffSet.GetNotMissingParts().InRandomOrder<BodyPartRecord>())
                         {
-                            if (maxInjuries < 0)
+                            if (maxInjuries > 0)
                             {
-                                pawn.TakeDamage(new DamageInfo(dinfo.Def, new IntRange(5, 10).RandomInRange));
-                                maxInjuries++;
+                                pawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, new IntRange(5, 10).RandomInRange, -1, caster, rec));
+                                maxInjuries--;
+                                maxHeals++;
                             }
                         }
 
                         int maxInjuriesPerBodypart;
                         foreach (BodyPartRecord rec in caster.health.hediffSet.GetInjuredParts())
                         {
-                            if (maxInjuries > 0)
+                            if (maxHeals > 0)
                             {
                                 maxInjuriesPerBodypart = 2;
                                 foreach (Hediff_Injury current in from injury in caster.health.hediffSet.GetHediffs<Hediff_Injury>() where injury.Part == rec select injury)
@@ -69,7 +72,7 @@ namespace ProjectJedi
                                         if (current.CanHealNaturally() && !current.IsOld()) // basically check for scars and old wounds
                                         {
                                             current.Heal((int)current.Severity + 1);
-                                            maxInjuries--;
+                                            maxHeals--;
                                             maxInjuriesPerBodypart--;
                                         }
                                     }
