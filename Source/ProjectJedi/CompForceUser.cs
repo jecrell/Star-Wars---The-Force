@@ -526,7 +526,7 @@ namespace ProjectJedi
                         for (int i = 0; i < 3; i++)
                         {
                             this.ForceUserLevel += 1;
-                            LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
                             this.abilityPoints -= 1;
                         }
                         return;
