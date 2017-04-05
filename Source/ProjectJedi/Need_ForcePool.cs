@@ -113,7 +113,7 @@ namespace ProjectJedi
 
         public override void NeedInterval()
         {
-            GainNeed(1f);
+            GainNeed(500f);
         }
 
         public override string GetTipString()

@@ -139,25 +139,20 @@ namespace ProjectJedi
             //Log.Message("1");
             if (__instance != null)
             {
-                //Log.Message("2");
                 Pawn p = __instance as Pawn;
                 if (p != null)
                 {
-                    //Log.Message("3");
-                    //if (p.story != null && (p.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
-                    //                        p.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait)))
-                    //{
-                        //Log.Message("4");
+                    if (p.RaceProps != null && p.RaceProps.Humanlike)
+                    {
                         ThingComp thingComp = (ThingComp)Activator.CreateInstance(typeof(CompForceUser));
                         thingComp.parent = __instance;
                         var comps = AccessTools.Field(typeof(ThingWithComps), "comps").GetValue(__instance);
                         if (comps != null)
                         {
-                            //Log.Message("comps loaded");
                             ((List<ThingComp>)comps).Add(thingComp);
                         }
                         thingComp.Initialize(null);
-                    //}
+                    }
                 }
             }
         }

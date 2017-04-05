@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using Verse;
 
 namespace ProjectJedi
 {
-
     public class DamageWorker_ForceHeal : DamageWorker
     {
         public override float Apply(DamageInfo dinfo, Thing thing)
@@ -14,19 +10,26 @@ namespace ProjectJedi
             Pawn pawn = thing as Pawn;
             if (pawn != null)
             {
-                IEnumerable<Hediff> source = pawn.health.hediffSet.GetHediffs<Hediff>();
-                if (source != null)
+                int maxInjuries = 6;
+                int maxInjuriesPerBodypart;
+
+                foreach (BodyPartRecord rec in pawn.health.hediffSet.GetInjuredParts())
                 {
-                    HediffDef globalDef = source.RandomElement<Hediff>().def;
-                    Hediff hediff = (from x in pawn.health.hediffSet.hediffs
-                                     where x.def == globalDef && x.def != ProjectJediDefOf.PJ_ForceWielderHD &&
-                                     x.def.isBad != false
-                                     select x).FirstOrDefault<Hediff>();
-                    if (hediff != null)
+                    if (maxInjuries > 0)
                     {
-                        Log.Message("Hediff to heal = " + hediff.Label);
-                        if (hediff.def != ProjectJediDefOf.PJ_ForceWielderHD)
-                            hediff.Severity -= dinfo.Amount;
+                        maxInjuriesPerBodypart = 2;
+                        foreach (Hediff_Injury current in from injury in pawn.health.hediffSet.GetHediffs<Hediff_Injury>() where injury.Part == rec select injury)
+                        {
+                            if (maxInjuriesPerBodypart > 0)
+                            {
+                                if (current.CanHealNaturally() && !current.IsOld()) // basically check for scars and old wounds
+                                {
+                                    current.Heal((int)current.Severity + 1);
+                                    maxInjuries--;
+                                    maxInjuriesPerBodypart--;
+                                }
+                            }
+                        }
                     }
                 }
             }

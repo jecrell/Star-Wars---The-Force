@@ -263,16 +263,25 @@ namespace ProjectJedi
 
         public override void CompTick()
         {
-            if (Find.TickManager.TicksGame > 200)
+            if (abilityUser != null)
             {
-                if (Find.TickManager.TicksGame % 30 == 0)
+                if (abilityUser.Spawned)
                 {
-                    if (IsForceUser)
+                    if (Find.TickManager.TicksGame > 200)
                     {
-                        if (!firstTick) PostInitializeTick();
-                        base.CompTick();
-                        if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
-                        forceUserXP++;
+                        //if (Find.TickManager.TicksGame % 30 == 0)
+                        //{
+                        if (IsForceUser)
+                        {
+                            if (!firstTick) PostInitializeTick();
+                            base.CompTick();
+                            if (Find.TickManager.TicksGame % 30 == 0)
+                            {
+                                if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
+                                forceUserXP++;
+                            }
+                        }
+                        //}
                     }
                 }
             }
@@ -339,11 +348,6 @@ namespace ProjectJedi
         {
 
             //Set the force alignment
-            if (this.abilityPowerManager == null)
-            {
-                Log.Message("Null handled");
-                this.abilityPowerManager = new AbilityPowerManager(this);
-            }
 
             if (forcePowersInitialized) return;
             forcePowersInitialized = true;
@@ -358,6 +362,7 @@ namespace ProjectJedi
                 switch (jediTrait.Degree)
                 {
                     case 0:
+                    case 1:
                         this.alignmentValue = 0.7f;
                         for (int o = 0; o < 2; o++)
                         {
@@ -365,7 +370,7 @@ namespace ProjectJedi
                             this.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
                         }
                         return;
-                    case 1:
+                    case 2:
                         this.alignmentValue = 0.8f;
                         for (int o = 0; o < 3; o++)
                         {
@@ -377,7 +382,7 @@ namespace ProjectJedi
                         this.abilityPoints -= 1;
                         LevelUpPower(this.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
                         return;
-                    case 2:
+                    case 3:
                         this.alignmentValue = 0.85f;
                         for (int o = 0; o < 4; o++)
                         {
@@ -392,8 +397,8 @@ namespace ProjectJedi
                             this.abilityPoints -= 1;
                         }
                         return;
-                    case 3:
-                        this.alignmentValue = 1.0f;
+                    case 4:
+                        this.alignmentValue = 0.99f;
                         for (int o = 0; o < 5; o++)
                         {
                             this.ForceUserLevel += 1;
@@ -419,6 +424,7 @@ namespace ProjectJedi
                 switch (grayTrait.Degree)
                 {
                     case 0:
+                    case 1:
                         for (int o = 0; o < 2; o++)
                         {
                             this.ForceUserLevel += 1;
@@ -426,7 +432,7 @@ namespace ProjectJedi
                             this.abilityPoints -= 1;
                         }
                         return;
-                    case 1:
+                    case 2:
                         for (int o = 0; o < 3; o++)
                         {
                             this.ForceUserLevel += 1;
@@ -437,7 +443,7 @@ namespace ProjectJedi
                         LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
                         this.abilityPoints -= 1;
                         return;
-                    case 2:
+                    case 3:
                         this.alignmentValue = 0.85f;
                         for (int o = 0; o < 4; o++)
                         {
@@ -452,7 +458,7 @@ namespace ProjectJedi
                             this.abilityPoints -= 1;
                         }
                         return;
-                    case 3:
+                    case 4:
                         this.alignmentValue = 1.0f;
                         for (int o = 0; o < 5; o++)
                         {
@@ -475,6 +481,7 @@ namespace ProjectJedi
                 switch (sithTrait.Degree)
                 {
                     case 0:
+                    case 1:
                         this.alignmentValue = 0.3f;
                         for (int o = 0; o < 2; o++)
                         {
@@ -483,7 +490,7 @@ namespace ProjectJedi
                             this.abilityPoints -= 1;
                         }
                         return;
-                    case 1:
+                    case 2:
                         this.alignmentValue = 0.2f;
                         for (int o = 0; o < 3; o++)
                         {
@@ -495,7 +502,7 @@ namespace ProjectJedi
                         LevelUpPower(this.ForcePowersDark.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
                         this.abilityPoints -= 1;
                         return;
-                    case 2:
+                    case 3:
                         this.alignmentValue = 0.15f;
                         for (int o = 0; o < 4; o++)
                         {
@@ -510,7 +517,7 @@ namespace ProjectJedi
                             this.abilityPoints -= 1;
                         }
                         return;
-                    case 3:
+                    case 4:
                         this.alignmentValue = 0.0f;
                         for (int o = 0; o < 5; o++)
                         {
@@ -531,9 +538,9 @@ namespace ProjectJedi
 
         public void LevelUpPower(ForcePower power)
         {
-            this.abilityPowerManager.RemovePawnAbility(power.abilityDef);
+            this.RemovePawnAbility(power.abilityDef);
             power.level++;
-            this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+            this.AddPawnAbility(power.abilityDef);
         }
 
         public void ResolveForcePool()
@@ -679,9 +686,6 @@ namespace ProjectJedi
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-
-                if (this.abilityPowerManager == null) this.abilityPowerManager = new AbilityPowerManager(this);
-
                 if (ForcePowersDark != null && ForcePowersDark.Count > 0)
                 {
                     foreach (ForcePower power in ForcePowersDark)
@@ -690,7 +694,7 @@ namespace ProjectJedi
                         {
                             if (power.level > 0)
                             {
-                                this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+                                this.AddPawnAbility(power.abilityDef);
                             }
                         }
                     }
@@ -704,7 +708,7 @@ namespace ProjectJedi
                         {
                             if (power.level > 0)
                             {
-                                this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+                                this.AddPawnAbility(power.abilityDef);
                             }
                         }
                     }
@@ -718,7 +722,7 @@ namespace ProjectJedi
                         {
                             if (power.level > 0)
                             {
-                                this.abilityPowerManager.AddPawnAbility(power.abilityDef);
+                                this.AddPawnAbility(power.abilityDef);
                             }
                         }
                     }

@@ -28,6 +28,24 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
   </DamageDef>
+  
+  
+    <DamageDef>
+    <defName>PJ_ForceDrainDamage</defName>
+    <label>force drain</label>
+    <workerClass>ProjectJedi.DamageWorker_ForceDrain</workerClass>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>	
+    <canInterruptJobs>false</canInterruptJobs>
+    <hediff>Burn</hediff>	
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<armorCategory>Electric</armorCategory>	
+  </DamageDef>
+  
+  
 
     <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FLightning</defName>
