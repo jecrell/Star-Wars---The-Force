@@ -131,25 +131,7 @@
   <!-- ===================== Force Choke =============================== -->
   
   
-  
-    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PChokeStun">
-   <defName>PChokeStun</defName>
-   <thingClass>AbilityUser.Projectile_Ability</thingClass>
-   <label>force drain</label>
-   <graphicData>
-		<texPath>Weapons/Projectiles/ChokeP</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-	</graphicData>
-   <projectile>
-		<flyOverhead>false</flyOverhead>
-		<damageDef>Stun</damageDef>
-		<damageAmountBase>3</damageAmountBase>
-		<speed>100</speed>
-   </projectile>
- </ThingDef>
-  
-  
-    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+ <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PForceChoke</defName>
    <label>force choke</label>
@@ -191,19 +173,22 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>
-		<IsDoubleProjectile>true</IsDoubleProjectile>
-		<DoubleProjectile>PChokeStun</DoubleProjectile>				
+        <projectileDef>PForceChoke</projectileDef>				
 		<abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>8</burstShotCount>
-        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>10</damage>
+			<damageDef>Stun</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
     </MainVerb>
   </ThingDef>
   
@@ -226,19 +211,22 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>
-		<IsDoubleProjectile>true</IsDoubleProjectile>
-		<DoubleProjectile>PChokeStun</DoubleProjectile>				
+        <projectileDef>PForceChoke</projectileDef>				
 		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>10</burstShotCount>
-        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>10</damage>
+			<damageDef>Stun</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
     </MainVerb>
   </ThingDef>
 
@@ -260,19 +248,22 @@
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>
-		<IsDoubleProjectile>true</IsDoubleProjectile>
-		<DoubleProjectile>PChokeStun</DoubleProjectile>				
+        <projectileDef>PForceChoke</projectileDef>			
 		<abilityDef>PJ_ForceChoke_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>15</burstShotCount>
-        <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>10</damage>
+			<damageDef>Stun</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
     </MainVerb>
   </ThingDef>
     
@@ -520,11 +511,11 @@
     <ThingDef Class="AbilityUser.ProjectileDef_Ability" ParentName="BaseBullet" Name="PJ_PForceStormProj">
    <defName>PJ_PForceStormProj</defName>
    <label>force storm</label>
+   <thingClass>AbilityUser.Projectile_Ability</thingClass>
    <graphicData>
 		<texPath>Weapons/Projectiles/Storm</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-	<thingClass>AbilityUser.ProjectileDef_Ability</thingClass>
    <projectile>
 		<flyOverhead>true</flyOverhead>
 		<explosionRadius>7</explosionRadius>
