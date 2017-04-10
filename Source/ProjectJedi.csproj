@@ -35,9 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.0.8.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\Hamony19Prerelease\0Harmony.dll</HintPath>
+      <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AbilityUser">
       <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
@@ -49,18 +49,22 @@
     <Reference Include="CompActivatableEffect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\CompActivatableEffect\Assemblies\CompActivatableEffect.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CompDeflector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\CompDeflector\Assemblies\CompDeflector.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CompOversizedWeapon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\CompOversizedWeapon\Assemblies\CompOversizedWeapon.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="CompSlotLoadable, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\CompSlotLoadable\Assemblies\CompSlotLoadable.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
