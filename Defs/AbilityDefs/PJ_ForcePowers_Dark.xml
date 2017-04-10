@@ -507,24 +507,32 @@
   </ThingDef>  
 
     <!-- ===================== Force Storm ============================= -->
-  
-    <ThingDef Class="AbilityUser.ProjectileDef_Ability" ParentName="BaseBullet" Name="PJ_PForceStormProj">
+ 
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+   <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PJ_PForceStormProj</defName>
    <label>force storm</label>
-   <thingClass>AbilityUser.Projectile_Ability</thingClass>
    <graphicData>
 		<texPath>Weapons/Projectiles/Storm</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
    <projectile>
-		<flyOverhead>true</flyOverhead>
+		<flyOverhead>false</flyOverhead>
 		<explosionRadius>7</explosionRadius>
 		<damageDef>PJ_FStorm</damageDef>
 		<damageAmountBase>65</damageAmountBase>
 		<speed>75</speed>
 		<explosionSpawnChance>1</explosionSpawnChance>
    </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>4</preFiringFinalIntensity>
+    <postFiringInitialIntensity>4</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>2</preFiringDuration>
+    <postFiringDuration>25</postFiringDuration>
+    <StartFireChance>0.100</StartFireChance>
  </ThingDef>
+ 
   
     <!-- ===================== Force Storm (Apprentice) ============================= -->
     
@@ -550,9 +558,19 @@
         <range>44</range>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
+		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+		<TargetAoEProperties>
+		  <targetClass>Pawn</targetClass>
+		  <showRangeOnSelect>true</showRangeOnSelect>
+		  <friendlyFire>true</friendlyFire>
+		  <range>10</range>
+		</TargetAoEProperties>
+		<burstShotCount>4</burstShotCount>
         <isPrimary>false</isPrimary>
 		 <targetParams>
-          <canTargetLocations>true</canTargetLocations>
+      	 <canTargetPawns>true</canTargetPawns>
+      	 <canTargetBuildings>false</canTargetBuildings>
+      	 <canTargetSelf>false</canTargetSelf>
         </targetParams>
     </MainVerb>
   </ThingDef>
@@ -582,8 +600,18 @@
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+		<TargetAoEProperties>
+		  <targetClass>Pawn</targetClass>
+		  <showRangeOnSelect>true</showRangeOnSelect>
+		  <friendlyFire>true</friendlyFire>
+		  <range>10</range>
+		</TargetAoEProperties>		
+		<burstShotCount>4</burstShotCount>
 		 <targetParams>
-          <canTargetLocations>true</canTargetLocations>
+      	 <canTargetPawns>true</canTargetPawns>
+      	 <canTargetBuildings>false</canTargetBuildings>
+      	 <canTargetSelf>false</canTargetSelf>
         </targetParams>
     </MainVerb>
   </ThingDef>
@@ -613,9 +641,19 @@
         <range>44</range>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
-        <isPrimary>false</isPrimary>
+		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+		<TargetAoEProperties>
+		  <targetClass>Pawn</targetClass>
+		  <showRangeOnSelect>true</showRangeOnSelect>
+		  <friendlyFire>true</friendlyFire>
+		  <range>10</range>
+		</TargetAoEProperties>		
+		<burstShotCount>4</burstShotCount>		
+        <isPrimary>false</isPrimary> 
 		 <targetParams>
-          <canTargetLocations>true</canTargetLocations>
+      	 <canTargetPawns>true</canTargetPawns>
+      	 <canTargetBuildings>false</canTargetBuildings>
+      	 <canTargetSelf>false</canTargetSelf>
         </targetParams>
     </MainVerb>
   </ThingDef>  
