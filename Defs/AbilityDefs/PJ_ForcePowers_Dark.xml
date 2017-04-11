@@ -563,6 +563,7 @@
 		  <targetClass>Pawn</targetClass>
 		  <showRangeOnSelect>true</showRangeOnSelect>
 		  <friendlyFire>true</friendlyFire>
+          <startsFromCaster>false</startsFromCaster>		  
 		  <range>10</range>
 		</TargetAoEProperties>
 		<burstShotCount>4</burstShotCount>
@@ -570,7 +571,8 @@
 		 <targetParams>
       	 <canTargetPawns>true</canTargetPawns>
       	 <canTargetBuildings>false</canTargetBuildings>
-      	 <canTargetSelf>false</canTargetSelf>
+      	 <canTargetSelf>true</canTargetSelf>
+		 <canTargetLocations>true</canTargetLocations>
         </targetParams>
     </MainVerb>
   </ThingDef>
@@ -603,6 +605,7 @@
 		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
 		<TargetAoEProperties>
 		  <targetClass>Pawn</targetClass>
+		  <startsFromCaster>false</startsFromCaster>		
 		  <showRangeOnSelect>true</showRangeOnSelect>
 		  <friendlyFire>true</friendlyFire>
 		  <range>10</range>
@@ -612,7 +615,8 @@
       	 <canTargetPawns>true</canTargetPawns>
       	 <canTargetBuildings>false</canTargetBuildings>
       	 <canTargetSelf>false</canTargetSelf>
-        </targetParams>
+		 <canTargetLocations>true</canTargetLocations>
+		</targetParams>
     </MainVerb>
   </ThingDef>
   
@@ -645,6 +649,7 @@
 		<TargetAoEProperties>
 		  <targetClass>Pawn</targetClass>
 		  <showRangeOnSelect>true</showRangeOnSelect>
+		  <startsFromCaster>false</startsFromCaster>
 		  <friendlyFire>true</friendlyFire>
 		  <range>10</range>
 		</TargetAoEProperties>		
@@ -654,7 +659,8 @@
       	 <canTargetPawns>true</canTargetPawns>
       	 <canTargetBuildings>false</canTargetBuildings>
       	 <canTargetSelf>false</canTargetSelf>
-        </targetParams>
+		 <canTargetLocations>true</canTargetLocations>
+		</targetParams>
     </MainVerb>
   </ThingDef>  
   
