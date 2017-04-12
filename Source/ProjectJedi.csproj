@@ -88,6 +88,8 @@
     <Compile Include="ProjectJedi\ForcePower.cs" />
     <Compile Include="ProjectJedi\ForceSkill.cs" />
     <Compile Include="ProjectJedi\HarmonyPatches.cs" />
+    <Compile Include="ProjectJedi\HediffComp_Shield.cs" />
+    <Compile Include="ProjectJedi\Gizmo_HediffShieldStatus.cs" />
     <Compile Include="ProjectJedi\ITab_Pawn_Force.cs" />
     <Compile Include="ProjectJedi\Need_ForcePool.cs" />
     <Compile Include="ProjectJedi\Projectile_ForceStorm.cs" />

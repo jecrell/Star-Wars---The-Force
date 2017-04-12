@@ -25,7 +25,6 @@
 		<damageAmountBase>100</damageAmountBase>
 		<speed>10</speed>
    </projectile>
-   <IsHealer>true</IsHealer>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
  

@@ -2,6 +2,28 @@
 <HediffDefs>
 
  <HediffDef>
+    <defName>PJ_ForceDefenseHediff</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+	<label>Force Defense</label>
+    <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>	
+	<comps>
+      <li>
+        <compClass>ProjectJedi.HediffComp_Shield</compClass>
+      </li>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-1.5</severityPerDay>
+      </li>	  
+    </comps>
+      <stages>
+        <li>
+          <restFallFactor>1.33</restFallFactor>
+        </li>
+      </stages>	
+  </HediffDef>
+
+ <HediffDef>
     <defName>PJ_MindTrick</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>Mind Trick</label>

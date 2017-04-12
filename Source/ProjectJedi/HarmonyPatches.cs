@@ -20,6 +20,102 @@ namespace ProjectJedi
             harmony.Patch(AccessTools.Method(typeof(ThingWithComps), "InitializeComps"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("InitializeComps_PostFix")), null);
             harmony.Patch(AccessTools.Method(typeof(Thing), "TakeDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("TakeDamage_PreFix")), null);
             harmony.Patch(AccessTools.Method(typeof(Verb_MeleeAttack), "GetHitChance"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetHitChance_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), "PreApplyDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("PreApplyDamage_PreFix")), null);
+            harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawEquipment_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(Pawn), "GetGizmos"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetGizmos_PostFix")));
+        }
+
+        public static IEnumerable<Gizmo> gizmoGetter(HediffComp_Shield compHediffShield)
+        {
+            //Log.Message("5");
+            if (compHediffShield.GetWornGizmos() != null)
+            {
+                //Log.Message("6");
+                //Iterate EquippedGizmos
+                IEnumerator<Gizmo> enumerator = compHediffShield.GetWornGizmos().GetEnumerator();
+                while (enumerator.MoveNext())
+                {
+                    //Log.Message("7");
+                    Gizmo current = enumerator.Current;
+                    yield return current;
+                }
+            }
+        }
+
+        public static void GetGizmos_PostFix(Pawn __instance, ref IEnumerable<Gizmo> __result)
+        {
+            Pawn pawn = __instance;
+            if (pawn.health != null)
+            {
+                if (pawn.health.hediffSet != null)
+                {
+                    if (pawn.health.hediffSet.hediffs != null && pawn.health.hediffSet.hediffs.Count > 0)
+                    {
+                        Hediff shieldHediff = pawn.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.TryGetComp<HediffComp_Shield>() != null);
+                        if (shieldHediff != null)
+                        {
+                            HediffComp_Shield shield = shieldHediff.TryGetComp<HediffComp_Shield>();
+                            if (shield != null)
+                            {
+                                __result = __result.Concat<Gizmo>(gizmoGetter(shield));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Verse.PawnRenderer
+        public static void DrawEquipment_PostFix(PawnRenderer __instance, Vector3 rootLoc)
+        {
+            Pawn pawn = (Pawn)AccessTools.Field(typeof(PawnRenderer), "pawn").GetValue(__instance);
+                if (pawn.health != null)
+                {
+                    if (pawn.health.hediffSet != null)
+                    {
+                        if (pawn.health.hediffSet.hediffs != null && pawn.health.hediffSet.hediffs.Count > 0)
+                        {
+                            Hediff shieldHediff = pawn.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.TryGetComp<HediffComp_Shield>() != null);
+                            if (shieldHediff != null)
+                            {
+                                HediffComp_Shield shield = shieldHediff.TryGetComp<HediffComp_Shield>();
+                                if (shield != null)
+                                {
+                                    shield.DrawWornExtras();
+                                }
+                            }
+                        }
+                    }
+                }
+            
+        }
+
+            // Verse.Pawn_HealthTracker
+            public static bool PreApplyDamage_PreFix(Pawn_HealthTracker __instance, DamageInfo dinfo, out bool absorbed)
+        {
+            Pawn pawn = (Pawn)AccessTools.Field(typeof(Pawn_HealthTracker), "pawn").GetValue(__instance);
+            if (pawn != null)
+            {
+
+                if (pawn.health.hediffSet.hediffs != null && pawn.health.hediffSet.hediffs.Count > 0)
+                {
+                    Hediff shieldHediff = pawn.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.TryGetComp<HediffComp_Shield>() != null);
+                    if (shieldHediff != null)
+                    {
+                        HediffComp_Shield shield = shieldHediff.TryGetComp<HediffComp_Shield>();
+                        if (shield != null)
+                        {
+                            if (shield.CheckPreAbsorbDamage(dinfo))
+                            {
+                                absorbed = true;
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            absorbed = false;
+            return true;
         }
 
         public static int nonForceUserLightsaberDamage = 10;
