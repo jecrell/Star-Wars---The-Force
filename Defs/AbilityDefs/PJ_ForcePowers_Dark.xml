@@ -508,8 +508,8 @@
 
     <!-- ===================== Force Storm ============================= -->
  
-    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
-   <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+    <ThingDef ParentName="BaseBullet" Class="ThingDef">
+   <thingClass>ProjectJedi.Projectile_ForceStorm</thingClass>
    <defName>PJ_PForceStormProj</defName>
    <label>force storm</label>
    <graphicData>
@@ -520,17 +520,10 @@
 		<flyOverhead>false</flyOverhead>
 		<explosionRadius>7</explosionRadius>
 		<damageDef>PJ_FStorm</damageDef>
-		<damageAmountBase>65</damageAmountBase>
+		<damageAmountBase>1</damageAmountBase>
 		<speed>75</speed>
 		<explosionSpawnChance>1</explosionSpawnChance>
    </projectile>
-    <preFiringInitialIntensity>0</preFiringInitialIntensity>
-    <preFiringFinalIntensity>4</preFiringFinalIntensity>
-    <postFiringInitialIntensity>4</postFiringInitialIntensity>
-    <postFiringFinalIntensity>0</postFiringFinalIntensity>
-    <preFiringDuration>2</preFiringDuration>
-    <postFiringDuration>25</postFiringDuration>
-    <StartFireChance>0.100</StartFireChance>
  </ThingDef>
  
   
