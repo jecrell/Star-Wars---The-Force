@@ -47,7 +47,7 @@ namespace ProjectJedi
                 Pawn victim = hitThing as Pawn;
                 if (victim != null)
                 {
-                    this.duration = Rand.Range(15, 60);
+                    this.duration = Rand.Range(30, 60);
                     ThrowBolt(victim.PositionHeld);
                 }
             }
