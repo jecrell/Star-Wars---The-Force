@@ -209,6 +209,8 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
+		<burstShotCount>2</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
@@ -246,13 +248,15 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
+		<burstShotCount>3</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
-		    <damage>10</damage>
+		    <damage>20</damage>
 			<damageDef>Stun</damageDef>
 			<chance>1.0</chance>
 		  </li>

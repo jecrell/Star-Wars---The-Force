@@ -37,7 +37,11 @@
           <li Class="AudioGrain_Clip">
             <clipPath>force/choke/choke</clipPath>
           </li>
-        </grains>        
+        </grains>    
+        <volumeRange>
+          <min>30.51151</min>        
+          <max>42.93479</max>
+        </volumeRange>   		
         <pitchRange>
 			<min>0.9152174</min>
 			<max>1.042391</max>
