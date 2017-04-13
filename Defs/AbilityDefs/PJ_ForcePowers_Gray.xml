@@ -24,7 +24,6 @@
 		<damageAmountBase>50</damageAmountBase>
 		<speed>10</speed>
    </projectile>
-   <IsHealer>true</IsHealer>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
 
@@ -128,7 +127,6 @@
 		<damageAmountBase>50</damageAmountBase>
 		<speed>10</speed>
    </projectile>
-   <IsHealer>true</IsHealer>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
 
@@ -232,7 +230,6 @@
 		<damageAmountBase>50</damageAmountBase>
 		<speed>10</speed>
    </projectile>
-   <IsHealer>true</IsHealer>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
 

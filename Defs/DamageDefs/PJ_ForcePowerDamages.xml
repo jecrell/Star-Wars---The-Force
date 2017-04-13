@@ -104,4 +104,20 @@
 		</additionalHediffs>
   </DamageDef>
   
+      <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_FChoke</defName>
+    <label>choke</label>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>Burn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<armorCategory>Electric</armorCategory>
+		<additionalHediffs>
+		<li>
+			<hediff>PJ_NoAir</hediff>
+			<severityPerDamageDealt>1.50</severityPerDamageDealt>
+		</li>
+		</additionalHediffs>
+  </DamageDef>
+  
 </Defs>
