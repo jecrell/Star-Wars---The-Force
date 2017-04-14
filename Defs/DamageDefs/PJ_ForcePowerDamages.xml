@@ -109,13 +109,13 @@
     <label>choke</label>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
-    <hediff>Burn</hediff>
+    <hediff>Crush</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	<armorCategory>Electric</armorCategory>
 		<additionalHediffs>
 		<li>
 			<hediff>PJ_NoAir</hediff>
-			<severityPerDamageDealt>0.10</severityPerDamageDealt>
+			<severityPerDamageDealt>0.05</severityPerDamageDealt>
 		</li>
 		</additionalHediffs>
   </DamageDef>
