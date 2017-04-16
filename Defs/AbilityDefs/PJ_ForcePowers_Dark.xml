@@ -155,6 +155,7 @@
    <graphicData>
 		<texPath>Weapons/Projectiles/ChokeP</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
@@ -300,10 +301,10 @@
 		<speed>125</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
-    <preFiringFinalIntensity>2</preFiringFinalIntensity>
-    <postFiringInitialIntensity>2</postFiringInitialIntensity>
+    <preFiringFinalIntensity>20</preFiringFinalIntensity>
+    <postFiringInitialIntensity>20</postFiringInitialIntensity>
     <postFiringFinalIntensity>0</postFiringFinalIntensity>
-    <preFiringDuration>2</preFiringDuration>
+    <preFiringDuration>10</preFiringDuration>
     <postFiringDuration>63</postFiringDuration>
     <StartFireChance>0.000</StartFireChance>
  </ThingDef>
@@ -416,15 +417,15 @@
    <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>PJ_FLightning</damageDef>
-		<damageAmountBase>65</damageAmountBase>
+		<damageAmountBase>45</damageAmountBase>
 		<speed>105</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
     <preFiringFinalIntensity>4</preFiringFinalIntensity>
-    <postFiringInitialIntensity>4</postFiringInitialIntensity>
+    <postFiringInitialIntensity>10</postFiringInitialIntensity>
     <postFiringFinalIntensity>0</postFiringFinalIntensity>
     <preFiringDuration>2</preFiringDuration>
-    <postFiringDuration>25</postFiringDuration>
+    <postFiringDuration>45</postFiringDuration>
     <StartFireChance>0.100</StartFireChance>
  </ThingDef>
 
@@ -450,7 +451,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -511,7 +512,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
-        <burstShotCount>2</burstShotCount>
+        <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -529,6 +530,7 @@
    <graphicData>
 		<texPath>Weapons/Projectiles/Storm</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
