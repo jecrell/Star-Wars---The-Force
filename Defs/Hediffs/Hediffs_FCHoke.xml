@@ -7,6 +7,11 @@
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
     <label>Asphyxia</label>
     <lethalSeverity>5</lethalSeverity>
+		<comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-5.5</severityPerDay>
+      </li>	  
+    </comps>
     <stages>
       <li>
         <label>gasping</label>
