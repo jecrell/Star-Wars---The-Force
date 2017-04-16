@@ -19,7 +19,7 @@
     <armorCategory>Sharp</armorCategory>
   </DamageDef>
   
-    <DamageDef>
+  <DamageDef>
     <defName>PJ_ForceHealDamage</defName>
     <label>force heal</label>
     <workerClass>ProjectJedi.DamageWorker_ForceHeal</workerClass>
@@ -30,7 +30,7 @@
   </DamageDef>
   
   
-    <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FDrainDamage</defName>
     <label>force drain</label>
     <workerClass>ProjectJedi.DamageWorker_ForceDrain</workerClass>
@@ -43,7 +43,7 @@
   
   
 
-    <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FLightning</defName>
     <label>lightning</label>
     <externalViolence>true</externalViolence>
@@ -53,7 +53,7 @@
 	<armorCategory>Electric</armorCategory>
   </DamageDef>
   
-      <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FStorm</defName>
     <label>Force storm</label>
     <externalViolence>true</externalViolence>
@@ -72,7 +72,7 @@
   </DamageDef>
  
  
-     <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_MindTrickDam</defName>
     <label>Mind trick</label>
     <makesBlood>false</makesBlood>
@@ -88,7 +88,7 @@
 		</additionalHediffs>
   </DamageDef>
   
-       <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_RageDam</defName>
     <label>Force Rage</label>
     <makesBlood>false</makesBlood>
@@ -104,10 +104,11 @@
 		</additionalHediffs>
   </DamageDef>
   
-      <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FChoke</defName>
     <label>choke</label>
-    <externalViolence>true</externalViolence>
+    <workerClass>ProjectJedi.DamageWorker_ForceChoke</workerClass>  
+    <externalViolence>false</externalViolence>
     <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
     <hediff>Crush</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>

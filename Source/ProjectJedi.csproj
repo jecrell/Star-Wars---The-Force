@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="ProjectJedi\Buttons.cs" />
     <Compile Include="ProjectJedi\CompForceUser.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceChoke.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceDrain.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />

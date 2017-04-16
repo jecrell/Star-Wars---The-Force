@@ -10,7 +10,7 @@
 
   <!-- ===================== Force Rage =============================== -->
 
-    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PForceRage</defName>
    <label>force rage</label>
@@ -20,8 +20,8 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>true</flyOverhead>
-		<damageDef>PJ_RageDam</damageDef>
-		<damageAmountBase>8</damageAmountBase>
+		<damageDef>EMP</damageDef>
+		<damageAmountBase>0</damageAmountBase>
 		<speed>105</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
@@ -32,7 +32,6 @@
     <postFiringDuration>25</postFiringDuration>
     <StartFireChance>0.100</StartFireChance>
  </ThingDef>
-
 
   <!-- ===================== Force Rage (Apprentice) =============================== -->
  
@@ -62,6 +61,12 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<mentalStatesToApply>
+	      <li>
+	        <mentalStateDef>Berserk</mentalStateDef>
+	        <applyChance>0.6</applyChance>
+	      </li>
+        </mentalStatesToApply>
     </MainVerb>
   </ThingDef>
   
@@ -93,6 +98,12 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<mentalStatesToApply>
+	      <li>
+	        <mentalStateDef>Berserk</mentalStateDef>
+	        <applyChance>0.8</applyChance>
+	      </li>
+        </mentalStatesToApply>
     </MainVerb>
   </ThingDef>  
  
@@ -124,6 +135,12 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<mentalStatesToApply>
+	      <li>
+	        <mentalStateDef>Berserk</mentalStateDef>
+	        <applyChance>0.95</applyChance>
+	      </li>
+        </mentalStatesToApply>		
     </MainVerb>
   </ThingDef> 
 
@@ -141,7 +158,7 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
-		<damageDef>PJ_FChoke</damageDef>
+		<damageDef>Stun</damageDef>
 		<damageAmountBase>5</damageAmountBase>
 		<speed>105</speed>
    </projectile>
@@ -177,8 +194,8 @@
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
-		    <damage>10</damage>
-			<damageDef>Stun</damageDef>
+		    <damage>5</damage>
+			<damageDef>PJ_FChoke</damageDef>
 			<chance>1.0</chance>
 		  </li>
 		</extraDamages>
@@ -218,7 +235,7 @@
 		<extraDamages>
 		  <li>
 		    <damage>10</damage>
-			<damageDef>Stun</damageDef>
+			<damageDef>PJ_FChoke</damageDef>
 			<chance>1.0</chance>
 		  </li>
 		</extraDamages>
@@ -268,7 +285,7 @@
   <!-- ===================== Force Drain =============================== -->
   
   
-    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PJ_PForceDrain</defName>
    <label>force drain</label>
@@ -388,7 +405,7 @@
 
   <!-- ===================== Force Lightning =============================== -->
   
-    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ThingDef_LaserProjectile">
+    <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PForceLightningProj</defName>
    <label>force lightning</label>
