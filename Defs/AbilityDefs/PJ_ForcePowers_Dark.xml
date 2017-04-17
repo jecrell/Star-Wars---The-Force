@@ -159,7 +159,7 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
-		<damageDef>Stun</damageDef>
+		<damageDef>PJ_FChoke</damageDef>
 		<damageAmountBase>5</damageAmountBase>
 		<speed>105</speed>
    </projectile>
@@ -196,7 +196,7 @@
 		<extraDamages>
 		  <li>
 		    <damage>5</damage>
-			<damageDef>PJ_FChoke</damageDef>
+			<damageDef>Stun</damageDef>
 			<chance>1.0</chance>
 		  </li>
 		</extraDamages>
@@ -236,7 +236,7 @@
 		<extraDamages>
 		  <li>
 		    <damage>10</damage>
-			<damageDef>PJ_FChoke</damageDef>
+			<damageDef>Stun</damageDef>
 			<chance>1.0</chance>
 		  </li>
 		</extraDamages>
@@ -305,7 +305,7 @@
     <postFiringInitialIntensity>20</postFiringInitialIntensity>
     <postFiringFinalIntensity>0</postFiringFinalIntensity>
     <preFiringDuration>10</preFiringDuration>
-    <postFiringDuration>63</postFiringDuration>
+    <postFiringDuration>83</postFiringDuration>
     <StartFireChance>0.000</StartFireChance>
  </ThingDef>
 
@@ -417,7 +417,7 @@
    <projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>PJ_FLightning</damageDef>
-		<damageAmountBase>45</damageAmountBase>
+		<damageAmountBase>22</damageAmountBase>
 		<speed>105</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
