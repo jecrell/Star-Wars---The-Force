@@ -104,7 +104,7 @@
 		</additionalHediffs>
   </DamageDef>
   
-  <DamageDef ParentName="LocalInjuryBase">
+  <DamageDef>
     <defName>PJ_FChoke</defName>
     <label>choke</label>
     <workerClass>ProjectJedi.DamageWorker_ForceChoke</workerClass>  
@@ -116,7 +116,7 @@
 		<additionalHediffs>
 		<li>
 			<hediff>PJ_NoAir</hediff>
-			<severityPerDamageDealt>0.05</severityPerDamageDealt>
+			<severityPerDamageDealt>0.12</severityPerDamageDealt>
 		</li>
 		</additionalHediffs>
   </DamageDef>
