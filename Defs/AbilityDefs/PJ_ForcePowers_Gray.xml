@@ -20,11 +20,10 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>true</flyOverhead>
-		<damageDef>PJ_ForceHealDamage</damageDef>
-		<damageAmountBase>50</damageAmountBase>
+		<damageDef>Stun</damageDef>
+		<damageAmountBase>0</damageAmountBase>
 		<speed>10</speed>
    </projectile>
-   <HealFailChance>0.1</HealFailChance>
  </ThingDef>
 
      <!-- ===================== Force Pull (Apprentice) =============================== -->
@@ -33,7 +32,7 @@
     <defName>PJ_ForcePull_Apprentice</defName>
     <label>Force Pull</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Pulls people or objects towards the caster.</description>
+    <description>Level 1: Pulls ground objects towards the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>false</requiresAlignment>
@@ -43,15 +42,30 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForcePull</projectileDef>	
 		<abilityDef>PJ_ForcePull_Apprentice</abilityDef>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>1</burstShotCount>		
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>1</damage>
+			<damageDef>PJ_DForcePull</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
+	    <targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>		  
+		  <canTargetItems>true</canTargetItems>
+		  <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>		
     </MainVerb>
   </ThingDef>
   
@@ -61,7 +75,7 @@
     <defName>PJ_ForcePull_Adept</defName>
     <label>Force Pull (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Pulls people or objects towards the caster.</description>
+    <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>false</requiresAlignment>
@@ -71,6 +85,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForcePull</projectileDef>	
 		<abilityDef>PJ_ForcePull_Adept</abilityDef>
+		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -80,6 +95,20 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>2</damage>
+			<damageDef>PJ_DForcePull</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>		
+	    <targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>		  
+		  <canTargetItems>true</canTargetItems>
+		  <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>		
     </MainVerb>
   </ThingDef>
 
@@ -89,7 +118,7 @@
     <defName>PJ_ForcePull_Master</defName>
     <label>Force Pull (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Pulls people or objects towards the caster.</description>
+    <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\n	Level 3: Can now pull weapons out of the hands of others.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>false</requiresAlignment>
@@ -99,6 +128,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForcePull</projectileDef>	
 		<abilityDef>PJ_ForcePull_Master</abilityDef>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -108,6 +138,20 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>3</damage>
+			<damageDef>PJ_DForcePull</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>		
+	    <targetParams>
+		  <canTargetPawns>true</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>		  
+		  <canTargetItems>true</canTargetItems>
+		  <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>		
     </MainVerb>
   </ThingDef>  
   
@@ -123,8 +167,8 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>true</flyOverhead>
-		<damageDef>PJ_ForceHealDamage</damageDef>
-		<damageAmountBase>50</damageAmountBase>
+		<damageDef>Stun</damageDef>
+		<damageAmountBase>0</damageAmountBase>
 		<speed>10</speed>
    </projectile>
    <HealFailChance>0.1</HealFailChance>
@@ -146,6 +190,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForcePush</projectileDef>	
 		<abilityDef>PJ_ForcePush_Apprentice</abilityDef>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -155,6 +200,19 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>1</damage>
+			<damageDef>PJ_DForcePush</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
+	    <targetParams>
+		  <canTargetPawns>true</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetItems>false</canTargetItems>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>				
     </MainVerb>
   </ThingDef>  
   
@@ -174,6 +232,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForcePush</projectileDef>	
 		<abilityDef>PJ_ForcePush_Adept</abilityDef>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -183,6 +242,19 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>2</damage>
+			<damageDef>PJ_DForcePush</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
+	    <targetParams>
+		  <canTargetPawns>true</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetItems>false</canTargetItems>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>						
     </MainVerb>
   </ThingDef>  
   
@@ -202,6 +274,7 @@
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForcePush</projectileDef>	
 		<abilityDef>PJ_ForcePush_Master</abilityDef>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -211,6 +284,19 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<extraDamages>
+		  <li>
+		    <damage>3</damage>
+			<damageDef>PJ_DForcePush</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
+	    <targetParams>
+		  <canTargetPawns>true</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetItems>false</canTargetItems>
+		  <canTargetSelf>false</canTargetSelf>
+		</targetParams>						
     </MainVerb>
   </ThingDef>  
   

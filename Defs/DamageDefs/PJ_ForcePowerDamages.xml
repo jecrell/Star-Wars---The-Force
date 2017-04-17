@@ -121,4 +121,28 @@
 		</additionalHediffs>
   </DamageDef>
   
+ <!-- Force Pull -->  
+  
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_DForcePull</defName>
+    <label>pull</label>
+    <workerClass>ProjectJedi.DamageWorker_ForcePull</workerClass>  
+    <externalViolence>false</externalViolence>
+	<harmsHealth>false</harmsHealth>	
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<armorCategory>Electric</armorCategory>
+  </DamageDef>
+
+ <!-- Force Push -->  
+  
+  <DamageDef ParentName="LocalInjuryBase">
+    <defName>PJ_DForcePush</defName>
+    <label>push</label>
+    <workerClass>ProjectJedi.DamageWorker_ForcePush</workerClass>  
+    <externalViolence>false</externalViolence>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+	<harmsHealth>false</harmsHealth>
+	<armorCategory>Electric</armorCategory>
+  </DamageDef>  
+  
 </Defs>

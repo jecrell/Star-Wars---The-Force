@@ -83,6 +83,9 @@
     <Compile Include="ProjectJedi\DamageWorker_ForceChoke.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceDrain.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceLeveled.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForcePull.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForcePush.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
     <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
     <Compile Include="ProjectJedi\ForceCardUtility.cs" />

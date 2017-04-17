@@ -241,7 +241,7 @@ namespace ProjectJedi
                         Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                         continue;
                     }
-                    else if (i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 4)
+                    else if (i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5)
                     {
                         //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
                         if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
