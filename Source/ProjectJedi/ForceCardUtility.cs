@@ -285,15 +285,22 @@ namespace ProjectJedi
                     if (i != 0) drawXOffset += (ForceButtonPointSize * i);
 
                     float drawYOffset = buttonYOffset + (ForceButtonSize / 3f);
+                    Rect powerRegion = new Rect(inRect.x + drawXOffset, drawYOffset, ForceButtonPointSize, ForceButtonPointSize);
 
                     if (power.level > i)
                     {
-                        Widgets.DrawTextureFitted(new Rect(inRect.x + drawXOffset, drawYOffset, ForceButtonPointSize, ForceButtonPointSize), pointTexture, 1.0f);
+                        Widgets.DrawTextureFitted(powerRegion, pointTexture, 1.0f);
                     }
                     else
                     {
-                        Widgets.DrawTextureFitted(new Rect(inRect.x + drawXOffset, drawYOffset, ForceButtonPointSize, ForceButtonPointSize), TexButton.PJTex_ForcePointDim, 1.0f);
+                        Widgets.DrawTextureFitted(powerRegion, TexButton.PJTex_ForcePointDim, 1.0f);
                     }
+                    AbilityUser.AbilityDef powerDef = power.GetAbilityDef(i);
+                    if (powerDef != null)
+                    {
+                        TooltipHandler.TipRegion(powerRegion, () => powerDef.GetDescription(), 398462);
+                    }
+                
                 }
                 buttonYOffset += ForceButtonSize + 1;
             }

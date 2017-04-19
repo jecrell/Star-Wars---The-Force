@@ -12,6 +12,21 @@ namespace ProjectJedi
     {
         public List<AbilityDef> abilityDefs;
         public int level;
+        public AbilityDef GetAbilityDef(int index)
+        {
+            AbilityDef result = null;
+            if (abilityDefs != null && abilityDefs.Count > 0)
+            {
+                result = abilityDefs[0];
+                
+                if (index > -1 && index < abilityDefs.Count) result = abilityDefs[index];
+                else if (index >= abilityDefs.Count)
+                {
+                    result = abilityDefs[abilityDefs.Count - 1];
+                }
+            }
+            return result;
+        }
         public AbilityDef abilityDef
         {
             get
