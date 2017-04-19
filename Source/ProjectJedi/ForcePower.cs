@@ -32,6 +32,8 @@ namespace ProjectJedi
             }
         }
 
+
+
         public AbilityDef HasAbilityDef(AbilityDef defToFind)
         {
             return this.abilityDefs.FirstOrDefault((AbilityDef x) => x == defToFind);

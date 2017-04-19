@@ -597,7 +597,7 @@ namespace ProjectJedi
         /// </summary>
         /// <param name="verb"></param>
         /// <returns></returns>
-        public override string PostAbilityVerbDesc(Verb_UseAbility verb)
+        public override string PostAbilityVerbCompDesc(Verb_UseAbility verb)
         {
             string result = "";
             StringBuilder postDesc = new StringBuilder();

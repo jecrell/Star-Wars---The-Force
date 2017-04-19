@@ -572,7 +572,8 @@
 		  <targetClass>Pawn</targetClass>
 		  <showRangeOnSelect>true</showRangeOnSelect>
 		  <friendlyFire>true</friendlyFire>
-          <startsFromCaster>false</startsFromCaster>		  
+          <startsFromCaster>false</startsFromCaster>
+		  <maxTargets>2</maxTargets>
 		  <range>10</range>
 		</TargetAoEProperties>
 		<burstShotCount>4</burstShotCount>
@@ -617,6 +618,7 @@
 		  <startsFromCaster>false</startsFromCaster>		
 		  <showRangeOnSelect>true</showRangeOnSelect>
 		  <friendlyFire>true</friendlyFire>
+		  <maxTargets>3</maxTargets>
 		  <range>10</range>
 		</TargetAoEProperties>		
 		<burstShotCount>4</burstShotCount>
@@ -660,6 +662,7 @@
 		  <showRangeOnSelect>true</showRangeOnSelect>
 		  <startsFromCaster>false</startsFromCaster>
 		  <friendlyFire>true</friendlyFire>
+		  <maxTargets>5</maxTargets>
 		  <range>10</range>
 		</TargetAoEProperties>		
 		<burstShotCount>4</burstShotCount>		
