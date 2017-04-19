@@ -49,6 +49,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+		<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+        <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+        <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Apprentice</abilityDef>
@@ -86,6 +90,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+		<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+        <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+        <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Adept</abilityDef>
@@ -123,6 +131,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+		<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+        <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+        <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Master</abilityDef>
@@ -183,6 +195,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceChoke</projectileDef>				
 		<abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
@@ -221,6 +237,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceChoke</projectileDef>				
 		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
@@ -260,6 +280,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceChoke</projectileDef>			
 		<abilityDef>PJ_ForceChoke_Master</abilityDef>
@@ -325,6 +349,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForceDrain</projectileDef>	
 		<abilityDef>PJ_ForceDrain_Apprentice</abilityDef>
@@ -356,6 +384,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForceDrain</projectileDef>		
 		<abilityDef>PJ_ForceDrain_Adept</abilityDef>
@@ -388,6 +420,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForceDrain</projectileDef>
 		<abilityDef>PJ_ForceDrain_Master</abilityDef>
@@ -445,6 +481,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceLightningProj</projectileDef>	
 		<abilityDef>PJ_ForceLightning_Apprentice</abilityDef>
@@ -475,6 +515,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceLightningProj</projectileDef>	
 		<abilityDef>PJ_ForceLightning_Adept</abilityDef>
@@ -506,6 +550,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PForceLightningProj</projectileDef>	
 		<abilityDef>PJ_ForceLightning_Master</abilityDef>
@@ -559,6 +607,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForceStormProj</projectileDef>	
 		<abilityDef>PJ_ForceStorm_Apprentice</abilityDef>
@@ -603,6 +655,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForceStormProj</projectileDef>	
 		<abilityDef>PJ_ForceStorm_Adept</abilityDef>
@@ -648,6 +704,10 @@
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
         <projectileDef>PJ_PForceStormProj</projectileDef>	
 		<abilityDef>PJ_ForceStorm_Master</abilityDef>
