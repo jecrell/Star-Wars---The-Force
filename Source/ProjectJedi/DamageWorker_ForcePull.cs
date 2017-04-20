@@ -13,48 +13,73 @@ namespace ProjectJedi
         {
             if (target != null && target.def != null)
             {
-                ThingDef tempProjectile = new ThingDef();
-                tempProjectile.defName = "PJ_TempProjectile_ForcePull";
-                tempProjectile.label = target.Label;
-                tempProjectile.graphicData = target.def.graphicData;
-                tempProjectile.projectile.damageDef = DamageDefOf.Stun;
-                tempProjectile.projectile.damageAmountBase = 0;
-                tempProjectile.projectile.speed = 70;
-                Projectile projectile = (Projectile)GenSpawn.Spawn(tempProjectile, target.PositionHeld, target.MapHeld);
-                projectile.Launch(Caster, target.Position.ToVector3(), Caster.PositionHeld, null);
-                target.Position = Caster.Position;
+                //Pull haulable things to us
+                if (target.def.EverHaulable && (!(target is Pawn)))
+                {
+                    FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                    flyingObject.Launch(Caster, Caster, target);
+                }
             }
         }
         public override void AdeptEffect(Thing target)
         {
             if (target != null && target.def != null)
             {
-                ThingDef tempProjectile = new ThingDef();
-                tempProjectile.defName = "PJ_TempProjectile_ForcePull";
-                tempProjectile.label = target.Label;
-                tempProjectile.graphicData = target.def.graphicData;
-                tempProjectile.projectile.damageDef = DamageDefOf.Stun;
-                tempProjectile.projectile.damageAmountBase = 0;
-                tempProjectile.projectile.speed = 70;
-                Projectile projectile = (Projectile)GenSpawn.Spawn(tempProjectile, target.PositionHeld, target.MapHeld);
-                projectile.Launch(Caster, target.Position.ToVector3(), Caster.PositionHeld, null);
-                target.Position = Caster.Position;
+                //Pull haulable things to us
+                if (target.def.EverHaulable && (!(target is Pawn)))
+                {
+                    //If it's equippable, equip it right away.
+                    if (target.def.equipmentType == EquipmentType.Primary)
+                    {
+                        FlyingObject_Equipable flyingObject = (FlyingObject_Equipable)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject_Equipable"), target.Position, target.Map);
+                        flyingObject.Launch(Caster, Caster, target);
+                    }
+                    //Or don't equip it~~
+                    else
+                    {
+                        FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                        flyingObject.Launch(Caster, Caster, target);
+                    }
+                }
             }
         }
         public override void MasterEffect(Thing target)
         {
-            if (target != null && target.def != null)
+            //Pull haulable things to us
+            if (target.def.EverHaulable && (!(target is Pawn)))
             {
-                ThingDef tempProjectile = new ThingDef();
-                tempProjectile.defName = "PJ_TempProjectile_ForcePull";
-                tempProjectile.label = target.Label;
-                tempProjectile.graphicData = target.def.graphicData;
-                tempProjectile.projectile.damageDef = DamageDefOf.Stun;
-                tempProjectile.projectile.damageAmountBase = 0;
-                tempProjectile.projectile.speed = 70;
-                Projectile projectile = (Projectile)GenSpawn.Spawn(tempProjectile, target.PositionHeld, target.MapHeld);
-                projectile.Launch(Caster, target.Position.ToVector3(), Caster.PositionHeld, null);
-                target.Position = Caster.Position;
+                //If it's equippable, equip it right away.
+                if (target.def.equipmentType == EquipmentType.Primary)
+                {
+                    FlyingObject_Equipable flyingObject = (FlyingObject_Equipable)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject_Equipable"), target.Position, target.Map);
+                    flyingObject.Launch(Caster, Caster, target);
+                }
+                //Or don't equip it~~
+                else
+                {
+                    FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                    flyingObject.Launch(Caster, Caster, target);
+                }
+            }
+            else if (target is Pawn)
+            {
+                Pawn pawnTarget = target as Pawn;
+                if (pawnTarget != null)
+                {
+                    if (pawnTarget.equipment != null)
+                    {
+                        if (pawnTarget.equipment.Primary != null)
+                        {
+                            ThingWithComps droppedEquip = null;
+                            pawnTarget.equipment.TryDropEquipment(pawnTarget.equipment.Primary, out droppedEquip, pawnTarget.Position.RandomAdjacentCell8Way(), false);
+                            if (droppedEquip != null)
+                            {
+                                FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                                flyingObject.Launch(Caster, Caster, droppedEquip);
+                            }
+                        }
+                    }
+                }
             }
         }
     }

@@ -86,6 +86,8 @@
     <Compile Include="ProjectJedi\DamageWorker_ForceLeveled.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForcePull.cs" />
     <Compile Include="ProjectJedi\DamageWorker_ForcePush.cs" />
+    <Compile Include="ProjectJedi\FlyingObject.cs" />
+    <Compile Include="ProjectJedi\FlyingObject_Equipable.cs" />
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
     <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
     <Compile Include="ProjectJedi\ForceCardUtility.cs" />
