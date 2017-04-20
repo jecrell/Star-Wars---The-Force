@@ -37,11 +37,7 @@
           <li Class="AudioGrain_Clip">
             <clipPath>force/choke/choke</clipPath>
           </li>
-        </grains>    
-        <volumeRange>
-          <min>30.51151</min>        
-          <max>42.93479</max>
-        </volumeRange>   		
+        </grains>     		
         <pitchRange>
 			<min>0.9152174</min>
 			<max>1.042391</max>
@@ -49,4 +45,64 @@
       </li>
     </subSounds>
   </SoundDef>   
+  
+        <SoundDef>
+    <defName>PJ_PushSound</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>force/gray/push01</clipPath>
+          </li>
+        </grains>     		
+        <pitchRange>
+			<min>0.9152174</min>
+			<max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+        <SoundDef>
+    <defName>PJ_PullSound</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>force/gray/pull01</clipPath>
+          </li>
+        </grains>     		
+        <pitchRange>
+			<min>0.9152174</min>
+			<max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>     
+  
+          <SoundDef>
+    <defName>PJ_SpeedSound</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>force/gray/speed01</clipPath>
+          </li>
+        </grains>     		
+        <pitchRange>
+			<min>0.9152174</min>
+			<max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>
 </DefPackage-SoundDef>

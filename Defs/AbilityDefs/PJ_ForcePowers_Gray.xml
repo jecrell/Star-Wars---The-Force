@@ -84,7 +84,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>		
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -131,7 +131,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -178,7 +178,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -244,7 +244,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -290,7 +290,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -336,7 +336,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -400,7 +400,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -432,7 +432,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
@@ -464,7 +464,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
