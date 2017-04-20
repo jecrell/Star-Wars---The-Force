@@ -298,7 +298,7 @@ namespace ProjectJedi
                     AbilityUser.AbilityDef powerDef = power.GetAbilityDef(i);
                     if (powerDef != null)
                     {
-                        TooltipHandler.TipRegion(powerRegion, () => powerDef.GetDescription(), 398462);
+                        TooltipHandler.TipRegion(powerRegion, () => powerDef.GetDescription() + "\n" + compForce.PostAbilityVerbCompDesc(powerDef.MainVerb), 398462);
                     }
                 
                 }

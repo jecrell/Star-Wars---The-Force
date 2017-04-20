@@ -597,11 +597,11 @@ namespace ProjectJedi
         /// </summary>
         /// <param name="verb"></param>
         /// <returns></returns>
-        public override string PostAbilityVerbCompDesc(Verb_UseAbility verb)
+        public override string PostAbilityVerbCompDesc(VerbProperties_Ability verbDef)
         {
             string result = "";
             StringBuilder postDesc = new StringBuilder();
-            ForceAbilityDef forceDef = (ForceAbilityDef)verb.useAbilityProps.abilityDef;
+            ForceAbilityDef forceDef = (ForceAbilityDef)verbDef.abilityDef;
             if (forceDef != null)
             {
                 string alignDesc = "";

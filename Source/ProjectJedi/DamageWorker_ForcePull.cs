@@ -11,15 +11,51 @@ namespace ProjectJedi
     {
         public override void ApprenticeEffect(Thing target)
         {
-            base.ApprenticeEffect(target);
+            if (target != null && target.def != null)
+            {
+                ThingDef tempProjectile = new ThingDef();
+                tempProjectile.defName = "PJ_TempProjectile_ForcePull";
+                tempProjectile.label = target.Label;
+                tempProjectile.graphicData = target.def.graphicData;
+                tempProjectile.projectile.damageDef = DamageDefOf.Stun;
+                tempProjectile.projectile.damageAmountBase = 0;
+                tempProjectile.projectile.speed = 70;
+                Projectile projectile = (Projectile)GenSpawn.Spawn(tempProjectile, target.PositionHeld, target.MapHeld);
+                projectile.Launch(Caster, target.Position.ToVector3(), Caster.PositionHeld, null);
+                target.Position = Caster.Position;
+            }
         }
         public override void AdeptEffect(Thing target)
         {
-            base.AdeptEffect(target);
+            if (target != null && target.def != null)
+            {
+                ThingDef tempProjectile = new ThingDef();
+                tempProjectile.defName = "PJ_TempProjectile_ForcePull";
+                tempProjectile.label = target.Label;
+                tempProjectile.graphicData = target.def.graphicData;
+                tempProjectile.projectile.damageDef = DamageDefOf.Stun;
+                tempProjectile.projectile.damageAmountBase = 0;
+                tempProjectile.projectile.speed = 70;
+                Projectile projectile = (Projectile)GenSpawn.Spawn(tempProjectile, target.PositionHeld, target.MapHeld);
+                projectile.Launch(Caster, target.Position.ToVector3(), Caster.PositionHeld, null);
+                target.Position = Caster.Position;
+            }
         }
         public override void MasterEffect(Thing target)
         {
-            base.MasterEffect(target);
+            if (target != null && target.def != null)
+            {
+                ThingDef tempProjectile = new ThingDef();
+                tempProjectile.defName = "PJ_TempProjectile_ForcePull";
+                tempProjectile.label = target.Label;
+                tempProjectile.graphicData = target.def.graphicData;
+                tempProjectile.projectile.damageDef = DamageDefOf.Stun;
+                tempProjectile.projectile.damageAmountBase = 0;
+                tempProjectile.projectile.speed = 70;
+                Projectile projectile = (Projectile)GenSpawn.Spawn(tempProjectile, target.PositionHeld, target.MapHeld);
+                projectile.Launch(Caster, target.Position.ToVector3(), Caster.PositionHeld, null);
+                target.Position = Caster.Position;
+            }
         }
     }
 }

@@ -9,6 +9,19 @@ namespace ProjectJedi
 {
     public class DamageWorker_ForceLeveled : DamageWorker
     {
+        private Pawn caster;
+        public Pawn Caster
+        {
+            get
+            {
+                return caster;
+            }
+            set
+            {
+                caster = value;
+            }
+        }
+
         public virtual void ApprenticeEffect(Thing target)
         {
             Log.Message("Placeholder: Apprentice");
@@ -25,6 +38,7 @@ namespace ProjectJedi
         public override float Apply(DamageInfo dinfo, Thing victim)
         {
             int amount = dinfo.Amount;
+            caster = dinfo.Instigator as Pawn;
             switch (amount)
             {
                 case 1:
