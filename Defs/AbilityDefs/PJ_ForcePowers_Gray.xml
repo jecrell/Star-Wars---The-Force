@@ -446,7 +446,7 @@
     <label>Force Speed (Master)</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
     <description>Increases the running speed of the caster for a short time.</description>
-<!--    <thingClass>ThingWithComps</thingClass> -->
+<!--    <thingClass>ThingWithComps</thingClass>   -->
     <forcePoolCost>0.5</forcePoolCost>
 	<requiresAlignment>false</requiresAlignment>
 	<changesAlignment>false</changesAlignment>	
