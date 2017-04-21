@@ -213,7 +213,7 @@
 		<flyOverhead>true</flyOverhead>
 		<damageDef>Stun</damageDef>
 		<damageAmountBase>0</damageAmountBase>
-		<speed>10</speed>
+		<speed>9999</speed>
    </projectile>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
@@ -244,7 +244,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessageBenefit</soundCast>	
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
