@@ -306,7 +306,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>2</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
@@ -345,7 +345,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>2</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
@@ -384,7 +384,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>2</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
