@@ -1,6 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <HediffDefs>
 
+
+ <HediffDef>
+    <defName>PJ_ForceSpeedHediff_One</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+	<label>Force Speed</label>
+    <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>	
+	<comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>700</min>
+          <max>700</max>
+        </disappearsAfterTicks>
+      </li>	  
+    </comps>
+      <stages>
+        <li>
+          <restFallFactor>1.33</restFallFactor>
+		  <statOffsets>
+			<MoveSpeed>8.0</MoveSpeed>
+			<WorkSpeedGlobal>2.0</WorkSpeedGlobal>		  
+		  </statOffsets>
+        </li>
+      </stages>	
+  </HediffDef>
+  
+ <HediffDef>
+    <defName>PJ_ForceSpeedHediff_Two</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+	<label>Force Speed</label>
+    <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>	
+	<comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>900</min>
+          <max>900</max>
+        </disappearsAfterTicks>
+      </li>	  
+    </comps>
+      <stages>
+        <li>
+          <restFallFactor>1.33</restFallFactor>
+		  <statOffsets>
+			<MoveSpeed>8.0</MoveSpeed>
+			<WorkSpeedGlobal>2.0</WorkSpeedGlobal>		  
+		  </statOffsets>
+        </li>
+      </stages>	
+  </HediffDef>  
+  
+ <HediffDef>
+    <defName>PJ_ForceSpeedHediff_Three</defName>
+	<hediffClass>HediffWithComps</hediffClass>
+	<label>Force Speed</label>
+    <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <maxSeverity>1.0</maxSeverity>	
+	<comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>
+          <min>1800</min>
+          <max>1800</max>
+        </disappearsAfterTicks>
+      </li>	  
+    </comps>
+      <stages>
+        <li>
+          <restFallFactor>1.33</restFallFactor>
+		  <statOffsets>
+			<MoveSpeed>12.0</MoveSpeed>
+			<WorkSpeedGlobal>2.0</WorkSpeedGlobal>		  
+		  </statOffsets>
+        </li>
+      </stages>	
+  </HediffDef>    
+
  <HediffDef>
     <defName>PJ_ForceDefenseHediff</defName>
 	<hediffClass>HediffWithComps</hediffClass>

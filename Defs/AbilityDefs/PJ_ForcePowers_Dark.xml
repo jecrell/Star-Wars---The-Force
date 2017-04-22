@@ -42,11 +42,8 @@
     <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.015</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -59,6 +56,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
+		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
@@ -83,11 +81,9 @@
     <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
+	<requiredAlignmentType>Dark</requiredAlignmentType>	
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.015</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -100,6 +96,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>44</range>
+		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
@@ -124,11 +121,10 @@
     <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.015</changedAlignmentRate>
+	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -188,9 +184,6 @@
     <description>Choke the life from your enemies.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -230,11 +223,10 @@
     <description>Choke the life from your enemies.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.05</changedAlignmentRate>
+	<abilityPoints>2</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -273,11 +265,10 @@
     <description>Choke the life from your enemies.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<abilityPoints>3</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -342,9 +333,6 @@
     <description>Drain another entity of lifeforce.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -377,11 +365,10 @@
     <description>Drain another entity of lifeforce.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.05</changedAlignmentRate>
+	<abilityPoints>2</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -413,11 +400,10 @@
     <description>Drain another entity of lifeforce.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<abilityPoints>3</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -474,9 +460,6 @@
     <description>Lash out with pure dark side energy.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -491,6 +474,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
+		<isViolent>true</isViolent>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
@@ -508,11 +492,10 @@
     <description>Lash out with pure dark side energy.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.05</changedAlignmentRate>
+	<abilityPoints>2</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -525,6 +508,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
+		<isViolent>true</isViolent>		
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
@@ -543,11 +527,10 @@
     <description>Lash out with pure dark side energy.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.05</changedAlignmentRate>
+	<abilityPoints>3</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -560,6 +543,7 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
         <range>34</range>
+				<isViolent>true</isViolent>
         <burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
@@ -600,11 +584,11 @@
     <description>Lash out with pure dark side energy at an area, causing great damage.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<changedAlignmentRate>0.05</changedAlignmentRate>
+	<abilityPoints>1</abilityPoints>
+	<darksideTreePointsRequired>9</darksideTreePointsRequired>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -615,8 +599,9 @@
         <projectileDef>PJ_PForceStormProj</projectileDef>	
 		<abilityDef>PJ_ForceStorm_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>60</SecondsToRecharge>
         <range>44</range>
+		<isViolent>true</isViolent>		
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
 		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
@@ -648,11 +633,11 @@
     <description>Lash out with pure dark side energy at an area, causing great damage.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<abilityPoints>2</abilityPoints>
+	<darksideTreePointsRequired>9</darksideTreePointsRequired>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -663,8 +648,9 @@
         <projectileDef>PJ_PForceStormProj</projectileDef>	
 		<abilityDef>PJ_ForceStorm_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>50</SecondsToRecharge>
         <range>44</range>
+		<isViolent>true</isViolent>		
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
@@ -697,11 +683,11 @@
     <description>Lash out with pure dark side energy at an area, causing great damage.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<abilityPoints>5</abilityPoints>
+	<darksideTreePointsRequired>9</darksideTreePointsRequired>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -712,8 +698,9 @@
         <projectileDef>PJ_PForceStormProj</projectileDef>	
 		<abilityDef>PJ_ForceStorm_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>30</SecondsToRecharge>
         <range>44</range>
+		<isViolent>true</isViolent>		
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
 		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>

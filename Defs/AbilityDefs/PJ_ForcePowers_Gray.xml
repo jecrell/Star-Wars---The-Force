@@ -54,7 +54,7 @@
 		<flyOverhead>true</flyOverhead>
 		<damageDef>Stun</damageDef>
 		<damageAmountBase>0</damageAmountBase>
-		<speed>10</speed>
+		<speed>9999</speed>
    </projectile>
  </ThingDef>
 
@@ -67,9 +67,7 @@
     <description>Level 1: Pulls ground objects towards the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
-    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+	<MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -114,9 +112,7 @@
     <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
-    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+	<MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
@@ -160,9 +156,7 @@
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
     <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
+    <forcePoolCost>0.5</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -213,7 +207,7 @@
 		<flyOverhead>true</flyOverhead>
 		<damageDef>Stun</damageDef>
 		<damageAmountBase>0</damageAmountBase>
-		<speed>10</speed>
+		<speed>9999</speed>
    </projectile>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
@@ -224,11 +218,9 @@
     <defName>PJ_ForcePush_Apprentice</defName>
     <label>Force Push</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
-    <description>Pushes people or objects away from the caster, often knocking them down with concussive force.</description>
+    <description>Level 1: Pushes characters away by 8 tiles.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -270,11 +262,9 @@
     <defName>PJ_ForcePush_Adept</defName>
     <label>Force Push (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
-    <description>Pushes people or objects away from the caster, often knocking them down with concussive force.</description>
+    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -300,6 +290,11 @@
 			<damageDef>PJ_DForcePush</damageDef>
 			<chance>1.0</chance>
 		  </li>
+		  <li>
+		    <damage>20</damage>
+			<damageDef>Stun</damageDef>
+			<chance>1.0</chance>
+		  </li>		  
 		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
@@ -316,11 +311,9 @@
     <defName>PJ_ForcePush_Master</defName>
     <label>Force Push (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
-    <description>Pushes people or objects away from the caster, often knocking them down with concussive force.</description>
+    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\nLevel 3: Pushes 12 tiles, stuns the target, and adds impact damage against walls.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
+    <forcePoolCost>0.5</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -346,6 +339,11 @@
 			<damageDef>PJ_DForcePush</damageDef>
 			<chance>1.0</chance>
 		  </li>
+		  <li>
+		    <damage>20</damage>
+			<damageDef>Stun</damageDef>
+			<chance>1.0</chance>
+		  </li>		  		  
 		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
@@ -368,9 +366,9 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>true</flyOverhead>
-		<damageDef>PJ_ForceHealDamage</damageDef>
-		<damageAmountBase>50</damageAmountBase>
-		<speed>10</speed>
+		<damageDef>Stun</damageDef>
+		<damageAmountBase>1</damageAmountBase>
+		<speed>99999</speed>
    </projectile>
    <HealFailChance>0.1</HealFailChance>
  </ThingDef>
@@ -384,8 +382,6 @@
     <description>Increases the running speed of the caster for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -396,7 +392,7 @@
         <projectileDef>PJ_PForceSpeed</projectileDef>	
 		<abilityDef>PJ_ForceSpeed_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>10.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -404,6 +400,18 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+   	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>true</canTargetSelf>
+		</targetParams>		
+		<hediffsToApply>
+	      <li>
+	        <hediffDef>PJ_ForceSpeedHediff_One</hediffDef>
+	        <applyChance>1.0</applyChance>
+	      </li>
+        </hediffsToApply>		
     </MainVerb>
   </ThingDef>    
 
@@ -416,8 +424,6 @@
     <description>Increases the running speed of the caster for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -428,7 +434,7 @@
         <projectileDef>PJ_PForceSpeed</projectileDef>	
 		<abilityDef>PJ_ForceSpeed_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>15.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -436,6 +442,18 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+   	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>true</canTargetSelf>
+		</targetParams>		
+		<hediffsToApply>
+	      <li>
+	        <hediffDef>PJ_ForceSpeedHediff_Two</hediffDef>
+	        <applyChance>1.0</applyChance>
+	      </li>
+        </hediffsToApply>		
     </MainVerb>
   </ThingDef>    
 
@@ -446,10 +464,8 @@
     <label>Force Speed (Master)</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
     <description>Increases the running speed of the caster for a short time.</description>
-<!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
-	<changesAlignment>false</changesAlignment>	
+<!--    <thingClass>ThingWithComps</thingClass>   -->
+    <forcePoolCost>0.5</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -460,14 +476,26 @@
         <projectileDef>PJ_PForceSpeed</projectileDef>	
 		<abilityDef>PJ_ForceSpeed_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>30.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+   	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>true</canTargetSelf>
+		</targetParams>		
         <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
+		<hediffsToApply>
+	      <li>
+	        <hediffDef>PJ_ForceSpeedHediff_Three</hediffDef>
+	        <applyChance>1.0</applyChance>
+	      </li>
+        </hediffsToApply>
     </MainVerb>
   </ThingDef>    
   

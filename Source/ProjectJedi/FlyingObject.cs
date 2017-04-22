@@ -21,6 +21,7 @@ namespace ProjectJedi
         protected Thing launcher;
         protected Thing assignedTarget;
         protected Thing flyingThing;
+        public DamageInfo? impactDamage;
 
         protected int StartingTicksToImpact
         {
@@ -80,18 +81,24 @@ namespace ProjectJedi
             Scribe_References.LookReference<Thing>(ref this.flyingThing, "flyingThing");
         }
 
+        public void Launch(Thing launcher, LocalTargetInfo targ, Thing flyingThing, DamageInfo? impactDamage)
+        {
+            this.Launch(launcher, base.Position.ToVector3Shifted(), targ, flyingThing, impactDamage);
+        }
+
         public void Launch(Thing launcher, LocalTargetInfo targ, Thing flyingThing)
         {
             this.Launch(launcher, base.Position.ToVector3Shifted(), targ, flyingThing);
         }
 
-        public void Launch(Thing launcher, Vector3 origin, LocalTargetInfo targ, Thing flyingThing)
+        public void Launch(Thing launcher, Vector3 origin, LocalTargetInfo targ, Thing flyingThing, DamageInfo? newDamageInfo = null)
         {
             //Despawn the object to fly
             if (flyingThing.Spawned) flyingThing.DeSpawn();
 
             this.launcher = launcher;
             this.origin = origin;
+            this.impactDamage = newDamageInfo;
             this.flyingThing = flyingThing;
             if (targ.Thing != null)
             {
@@ -131,7 +138,16 @@ namespace ProjectJedi
         {
             if (flyingThing != null)
             {
-                Graphics.DrawMesh(MeshPool.plane10, this.DrawPos, this.ExactRotation, this.flyingThing.def.DrawMatSingle, 0);
+                if (flyingThing is Pawn)
+                {
+                    Pawn pawn = flyingThing as Pawn;
+                    pawn.Drawer.DrawAt(this.DrawPos);
+                    //Graphics.DrawMesh(MeshPool.plane10, this.DrawPos, this.ExactRotation, this.flyingThing.def.graphic.MatFront, 0);
+                }
+                else
+                {
+                    Graphics.DrawMesh(MeshPool.plane10, this.DrawPos, this.ExactRotation, this.flyingThing.def.DrawMatSingle, 0);
+                }
                 base.Comps_PostDraw();
             }
         }
@@ -159,6 +175,10 @@ namespace ProjectJedi
         protected virtual void Impact(Thing hitThing)
         {
             GenSpawn.Spawn(flyingThing, this.Position, this.Map);
+            if (impactDamage != null)
+            {
+                for (int i = 0; i < 3; i++) flyingThing.TakeDamage(impactDamage.Value);
+            }
             this.Destroy(DestroyMode.Vanish);
         }
 

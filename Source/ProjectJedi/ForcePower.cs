@@ -37,7 +37,26 @@ namespace ProjectJedi
                     result = abilityDefs[0];
 
                     int index = level - 1;
-                    if (index > -1 && index < abilityDefs.Count) result = abilityDefs[level - 1];
+                    if (index > -1 && index < abilityDefs.Count) result = abilityDefs[index];
+                    else if (index >= abilityDefs.Count)
+                    {
+                        result = abilityDefs[abilityDefs.Count - 1];
+                    }
+                }
+                return result;
+            }
+        }
+        public AbilityDef nextLevelAbilityDef
+        {
+            get
+            {
+                AbilityDef result = null;
+                if (abilityDefs != null && abilityDefs.Count > 0)
+                {
+                    result = abilityDefs[0];
+
+                    int index = level;
+                    if (index > -1 && index <= abilityDefs.Count) result = abilityDefs[index];
                     else if (index >= abilityDefs.Count)
                     {
                         result = abilityDefs[abilityDefs.Count - 1];

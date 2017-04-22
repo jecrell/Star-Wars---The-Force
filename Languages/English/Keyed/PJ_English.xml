@@ -5,7 +5,15 @@
 <!-- =========== Messages ======== -->
 <PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
 <WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
-<DrainedForcePool>{0} needs to recover their force powers.</DrainedForcePool>	
+<PJ_LightsidePointsRequired>Requires {0} points spent on light side abilities</PJ_LightsidePointsRequired>
+<PJ_DarksidePointsRequired>Requires {0} points spent on dark side abilities</PJ_DarksidePointsRequired>
+<DrainedForcePool>{0} needs to recover their force powers.</DrainedForcePool>
+<PJ_NotEnoughAbilityPoints>Requires {1} ability points. We have {0}.</PJ_NotEnoughAbilityPoints>
+<PJ_PointsRequired>Req Ability Points: {0}</PJ_PointsRequired>
+<PJ_DarkPointsRequired>Req Darkside Points: {0}</PJ_DarkPointsRequired>
+<PJ_LightPointsRequired>Req Lightside Points: {0}</PJ_LightPointsRequired> 
+<PJ_CastSuccess>Cast Success</PJ_CastSuccess>
+<PJ_CastFailure>Cast Failure</PJ_CastFailure>
 
 <!-- ============= UI ============ -->
 <PJ_TabForce>Force</PJ_TabForce>

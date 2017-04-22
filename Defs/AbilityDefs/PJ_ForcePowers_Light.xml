@@ -37,9 +37,6 @@
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -77,9 +74,7 @@
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -116,9 +111,7 @@
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -155,11 +148,8 @@
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
-	<changedAlignmentRate>0.10</changedAlignmentRate>
+	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -192,11 +182,9 @@
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
-	<changedAlignmentRate>0.10</changedAlignmentRate>
+	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -230,9 +218,7 @@
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.10</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -288,9 +274,6 @@
     <description>Protects the caster from harm for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
-	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -315,6 +298,13 @@
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
 		</targetParams>
+		<hediffsToApply>
+	      <li>
+	        <hediffDef>PJ_ForceDefenseHediff</hediffDef>
+	        <applyChance>1.0</applyChance>
+			<severity>0.3</severity>
+	      </li>
+        </hediffsToApply>				
     </MainVerb>
   </ThingDef>  
   
@@ -327,9 +317,7 @@
     <description>Protects the caster from harm for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -354,6 +342,13 @@
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
 		</targetParams>
+		<hediffsToApply>
+	      <li>
+	        <hediffDef>PJ_ForceDefenseHediff</hediffDef>
+	        <applyChance>1.0</applyChance>
+			<severity>0.6</severity>
+	      </li>
+        </hediffsToApply>				
     </MainVerb>
   </ThingDef>  
   
@@ -366,9 +361,7 @@
     <description>Protects the caster from harm for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.5</forcePoolCost>
-	<requiresAlignment>true</requiresAlignment>
 	<requiredAlignmentType>Light</requiredAlignmentType>
-	<changesAlignment>true</changesAlignment>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -393,6 +386,13 @@
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
 		</targetParams>
+		<hediffsToApply>
+	      <li>
+	        <hediffDef>PJ_ForceDefenseHediff</hediffDef>
+	        <applyChance>1.0</applyChance>
+			<severity>1.0</severity>
+	      </li>
+        </hediffsToApply>		
     </MainVerb>
   </ThingDef>  
     
@@ -423,7 +423,8 @@
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.025</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -452,7 +453,9 @@
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.025</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -481,7 +484,9 @@
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.025</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -528,7 +533,11 @@
     <description>Summon a ghost of ages past to aid you for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
+	<abilityPoints>1</abilityPoints>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<lightsideTreePointsRequired>9</lightsideTreePointsRequired>		
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -539,7 +548,7 @@
         <projectileDef>PForceGhost</projectileDef>	
 		<abilityDef>PJ_ForceGhost_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -557,7 +566,11 @@
     <description>Summon a ghost of ages past to aid you for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<abilityPoints>2</abilityPoints>
+	<lightsideTreePointsRequired>9</lightsideTreePointsRequired>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -568,7 +581,7 @@
         <projectileDef>PForceGhost</projectileDef>	
 		<abilityDef>PJ_ForceGhost_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -586,7 +599,11 @@
     <description>Summon a ghost of ages past to aid you for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
-	<requiresAlignment>false</requiresAlignment>
+	<requiredAlignmentType>Light</requiredAlignmentType>
+	<changedAlignmentType>Light</changedAlignmentType>
+	<changedAlignmentRate>0.05</changedAlignmentRate>	
+	<abilityPoints>5</abilityPoints>
+	<lightsideTreePointsRequired>9</lightsideTreePointsRequired>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -597,7 +614,7 @@
         <projectileDef>PForceGhost</projectileDef>	
 		<abilityDef>PJ_ForceGhost_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
