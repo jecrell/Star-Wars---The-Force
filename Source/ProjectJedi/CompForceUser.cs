@@ -173,6 +173,38 @@ namespace ProjectJedi
 
         public int abilityPoints = 0;
 
+        public int DarksidePoints
+        {
+            get
+            {
+                int result = 0;
+                if (ForcePowersDark != null && ForcePowersDark.Count > 0)
+                {
+                    foreach (ForcePower power in ForcePowersDark)
+                    {
+                        result += power.level;
+                    }
+                }
+                return result;
+            }
+        }
+        public int LightsidePoints
+        {
+            get
+            {
+                int result = 0;
+                if (ForcePowersLight != null && ForcePowersLight.Count > 0)
+                {
+                    foreach (ForcePower power in ForcePowersLight)
+                    {
+                        result += power.level;
+                    }
+                }
+                return result;
+            }
+        }
+
+
         //public int levelLightsaberOff = 4;
         //public int levelLightsaberDef = 3;
         //public int levelLightsaberAcc = 2;
@@ -191,8 +223,8 @@ namespace ProjectJedi
                 return alignmentValue;
             }
             set
-            {
-                alignmentValue = value;
+            {     
+                alignmentValue = Mathf.Clamp(value, 0.0f, 1.0f);
             }
         }
 
@@ -463,7 +495,6 @@ namespace ProjectJedi
                         }
                         return;
                     case 3:
-                        this.alignmentValue = 0.85f;
                         for (int o = 0; o < 5; o++)
                         {
                             this.ForceUserLevel += 1;
@@ -478,7 +509,6 @@ namespace ProjectJedi
                         }
                         return;
                     case 4:
-                        this.alignmentValue = 1.0f;
                         for (int o = 0; o < 10; o++)
                         {
                             this.ForceUserLevel += 1;
@@ -488,7 +518,7 @@ namespace ProjectJedi
                         for (int i = 0; i < 8; i++)
                         {
                             this.ForceUserLevel += 1;
-                            LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                            LevelUpPower(this.ForcePowersGray.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 3));
                             this.abilityPoints -= 1;
                         }
                         return;
@@ -607,14 +637,14 @@ namespace ProjectJedi
                 string alignDesc = "";
                 string changeDesc = "";
                 string pointsDesc = "";
-                if (forceDef.requiresAlignment)
+                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
                 {
                     alignDesc = "ForceAbilityDescAlign".Translate(new object[]
                     {
                     forceDef.requiredAlignmentType.ToString(),
                     });
                 }
-                if (forceDef.changesAlignment)
+                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
                 {
                     changeDesc = "ForceAbilityDescChange".Translate(new object[]
                     {
@@ -646,10 +676,9 @@ namespace ProjectJedi
             ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
             if (forceDef != null)
             {
-                if (forceDef.requiresAlignment)
+                if (forceDef.requiredAlignmentType != ForceAlignmentType.None)
                 {
-                    if (forceDef.requiredAlignmentType != ForceAlignmentType.Gray &&
-                    forceDef.requiredAlignmentType != this.ForceAlignmentType)
+                    if (forceDef.requiredAlignmentType != this.ForceAlignmentType)
                     {
                         reason = "WrongAlignment";
                         return false;
@@ -664,7 +693,6 @@ namespace ProjectJedi
                         return false;
                     }
                 }
-
             }
             return true;
         }
@@ -676,6 +704,20 @@ namespace ProjectJedi
             return newDefs;
         }
 
+        public override void PostAbilityAttempt(Pawn caster, AbilityDef ability)
+        {
+            ForceAbilityDef forceDef = ability as ForceAbilityDef;
+            if (forceDef != null)
+            {
+                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
+                {
+                    Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
+                    Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
+                    AlignmentValue += forceDef.changedAlignmentRate;
+                    Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
+                }
+            }
+        }
 
 
         /// <summary>

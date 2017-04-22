@@ -175,10 +175,19 @@ namespace ProjectJedi
         #region InfoPane
         public static void InfoPane(Rect inRect, CompForceUser compForce)
         {
-            Rect rectLevel = new Rect(inRect.x, inRect.y, inRect.width, TextSize);
+            Rect rectLevel = new Rect(inRect.x, inRect.y, inRect.width * 0.7f, TextSize);
             Text.Font = GameFont.Small;
             Widgets.Label(rectLevel, "PJ_Level".Translate().CapitalizeFirst() + " " + compForce.ForceUserLevel.ToString());
             Text.Font = GameFont.Small;
+
+            if (DebugSettings.godMode)
+            {
+                Rect rectDebugPlus = new Rect(rectLevel.xMax, inRect.y, inRect.width * 0.3f, TextSize);
+                if (Widgets.ButtonText(rectDebugPlus, "+", true, false, true))
+                {
+                    compForce.LevelUp(true);
+                }
+            }
 
             //Level 0
 
@@ -270,14 +279,40 @@ namespace ProjectJedi
             float buttonYOffset = inRect.y;
             foreach (ForcePower power in forcePowers)
             {
-                if (compForce.abilityPoints == 0)
+                if (compForce.abilityPoints == 0 || power.level >= 3)
                 {
                     Widgets.DrawTextureFitted(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon, 1.0f);
                 }
                 else if(Widgets.ButtonImage(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon))
                 {
+                    ForceAbilityDef powerDef = power.nextLevelAbilityDef as ForceAbilityDef;
+                    if (compForce.LightsidePoints < powerDef.lightsideTreePointsRequired)
+                    {
+                        Messages.Message("PJ_LightsidePointsRequired".Translate(new object[]
+                        {
+                            powerDef.lightsideTreePointsRequired
+                        }), MessageSound.RejectInput);
+                        return;
+                    }
+                    if (compForce.DarksidePoints < powerDef.darksideTreePointsRequired)
+                    {
+                        Messages.Message("PJ_DarksidePointsRequired".Translate(new object[]
+                        {  
+                            powerDef.darksideTreePointsRequired
+                        }), MessageSound.RejectInput);
+                        return;
+                    }
+                    if (compForce.abilityPoints < powerDef.abilityPoints)
+                    {
+                        Messages.Message("PJ_NotEnoughAbilityPoints".Translate(new object[]
+                        {
+                            compForce.abilityPoints,
+                            powerDef.abilityPoints
+                        }), MessageSound.RejectInput);
+                        return;
+                    }
                     compForce.LevelUpPower(power);
-                    compForce.abilityPoints--;
+                    compForce.abilityPoints -= powerDef.abilityPoints;
                 }
                 for (int i = 0; i < 3; i++)
                 {
@@ -295,10 +330,10 @@ namespace ProjectJedi
                     {
                         Widgets.DrawTextureFitted(powerRegion, TexButton.PJTex_ForcePointDim, 1.0f);
                     }
-                    AbilityUser.AbilityDef powerDef = power.GetAbilityDef(i);
+                    ForceAbilityDef powerDef = power.GetAbilityDef(i) as ForceAbilityDef;
                     if (powerDef != null)
                     {
-                        TooltipHandler.TipRegion(powerRegion, () => powerDef.GetDescription() + "\n" + compForce.PostAbilityVerbCompDesc(powerDef.MainVerb), 398462);
+                        TooltipHandler.TipRegion(powerRegion, () => powerDef.GetDescription() + "\n" + compForce.PostAbilityVerbCompDesc(powerDef.MainVerb) + "\n" + powerDef.GetPointDesc() , 398462);
                     }
                 
                 }

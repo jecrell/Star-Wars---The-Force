@@ -2,21 +2,52 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Verse;
 
 namespace ProjectJedi
 {
     public class ForceAbilityDef : AbilityUser.AbilityDef
     {
-        public float forcePoolCost; //p
+        public float forcePoolCost = 0.0f;
 
-        public bool requiresAlignment = false;
+        public int abilityPoints = 1;
 
-        public ForceAlignmentType requiredAlignmentType;
-        //
-        public bool changesAlignment = false;
+        public int darksideTreePointsRequired = 0;
 
-        public ForceAlignmentType changedAlignmentType;
-        //
-        public float changedAlignmentRate;
+        public int lightsideTreePointsRequired = 0;
+
+        public ForceAlignmentType requiredAlignmentType = ForceAlignmentType.None;
+
+        public ForceAlignmentType changedAlignmentType = ForceAlignmentType.None;
+
+        public float changedAlignmentRate = 0.0f;
+
+
+        public string GetPointDesc()
+        {
+            string result = "";
+            StringBuilder s = new StringBuilder();
+            s.AppendLine("PJ_PointsRequired".Translate(new object[]
+                {
+                this.abilityPoints
+                }));
+            if (darksideTreePointsRequired > 0)
+            {
+                s.AppendLine("PJ_DarkPointsRequired".Translate(new object[]
+                {
+                    this.darksideTreePointsRequired
+                }));
+            }
+            if (lightsideTreePointsRequired > 0)
+            {
+                s.AppendLine("PJ_LightPointsRequired".Translate(new object[]
+                {
+                    this.lightsideTreePointsRequired
+                }));
+            }
+            result = s.ToString();
+            return result;
+        }
     }
+
 }
