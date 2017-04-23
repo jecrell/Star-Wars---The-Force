@@ -34,7 +34,7 @@ namespace ProjectJedi
                                     {
                                         //Turn 0.01f into 1, or 1.0 into 100.
                                         int victimForceInt = System.Convert.ToInt32(victimForcePool.CurLevel * 100);
-                                        Log.Message("Victim Force Pool = " + victimForceInt.ToString());
+                                       //Log.Message("Victim Force Pool = " + victimForceInt.ToString());
                                         Need_ForcePool casterPool = caster.needs.TryGetNeed<Need_ForcePool>();
                                         if (casterPool != null)
                                         {

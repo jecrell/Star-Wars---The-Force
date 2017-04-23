@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>
+<ThingDefs>  
+  
 
-
-
-  <ThingDef ParentName="BasePawn" Name="BaseFGhost" Abstract="True">
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+  <ThingDef Name="PJ_BaseFGhost" Abstract="True">
+    <thingClass>ProjectJedi.PawnGhost</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpactGround</soundImpactDefault>
     <statBases>
+      <Mass>70</Mass>
       <PsychicSensitivity>0</PsychicSensitivity>
       <Flammability>1</Flammability>
       <ComfyTemperatureMin>-450</ComfyTemperatureMin>
@@ -19,10 +26,15 @@
       <foodType>OmnivoreAnimal</foodType>
       <baseHungerRate>0.01</baseHungerRate>
     </race>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
   </ThingDef>
 
-
-  <ThingDef ParentName="BaseFGhost">
+  <ThingDef ParentName="PJ_BaseFGhost">
     <defName>PJ_ForceGhostR</defName>
     <label>Force ghost</label>
     <description>A force ghost</description>
@@ -51,6 +63,7 @@
     </verbs>
     <race>
       <intelligence>ToolUser</intelligence>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
       <thinkTreeMain>Humanlike</thinkTreeMain>
       <body>Human</body>
       <meatLabel>ectoplasm</meatLabel>
@@ -94,11 +107,11 @@
       </li>
     </lifeStages>
     <weaponMoney>
-      <min>9950</min>
-      <max>91900</max>
+      <min>9900</min>
+      <max>9900</max>
     </weaponMoney>
     <weaponTags>
-      <li>Melee</li>
+      <li>PJ_Lightsaber</li>
     </weaponTags>
   </PawnKindDef>
  

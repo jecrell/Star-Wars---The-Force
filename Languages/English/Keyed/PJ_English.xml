@@ -30,6 +30,7 @@
 <PJ_LightsaberAccuracy>Lightsaber Accuracy</PJ_LightsaberAccuracy>
 <PJ_LightsaberReflection>Lightsaber Reflection</PJ_LightsaberReflection>
 <PJ_ForcePool>Force Pool</PJ_ForcePool>
+<PJ_ForceXPDesc>Force XP is gained whenever a character uses their skills. Select skills increase force XP more than others.</PJ_ForceXPDesc>
 
 <!-- =========== Skills ========== -->
 <PJ_LightsaberOffense_Desc>Increases lightsaber damage by 20% per skill point. All force users start with half damage on lightsabers until leveling this skill. Non-force users can only deal a maximum of 10 damage.</PJ_LightsaberOffense_Desc>

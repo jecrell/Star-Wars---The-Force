@@ -173,6 +173,8 @@ namespace ProjectJedi
 
         public int abilityPoints = 0;
 
+        public int canMeditateTicks = 0;
+
         public int DarksidePoints
         {
             get
@@ -260,13 +262,11 @@ namespace ProjectJedi
         /// The force pool is where all fatigue and
         /// casting limits are decided.
         /// </summary>
-        private Need_ForcePool forcePool;
         public Need_ForcePool ForcePool
         {
             get
             {
-                if (forcePool == null) forcePool = abilityUser.needs.TryGetNeed<Need_ForcePool>();
-                return forcePool;
+                return abilityUser.needs.TryGetNeed<Need_ForcePool>();
             }
         }
 
@@ -310,7 +310,7 @@ namespace ProjectJedi
                             if (Find.TickManager.TicksGame % 30 == 0)
                             {
                                 if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
-                                forceUserXP++;
+                                //forceUserXP++;
                             }
                         }
                         //}
@@ -711,10 +711,15 @@ namespace ProjectJedi
             {
                 if (forceDef.changedAlignmentType != ForceAlignmentType.None)
                 {
-                    Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
-                    Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
+                   //Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
+                   //Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
                     AlignmentValue += forceDef.changedAlignmentRate;
-                    Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
+                   //Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
+                }
+
+                if (ForcePool != null)
+                {
+                    ForcePool.UseForcePower(forceDef.forcePoolCost);
                 }
             }
         }
@@ -723,18 +728,17 @@ namespace ProjectJedi
         /// <summary>
         /// This section checks what force abilities were used, and thus their effect on the Jedi's force powers.
         /// </summary>
-        public override void PostCastAbilityEffects(Verb_UseAbility verbAbility)
-        {
-            ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
-            if (forceDef != null)
-            {
-                if (ForcePool != null)
-                {
-                    float value = ForcePool.CurLevel - forceDef.forcePoolCost;
-                    ForcePool.CurLevel = Mathf.Clamp(value, 0.01f, 0.99f);
-                }
-            }
-        }
+        //public override void PostCastAbilityEffects(Verb_UseAbility verbAbility)
+        //{
+        //    ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
+        //    if (forceDef != null)
+        //    {
+        //        if (ForcePool != null)
+        //        {
+        //            ForcePool.UseForcePower(forceDef.forcePoolCost);
+        //        }
+        //    }
+        //}
 
         public override void PostExposeData()
         {
@@ -749,6 +753,7 @@ namespace ProjectJedi
             //Scribe_Values.LookValue<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
             //Scribe_Values.LookValue<int>(ref this.levelForcePool, "levelForcePool", 0);
             Scribe_Values.LookValue<int>(ref this.abilityPoints, "abilityPoints", 0);
+            Scribe_Values.LookValue<int>(ref this.canMeditateTicks, "canMeditateTicks", 0);
             Scribe_Collections.LookList<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, null);
             Scribe_Collections.LookList<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, null);
             Scribe_Collections.LookList<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, null);

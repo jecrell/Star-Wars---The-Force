@@ -7,6 +7,7 @@
 <AU_TargetAoE>Area of Effect</AU_TargetAoE>
 <AU_TargetSelf>Targets Self</AU_TargetSelf>
 <AU_TargetThing>Targets Other</AU_TargetThing>
+<AU_TargetLocation>Targets Location</AU_TargetLocation>
 <AU_Cooldown>Cooldown: </AU_Cooldown>
 <AU_Extra>Extra</AU_Extra>
 <AU_MentalStateChance>Mental State Chance</AU_MentalStateChance>
