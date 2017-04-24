@@ -124,9 +124,9 @@ namespace ProjectJedi
         }
 
         #region AlignmentGUI
-        public static string AlignmentTipString()
+        public static string AlignmentTipString(CompForceUser compForce)
         {
-            return "";
+            return compForce.ForceUserXP.ToString() + " / " + compForce.ForceUserXPTillNextLevel.ToString() + "\n" + "PJ_ForceXPDesc".Translate();
         }
 
         public static void AlignmentOnGUI(Rect rect, CompForceUser compForce)
@@ -142,7 +142,7 @@ namespace ProjectJedi
             {
                 Widgets.DrawHighlight(rect);
             }
-            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(), rect.GetHashCode()));
+            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(compForce), rect.GetHashCode()));
             float num2 = 14f;
             if (rect.height < 50f)
             {
@@ -215,7 +215,7 @@ namespace ProjectJedi
             {
                 Widgets.DrawHighlight(rect);
             }
-            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(), rect.GetHashCode()));
+            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(compForce), rect.GetHashCode()));
             float num2 = 14f;
             if (rect.height < 50f)
             {
@@ -250,7 +250,7 @@ namespace ProjectJedi
                         Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                         continue;
                     }
-                    else if (i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5)
+                    else if ((i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5) && (compForce.abilityUser.Faction == Faction.OfPlayer))
                     {
                         //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
                         if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
@@ -283,7 +283,7 @@ namespace ProjectJedi
                 {
                     Widgets.DrawTextureFitted(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon, 1.0f);
                 }
-                else if(Widgets.ButtonImage(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon))
+                else if(Widgets.ButtonImage(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon) && (compForce.abilityUser.Faction == Faction.OfPlayer))
                 {
                     ForceAbilityDef powerDef = power.nextLevelAbilityDef as ForceAbilityDef;
                     if (compForce.LightsidePoints < powerDef.lightsideTreePointsRequired)

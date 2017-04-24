@@ -35,7 +35,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="0Harmony, Version=1.0.9.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
     </Reference>
@@ -97,9 +97,13 @@
     <Compile Include="ProjectJedi\HediffComp_Shield.cs" />
     <Compile Include="ProjectJedi\Gizmo_HediffShieldStatus.cs" />
     <Compile Include="ProjectJedi\ITab_Pawn_Force.cs" />
+    <Compile Include="ProjectJedi\JobDriver_ForceMeditation.cs" />
+    <Compile Include="ProjectJedi\JobGiver_ForceMeditation.cs" />
     <Compile Include="ProjectJedi\Need_ForcePool.cs" />
+    <Compile Include="ProjectJedi\PawnGhost.cs" />
     <Compile Include="ProjectJedi\Projectile_ForceStorm.cs" />
     <Compile Include="ProjectJedi\ProjectJediDefOf.cs" />
+    <Compile Include="ProjectJedi\ThinkNode_ModNeedPercentageAbove.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

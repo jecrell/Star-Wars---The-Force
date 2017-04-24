@@ -108,12 +108,16 @@ namespace ProjectJedi
 
         public void UseForcePower(float amount)
         {
-            this.curLevelInt -= Mathf.Min(amount, 1f - this.CurLevel);
+            Log.Message(this.curLevelInt.ToString());
+            Log.Message(amount.ToString());
+            this.curLevelInt = Mathf.Clamp(this.curLevelInt - amount, 0f, 1.0f);
+            Log.Message(this.curLevelInt.ToString());
+
         }
 
         public override void NeedInterval()
         {
-            GainNeed(500f);
+            GainNeed(1f);
         }
 
         public override string GetTipString()

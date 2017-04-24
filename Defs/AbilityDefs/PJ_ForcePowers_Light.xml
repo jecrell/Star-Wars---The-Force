@@ -440,6 +440,7 @@
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<isViolent>false</isViolent>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
     </MainVerb>
   </ThingDef>
@@ -471,6 +472,7 @@
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<isViolent>false</isViolent>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
     </MainVerb>
   </ThingDef>
@@ -498,6 +500,7 @@
 		<abilityDef>PJ_MindTrick_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>1.5</SecondsToRecharge>
+		<isViolent>false</isViolent>
         <range>34</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -518,8 +521,8 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
-		<damageDef>PJ_MindTrickDam</damageDef>
-		<damageAmountBase>10</damageAmountBase>
+		<damageDef>Stun</damageDef>
+		<damageAmountBase>1</damageAmountBase>
 		<speed>105</speed>
    </projectile>
  </ThingDef>
@@ -550,10 +553,26 @@
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
+		<stopBurstWithoutLos>false</stopBurstWithoutLos>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<isViolent>false</isViolent>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+   	    <AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>false</canTargetSelf>
+		  <canTargetLocations>true</canTargetLocations>
+		</targetParams>		
+		<thingsToSpawn>
+		  <li>
+		    <def>PJ_ForceGhostR</def>
+			<kindDef>PJ_ForceGhost</kindDef>
+			<spawnCount>1</spawnCount>
+		  </li>
+		</thingsToSpawn>
     </MainVerb>
   </ThingDef>  
  
@@ -586,7 +605,23 @@
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<stopBurstWithoutLos>false</stopBurstWithoutLos>		
+		<isViolent>false</isViolent>
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+   	    <AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>false</canTargetSelf>
+		  <canTargetLocations>true</canTargetLocations>
+		</targetParams>
+		<thingsToSpawn>
+		  <li>
+		    <def>PJ_ForceGhostR</def>
+			<kindDef>PJ_ForceGhost</kindDef>
+			<spawnCount>1</spawnCount>
+		  </li>
+		</thingsToSpawn>		
     </MainVerb>
   </ThingDef>  
  
@@ -619,7 +654,23 @@
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<isViolent>false</isViolent>
+		<stopBurstWithoutLos>false</stopBurstWithoutLos>		
         <DrawProjectileOnTarget>true</DrawProjectileOnTarget>
+   	    <AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
+		<targetParams>
+		  <canTargetPawns>false</canTargetPawns>
+		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetSelf>false</canTargetSelf>
+		  <canTargetLocations>true</canTargetLocations>		
+		 </targetParams>
+		<thingsToSpawn>
+		  <li>
+		    <def>PJ_ForceGhostR</def>
+			<kindDef>PJ_ForceGhost</kindDef>
+			<spawnCount>1</spawnCount>
+		  </li>
+		</thingsToSpawn>		
     </MainVerb>
   </ThingDef>  
   

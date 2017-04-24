@@ -23,6 +23,25 @@ namespace ProjectJedi
             harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), "PreApplyDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("PreApplyDamage_PreFix")), null);
             harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawEquipment_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn), "GetGizmos"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetGizmos_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(Pawn_SkillTracker), "Learn"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Learn_PostFix")));
+        }
+
+        // RimWorld.Pawn_SkillTracker
+        public static void Learn_PostFix(Pawn_SkillTracker __instance, SkillDef sDef, float xp, bool direct = false)
+        {
+            Pawn pawn = (Pawn)AccessTools.Field(typeof(Pawn_SkillTracker), "pawn").GetValue(__instance);
+            CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
+            if (compForce != null)
+            {
+                if ((sDef == SkillDefOf.Melee || sDef == SkillDefOf.Shooting))
+                {
+                    compForce.ForceUserXP += Rand.Range(3, 6);
+                }
+                else if (Find.TickManager.TicksGame % 30 == 0)
+                {
+                    compForce.ForceUserXP++;
+                }
+            }
         }
 
         public static IEnumerable<Gizmo> gizmoGetter(HediffComp_Shield compHediffShield)
@@ -141,7 +160,7 @@ namespace ProjectJedi
                                     if (thingWithComps.def.defName.Contains("SWSaber_"))
                                     {
 
-                                    Log.Message("Force :: Lightsaber Original Accuracy " + __result.ToString("F"));
+                                   //Log.Message("Force :: Lightsaber Original Accuracy " + __result.ToString("F"));
                                     CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
                                         if (compForce == null)
                                         {
@@ -165,7 +184,7 @@ namespace ProjectJedi
                                             }
                                         __result = newAccuracy;
                                         }
-                                        Log.Message("Force :: Lightsaber Modified Accuracy " + __result.ToString("F"));
+                                       //Log.Message("Force :: Lightsaber Modified Accuracy " + __result.ToString("F"));
                                     }
                                 }
                             }
@@ -196,7 +215,7 @@ namespace ProjectJedi
                                 {
                                     if (thingWithComps.def.defName.Contains("SWSaber_"))
                                     {
-                                        Log.Message("Force :: Lightsaber Original Damage " + dinfo.Amount.ToString());
+                                       //Log.Message("Force :: Lightsaber Original Damage " + dinfo.Amount.ToString());
                                         CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
                                         if (compForce == null)
                                         {
@@ -220,7 +239,7 @@ namespace ProjectJedi
                                             }
                                             dinfo.SetAmount(newDamage);
                                         }
-                                        Log.Message("Force :: Lightsaber Modified Damage " + dinfo.Amount.ToString());
+                                       //Log.Message("Force :: Lightsaber Modified Damage " + dinfo.Amount.ToString());
                                     }
                                 }
                             }
