@@ -35,7 +35,27 @@
       <li>
         <grains>
           <li Class="AudioGrain_Clip">
-            <clipPath>force/choke/choke</clipPath>
+            <clipPath>force/dark/choke</clipPath>
+          </li>
+        </grains>     		
+        <pitchRange>
+			<min>0.9152174</min>
+			<max>1.042391</max>
+        </pitchRange>
+      </li>
+    </subSounds>
+  </SoundDef>   
+  
+      <SoundDef>
+    <defName>PJ_RageSound</defName>  
+    <context>MapOnly</context>
+    <eventNames />  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>force/dark/rage</clipPath>
           </li>
         </grains>     		
         <pitchRange>
