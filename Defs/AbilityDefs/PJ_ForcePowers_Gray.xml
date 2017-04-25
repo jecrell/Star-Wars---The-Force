@@ -85,7 +85,6 @@
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
 		    <damage>1</damage>
@@ -130,7 +129,6 @@
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
 		    <damage>2</damage>
@@ -175,7 +173,6 @@
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
 		    <damage>3</damage>
@@ -239,7 +236,6 @@
         <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
 		    <damage>1</damage>
@@ -283,7 +279,6 @@
         <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
 		    <damage>2</damage>
@@ -332,7 +327,6 @@
         <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<extraDamages>
 		  <li>
 		    <damage>3</damage>
@@ -399,7 +393,6 @@
         <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -441,7 +434,6 @@
         <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -489,7 +481,6 @@
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
 		</targetParams>		
-        <DrawProjectileOnTarget>false</DrawProjectileOnTarget>
 		<hediffsToApply>
 	      <li>
 	        <hediffDef>PJ_ForceSpeedHediff_Three</hediffDef>

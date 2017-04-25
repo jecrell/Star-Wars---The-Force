@@ -719,7 +719,11 @@ namespace ProjectJedi
 
                 if (ForcePool != null)
                 {
-                    ForcePool.UseForcePower(forceDef.forcePoolCost);
+                    float poolCost = 0f;
+                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
+                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
+                    //Log.Message("PC" + poolCost.ToString());
+                    ForcePool.UseForcePower(poolCost);
                 }
             }
         }

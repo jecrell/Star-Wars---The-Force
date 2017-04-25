@@ -78,6 +78,16 @@ namespace ProjectJedi
                                 flyingObject.Launch(Caster, Caster, droppedEquip);
                             }
                         }
+                        else
+                        {
+                            FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                            flyingObject.Launch(Caster, Caster, pawnTarget);    
+                        }
+                    }
+                    else
+                    {
+                        FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
+                        flyingObject.Launch(Caster, Caster, pawnTarget);
                     }
                 }
             }

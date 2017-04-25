@@ -110,7 +110,7 @@
     <workerClass>ProjectJedi.DamageWorker_ForceChoke</workerClass>  
     <externalViolence>false</externalViolence>
     <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
-    <hediff>Crush</hediff>
+    <hediff>PJ_ChokeCrush</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	<armorCategory>Electric</armorCategory>
 		<additionalHediffs>

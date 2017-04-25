@@ -3,6 +3,8 @@
 
 
 <!-- =========== Messages ======== -->
+<PJ_ForceDrainTwo>{0} is draining {1}'s health!</PJ_ForceDrainTwo>
+<PJ_ForceDrainOne>{0} is draining {1}'s force pool!</PJ_ForceDrainOne>
 <PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
 <WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
 <PJ_LightsidePointsRequired>Requires {0} points spent on light side abilities</PJ_LightsidePointsRequired>
