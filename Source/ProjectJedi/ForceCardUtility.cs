@@ -49,84 +49,105 @@ namespace ProjectJedi
         {
             GUI.BeginGroup(rect);
 
+            CompForceUser compForce = pawn.GetComp<CompForceUser>();
+            if (compForce != null)
+            {
+                if (compForce.ForceUserLevel > 0)
+                {
+                    float alignmentTextSize = Text.CalcSize("PJ_Alignment".Translate()).x;
+                    Rect rect2 = new Rect(((rect.width / 2) - alignmentTextSize) + SpacingOffset, rect.y, rect.width, HeaderSize);
+                    Text.Font = GameFont.Medium;
+                    Widgets.Label(rect2, "PJ_Alignment".Translate().CapitalizeFirst());
+                    Text.Font = GameFont.Small;
+                    //                             Alignment
 
-            float alignmentTextSize = Text.CalcSize("PJ_Alignment".Translate()).x;
-            Rect rect2 = new Rect(((rect.width / 2) - alignmentTextSize) + SpacingOffset, rect.y, rect.width, HeaderSize);            
-            Text.Font = GameFont.Medium;
-            Widgets.Label(rect2, "PJ_Alignment".Translate().CapitalizeFirst());
-            Text.Font = GameFont.Small;
-            //                             Alignment
+                    Widgets.DrawLineHorizontal(rect.x - 10, rect2.yMax, rect.width - 15f);
+                    //---------------------------------------------------------------------
 
-            Widgets.DrawLineHorizontal(rect.x - 10, rect2.yMax, rect.width - 15f);
-            //---------------------------------------------------------------------
 
-            
-            float grayTextSize = Text.CalcSize("PJ_Gray".Translate()).x;
-            float lightTextSize = Text.CalcSize("PJ_Light".Translate()).x;
-            Rect rectAlignmentLabels = new Rect(0 + SpacingOffset, 0 + rect2.yMax + 2, ForceCardSize.x, ForceCardUtility.ButtonSize * 1.15f);
-            Rect rectAlignmentDark = new Rect(rectAlignmentLabels.x, rectAlignmentLabels.y, rectAlignmentLabels.width / 3, rectAlignmentLabels.height);
-            Rect rectAlignmentGray = new Rect((rectAlignmentLabels.x + (rectAlignmentLabels.width / 2)) - grayTextSize, rectAlignmentLabels.y, rectAlignmentLabels.width / 3, rectAlignmentLabels.height);
-            Rect rectAlignmentLight = new Rect(rectAlignmentLabels.width - (lightTextSize * 2), rectAlignmentLabels.y, rectAlignmentLabels.width / 3, rectAlignmentLabels.height);
-            Widgets.Label(rectAlignmentDark, "PJ_Dark".Translate().CapitalizeFirst());
-            Widgets.Label(rectAlignmentGray, "PJ_Gray".Translate().CapitalizeFirst());
-            Widgets.Label(rectAlignmentLight, "PJ_Light".Translate().CapitalizeFirst());
+                    float grayTextSize = Text.CalcSize("PJ_Gray".Translate()).x;
+                    float lightTextSize = Text.CalcSize("PJ_Light".Translate()).x;
+                    Rect rectAlignmentLabels = new Rect(0 + SpacingOffset, 0 + rect2.yMax + 2, ForceCardSize.x, ForceCardUtility.ButtonSize * 1.15f);
+                    Rect rectAlignmentDark = new Rect(rectAlignmentLabels.x, rectAlignmentLabels.y, rectAlignmentLabels.width / 3, rectAlignmentLabels.height);
+                    Rect rectAlignmentGray = new Rect((rectAlignmentLabels.x + (rectAlignmentLabels.width / 2)) - grayTextSize, rectAlignmentLabels.y, rectAlignmentLabels.width / 3, rectAlignmentLabels.height);
+                    Rect rectAlignmentLight = new Rect(rectAlignmentLabels.width - (lightTextSize * 2), rectAlignmentLabels.y, rectAlignmentLabels.width / 3, rectAlignmentLabels.height);
+                    Widgets.Label(rectAlignmentDark, "PJ_Dark".Translate().CapitalizeFirst());
+                    Widgets.Label(rectAlignmentGray, "PJ_Gray".Translate().CapitalizeFirst());
+                    Widgets.Label(rectAlignmentLight, "PJ_Light".Translate().CapitalizeFirst());
 
-            //Dark                        Gray                        Light
-            Rect rectAlignment = new Rect(rect.x, rectAlignmentLabels.yMax / 1.5f, rectAlignmentLabels.width - 20f, TextSize);
+                    //Dark                        Gray                        Light
+                    Rect rectAlignment = new Rect(rect.x, rectAlignmentLabels.yMax / 1.5f, rectAlignmentLabels.width - 20f, TextSize);
 
-            AlignmentOnGUI(rectAlignment, pawn.GetComp<CompForceUser>());
-            // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+                    AlignmentOnGUI(rectAlignment, pawn.GetComp<CompForceUser>());
+                    // |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 
-            float skillsTextSize = Text.CalcSize("PJ_Skills".Translate()).x;
-            Rect rectSkillsLabel = new Rect((rectAlignmentLabels.width / 2) - skillsTextSize, rectAlignment.yMax + SectionOffset, rect.width, HeaderSize);
-            Text.Font = GameFont.Medium;
-            Widgets.Label(rectSkillsLabel, "PJ_Skills".Translate().CapitalizeFirst());
-            Text.Font = GameFont.Small;
-            
-            //                               Skills
+                    float skillsTextSize = Text.CalcSize("PJ_Skills".Translate()).x;
+                    Rect rectSkillsLabel = new Rect((rectAlignmentLabels.width / 2) - skillsTextSize, rectAlignment.yMax + SectionOffset, rect.width, HeaderSize);
+                    Text.Font = GameFont.Medium;
+                    Widgets.Label(rectSkillsLabel, "PJ_Skills".Translate().CapitalizeFirst());
+                    Text.Font = GameFont.Small;
 
-            Widgets.DrawLineHorizontal(rect.x - 10, rectSkillsLabel.yMax + Padding, rect.width - 15f);
-            //---------------------------------------------------------------------
+                    //                               Skills
 
-            Rect rectSkills = new Rect(rect.x, rectSkillsLabel.yMax + Padding, rectSkillsLabel.width, SkillsColumnHeight);
-            Rect rectInfoPane = new Rect(rectSkills.x, rectSkills.y + Padding, SkillsColumnDivider, SkillsColumnHeight);
-            Rect rectSkillsPane = new Rect(rectSkills.x + SkillsColumnDivider, rectSkills.y + Padding, rectSkills.width - SkillsColumnDivider, SkillsColumnHeight);
+                    Widgets.DrawLineHorizontal(rect.x - 10, rectSkillsLabel.yMax + Padding, rect.width - 15f);
+                    //---------------------------------------------------------------------
 
-            InfoPane(rectInfoPane, pawn.GetComp<CompForceUser>());
-            SkillsPane(rectSkillsPane, pawn.GetComp<CompForceUser>());
+                    Rect rectSkills = new Rect(rect.x, rectSkillsLabel.yMax + Padding, rectSkillsLabel.width, SkillsColumnHeight);
+                    Rect rectInfoPane = new Rect(rectSkills.x, rectSkills.y + Padding, SkillsColumnDivider, SkillsColumnHeight);
+                    Rect rectSkillsPane = new Rect(rectSkills.x + SkillsColumnDivider, rectSkills.y + Padding, rectSkills.width - SkillsColumnDivider, SkillsColumnHeight);
 
-            // LEVEL ________________             |       Lightsaber Offense  [X][X][+][_][_]
-            // ||||||||||||||||||||||             |       Lightsaber Defense  [+][_][_][_][_]
-            // Points Available 1                 |       Lightsaber Accuracy [X][+][_][_][_]
-            //
+                    InfoPane(rectInfoPane, pawn.GetComp<CompForceUser>());
+                    SkillsPane(rectSkillsPane, pawn.GetComp<CompForceUser>());
 
-            float powersTextSize = Text.CalcSize("PJ_Powers".Translate()).x;
-            Rect rectPowersLabel = new Rect((rect.width / 2) - (powersTextSize /2), rectSkills.yMax + SectionOffset, rect.width, HeaderSize);
-            Text.Font = GameFont.Medium;
-            Widgets.Label(rectPowersLabel, "PJ_Powers".Translate().CapitalizeFirst());
-            Text.Font = GameFont.Small;
+                    // LEVEL ________________             |       Lightsaber Offense  [X][X][+][_][_]
+                    // ||||||||||||||||||||||             |       Lightsaber Defense  [+][_][_][_][_]
+                    // Points Available 1                 |       Lightsaber Accuracy [X][+][_][_][_]
+                    //
 
-            //Powers
+                    float powersTextSize = Text.CalcSize("PJ_Powers".Translate()).x;
+                    Rect rectPowersLabel = new Rect((rect.width / 2) - (powersTextSize / 2), rectSkills.yMax + SectionOffset, rect.width, HeaderSize);
+                    Text.Font = GameFont.Medium;
+                    Widgets.Label(rectPowersLabel, "PJ_Powers".Translate().CapitalizeFirst());
+                    Text.Font = GameFont.Small;
 
-            Widgets.DrawLineHorizontal(rect.x - 10, rectPowersLabel.yMax, rect.width - 15f);
-            //---------------------------------------------------------------------
+                    //Powers
 
-            Rect rectPowers = new Rect(rect.x, rectPowersLabel.yMax + SectionOffset, rectPowersLabel.width, PowersColumnHeight);
-            Rect rectPowersDark = new Rect(rectPowers.x, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
-            Rect rectPowersGray = new Rect(rectPowers.x + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
-            Rect rectPowersLight = new Rect(rectPowers.x + PowersColumnWidth + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
+                    Widgets.DrawLineHorizontal(rect.x - 10, rectPowersLabel.yMax, rect.width - 15f);
+                    //---------------------------------------------------------------------
 
-            PowersGUIHandler(rectPowersDark, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersDark, TexButton.PJTex_ForcePointDark);
-            PowersGUIHandler(rectPowersGray, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersGray, TexButton.PJTex_ForcePointGray);
-            PowersGUIHandler(rectPowersLight, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersLight, TexButton.PJTex_ForcePointLight);
+                    Rect rectPowers = new Rect(rect.x, rectPowersLabel.yMax + SectionOffset, rectPowersLabel.width, PowersColumnHeight);
+                    Rect rectPowersDark = new Rect(rectPowers.x, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
+                    Rect rectPowersGray = new Rect(rectPowers.x + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
+                    Rect rectPowersLight = new Rect(rectPowers.x + PowersColumnWidth + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
+
+                    PowersGUIHandler(rectPowersDark, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersDark, TexButton.PJTex_ForcePointDark);
+                    PowersGUIHandler(rectPowersGray, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersGray, TexButton.PJTex_ForcePointGray);
+                    PowersGUIHandler(rectPowersLight, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersLight, TexButton.PJTex_ForcePointLight);
+                }
+                else
+                {
+                    Rect rectInfoPane = new Rect(rect.x, rect.y, rect.width, rect.height);
+                    InfoPaneSensitive(rectInfoPane, pawn.GetComp<CompForceUser>());
+                }
+            }
 
             GUI.EndGroup();
         }
 
         #region AlignmentGUI
-        public static string AlignmentTipString(CompForceUser compForce)
+        public static string AlignmentTipString(CompForceUser compForce, bool sensitive)
         {
-            return compForce.ForceUserXP.ToString() + " / " + compForce.ForceUserXPTillNextLevel.ToString() + "\n" + "PJ_ForceXPDesc".Translate();
+            return "PJ_AlignmentDesc".Translate();
+
+        }
+
+        public static string ForceXPTipString(CompForceUser compForce, bool sensitive)
+        {
+            if (!sensitive) return compForce.ForceUserXP.ToString() + " / " + compForce.ForceUserXPTillNextLevel.ToString() + "\n" + "PJ_ForceXPDesc".Translate();
+            return "PJ_ForceSensitiveDesc".Translate(new object[] {
+                compForce.abilityUser.LabelShort
+            });
+
         }
 
         public static void AlignmentOnGUI(Rect rect, CompForceUser compForce)
@@ -142,7 +163,7 @@ namespace ProjectJedi
             {
                 Widgets.DrawHighlight(rect);
             }
-            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(compForce), rect.GetHashCode()));
+            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(compForce, false), rect.GetHashCode()));
             float num2 = 14f;
             if (rect.height < 50f)
             {
@@ -202,7 +223,34 @@ namespace ProjectJedi
             DrawLevelBar(rectLevelBar, compForce);
 
         }
-        public static void DrawLevelBar(Rect rect, CompForceUser compForce)
+
+        public static void InfoPaneSensitive(Rect inRect, CompForceUser compForce)
+        {
+            Rect rectLevel = new Rect(inRect.x, inRect.y, inRect.width * 0.7f, TextSize);
+            Text.Font = GameFont.Small;
+            Widgets.Label(rectLevel, "PJ_SensitiveMessage".Translate(new object[] {
+                compForce.abilityUser.LabelShort
+            }
+            ));
+            Text.Font = GameFont.Small;
+
+            if (DebugSettings.godMode)
+            {
+                Rect rectDebugPlus = new Rect(rectLevel.xMax, inRect.y, inRect.width * 0.3f, TextSize);
+                if (Widgets.ButtonText(rectDebugPlus, "+", true, false, true))
+                {
+                    compForce.LevelUp(true);
+                }
+            }
+            
+            //Something is awakening...
+
+            Rect rectPointsAvail = new Rect(inRect.x, rectLevel.yMax, inRect.width, TextSize);
+            Rect rectLevelBar = new Rect(rectPointsAvail.x, rectPointsAvail.yMax + 3f, inRect.width - 10f, HeaderSize * 0.6f);
+            DrawLevelBar(rectLevelBar, compForce, true);
+
+        }
+        public static void DrawLevelBar(Rect rect, CompForceUser compForce, bool sensitive = false)
         {
             ////base.DrawOnGUI(rect, maxThresholdMarkers, customMargin, drawArrows, doTooltip);
             if (rect.height > 70f)
@@ -215,7 +263,7 @@ namespace ProjectJedi
             {
                 Widgets.DrawHighlight(rect);
             }
-            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(compForce), rect.GetHashCode()));
+            TooltipHandler.TipRegion(rect, new TipSignal(() => ForceXPTipString(compForce, sensitive), rect.GetHashCode()));
             float num2 = 14f;
             if (rect.height < 50f)
             {

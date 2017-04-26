@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>PJ_ForceSensitive</defName>
-    <commonality>0.05</commonality>
+    <commonality>0.07</commonality>
     <degreeDatas>	
       <li>
         <label>Force Sensitive</label>
@@ -20,7 +20,7 @@
   
   <TraitDef>
     <defName>PJ_JediTrait</defName>
-    <commonality>1.0</commonality>
+    <commonality>0.03</commonality>
     <degreeDatas>	
       <li>
         <label>Jedi</label>
@@ -51,7 +51,7 @@
 
   <TraitDef>
     <defName>PJ_SithTrait</defName>
-    <commonality>1.0</commonality>
+    <commonality>0.03</commonality>
     <degreeDatas>	
       <li>
         <label>Sith</label>
@@ -86,7 +86,7 @@
   
     <TraitDef>
     <defName>PJ_GrayTrait</defName>
-    <commonality>1.0</commonality>
+    <commonality>0.03</commonality>
     <degreeDatas>	
       <li>
         <label>Gray Padawan</label>

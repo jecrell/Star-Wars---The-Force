@@ -2,6 +2,27 @@
 
 <DefPackage-SoundDef>
 
+  <SoundDef>
+    <defName>PJ_ForcePowersUnlocked</defName>  
+    <eventNames />  
+    <maxVoices>1</maxVoices>  
+    <maxSimultaneous>1</maxSimultaneous>  
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>      
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>StarWarsClawhammerBanjo</clipPath>
+          </li>
+        </grains>      
+        <volumeRange>
+          <min>30</min>        
+          <max>30</max>
+        </volumeRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+
     <SoundDef>
     <defName>PJ_LightningSound</defName>  
     <context>MapOnly</context>

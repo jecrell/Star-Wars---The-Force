@@ -37,7 +37,7 @@ namespace ProjectJedi
                 {
                     compForce.ForceUserXP += Rand.Range(3, 6);
                 }
-                else if (Find.TickManager.TicksGame % 30 == 0)
+                else if (Find.TickManager.TicksGame % 70 == 0)
                 {
                     compForce.ForceUserXP++;
                 }

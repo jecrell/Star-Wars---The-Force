@@ -7,6 +7,7 @@ using System.Text;
 using Verse;
 using AbilityUser;
 using UnityEngine;
+using Verse.Sound;
 
 namespace ProjectJedi
 {
@@ -322,10 +323,102 @@ namespace ProjectJedi
         public void LevelUp(bool hideNotification = false)
         {
             ForceUserLevel += 1;
-            if (!hideNotification) Messages.Message("PJ_LevelUp".Translate(new object[]
+            if (ForceUserLevel == 1)
             {
+
+                if (!hideNotification) Messages.Message("PJ_ForcePowersUnlocked".Translate(new object[]
+                {
                 this.parent.Label
-            }), MessageSound.Benefit);
+                }), MessageSound.Silent);
+                SoundDef.Named("PJ_ForcePowersUnlocked").PlayOneShotOnCamera();
+            }
+            else
+            {
+                if (!hideNotification) Messages.Message("PJ_LevelUp".Translate(new object[]
+                {
+                this.parent.Label
+                }), MessageSound.Benefit);
+                UpdateAlignment();
+            }
+
+        }
+
+        public void UpdateAlignment()
+        {
+            //Change traits...
+            Trait jediTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
+            Trait sithTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
+            Trait grayTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
+            Trait sensitiveTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
+            
+            //Clear traits.
+            if (jediTrait != null) LoseTrait(this.abilityUser.story.traits, jediTrait);
+            if (sithTrait != null) LoseTrait(this.abilityUser.story.traits, sithTrait);
+            if (grayTrait != null) LoseTrait(this.abilityUser.story.traits, grayTrait);
+            if (sensitiveTrait != null) LoseTrait(this.abilityUser.story.traits, sensitiveTrait);
+
+            //Jedi
+            int degree = 0;
+
+            if (ForceUserLevel > 14)
+            {
+                degree = 4;
+            }
+            else if (ForceUserLevel > 8)
+            {
+                degree = 3;
+            }
+            else if (ForceUserLevel > 3)
+            {
+                degree = 2;
+            }
+            else if (ForceUserLevel > 0)
+            {
+                degree = 1;
+            }
+
+            if (AlignmentValue > 0.75)
+            {
+                this.abilityUser.story.traits. GainTrait(new Trait(ProjectJediDefOf.PJ_JediTrait, degree, true));
+                return;
+            }
+            //Gray
+            else if (AlignmentValue >= 0.25 && AlignmentValue <= 0.75)
+            {
+                this.abilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_GrayTrait, degree, true));
+                return;
+            }
+            //Sith
+            else
+            {
+                this.abilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_SithTrait, degree, true));
+                return;
+            }
+
+        }
+
+        // RimWorld.TraitSet
+        public void LoseTrait(TraitSet traits, Trait trait)
+        {
+            if (!traits.HasTrait(trait.def))
+            {
+                Log.Warning(this.abilityUser + " doesn't have trait " + trait.def);
+                return;
+            }
+            traits.allTraits.Remove(trait);
+            if (this.abilityUser.workSettings != null)
+            {
+                this.abilityUser.workSettings.Notify_GainedTrait();
+            }
+            //this.abilityUser.story.Notify_TraitChanged();
+            if (this.abilityUser.skills != null)
+            {
+                this.abilityUser.skills.Notify_SkillDisablesChanged();
+            }
+            if (!this.abilityUser.Dead && this.abilityUser.RaceProps.Humanlike)
+            {
+                this.abilityUser.needs.mood.thoughts.situational.Notify_SituationalThoughtsDirty();
+            }
         }
 
         /// <summary>
@@ -341,6 +434,7 @@ namespace ProjectJedi
                     {
                         firstTick = true;
                         this.Initialize();
+                        if (this.AlignmentValue == 0.0f) this.AlignmentValue = 0.5f;
                         ResolveForceTab();
                         ResolveForcePowers();
                         ResolveForcePool();
@@ -714,7 +808,8 @@ namespace ProjectJedi
                    //Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
                    //Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
                     AlignmentValue += forceDef.changedAlignmentRate;
-                   //Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
+                    //Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
+                    UpdateAlignment();
                 }
 
                 if (ForcePool != null)
