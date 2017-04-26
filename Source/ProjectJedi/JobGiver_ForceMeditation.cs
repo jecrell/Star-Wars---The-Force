@@ -43,6 +43,8 @@ namespace ProjectJedi
 
         public override ThinkResult TryIssueJobPackage(Pawn pawn)
         {
+
+
            //Log.Message("TryIssueJobPackage");
             Need_ForcePool forcePool = pawn.needs.TryGetNeed<Need_ForcePool>();
            //Log.Message("T1");
@@ -57,7 +59,14 @@ namespace ProjectJedi
             {
                 return ThinkResult.NoJob;
             }
-           //Log.Message("T3");
+            //Log.Message("T3");
+
+
+            Trait sensitiveTrait = pawn.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
+            if (sensitiveTrait != null)
+            {
+                return ThinkResult.NoJob;
+            }
 
             if (compForce.canMeditateTicks > Find.TickManager.TicksAbs)
             {

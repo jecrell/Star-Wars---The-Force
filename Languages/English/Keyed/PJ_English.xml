@@ -3,6 +3,8 @@
 
 
 <!-- =========== Messages ======== -->
+<PJ_ForceDrainTwo>{0} is draining {1}'s health!</PJ_ForceDrainTwo>
+<PJ_ForceDrainOne>{0} is draining {1}'s force pool!</PJ_ForceDrainOne>
 <PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
 <WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
 <PJ_LightsidePointsRequired>Requires {0} points spent on light side abilities</PJ_LightsidePointsRequired>
@@ -31,6 +33,10 @@
 <PJ_LightsaberReflection>Lightsaber Reflection</PJ_LightsaberReflection>
 <PJ_ForcePool>Force Pool</PJ_ForcePool>
 <PJ_ForceXPDesc>Force XP is gained whenever a character uses their skills. Select skills increase force XP more than others.</PJ_ForceXPDesc>
+<PJ_AlignmentDesc>Alignment determines what abilities a character can use. Gray Jedi can use low levels of both light and dark powers. However, higher level abilities require commitment to the dark or light side of the force</PJ_AlignmentDesc>
+<PJ_ForceSensitiveDesc>{0} can feel something stirring within... Utilize their skills and watch them grow.</PJ_ForceSensitiveDesc>
+<PJ_SensitiveMessage>Something is awakening...</PJ_SensitiveMessage>
+<PJ_ForcePowersUnlocked>{0} has begun to control the force.</PJ_ForcePowersUnlocked>
 
 <!-- =========== Skills ========== -->
 <PJ_LightsaberOffense_Desc>Increases lightsaber damage by 20% per skill point. All force users start with half damage on lightsabers until leveling this skill. Non-force users can only deal a maximum of 10 damage.</PJ_LightsaberOffense_Desc>

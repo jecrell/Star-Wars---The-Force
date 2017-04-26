@@ -38,10 +38,16 @@ namespace ProjectJedi
                                         Need_ForcePool casterPool = caster.needs.TryGetNeed<Need_ForcePool>();
                                         if (casterPool != null)
                                         {
+                                            Messages.Message("PJ_ForceDrainOne".Translate(new object[]
+                                                {
+                                                    caster.Label,
+                                                    pawn.Label
+                                                }), MessageSound.Silent);
                                             for (int i = 0; i < Mathf.Min(victimForceInt, maxPoolDamage); i++)
                                             {
                                                 if (casterPool.CurLevel >= 0.99f) break;
                                                 casterPool.CurLevel += 0.01f;
+                                                victimForcePool.CurLevel -= 0.05f;
                                             }
                                             return 0f;
                                         }
@@ -49,6 +55,13 @@ namespace ProjectJedi
                                 }
                             }
                         }
+
+                        Messages.Message("PJ_ForceDrainTwo".Translate(new object[]
+                            {
+                               caster.Label,
+                               pawn.Label
+                            }), MessageSound.Silent);
+
                         foreach (BodyPartRecord rec in pawn.health.hediffSet.GetNotMissingParts().InRandomOrder<BodyPartRecord>())
                         {
                             if (maxInjuries > 0)

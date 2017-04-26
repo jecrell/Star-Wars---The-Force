@@ -17,39 +17,49 @@ namespace ProjectJedi
         private IntVec3 strikeLoc = IntVec3.Invalid;
         private int age = 0;
         private int duration;
+        private bool thrown = false;
 
-        public void ThrowBolt(IntVec3 strikeZone)
+        public override void Destroy(DestroyMode mode = DestroyMode.Vanish)
         {
-            this.strikeLoc = strikeZone;
-            SoundDefOf.Thunder_OffMap.PlayOneShotOnCamera();
-            if (!strikeLoc.IsValid)
+            if (age < 600) return;
+            base.Destroy(mode);
+        }
+
+        public void ThrowBolt(IntVec3 strikeZone, Pawn victim)
+        {
+            if (!thrown)
             {
-                strikeLoc = CellFinderLoose.RandomCellWith((IntVec3 sq) => sq.Standable(Caster.Map) && !Caster.Map.roofGrid.Roofed(sq), Caster.Map, 1000);
+                thrown = true;
+                this.strikeLoc = strikeZone;
+                SoundDefOf.Thunder_OffMap.PlayOneShotOnCamera();
+                //if (!strikeLoc.IsValid)
+                //{
+                //    strikeLoc = CellFinderLoose.RandomCellWith((IntVec3 sq) => sq.Standable(victim.Map) && !victim.Map.roofGrid.Roofed(sq), victim.Map, 1000);
+                //}
+                this.boltMesh = LightningBoltMeshPool.RandomBoltMesh;
+                GenExplosion.DoExplosion(strikeLoc, victim.Map, 1.9f, DamageDefOf.Flame, null, null, null, null, null, 0f, 1, false, null, 0f, 1);
+                Vector3 loc = strikeLoc.ToVector3Shifted();
+                for (int i = 0; i < 4; i++)
+                {
+                    MoteMaker.ThrowSmoke(loc, victim.Map, 1.5f);
+                    MoteMaker.ThrowMicroSparks(loc, victim.Map);
+                    MoteMaker.ThrowLightningGlow(loc, victim.Map, 1.5f);
+                }
+                SoundInfo info = SoundInfo.InMap(new TargetInfo(strikeLoc, victim.Map, false), MaintenanceType.None);
+                SoundDefOf.Thunder_OnMap.PlayOneShot(info);
             }
-            this.boltMesh = LightningBoltMeshPool.RandomBoltMesh;
-            GenExplosion.DoExplosion(strikeLoc, Caster.Map, 1.9f, DamageDefOf.Flame, null, null, null, null, null, 0f, 1, false, null, 0f, 1);
-            Vector3 loc = strikeLoc.ToVector3Shifted();
-            for (int i = 0; i < 4; i++) 
-            {
-                MoteMaker.ThrowSmoke(loc, Caster.Map, 1.5f);
-                MoteMaker.ThrowMicroSparks(loc, Caster.Map);
-                MoteMaker.ThrowLightningGlow(loc, Caster.Map, 1.5f);
-            }
-            SoundInfo info = SoundInfo.InMap(new TargetInfo(strikeLoc, Caster.Map, false), MaintenanceType.None);
-            SoundDefOf.Thunder_OnMap.PlayOneShot(info);
         }
 
         public override void PostImpactEffects(Thing hitThing)
         {
             if (hitThing != null)
             {
-
-                Pawn victim = hitThing as Pawn;
-                if (victim != null)
-                {
-                    this.duration = Rand.Range(30, 60);
-                    ThrowBolt(victim.PositionHeld);
-                }
+                    Pawn victim = hitThing as Pawn;
+                    if (victim != null)
+                    {
+                            this.duration = Rand.Range(30, 60);
+                            ThrowBolt(victim.Position, victim);
+                    }
             }
         }
 
