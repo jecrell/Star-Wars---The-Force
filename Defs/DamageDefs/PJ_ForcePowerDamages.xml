@@ -116,7 +116,7 @@
 		<additionalHediffs>
 		<li>
 			<hediff>PJ_NoAir</hediff>
-			<severityPerDamageDealt>0.12</severityPerDamageDealt>
+			<severityPerDamageDealt>0.32</severityPerDamageDealt>
 		</li>
 		</additionalHediffs>
   </DamageDef>
