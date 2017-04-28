@@ -54,7 +54,7 @@
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
 		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
@@ -65,7 +65,7 @@
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>Berserk</mentalStateDef>
-	        <applyChance>0.6</applyChance>
+	        <applyChance>0.7</applyChance>
 	      </li>
         </mentalStatesToApply>
     </MainVerb>
@@ -81,6 +81,7 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
+	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentRate>-0.025</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -92,7 +93,7 @@
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>60.0</SecondsToRecharge>
         <range>44</range>
 		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
@@ -103,7 +104,7 @@
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>Berserk</mentalStateDef>
-	        <applyChance>0.8</applyChance>
+	        <applyChance>0.85</applyChance>
 	      </li>
         </mentalStatesToApply>
     </MainVerb>
@@ -119,6 +120,7 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
+	<requiredAlignmentType>Dark</requiredAlignmentType>	
 	<changedAlignmentRate>-0.035</changedAlignmentRate>
 	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -131,7 +133,7 @@
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>30.0</SecondsToRecharge>
         <range>50</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>

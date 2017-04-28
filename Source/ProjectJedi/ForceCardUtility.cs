@@ -152,6 +152,20 @@ namespace ProjectJedi
 
         public static void AlignmentOnGUI(Rect rect, CompForceUser compForce)
         {
+            if (DebugSettings.godMode)
+            {
+                Rect rectDebugPlus = new Rect(rect.xMax - 5, rect.y, 5, 5);
+                if (Widgets.ButtonText(rectDebugPlus, "+", true, false, true))
+                {
+                    compForce.AlignmentValue += 0.025f;
+                }
+                Rect rectDebugMinus = new Rect(rect.xMin + 5, rect.y, 5, 5);
+                if (Widgets.ButtonText(rectDebugPlus, "-", true, false, true))
+                {
+                    compForce.AlignmentValue -= 0.025f;
+                }
+            }
+
             ////base.DrawOnGUI(rect, maxThresholdMarkers, customMargin, drawArrows, doTooltip);
             if (rect.height > 70f)
             {
@@ -327,13 +341,26 @@ namespace ProjectJedi
             float buttonYOffset = inRect.y;
             foreach (ForcePower power in forcePowers)
             {
+                
+                Rect buttonRect = new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize);
+                TooltipHandler.TipRegion(buttonRect, () => power.abilityDef.label + "\n\n" + power.abilityDef.description + "\n\n" + "PJ_CheckStarsForMoreInfo".Translate(), 398462);
                 if (compForce.abilityPoints == 0 || power.level >= 3)
                 {
-                    Widgets.DrawTextureFitted(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon, 1.0f);
+                    Widgets.DrawTextureFitted(buttonRect, power.Icon, 1.0f);
                 }
-                else if(Widgets.ButtonImage(new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize), power.Icon) && (compForce.abilityUser.Faction == Faction.OfPlayer))
+                else if(Widgets.ButtonImage(buttonRect, power.Icon) && (compForce.abilityUser.Faction == Faction.OfPlayer))
                 {
                     ForceAbilityDef powerDef = power.nextLevelAbilityDef as ForceAbilityDef;
+                    if (powerDef.requiredAlignmentType != ForceAlignmentType.None &&
+                        powerDef.requiredAlignmentType != compForce.ForceAlignmentType)
+                    {
+                        Messages.Message("PJ_NextLevelAlignmentMismatch".Translate(new object[]
+                        {
+                            powerDef.requiredAlignmentType.ToString(),
+                            compForce.ForceAlignmentType.ToString()
+                        }), MessageSound.RejectInput);
+                        return;
+                    }
                     if (compForce.LightsidePoints < powerDef.lightsideTreePointsRequired)
                     {
                         Messages.Message("PJ_LightsidePointsRequired".Translate(new object[]

@@ -24,7 +24,38 @@ namespace ProjectJedi
             harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawEquipment_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn), "GetGizmos"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetGizmos_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn_SkillTracker), "Learn"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Learn_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(StorytellerUtility), "DefaultParmsNow"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DefaultParmsNow_PostFix")));
         }
+
+        // RimWorld.StorytellerUtility
+        public static void DefaultParmsNow_PostFix(ref IncidentParms __result, StorytellerDef tellerDef, IncidentCategory incCat, IIncidentTarget target)
+        {
+            Map map = target as Map;
+            if (map != null)
+            {
+                if (__result.points > 0)
+                {
+                    try
+                    {
+                        List<Pawn> forceUsers = map.mapPawns.FreeColonistsSpawned.ToList().FindAll(p => p.GetComp<CompForceUser>() != null);
+                        if (forceUsers != null)
+                        {
+                            foreach (Pawn pawn in forceUsers)
+                            {
+                                CompForceUser compForce = pawn.GetComp<CompForceUser>();
+                                if (compForce.ForceUserLevel > 0)
+                                {
+                                        __result.points += (120 * compForce.ForceUserLevel);
+                                }
+                            }
+                        }
+                    }
+                    catch (NullReferenceException)
+                    { }
+                }
+            }
+        }
+
 
         // RimWorld.Pawn_SkillTracker
         public static void Learn_PostFix(Pawn_SkillTracker __instance, SkillDef sDef, float xp, bool direct = false)

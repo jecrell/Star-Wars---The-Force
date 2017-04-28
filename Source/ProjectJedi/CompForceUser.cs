@@ -61,7 +61,7 @@ namespace ProjectJedi
             get
             {
                 float result = 0f;
-                if (forceUserLevel > 0) result = forceUserLevel * 600;
+                if (ForceUserLevel > 0) result = ForceUserLevel * 600;
                 return result;
             }
         }
@@ -228,6 +228,7 @@ namespace ProjectJedi
             set
             {     
                 alignmentValue = Mathf.Clamp(value, 0.0f, 1.0f);
+                if (ForceUserLevel > 0) UpdateAlignment();
             }
         }
 
@@ -326,10 +327,17 @@ namespace ProjectJedi
             if (ForceUserLevel == 1)
             {
 
-                if (!hideNotification) Messages.Message("PJ_ForcePowersUnlocked".Translate(new object[]
+                if (!hideNotification)
                 {
+                    Messages.Message("PJ_ForcePowersUnlocked".Translate(new object[]
+{
                 this.parent.Label
-                }), MessageSound.Silent);
+}), MessageSound.Silent);
+                    Find.LetterStack.ReceiveLetter("PJ_ForceAwakensLabel".Translate(), "PJ_ForceAwakensDesc".Translate(new object[]
+                    {
+                        this.parent.Label
+                        }), LetterType.Good, this.parent, null);
+                }
                 SoundDef.Named("PJ_ForcePowersUnlocked").PlayOneShotOnCamera();
             }
             else

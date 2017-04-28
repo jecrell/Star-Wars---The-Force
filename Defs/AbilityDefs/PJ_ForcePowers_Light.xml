@@ -106,7 +106,7 @@
  
  <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceHealingSelf_Master</defName>
-    <label>Heal Self(Master)</label>
+    <label>Heal Self (Master)</label>
     <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
@@ -143,7 +143,7 @@
   <!-- ===================== Force Heal Target (Apprentice) =============================== -->
      <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceHealingOther_Apprentice</defName>
-    <label>Hael Other</label>
+    <label>Heal Other</label>
     <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
     <description>Miraculously heals the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
@@ -179,7 +179,7 @@
     <defName>PJ_ForceHealingOther_Adept</defName>
     <label>Heal Other (Adept)</label>
     <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
-    <description>Miraculously heals the caster.</description>
+    <description>Miraculously heals the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.45</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
@@ -207,7 +207,6 @@
 		  <canTargetSelf>true</canTargetSelf>
 		</targetParams>
     </MainVerb>
-	
   </ThingDef>  
   
   <!-- ===================== Force Heal Target (Master) =============================== -->
@@ -408,8 +407,8 @@
 	</graphicData>
    <projectile>
 		<flyOverhead>false</flyOverhead>
-		<damageDef>PJ_MindTrickDam</damageDef>
-		<damageAmountBase>10</damageAmountBase>
+		<damageDef>Stun</damageDef>
+		<damageAmountBase>1</damageAmountBase>
 		<speed>105</speed>
    </projectile>
  </ThingDef>
@@ -435,12 +434,18 @@
         <projectileDef>PMindTrick</projectileDef>	
 		<abilityDef>PJ_MindTrick_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
+		<mentalStatesToApply>
+	      <li>
+	        <mentalStateDef>WanderConfused</mentalStateDef>
+	        <applyChance>0.7</applyChance>
+	      </li>
+        </mentalStatesToApply>			
     </MainVerb>
   </ThingDef>
   
@@ -466,12 +471,18 @@
         <projectileDef>PMindTrick</projectileDef>	
 		<abilityDef>PJ_MindTrick_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
-        <range>34</range>
+        <SecondsToRecharge>60.0</SecondsToRecharge>
+        <range>44</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
+		<mentalStatesToApply>
+	      <li>
+	        <mentalStateDef>WanderConfused</mentalStateDef>
+	        <applyChance>0.85</applyChance>
+	      </li>
+        </mentalStatesToApply>					
     </MainVerb>
   </ThingDef>
   
@@ -497,12 +508,18 @@
         <projectileDef>PMindTrick</projectileDef>	
 		<abilityDef>PJ_MindTrick_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>30.0</SecondsToRecharge>
 		<isViolent>false</isViolent>
-        <range>34</range>
+        <range>50</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+		<mentalStatesToApply>
+	      <li>
+	        <mentalStateDef>WanderConfused</mentalStateDef>
+	        <applyChance>0.95</applyChance>
+	      </li>
+        </mentalStatesToApply>					
     </MainVerb>
   </ThingDef>
 
