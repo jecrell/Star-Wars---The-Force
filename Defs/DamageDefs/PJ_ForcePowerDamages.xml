@@ -99,7 +99,7 @@
 	<additionalHediffs>
 		<li>
 			<hediff>PJ_Rage</hediff>
-			<severityPerDamageDealt>1.50</severityPerDamageDealt>
+			<severityPerDamageDealt>1.80</severityPerDamageDealt>
 		</li>
 		</additionalHediffs>
   </DamageDef>
