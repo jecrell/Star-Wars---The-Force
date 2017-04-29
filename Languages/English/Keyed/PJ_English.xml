@@ -9,6 +9,10 @@
 <WrongAlignment>{0} has the wrong alignment.</WrongAlignment>
 <PJ_LightsidePointsRequired>Requires {0} points spent on light side abilities</PJ_LightsidePointsRequired>
 <PJ_DarksidePointsRequired>Requires {0} points spent on dark side abilities</PJ_DarksidePointsRequired>
+<PJ_NextLevelAlignmentMismatch>The next level requires {0} side alignment. We are {1}.</PJ_NextLevelAlignmentMismatch>
+<PJ_CheckStarsForMoreInfo>Hover your mouse over the adjacent stars for detailed information on each level of this power.</PJ_CheckStarsForMoreInfo>
+<PJ_ForceAwakensLabel>The Force Awakens</PJ_ForceAwakensLabel>
+<PJ_ForceAwakensDesc>{0} has discovered deep within themselves a mysterious power.</PJ_ForceAwakensDesc>
 <DrainedForcePool>{0} needs to recover their force powers.</DrainedForcePool>
 <PJ_NotEnoughAbilityPoints>Requires {1} ability points. We have {0}.</PJ_NotEnoughAbilityPoints>
 <PJ_PointsRequired>Req Ability Points: {0}</PJ_PointsRequired>
