@@ -54,7 +54,7 @@
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>120.0</SecondsToRecharge>
+        <SecondsToRecharge>60.0</SecondsToRecharge>
         <range>34</range>
 		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
@@ -93,7 +93,7 @@
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>40.0</SecondsToRecharge>
+        <SecondsToRecharge>20.0</SecondsToRecharge>
         <range>44</range>
 		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
@@ -133,7 +133,7 @@
         <projectileDef>PForceRage</projectileDef>	
 		<abilityDef>PJ_ForceRage_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>20.0</SecondsToRecharge>
+        <SecondsToRecharge>10.0</SecondsToRecharge>
         <range>50</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -193,7 +193,7 @@
         <projectileDef>PForceChoke</projectileDef>				
 		<abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>10</SecondsToRecharge>
         <range>34</range>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -233,7 +233,7 @@
         <projectileDef>PForceChoke</projectileDef>				
 		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>8</SecondsToRecharge>
         <range>34</range>
 		<burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
@@ -274,7 +274,7 @@
         <projectileDef>PForceChoke</projectileDef>			
 		<abilityDef>PJ_ForceChoke_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>4.5</SecondsToRecharge>
         <range>34</range>
 		<burstShotCount>3</burstShotCount>
         <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
@@ -339,7 +339,7 @@
         <projectileDef>PJ_PForceDrain</projectileDef>	
 		<abilityDef>PJ_ForceDrain_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>120.0</SecondsToRecharge>
+        <SecondsToRecharge>80.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -372,7 +372,7 @@
         <projectileDef>PJ_PForceDrain</projectileDef>		
 		<abilityDef>PJ_ForceDrain_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>60.0</SecondsToRecharge>
+        <SecondsToRecharge>50.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -406,7 +406,7 @@
         <projectileDef>PJ_PForceDrain</projectileDef>
 		<abilityDef>PJ_ForceDrain_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>30.0</SecondsToRecharge>
+        <SecondsToRecharge>20.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
@@ -463,7 +463,7 @@
         <projectileDef>PForceLightningProj</projectileDef>	
 		<abilityDef>PJ_ForceLightning_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>15</SecondsToRecharge>
         <range>34</range>
 		<isViolent>true</isViolent>
         <burstShotCount>1</burstShotCount>
@@ -496,7 +496,7 @@
         <projectileDef>PForceLightningProj</projectileDef>	
 		<abilityDef>PJ_ForceLightning_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>10</SecondsToRecharge>
         <range>34</range>
 		<isViolent>true</isViolent>		
         <burstShotCount>2</burstShotCount>
@@ -530,7 +530,7 @@
         <projectileDef>PForceLightningProj</projectileDef>	
 		<abilityDef>PJ_ForceLightning_Master</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>1.5</SecondsToRecharge>
+        <SecondsToRecharge>6.5</SecondsToRecharge>
         <range>34</range>
 				<isViolent>true</isViolent>
         <burstShotCount>3</burstShotCount>
