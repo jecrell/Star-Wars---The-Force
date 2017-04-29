@@ -36,7 +36,7 @@
     <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.35</forcePoolCost>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -73,7 +73,7 @@
     <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.45</forcePoolCost>
+    <forcePoolCost>0.27</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
@@ -110,7 +110,7 @@
     <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
     <description>Miraculously heal the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.4</forcePoolCost>
+    <forcePoolCost>0.20</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
@@ -147,7 +147,7 @@
     <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
     <description>Miraculously heals the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.38</forcePoolCost>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -181,7 +181,7 @@
     <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
     <description>Miraculously heals the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.45</forcePoolCost>
+    <forcePoolCost>0.28</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
@@ -216,7 +216,7 @@
     <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
     <description>Miraculously heals the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.4</forcePoolCost>
+    <forcePoolCost>0.20</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.10</changedAlignmentRate>
@@ -272,7 +272,7 @@
     <uiIconPath>UI/ForceUser/ForceDefense</uiIconPath>
     <description>Protects the caster from harm for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.35</forcePoolCost>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -315,7 +315,7 @@
     <uiIconPath>UI/ForceUser/ForceDefense</uiIconPath>
     <description>Protects the caster from harm for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.25</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
@@ -359,7 +359,7 @@
     <uiIconPath>UI/ForceUser/ForceDefense</uiIconPath>
     <description>Protects the caster from harm for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.15</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>
@@ -421,7 +421,7 @@
     <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.05</forcePoolCost>
+    <forcePoolCost>0.25</forcePoolCost>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.025</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -457,7 +457,7 @@
     <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.05</forcePoolCost>
+    <forcePoolCost>0.20</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.025</changedAlignmentRate>	
@@ -494,7 +494,7 @@
     <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
     <description>Use the force to influence the weak minded, causing them to wander aimlessly.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.05</forcePoolCost>
+    <forcePoolCost>0.15</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.025</changedAlignmentRate>	
@@ -549,7 +549,7 @@
     <uiIconPath>UI/ForceUser/ForceGhost</uiIconPath>
     <description>Summon a ghost of ages past to aid you for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.05</forcePoolCost>
+    <forcePoolCost>0.35</forcePoolCost>
 	<abilityPoints>1</abilityPoints>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
@@ -597,7 +597,7 @@
     <uiIconPath>UI/ForceUser/ForceGhost</uiIconPath>
     <description>Summon a ghost of ages past to aid you for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.05</forcePoolCost>
+    <forcePoolCost>0.25</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	
@@ -645,7 +645,7 @@
     <uiIconPath>UI/ForceUser/ForceGhost</uiIconPath>
     <description>Summon a ghost of ages past to aid you for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.05</forcePoolCost>
+    <forcePoolCost>0.15</forcePoolCost>
 	<requiredAlignmentType>Light</requiredAlignmentType>
 	<changedAlignmentType>Light</changedAlignmentType>
 	<changedAlignmentRate>0.05</changedAlignmentRate>	

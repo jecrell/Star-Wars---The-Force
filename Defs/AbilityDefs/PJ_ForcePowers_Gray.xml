@@ -66,7 +66,7 @@
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
     <description>Level 1: Pulls ground objects towards the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.35</forcePoolCost>
 	<MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -110,7 +110,7 @@
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
     <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.28</forcePoolCost>
 	<MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -154,7 +154,7 @@
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
     <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>	
+    <forcePoolCost>0.2</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -217,7 +217,7 @@
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
     <description>Level 1: Pushes characters away by 8 tiles.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.35</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -260,7 +260,7 @@
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
     <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.25</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -308,7 +308,7 @@
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
     <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\nLevel 3: Pushes 12 tiles, stuns the target, and adds impact damage against walls.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>	
+    <forcePoolCost>0.15</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -375,7 +375,7 @@
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
     <description>Increases the running speed of the caster for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.35</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -416,7 +416,7 @@
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
     <description>Increases the running speed of the caster for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.5</forcePoolCost>
+    <forcePoolCost>0.25</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -457,7 +457,7 @@
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
     <description>Increases the running speed of the caster for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass>   -->
-    <forcePoolCost>0.5</forcePoolCost>	
+    <forcePoolCost>0.15</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
