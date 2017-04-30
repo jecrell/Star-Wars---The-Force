@@ -21,8 +21,99 @@ namespace ProjectJedi
      */
     public class CompForceUser : CompAbilityUser
     {
-
+        #region Variables
         private int forceUserLevel = 0;
+        private int forceUserXP = 1;
+        public List<ForceSkill> forceSkills;
+        public List<ForcePower> forcePowersLight;
+        public List<ForcePower> forcePowersGray;
+        public List<ForcePower> forcePowersDark;
+        public bool forcePowersInitialized = false;
+
+        public int abilityPoints = 0;
+        public int canMeditateTicks = 0;
+        private float alignmentValue;
+        public bool firstTick = false;
+
+        public Faction affiliation = null;
+        public int affiliationTicks = 0;
+
+        #endregion Variables
+
+        #region PowerLists
+        public List<ForceSkill> ForceSkills
+        {
+            get
+            {
+                if (forceSkills == null)
+                {
+                    forceSkills = new List<ForceSkill>
+                    {
+                        new ForceSkill("PJ_LightsaberOffense", "PJ_LightsaberOffense_Desc"),
+                        new ForceSkill("PJ_LightsaberDefense", "PJ_LightsaberDefense_Desc"),
+                        new ForceSkill("PJ_LightsaberAccuracy", "PJ_LightsaberAccuracy_Desc"),
+                        new ForceSkill("PJ_LightsaberReflection", "PJ_LightsaberReflection_Desc"),
+                        new ForceSkill("PJ_ForcePool", "PJ_ForcePool_Desc")
+                    };
+                }
+                return forceSkills;
+            }
+        }
+        public List<ForcePower> ForcePowersDark
+        {
+            get
+            {
+                if (forcePowersDark == null)
+                {
+                    forcePowersDark = new List<ForcePower>
+                    {
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceRage_Apprentice, ProjectJediDefOf.PJ_ForceRage_Adept, ProjectJediDefOf.PJ_ForceRage_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceChoke_Apprentice, ProjectJediDefOf.PJ_ForceChoke_Adept, ProjectJediDefOf.PJ_ForceChoke_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceDrain_Apprentice, ProjectJediDefOf.PJ_ForceDrain_Adept, ProjectJediDefOf.PJ_ForceDrain_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceLightning_Apprentice, ProjectJediDefOf.PJ_ForceLightning_Adept, ProjectJediDefOf.PJ_ForceLightning_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceStorm_Apprentice, ProjectJediDefOf.PJ_ForceStorm_Adept, ProjectJediDefOf.PJ_ForceStorm_Master })
+                    };
+                }
+                return forcePowersDark;
+            }
+        }
+        public List<ForcePower> ForcePowersGray
+        {
+            get
+            {
+                if (forcePowersGray == null)
+                {
+                    forcePowersGray = new List<ForcePower>
+                    {
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForcePush_Apprentice, ProjectJediDefOf.PJ_ForcePush_Adept, ProjectJediDefOf.PJ_ForcePush_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForcePull_Apprentice, ProjectJediDefOf.PJ_ForcePull_Adept, ProjectJediDefOf.PJ_ForcePull_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceSpeed_Apprentice, ProjectJediDefOf.PJ_ForceSpeed_Adept, ProjectJediDefOf.PJ_ForceSpeed_Master }),
+                    };
+                }
+                return forcePowersGray;
+            }
+        }
+        public List<ForcePower> ForcePowersLight
+        {
+            get
+            {
+                if (forcePowersLight == null)
+                {
+                    forcePowersLight = new List<ForcePower>
+                    {
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceHealingSelf_Apprentice, ProjectJediDefOf.PJ_ForceHealingSelf_Adept, ProjectJediDefOf.PJ_ForceHealingSelf_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceHealingOther_Apprentice, ProjectJediDefOf.PJ_ForceHealingOther_Adept, ProjectJediDefOf.PJ_ForceHealingOther_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceDefense_Apprentice, ProjectJediDefOf.PJ_ForceDefense_Adept, ProjectJediDefOf.PJ_ForceDefense_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_MindTrick_Apprentice, ProjectJediDefOf.PJ_MindTrick_Adept, ProjectJediDefOf.PJ_MindTrick_Master }),
+                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceGhost_Apprentice, ProjectJediDefOf.PJ_ForceGhost_Adept, ProjectJediDefOf.PJ_ForceGhost_Master })
+                    };
+                }
+                return forcePowersLight;
+            }
+        }
+        #endregion PowerLists
+
+        #region Levels
         public int ForceUserLevel
         {
             get
@@ -42,8 +133,6 @@ namespace ProjectJedi
                 forceUserLevel = value;
             }
         }
-
-        private int forceUserXP = 1;
         public int ForceUserXP
         {
             get
@@ -55,7 +144,6 @@ namespace ProjectJedi
                 forceUserXP = value;
             }
         }
-
         public float XPLastLevel
         {
             get
@@ -65,7 +153,6 @@ namespace ProjectJedi
                 return result;
             }
         }
-
         public float XPTillNextLevelPercent
         {
             get
@@ -73,32 +160,11 @@ namespace ProjectJedi
                 return ((float)(forceUserXP - XPLastLevel) / (float)(ForceUserXPTillNextLevel - XPLastLevel));
             }
         }
-
         public int ForceUserXPTillNextLevel
         {
             get
             {
                 return (forceUserLevel + 1) * 600;
-            }
-        }
-
-        public List<ForceSkill> forceSkills;
-        public List<ForceSkill> ForceSkills
-        {
-            get
-            {
-                if (forceSkills == null)
-                {
-                    forceSkills = new List<ForceSkill>
-                    {
-                        new ForceSkill("PJ_LightsaberOffense", "PJ_LightsaberOffense_Desc"),
-                        new ForceSkill("PJ_LightsaberDefense", "PJ_LightsaberDefense_Desc"),
-                        new ForceSkill("PJ_LightsaberAccuracy", "PJ_LightsaberAccuracy_Desc"),
-                        new ForceSkill("PJ_LightsaberReflection", "PJ_LightsaberReflection_Desc"),
-                        new ForceSkill("PJ_ForcePool", "PJ_ForcePool_Desc")
-                    };
-                }
-                return forceSkills;
             }
         }
         public int ForceSkillLevel(string skillName)
@@ -111,71 +177,6 @@ namespace ProjectJedi
             }
             return result;
         }
-
-
-        public bool forcePowersInitialized = false;
-        public List<ForcePower> forcePowersDark;
-        public List<ForcePower> ForcePowersDark
-        {
-            get
-            {
-                if (forcePowersDark == null)
-                {
-                    forcePowersDark = new List<ForcePower>
-                    {
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceRage_Apprentice, ProjectJediDefOf.PJ_ForceRage_Adept, ProjectJediDefOf.PJ_ForceRage_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceChoke_Apprentice, ProjectJediDefOf.PJ_ForceChoke_Adept, ProjectJediDefOf.PJ_ForceChoke_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceDrain_Apprentice, ProjectJediDefOf.PJ_ForceDrain_Adept, ProjectJediDefOf.PJ_ForceDrain_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceLightning_Apprentice, ProjectJediDefOf.PJ_ForceLightning_Adept, ProjectJediDefOf.PJ_ForceLightning_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceStorm_Apprentice, ProjectJediDefOf.PJ_ForceStorm_Adept, ProjectJediDefOf.PJ_ForceStorm_Master })
-                    };
-                }
-                return forcePowersDark;
-            }
-        }
-
-        public List<ForcePower> forcePowersGray;
-        public List<ForcePower> ForcePowersGray
-        {
-            get
-            {
-                if (forcePowersGray == null)
-                {
-                    forcePowersGray = new List<ForcePower>
-                    {
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForcePush_Apprentice, ProjectJediDefOf.PJ_ForcePush_Adept, ProjectJediDefOf.PJ_ForcePush_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForcePull_Apprentice, ProjectJediDefOf.PJ_ForcePull_Adept, ProjectJediDefOf.PJ_ForcePull_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceSpeed_Apprentice, ProjectJediDefOf.PJ_ForceSpeed_Adept, ProjectJediDefOf.PJ_ForceSpeed_Master }),
-                    };
-                }
-                return forcePowersGray;
-            }
-        }
-        public List<ForcePower> forcePowersLight;
-        public List<ForcePower> ForcePowersLight
-        {
-            get
-            {
-                if (forcePowersLight == null)
-                {
-                    forcePowersLight = new List<ForcePower>
-                    {
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceHealingSelf_Apprentice, ProjectJediDefOf.PJ_ForceHealingSelf_Adept, ProjectJediDefOf.PJ_ForceHealingSelf_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceHealingOther_Apprentice, ProjectJediDefOf.PJ_ForceHealingOther_Adept, ProjectJediDefOf.PJ_ForceHealingOther_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceDefense_Apprentice, ProjectJediDefOf.PJ_ForceDefense_Adept, ProjectJediDefOf.PJ_ForceDefense_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_MindTrick_Apprentice, ProjectJediDefOf.PJ_MindTrick_Adept, ProjectJediDefOf.PJ_MindTrick_Master }),
-                        new ForcePower(new List<AbilityDef> { ProjectJediDefOf.PJ_ForceGhost_Apprentice, ProjectJediDefOf.PJ_ForceGhost_Adept, ProjectJediDefOf.PJ_ForceGhost_Master })
-                    };
-                }
-                return forcePowersLight;
-            }
-        }
-
-
-        public int abilityPoints = 0;
-
-        public int canMeditateTicks = 0;
-
         public int DarksidePoints
         {
             get
@@ -207,120 +208,6 @@ namespace ProjectJedi
             }
         }
 
-
-        //public int levelLightsaberOff = 4;
-        //public int levelLightsaberDef = 3;
-        //public int levelLightsaberAcc = 2;
-        //public int levelLightsaberRef = 1;
-        //public int levelForcePool = 0;
-
-        /// <summary>
-        /// Keep track of an internal alignment.
-        /// As a float value, this allows greater roleplaying possibilities.
-        /// </summary>
-        private float alignmentValue;
-        public float AlignmentValue
-        {
-            get
-            {
-                return alignmentValue;
-            }
-            set
-            {     
-                alignmentValue = Mathf.Clamp(value, 0.0f, 1.0f);
-                if (ForceUserLevel > 0) UpdateAlignment();
-            }
-        }
-
-        public ForceAlignmentType ForceAlignmentType
-        {
-            set
-            {
-                switch (value)
-                {
-                    case ForceAlignmentType.Dark:
-                        alignmentValue = 0.0f;
-                        break;
-                    case ForceAlignmentType.Gray:
-                    case ForceAlignmentType.None:
-                        alignmentValue = 0.5f;
-                        break;
-                    case ForceAlignmentType.Light:
-                        alignmentValue = 1.0f;
-                        break;
-                }
-            }
-            get
-            {
-                if (alignmentValue < 0.4)
-                    return ForceAlignmentType.Dark;
-                if (alignmentValue < 0.6)
-                    return ForceAlignmentType.Gray;
-                return ForceAlignmentType.Light;
-            }
-        }
-
-        /// <summary>
-        /// The force pool is where all fatigue and
-        /// casting limits are decided.
-        /// </summary>
-        public Need_ForcePool ForcePool
-        {
-            get
-            {
-                return abilityUser.needs.TryGetNeed<Need_ForcePool>();
-            }
-        }
-
-        public bool firstTick = false;
-
-        public bool IsForceUser
-        {
-            get
-            {
-                if (this.abilityUser != null)
-                {
-                    if (this.abilityUser.story != null)
-                    {
-                        if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
-                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
-                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_GrayTrait) ||
-                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive))
-                        {
-                            return true;
-                        }
-                    }
-                }
-                return false;
-            }
-        }
-
-        public override void CompTick()
-        {
-            if (abilityUser != null)
-            {
-                if (abilityUser.Spawned)
-                {
-                    if (Find.TickManager.TicksGame > 200)
-                    {
-                        //if (Find.TickManager.TicksGame % 30 == 0)
-                        //{
-                        if (IsForceUser)
-                        {
-                            if (!firstTick) PostInitializeTick();
-                            base.CompTick();
-                            if (Find.TickManager.TicksGame % 30 == 0)
-                            {
-                                if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
-                                //forceUserXP++;
-                            }
-                        }
-                        //}
-                    }
-                }
-            }
-        }
-
         public void LevelUp(bool hideNotification = false)
         {
             ForceUserLevel += 1;
@@ -330,9 +217,9 @@ namespace ProjectJedi
                 if (!hideNotification)
                 {
                     Messages.Message("PJ_ForcePowersUnlocked".Translate(new object[]
-{
-                this.parent.Label
-}), MessageSound.Silent);
+                    {
+                                    this.parent.Label
+                    }), MessageSound.Silent);
                     Find.LetterStack.ReceiveLetter("PJ_ForceAwakensLabel".Translate(), "PJ_ForceAwakensDesc".Translate(new object[]
                     {
                         this.parent.Label
@@ -350,7 +237,15 @@ namespace ProjectJedi
             }
 
         }
-
+        public void LevelUpPower(ForcePower power)
+        {
+            this.RemovePawnAbility(power.abilityDef);
+            power.level++;
+            this.AddPawnAbility(power.abilityDef);
+        }
+        /// <summary>
+        /// Updates the alignment after a level up or force power casting
+        /// </summary>
         public void UpdateAlignment()
         {
             //Change traits...
@@ -358,7 +253,7 @@ namespace ProjectJedi
             Trait sithTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
             Trait grayTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
             Trait sensitiveTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
-            
+
             //Clear traits.
             if (jediTrait != null) LoseTrait(this.abilityUser.story.traits, jediTrait);
             if (sithTrait != null) LoseTrait(this.abilityUser.story.traits, sithTrait);
@@ -387,7 +282,7 @@ namespace ProjectJedi
 
             if (AlignmentValue > 0.75)
             {
-                this.abilityUser.story.traits. GainTrait(new Trait(ProjectJediDefOf.PJ_JediTrait, degree, true));
+                this.abilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_JediTrait, degree, true));
                 return;
             }
             //Gray
@@ -403,6 +298,122 @@ namespace ProjectJedi
                 return;
             }
 
+        }
+        #endregion Levels
+
+        #region Alignment
+        /// <summary>
+        /// Keep track of an internal alignment.
+        /// As a float value, this allows greater roleplaying possibilities.
+        /// </summary>
+        public float AlignmentValue
+        {
+            get
+            {
+                return alignmentValue;
+            }
+            set
+            {     
+                alignmentValue = Mathf.Clamp(value, 0.0f, 1.0f);
+                if (ForceUserLevel > 0) UpdateAlignment();
+            }
+        }
+        public ForceAlignmentType ForceAlignmentType
+        {
+            set
+            {
+                switch (value)
+                {
+                    case ForceAlignmentType.Dark:
+                        alignmentValue = 0.0f;
+                        break;
+                    case ForceAlignmentType.Gray:
+                    case ForceAlignmentType.None:
+                        alignmentValue = 0.5f;
+                        break;
+                    case ForceAlignmentType.Light:
+                        alignmentValue = 1.0f;
+                        break;
+                }
+            }
+            get
+            {
+                if (alignmentValue < 0.4)
+                    return ForceAlignmentType.Dark;
+                if (alignmentValue < 0.6)
+                    return ForceAlignmentType.Gray;
+                return ForceAlignmentType.Light;
+            }
+        }
+        #endregion Alignment
+
+        #region Affiliation
+        //public void SetAffiliation(Faction newFaction)
+        //{
+        //    affiliation = newFaction;
+        //    affiliationTicks = Find.TickManager.TicksGame + GenDate.TicksPerSeason + Rand.Range(-120000, 120000);
+        //}
+
+        //public void BreakAffiliation(Faction newFaction)
+        //{
+        //    affiliationTicks = 0;
+        //    affiliation = null;
+        //}
+
+        //public void GetAffiliatedCaravan()
+        //{
+        //    if (affiliation == null) return;
+        //    if (affiliationTicks > Find.TickManager.TicksGame || affiliationTicks == 0) return;
+        //    if (affiliation.HostileTo(Faction.OfPlayer))
+        //    {
+        //        BreakAffiliation(affiliation);
+        //        return;
+        //    }
+
+        //    affiliationTicks = Find.TickManager.TicksGame + GenDate.TicksPerSeason + Rand.Range(-120000, 120000);
+
+        //    IncidentParms incidentParms = new IncidentParms();
+        //    incidentParms.target = parent.Map;
+        //    incidentParms.faction = affiliation;
+        //    incidentParms.traderKind = affiliation.def.caravanTraderKinds.RandomElement<TraderKindDef>();
+        //    incidentParms.forced = true;
+        //    Find.Storyteller.incidentQueue.Add(IncidentDefOf.TraderCaravanArrival, affiliationTicks, incidentParms);
+        //}
+
+        #endregion Affiliation
+
+        #region Methods
+        /// <summary>
+        /// The force pool is where all fatigue and
+        /// casting limits are decided.
+        /// </summary>
+        public Need_ForcePool ForcePool
+        {
+            get
+            {
+                return abilityUser.needs.TryGetNeed<Need_ForcePool>();
+            }
+        }
+
+        public bool IsForceUser
+        {
+            get
+            {
+                if (this.abilityUser != null)
+                {
+                    if (this.abilityUser.story != null)
+                    {
+                        if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
+                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
+                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_GrayTrait) ||
+                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive))
+                        {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
         }
 
         // RimWorld.TraitSet
@@ -429,6 +440,143 @@ namespace ProjectJedi
             }
         }
 
+        /// <summary>
+        /// Shows the required alignment (optional), 
+        /// alignment change (optional),
+        /// and the force pool usage
+        /// </summary>
+        /// <param name="verb"></param>
+        /// <returns></returns>
+        public override string PostAbilityVerbCompDesc(VerbProperties_Ability verbDef)
+        {
+            string result = "";
+            StringBuilder postDesc = new StringBuilder();
+            ForceAbilityDef forceDef = (ForceAbilityDef)verbDef.abilityDef;
+            if (forceDef != null)
+            {
+                string alignDesc = "";
+                string changeDesc = "";
+                string pointsDesc = "";
+                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
+                {
+                    alignDesc = "ForceAbilityDescAlign".Translate(new object[]
+                    {
+                    forceDef.requiredAlignmentType.ToString(),
+                    });
+                }
+                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
+                {
+                    changeDesc = "ForceAbilityDescChange".Translate(new object[]
+                    {
+                    forceDef.changedAlignmentType.ToString(),
+                    forceDef.changedAlignmentRate.ToString("p1")
+                    });
+                }
+                pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
+                {
+                    forceDef.forcePoolCost.ToString("p1")
+                });
+                if (alignDesc != "") postDesc.AppendLine(alignDesc);
+                if (changeDesc != "") postDesc.AppendLine(changeDesc);
+                if (pointsDesc != "") postDesc.AppendLine(pointsDesc);
+                result = postDesc.ToString();
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// This section checks if the force pool allows for the casting of the spell.
+        /// </summary>
+        /// <param name="verbAbility"></param>
+        /// <param name="reason">Why did we fail?</param>
+        /// <returns></returns>
+        public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
+        {
+            reason = "";
+            ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
+            if (forceDef != null)
+            {
+                if (forceDef.requiredAlignmentType != ForceAlignmentType.None)
+                {
+                    if (forceDef.requiredAlignmentType != this.ForceAlignmentType)
+                    {
+                        reason = "WrongAlignment";
+                        return false;
+                    }
+                }
+                if (ForcePool != null)
+                {
+                    if (forceDef.forcePoolCost > 0 &&
+                        forceDef.forcePoolCost > ForcePool.CurLevel)
+                    {
+                        reason = "DrainedForcePool";
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+        public override List<HediffDef> ignoredHediffs()
+        {
+            List<HediffDef> newDefs = new List<HediffDef>();
+            newDefs.Add(ProjectJediDefOf.PJ_ForceWielderHD);
+            return newDefs;
+        }
+
+        public override void PostAbilityAttempt(Pawn caster, AbilityDef ability)
+        {
+            ForceAbilityDef forceDef = ability as ForceAbilityDef;
+            if (forceDef != null)
+            {
+                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
+                {
+                    //Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
+                    //Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
+                    AlignmentValue += forceDef.changedAlignmentRate;
+                    //Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
+                    UpdateAlignment();
+                }
+
+                if (ForcePool != null)
+                {
+                    float poolCost = 0f;
+                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
+                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
+                    //Log.Message("PC" + poolCost.ToString());
+                    ForcePool.UseForcePower(poolCost);
+                }
+            }
+        }
+#endregion Methods
+
+        #region Initialize
+        public override void CompTick()
+        {
+            if (abilityUser != null)
+            {
+                if (abilityUser.Spawned)
+                {
+                    if (Find.TickManager.TicksGame > 200)
+                    {
+                        //if (Find.TickManager.TicksGame % 30 == 0)
+                        //{
+                        if (IsForceUser)
+                        {
+                            if (!firstTick) PostInitializeTick();
+                            base.CompTick();
+                            if (Find.TickManager.TicksGame % 30 == 0)
+                            {
+                                if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
+                                //forceUserXP++;
+                            }
+                        }
+                        //}
+                    }
+                }
+            }
+        }
+        
         /// <summary>
         /// Creates a force user by adding a hidden Hediff that adds their Force Pool needs.
         /// </summary>
@@ -696,13 +844,6 @@ namespace ProjectJedi
             }
         }
 
-        public void LevelUpPower(ForcePower power)
-        {
-            this.RemovePawnAbility(power.abilityDef);
-            power.level++;
-            this.AddPawnAbility(power.abilityDef);
-        }
-
         public void ResolveForcePool()
         {
             //Add the hediff if no pool exists.
@@ -721,132 +862,9 @@ namespace ProjectJedi
                 }
             }
         }
+        #endregion Initialize
 
-        /// <summary>
-        /// Shows the required alignment (optional), 
-        /// alignment change (optional),
-        /// and the force pool usage
-        /// </summary>
-        /// <param name="verb"></param>
-        /// <returns></returns>
-        public override string PostAbilityVerbCompDesc(VerbProperties_Ability verbDef)
-        {
-            string result = "";
-            StringBuilder postDesc = new StringBuilder();
-            ForceAbilityDef forceDef = (ForceAbilityDef)verbDef.abilityDef;
-            if (forceDef != null)
-            {
-                string alignDesc = "";
-                string changeDesc = "";
-                string pointsDesc = "";
-                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
-                {
-                    alignDesc = "ForceAbilityDescAlign".Translate(new object[]
-                    {
-                    forceDef.requiredAlignmentType.ToString(),
-                    });
-                }
-                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
-                {
-                    changeDesc = "ForceAbilityDescChange".Translate(new object[]
-                    {
-                    forceDef.changedAlignmentType.ToString(),
-                    forceDef.changedAlignmentRate.ToString("p1")
-                    });
-                }
-                pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
-                {
-                    forceDef.forcePoolCost.ToString("p1")
-                });
-                if (alignDesc != "") postDesc.AppendLine(alignDesc);
-                if (changeDesc != "") postDesc.AppendLine(changeDesc);
-                if (pointsDesc != "") postDesc.AppendLine(pointsDesc);
-                result = postDesc.ToString();
-            }
-            return result;
-        }
-
-        /// <summary>
-        /// This section checks if the force pool allows for the casting of the spell.
-        /// </summary>
-        /// <param name="verbAbility"></param>
-        /// <param name="reason">Why did we fail?</param>
-        /// <returns></returns>
-        public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
-        {
-            reason = "";
-            ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
-            if (forceDef != null)
-            {
-                if (forceDef.requiredAlignmentType != ForceAlignmentType.None)
-                {
-                    if (forceDef.requiredAlignmentType != this.ForceAlignmentType)
-                    {
-                        reason = "WrongAlignment";
-                        return false;
-                    }
-                }
-                if (ForcePool != null)
-                {
-                    if (forceDef.forcePoolCost > 0 &&
-                        forceDef.forcePoolCost > ForcePool.CurLevel)
-                    {
-                        reason = "DrainedForcePool";
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }
-
-        public override List<HediffDef> ignoredHediffs()
-        {
-            List<HediffDef> newDefs = new List<HediffDef>();
-            newDefs.Add(ProjectJediDefOf.PJ_ForceWielderHD);
-            return newDefs;
-        }
-
-        public override void PostAbilityAttempt(Pawn caster, AbilityDef ability)
-        {
-            ForceAbilityDef forceDef = ability as ForceAbilityDef;
-            if (forceDef != null)
-            {
-                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
-                {
-                   //Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
-                   //Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
-                    AlignmentValue += forceDef.changedAlignmentRate;
-                    //Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
-                    UpdateAlignment();
-                }
-
-                if (ForcePool != null)
-                {
-                    float poolCost = 0f;
-                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
-                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
-                    //Log.Message("PC" + poolCost.ToString());
-                    ForcePool.UseForcePower(poolCost);
-                }
-            }
-        }
-
-
-        /// <summary>
-        /// This section checks what force abilities were used, and thus their effect on the Jedi's force powers.
-        /// </summary>
-        //public override void PostCastAbilityEffects(Verb_UseAbility verbAbility)
-        //{
-        //    ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
-        //    if (forceDef != null)
-        //    {
-        //        if (ForcePool != null)
-        //        {
-        //            ForcePool.UseForcePower(forceDef.forcePoolCost);
-        //        }
-        //    }
-        //}
-
+        #region ExposeData
         public override void PostExposeData()
         {
             base.PostExposeData();
@@ -914,5 +932,6 @@ namespace ProjectJedi
 
             //Log.Message("PostExposeData Called: ForceUser");
         }
+        #endregion ExposeData
     }
 }

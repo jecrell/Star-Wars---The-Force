@@ -223,7 +223,7 @@ namespace ProjectJedi
                     compForce.LevelUp(true);
                 }
             }
-
+            
             //Level 0
 
             Rect rectPointsAvail = new Rect(inRect.x, rectLevel.yMax, inRect.width, TextSize);
@@ -235,6 +235,15 @@ namespace ProjectJedi
 
             Rect rectLevelBar = new Rect(rectPointsAvail.x, rectPointsAvail.yMax + 3f, inRect.width - 10f, HeaderSize * 0.6f);
             DrawLevelBar(rectLevelBar, compForce);
+
+            //[|||||||||||||]
+
+            //Rect rectAffiliation = new Rect(rectPointsAvail.x, rectLevelBar.yMax + 3f, inRect.width - 10f, HeaderSize + 5f);
+            //Text.Font = GameFont.Small;
+            //string affiliation = "None";
+            //if (compForce.affiliation != null) affiliation = compForce.affiliation.Name; 
+            //Widgets.Label(rectAffiliation, "PJ_Affiliation".Translate().CapitalizeFirst() + ": " + affiliation);
+            //Text.Font = GameFont.Small;
 
         }
 

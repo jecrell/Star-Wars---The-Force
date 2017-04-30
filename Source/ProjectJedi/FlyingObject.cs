@@ -140,6 +140,8 @@ namespace ProjectJedi
             {
                 if (flyingThing is Pawn)
                 {
+                    if (!this.DrawPos.InBounds(flyingThing.Map)) return;
+                    if (!this.DrawPos.ToIntVec3().IsValid) return;
                     Pawn pawn = flyingThing as Pawn;
                     pawn.Drawer.DrawAt(this.DrawPos);
                     //Graphics.DrawMesh(MeshPool.plane10, this.DrawPos, this.ExactRotation, this.flyingThing.def.graphic.MatFront, 0);

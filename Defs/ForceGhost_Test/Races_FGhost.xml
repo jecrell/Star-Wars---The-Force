@@ -116,4 +116,62 @@
   </PawnKindDef>
  
 
+
+	<ThingDef>
+	<thingClass>ThingWithComps</thingClass>
+	<category>Item</category>
+	<drawGUIOverlay>true</drawGUIOverlay>
+	<altitudeLayer>Item</altitudeLayer>
+	<alwaysHaulable>true</alwaysHaulable>
+	<tickerType>Never</tickerType>
+	<equipmentType>Primary</equipmentType>
+	<useHitPoints>true</useHitPoints>
+	<pathCost>10</pathCost>
+	<selectable>true</selectable>	
+    <defName>PJ_MeleeWeapon_ForceGladius</defName>
+    <label>ghostly gladius</label>
+    <description>An ethereal short sword of ancient design. Good for stabbing or slashing.</description>
+    <graphicData>
+      <texPath>Things/Item/Equipment/WeaponMelee/Gladius</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>	  
+    </graphicData>
+    <soundInteract>InteractPistol</soundInteract>
+    <costStuffCount>50</costStuffCount>
+    <statBases>
+      <WorkToMake>10000</WorkToMake>
+      <Mass>0.85</Mass>
+      <MeleeWeapon_DamageAmount>60</MeleeWeapon_DamageAmount>
+      <MeleeWeapon_Cooldown>1.95</MeleeWeapon_Cooldown>
+      <MaxHitPoints>100</MaxHitPoints>
+	  <Flammability>0.0</Flammability>
+	  <DeteriorationRate>0</DeteriorationRate>
+	  <Beauty>6</Beauty>
+	  <SellPriceFactor>1.0</SellPriceFactor>	  
+    </statBases>
+	<tradeability>Never</tradeability>
+	<destroyOnDrop>true</destroyOnDrop>
+    <equippedAngleOffset>-65</equippedAngleOffset>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+		<comps>
+			<li Class="CompProperties_Forbiddable"/>
+			<li>
+				<compClass>CompEquippable</compClass>
+			</li>
+		</comps>	
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttack</verbClass>
+        <hasStandardCommand>true</hasStandardCommand>
+        <meleeDamageDef>Cut</meleeDamageDef>
+      </li>
+    </verbs>
+    <techLevel>Industrial</techLevel>
+	<weaponTags>
+      <li>PJ_Lightsaber</li>
+    </weaponTags>
+  </ThingDef> 
+ 
 </ThingDefs>

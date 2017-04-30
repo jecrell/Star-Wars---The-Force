@@ -36,7 +36,7 @@ namespace ProjectJedi
             }
             if (forcePool.CurLevelPercentage < 0.5)
             {
-                return 7.5f;
+                return 9.5f;
             }
             return 0f;
         }

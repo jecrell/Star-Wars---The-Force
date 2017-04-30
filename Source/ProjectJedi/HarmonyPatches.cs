@@ -45,7 +45,7 @@ namespace ProjectJedi
                                 CompForceUser compForce = pawn.GetComp<CompForceUser>();
                                 if (compForce.ForceUserLevel > 0)
                                 {
-                                        __result.points += (120 * compForce.ForceUserLevel);
+                                        __result.points += (20 * compForce.ForceUserLevel);
                                 }
                             }
                         }
@@ -56,8 +56,13 @@ namespace ProjectJedi
             }
         }
 
-
-        // RimWorld.Pawn_SkillTracker
+        /// <summary>
+        /// Add Force XP every time a pawn learns a skill.
+        /// </summary>
+        /// <param name="__instance"></param>
+        /// <param name="sDef"></param>
+        /// <param name="xp"></param>
+        /// <param name="direct"></param>
         public static void Learn_PostFix(Pawn_SkillTracker __instance, SkillDef sDef, float xp, bool direct = false)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(Pawn_SkillTracker), "pawn").GetValue(__instance);
@@ -77,15 +82,11 @@ namespace ProjectJedi
 
         public static IEnumerable<Gizmo> gizmoGetter(HediffComp_Shield compHediffShield)
         {
-            //Log.Message("5");
             if (compHediffShield.GetWornGizmos() != null)
             {
-                //Log.Message("6");
-                //Iterate EquippedGizmos
                 IEnumerator<Gizmo> enumerator = compHediffShield.GetWornGizmos().GetEnumerator();
                 while (enumerator.MoveNext())
                 {
-                    //Log.Message("7");
                     Gizmo current = enumerator.Current;
                     yield return current;
                 }
@@ -140,8 +141,9 @@ namespace ProjectJedi
             
         }
 
-            // Verse.Pawn_HealthTracker
-            public static bool PreApplyDamage_PreFix(Pawn_HealthTracker __instance, DamageInfo dinfo, out bool absorbed)
+
+        // Verse.Pawn_HealthTracker
+        public static bool PreApplyDamage_PreFix(Pawn_HealthTracker __instance, DamageInfo dinfo, out bool absorbed)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(Pawn_HealthTracker), "pawn").GetValue(__instance);
             if (pawn != null)
@@ -176,22 +178,17 @@ namespace ProjectJedi
                 Pawn attacker = __instance.CasterPawn;
                 if (attacker != null)
                 {
-                    ////Log.Message("1");
                     Pawn_EquipmentTracker pawn_EquipmentTracker = attacker.equipment;
                     if (pawn_EquipmentTracker != null)
                     {
-                        ////Log.Message("2");
                         foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipment)
                         {
-                            ////Log.Message("3");
                             if (thingWithComps != null)
                             {
                                 if (thingWithComps.def.IsMeleeWeapon)
                                 {
                                     if (thingWithComps.def.defName.Contains("SWSaber_"))
                                     {
-
-                                   //Log.Message("Force :: Lightsaber Original Accuracy " + __result.ToString("F"));
                                     CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
                                         if (compForce == null)
                                         {
@@ -215,7 +212,6 @@ namespace ProjectJedi
                                             }
                                         __result = newAccuracy;
                                         }
-                                       //Log.Message("Force :: Lightsaber Modified Accuracy " + __result.ToString("F"));
                                     }
                                 }
                             }
@@ -232,21 +228,17 @@ namespace ProjectJedi
                 Pawn attacker = dinfo.Instigator as Pawn;
                 if (attacker != null)
                 {
-                    ////Log.Message("1");
                     Pawn_EquipmentTracker pawn_EquipmentTracker = attacker.equipment;
                     if (pawn_EquipmentTracker != null)
                     {
-                        ////Log.Message("2");
                         foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipment)
                         {
-                            ////Log.Message("3");
                             if (thingWithComps != null)
                             {
                                 if (thingWithComps.def.IsMeleeWeapon)
                                 {
                                     if (thingWithComps.def.defName.Contains("SWSaber_"))
                                     {
-                                       //Log.Message("Force :: Lightsaber Original Damage " + dinfo.Amount.ToString());
                                         CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
                                         if (compForce == null)
                                         {
@@ -270,7 +262,6 @@ namespace ProjectJedi
                                             }
                                             dinfo.SetAmount(newDamage);
                                         }
-                                       //Log.Message("Force :: Lightsaber Modified Damage " + dinfo.Amount.ToString());
                                     }
                                 }
                             }
