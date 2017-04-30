@@ -161,7 +161,7 @@
 		<isViolent>false</isViolent>
         <projectileDef>PJ_PForceHeal</projectileDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>240.0</SecondsToRecharge>
+        <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>16</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -196,7 +196,7 @@
 		<isViolent>false</isViolent>
         <projectileDef>PJ_PForceHeal</projectileDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>120.0</SecondsToRecharge>
+        <SecondsToRecharge>90.0</SecondsToRecharge>
         <range>16</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -286,7 +286,7 @@
 		<isViolent>false</isViolent>
         <projectileDef>PJ_PForceDefense</projectileDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>85.0</SecondsToRecharge>
         <range>2</range>
         <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -330,7 +330,7 @@
 		<isViolent>false</isViolent>
         <projectileDef>PJ_PForceDefense</projectileDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>55.0</SecondsToRecharge>
         <range>2</range>
         <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -374,7 +374,7 @@
 		<isViolent>false</isViolent>
         <projectileDef>PJ_PForceDefense</projectileDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>5.0</SecondsToRecharge>
+        <SecondsToRecharge>35.0</SecondsToRecharge>
         <range>2</range>
         <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -434,7 +434,7 @@
         <projectileDef>PMindTrick</projectileDef>	
 		<abilityDef>PJ_MindTrick_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>120.0</SecondsToRecharge>
+        <SecondsToRecharge>70.0</SecondsToRecharge>
         <range>34</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -471,7 +471,7 @@
         <projectileDef>PMindTrick</projectileDef>	
 		<abilityDef>PJ_MindTrick_Adept</abilityDef>
         <warmupTime>1</warmupTime>
-        <SecondsToRecharge>60.0</SecondsToRecharge>
+        <SecondsToRecharge>50.0</SecondsToRecharge>
         <range>44</range>
         <soundCast>MessageBenefit</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>

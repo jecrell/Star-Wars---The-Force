@@ -59,7 +59,7 @@
 		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>PJ_LightningSound</soundCast>
+        <soundCast>PJ_RageSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<mentalStatesToApply>
@@ -98,7 +98,7 @@
 		<isViolent>false</isViolent>		
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>PJ_LightningSound</soundCast>
+        <soundCast>PJ_RageSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<mentalStatesToApply>
@@ -137,7 +137,7 @@
         <range>50</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>PJ_LightningSound</soundCast>
+        <soundCast>PJ_RageSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<mentalStatesToApply>
