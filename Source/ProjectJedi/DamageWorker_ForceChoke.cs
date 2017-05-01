@@ -11,6 +11,12 @@ namespace ProjectJedi
     {
         public override float Apply(DamageInfo dinfo, Thing victim)
         {
+            if (victim is ProjectJedi.PawnGhost)
+            {
+                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageSound.Negative);
+                return 0f;
+            }
+
             Pawn pawn = victim as Pawn;
             if (pawn != null)
             {

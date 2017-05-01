@@ -3,6 +3,8 @@
 
 
 <!-- =========== Messages ======== -->
+<PJ_ForceGhostResisted>The ghost resists.</PJ_ForceGhostResisted>
+<PJ_ForceResisted>{0} resists {1}'s {2}.</PJ_ForceResisted>
 <PJ_ForceDrainTwo>{0} is draining {1}'s health!</PJ_ForceDrainTwo>
 <PJ_ForceDrainOne>{0} is draining {1}'s force pool!</PJ_ForceDrainOne>
 <PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
@@ -20,6 +22,11 @@
 <PJ_LightPointsRequired>Req Lightside Points: {0}</PJ_LightPointsRequired> 
 <PJ_CastSuccess>Cast Success</PJ_CastSuccess>
 <PJ_CastFailure>Cast Failure</PJ_CastFailure>
+
+<!-- ============= Float Menus ============= -->
+<PJ_ForceMeditate>Meditate</PJ_ForceMeditate>
+<PJ_ForceMeditate_NeedForceUsersOnly>Force wielders only</PJ_ForceMeditate_NeedForceUsersOnly>
+<PJ_ForceMeditate_NeedRest>Try again later</PJ_ForceMeditate_NeedRest>
 
 <!-- ============= UI ============ -->
 <PJ_TabForce>Force</PJ_TabForce>

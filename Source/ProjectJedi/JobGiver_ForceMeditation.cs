@@ -3,6 +3,7 @@ using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 using RimWorld;
+using System.Collections.Generic;
 
 namespace ProjectJedi
 {
@@ -44,23 +45,18 @@ namespace ProjectJedi
         public override ThinkResult TryIssueJobPackage(Pawn pawn)
         {
 
-
-           //Log.Message("TryIssueJobPackage");
             Need_ForcePool forcePool = pawn.needs.TryGetNeed<Need_ForcePool>();
-           //Log.Message("T1");
+
             if (forcePool == null)
             {
                 return ThinkResult.NoJob;
             }
-           //Log.Message("T2");
 
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
             if (compForce == null)
             {
                 return ThinkResult.NoJob;
             }
-            //Log.Message("T3");
-
 
             Trait sensitiveTrait = pawn.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
             if (sensitiveTrait != null)
@@ -72,28 +68,52 @@ namespace ProjectJedi
             {
                 return ThinkResult.NoJob;
             }
-           //Log.Message("T4");
 
             if (forcePool.CurCategory > ForcePoolCategory.Strong)
             {
                 return ThinkResult.NoJob;
             }
-           //Log.Message("T5");
 
             return base.TryIssueJobPackage(pawn);
         }
 
+        public static IntVec3 ResolveMeditationLocation(Pawn pawn, out Thing padResult)
+        {
+            IntVec3 result = CellFinder.RandomClosewalkCellNearNotForbidden(pawn.Position, pawn.Map, 4, pawn);
+            float closestDist = 0;
+            padResult = null;
+            List<Thing> meditationPads = pawn.Map.listerThings.AllThings.FindAll((Thing t) => t.Spawned && t is Building_ForceMeditationPad);
+            if (meditationPads != null && meditationPads.Count > 0)
+            {
+                foreach (Thing pad in meditationPads)
+                {
+                    if (closestDist == 0)
+                    {
+                        result = pad.PositionHeld;
+                        closestDist = pawn.PositionHeld.DistanceToSquared(pad.PositionHeld);
+                        padResult = pad;
+                    }
+                    float newDist = pawn.PositionHeld.DistanceToSquared(pad.PositionHeld);
+                    if (newDist < closestDist)
+                    {
+                        closestDist = newDist;
+                        result = pad.PositionHeld;
+                        padResult = pad;
+                    }
+
+                }
+            }
+            return result;
+        }
+
         protected override Job TryGiveJob(Pawn pawn)
         {
-           //Log.Message("JobGiven");
-            //if (RestUtility.DisturbancePreventsLyingDown(pawn))
-            //{
-            //    return null;
-            //}
-            IntVec3 c = CellFinder.RandomClosewalkCellNearNotForbidden(pawn.Position, pawn.Map, 4, pawn);
+            Thing padResult = null;
+            IntVec3 c = ResolveMeditationLocation(pawn, out padResult);
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
             compForce.canMeditateTicks = Find.TickManager.TicksGame + 6000;
-            return new Job(DefDatabase<JobDef>.GetNamed("PJ_ForceMeditationJob"), c);
+            if (padResult != null) return new Job(DefDatabase<JobDef>.GetNamed("PJ_ForceMeditationJob"), padResult);
+            else return new Job(DefDatabase<JobDef>.GetNamed("PJ_ForceMeditationJob"), c);
 
         }
     }

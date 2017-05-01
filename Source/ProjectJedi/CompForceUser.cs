@@ -233,9 +233,8 @@ namespace ProjectJedi
                 {
                 this.parent.Label
                 }), MessageSound.Benefit);
-                UpdateAlignment();
             }
-
+            UpdateAlignment();
         }
         public void LevelUpPower(ForcePower power)
         {
@@ -484,13 +483,28 @@ namespace ProjectJedi
             return result;
         }
 
-        /// <summary>
-        /// This section checks if the force pool allows for the casting of the spell.
-        /// </summary>
-        /// <param name="verbAbility"></param>
-        /// <param name="reason">Why did we fail?</param>
-        /// <returns></returns>
-        public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
+        public override bool CanOverpowerTarget(Pawn user, Thing target, AbilityUser.AbilityDef abilityDef)
+        {
+            if (target is ProjectJedi.PawnGhost)
+            {
+                Messages.Message("PJ_ForceResisted".Translate(new object[]
+                    {
+                        target.LabelShort,
+                        user.LabelShort,
+                        abilityDef.label
+                    }), MessageSound.Negative);
+                return false;
+            }
+            return base.CanOverpowerTarget(user, target, abilityDef);
+        }
+
+/// <summary>
+/// This section checks if the force pool allows for the casting of the spell.
+/// </summary>
+/// <param name="verbAbility"></param>
+/// <param name="reason">Why did we fail?</param>
+/// <returns></returns>
+public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
         {
             reason = "";
             ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;

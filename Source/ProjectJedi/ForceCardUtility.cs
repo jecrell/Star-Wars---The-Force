@@ -395,6 +395,14 @@ namespace ProjectJedi
                         }), MessageSound.RejectInput);
                         return;
                     }
+                    if (compForce.abilityUser.story != null && (compForce.abilityUser.story.WorkTagIsDisabled(WorkTags.Violent) && power.abilityDef.MainVerb.isViolent))
+                    {
+                        Messages.Message("IsIncapableOfViolenceLower".Translate(new object[]
+                        {
+                            compForce.parent.LabelShort
+                        }), MessageSound.RejectInput);
+                        return;
+                    }
                     compForce.LevelUpPower(power);
                     compForce.abilityPoints -= powerDef.abilityPoints;
                 }

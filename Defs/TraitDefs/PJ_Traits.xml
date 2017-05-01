@@ -46,6 +46,7 @@
     <conflictingTraits>
       <li>PJ_SithTrait</li>
 	  <li>PJ_GrayTrait</li>
+	  <li>PJ_ForceSensitive</li>
     </conflictingTraits>	
   </TraitDef>
 
@@ -80,6 +81,7 @@
     <conflictingTraits>
       <li>PJ_JediTrait</li>
 	  <li>PJ_GrayTrait</li>
+	  <li>PJ_ForceSensitive</li>	  
     </conflictingTraits>		
   </TraitDef>  
   
@@ -112,6 +114,7 @@
     <conflictingTraits>
       <li>PJ_JediTrait</li>
 	  <li>PJ_SithTrait</li>
+	  <li>PJ_ForceSensitive</li>	  
     </conflictingTraits>	
   </TraitDef>  
 

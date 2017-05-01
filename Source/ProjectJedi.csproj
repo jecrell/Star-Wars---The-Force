@@ -91,6 +91,7 @@
     <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
     <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
     <Compile Include="ProjectJedi\ForceCardUtility.cs" />
+    <Compile Include="ProjectJedi\Building_ForceMeditationPad.cs" />
     <Compile Include="ProjectJedi\ForcePower.cs" />
     <Compile Include="ProjectJedi\ForceSkill.cs" />
     <Compile Include="ProjectJedi\HarmonyPatches.cs" />

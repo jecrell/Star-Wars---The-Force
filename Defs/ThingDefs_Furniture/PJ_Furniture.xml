@@ -44,6 +44,7 @@
 
 		<ThingDef ParentName="ArtableFurnitureBase">
 		<defName>PJ_ForceMedPadJ</defName>
+		<thingClass>ProjectJedi.Building_ForceMeditationPad</thingClass>
 		<label>Meditation pad (Jedi)</label>
 		<graphicData>
 			<texPath>Furniture/MedCushion</texPath>
@@ -86,6 +87,7 @@
 	
 		<ThingDef ParentName="ArtableFurnitureBase">
 		<defName>PJ_ForceMedPadS</defName>
+		<thingClass>ProjectJedi.Building_ForceMeditationPad</thingClass>		
 		<label>Meditation pad (Sith)</label>
 		<graphicData>
 			<texPath>Furniture/MedCushionSith</texPath>
