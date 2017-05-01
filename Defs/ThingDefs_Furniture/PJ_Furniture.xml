@@ -1,5 +1,35 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Buildings> 
+
+
+  <ThingDef Name="FurnitureBase" ParentName="BuildingBase" Abstract="True">
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+    </comps>
+    <DesignationCategory>Furniture</DesignationCategory>
+    <minifiedDef>MinifiedFurniture</minifiedDef>
+    <tradeTags>
+      <li>Furniture</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <ThingDef Name="ArtableFurnitureBase" ParentName="FurnitureBase" Abstract="True">
+    <comps>
+      <li Class="CompProperties_Art">
+        <nameMaker>ArtName_Furniture</nameMaker>
+        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
+        <minQualityForArtistic>Excellent</minQualityForArtistic>
+      </li>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Art</li>
+    </inspectorTabs>
+  </ThingDef>
+
+
+
 		<ThingDef ParentName="ArtableFurnitureBase">
 		<defName>PJ_ForceMedPadJ</defName>
 		<label>Meditation pad (Jedi)</label>
