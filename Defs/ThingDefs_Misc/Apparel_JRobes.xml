@@ -33,21 +33,21 @@
 			<ShootingAccuracy>0.05</ShootingAccuracy>
 			<PsychicSensitivity>-0.05</PsychicSensitivity>
 			<MoveSpeed>0.20</MoveSpeed>
-			<PlantWorkSpeed>0.25</PlantWorkSpeed>
-			<HarvestFailChance>-0.4</HarvestFailChance>
-			<MentalBreakThreshold>-0.2</MentalBreakThreshold>
-			<MeleeHitChance>0.35</MeleeHitChance>
-			<AimingDelayFactor>-0.1</AimingDelayFactor>
-			<RecruitPrisonerChance>0.25</RecruitPrisonerChance>
-			<SocialImpact>0.15</SocialImpact>
-			<TradePriceImprovement>0.25</TradePriceImprovement>
-			<SurgerySuccessChance>0.25</SurgerySuccessChance>
-			<HealingQuality>0.30</HealingQuality>
-			<HealingSpeed>0.3</HealingSpeed>
-			<MedicalOperationSpeed>0.3</MedicalOperationSpeed>
-			<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
-			<MiningSpeed>0.5</MiningSpeed>
-			<SmithingSpeed>0.8</SmithingSpeed>
+			<PlantWorkSpeed>0.025</PlantWorkSpeed>
+			<HarvestFailChance>-0.04</HarvestFailChance>
+			<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+			<MeleeHitChance>0.035</MeleeHitChance>
+			<AimingDelayFactor>-0.01</AimingDelayFactor>
+			<RecruitPrisonerChance>0.025</RecruitPrisonerChance>
+			<SocialImpact>0.015</SocialImpact>
+			<TradePriceImprovement>0.025</TradePriceImprovement>
+			<SurgerySuccessChance>0.025</SurgerySuccessChance>
+			<HealingQuality>0.030</HealingQuality>
+			<HealingSpeed>0.030</HealingSpeed>
+			<MedicalOperationSpeed>0.03</MedicalOperationSpeed>
+			<WorkSpeedGlobal>0.025</WorkSpeedGlobal>
+			<MiningSpeed>0.05</MiningSpeed>
+			<SmithingSpeed>0.028</SmithingSpeed>
 		</equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -100,21 +100,21 @@
 			<ShootingAccuracy>0.05</ShootingAccuracy>
 			<PsychicSensitivity>-0.05</PsychicSensitivity>
 			<MoveSpeed>0.20</MoveSpeed>
-			<PlantWorkSpeed>0.25</PlantWorkSpeed>
-			<HarvestFailChance>-0.4</HarvestFailChance>
-			<MentalBreakThreshold>-0.2</MentalBreakThreshold>
-			<MeleeHitChance>0.35</MeleeHitChance>
-			<AimingDelayFactor>-0.1</AimingDelayFactor>
-			<RecruitPrisonerChance>0.25</RecruitPrisonerChance>
-			<SocialImpact>0.15</SocialImpact>
-			<TradePriceImprovement>0.25</TradePriceImprovement>
-			<SurgerySuccessChance>0.25</SurgerySuccessChance>
-			<HealingQuality>0.30</HealingQuality>
-			<HealingSpeed>0.3</HealingSpeed>
-			<MedicalOperationSpeed>0.3</MedicalOperationSpeed>
-			<WorkSpeedGlobal>0.05</WorkSpeedGlobal>
-			<MiningSpeed>0.5</MiningSpeed>
-			<SmithingSpeed>0.8</SmithingSpeed>
+			<PlantWorkSpeed>0.025</PlantWorkSpeed>
+			<HarvestFailChance>-0.04</HarvestFailChance>
+			<MentalBreakThreshold>-0.02</MentalBreakThreshold>
+			<MeleeHitChance>0.035</MeleeHitChance>
+			<AimingDelayFactor>-0.01</AimingDelayFactor>
+			<RecruitPrisonerChance>0.025</RecruitPrisonerChance>
+			<SocialImpact>0.015</SocialImpact>
+			<TradePriceImprovement>0.025</TradePriceImprovement>
+			<SurgerySuccessChance>0.025</SurgerySuccessChance>
+			<HealingQuality>0.030</HealingQuality>
+			<HealingSpeed>0.030</HealingSpeed>
+			<MedicalOperationSpeed>0.03</MedicalOperationSpeed>
+			<WorkSpeedGlobal>0.025</WorkSpeedGlobal>
+			<MiningSpeed>0.05</MiningSpeed>
+			<SmithingSpeed>0.028</SmithingSpeed>
 		</equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
