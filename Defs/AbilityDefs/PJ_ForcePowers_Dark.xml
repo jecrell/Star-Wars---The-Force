@@ -82,7 +82,7 @@
     <forcePoolCost>0.18</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changedAlignmentRate>-0.025</changedAlignmentRate>	
+	<changedAlignmentRate>-0.05</changedAlignmentRate>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -121,7 +121,7 @@
     <forcePoolCost>0.05</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<requiredAlignmentType>Dark</requiredAlignmentType>	
-	<changedAlignmentRate>-0.035</changedAlignmentRate>
+	<changedAlignmentRate>-0.2</changedAlignmentRate>
 	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -221,7 +221,7 @@
     <forcePoolCost>0.18</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>
+	<changedAlignmentRate>-0.1</changedAlignmentRate>
 	<abilityPoints>2</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -262,7 +262,7 @@
     <forcePoolCost>0.15</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>	
+	<changedAlignmentRate>-0.15</changedAlignmentRate>	
 	<abilityPoints>3</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -360,7 +360,7 @@
     <forcePoolCost>0.28</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>
+	<changedAlignmentRate>-0.15</changedAlignmentRate>
 	<abilityPoints>2</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -394,7 +394,7 @@
     <forcePoolCost>0.25</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>	
+	<changedAlignmentRate>-0.25</changedAlignmentRate>	
 	<abilityPoints>3</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -484,7 +484,7 @@
     <forcePoolCost>0.13</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>
+	<changedAlignmentRate>-0.15</changedAlignmentRate>
 	<abilityPoints>2</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -518,7 +518,7 @@
     <forcePoolCost>0.10</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>
+	<changedAlignmentRate>-0.25</changedAlignmentRate>
 	<abilityPoints>3</abilityPoints>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
@@ -623,7 +623,7 @@
     <forcePoolCost>0.22</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.09</changedAlignmentRate>	
+	<changedAlignmentRate>-0.19</changedAlignmentRate>	
 	<abilityPoints>2</abilityPoints>
 	<darksideTreePointsRequired>9</darksideTreePointsRequired>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -673,7 +673,7 @@
     <forcePoolCost>0.18</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.15</changedAlignmentRate>	
+	<changedAlignmentRate>-0.3</changedAlignmentRate>	
 	<abilityPoints>5</abilityPoints>
 	<darksideTreePointsRequired>9</darksideTreePointsRequired>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
