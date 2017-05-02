@@ -26,8 +26,7 @@ namespace ProjectJedi
         public const float ThreshSatisfied = 0.5f;
         public const float ThreshHigh = 0.7f;
         public const float ThreshVeryHigh = 0.9f;
-
-        private bool baseSet = false;
+        
         public int ticksUntilBaseSet = 500;
         private int lastGainTick;
 

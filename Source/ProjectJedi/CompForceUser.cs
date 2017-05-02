@@ -236,6 +236,33 @@ namespace ProjectJedi
             }
             UpdateAlignment();
         }
+        public void ResetPowers()
+        {
+            foreach (ForceSkill skill in ForceSkills)
+            {
+                this.abilityPoints += skill.level;
+                skill.level = 0;
+            }
+            foreach (ForcePower power in ForcePowersDark)
+            {
+                this.abilityPoints += power.level;
+                power.level = 0;
+                this.RemovePawnAbility(power.abilityDef);
+            }
+            foreach (ForcePower power in ForcePowersGray)
+            {
+                this.abilityPoints += power.level;
+                power.level = 0;
+                this.RemovePawnAbility(power.abilityDef);
+            }
+            foreach (ForcePower power in ForcePowersLight)
+            {
+                this.abilityPoints += power.level;
+                power.level = 0;
+                this.RemovePawnAbility(power.abilityDef);
+            }
+        }
+
         public void LevelUpPower(ForcePower power)
         {
             this.RemovePawnAbility(power.abilityDef);

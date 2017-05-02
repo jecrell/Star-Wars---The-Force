@@ -152,19 +152,6 @@ namespace ProjectJedi
 
         public static void AlignmentOnGUI(Rect rect, CompForceUser compForce)
         {
-            if (DebugSettings.godMode)
-            {
-                Rect rectDebugPlus = new Rect(rect.xMax - 5, rect.y, 5, 5);
-                if (Widgets.ButtonText(rectDebugPlus, "+", true, false, true))
-                {
-                    compForce.AlignmentValue += 0.025f;
-                }
-                Rect rectDebugMinus = new Rect(rect.xMin + 5, rect.y, 5, 5);
-                if (Widgets.ButtonText(rectDebugPlus, "-", true, false, true))
-                {
-                    compForce.AlignmentValue -= 0.025f;
-                }
-            }
 
             ////base.DrawOnGUI(rect, maxThresholdMarkers, customMargin, drawArrows, doTooltip);
             if (rect.height > 70f)
@@ -173,11 +160,6 @@ namespace ProjectJedi
                 rect.height = 70f;
                 rect.y += num;
             }
-            if (Mouse.IsOver(rect))
-            {
-                Widgets.DrawHighlight(rect);
-            }
-            TooltipHandler.TipRegion(rect, new TipSignal(() => AlignmentTipString(compForce, false), rect.GetHashCode()));
             float num2 = 14f;
             if (rect.height < 50f)
             {
@@ -185,12 +167,32 @@ namespace ProjectJedi
             }
             Text.Anchor = TextAnchor.UpperLeft;
             Rect rect3 = new Rect(rect.x, rect.y + rect.height / 2f, rect.width - 10f, rect.height);
-            rect3 = new Rect(rect3.x, rect3.y, rect3.width, rect3.height - num2);
+            rect3 = new Rect(rect3.x + 20, rect3.y, rect3.width - 35, rect3.height - num2);
+            if (Mouse.IsOver(rect3))
+            {
+                Widgets.DrawHighlight(rect3);
+            }
+            TooltipHandler.TipRegion(rect3, new TipSignal(() => AlignmentTipString(compForce, false), rect.GetHashCode()));
             Widgets.FillableBar(rect3, 1.0f, TexButton.PJTex_AlignmentBar);
+
             float curInstantLevelPercentage = compForce.AlignmentValue;
             if (curInstantLevelPercentage >= 0f)
             {
                 DrawBarInstantMarkerAt(rect3, curInstantLevelPercentage);
+            }
+            
+            if (DebugSettings.godMode)
+            {
+                Rect rectDebugPlus = new Rect(rect3.xMax + 10, rect3.y, 10, 10);
+                if (Widgets.ButtonText(rectDebugPlus, "+", true, false, true))
+                {
+                    compForce.AlignmentValue += 0.025f;
+                }
+                Rect rectDebugMinus = new Rect(rect3.xMin - 15, rect3.y, 10, 10);
+                if (Widgets.ButtonText(rectDebugMinus, "-", true, false, true))
+                {
+                    compForce.AlignmentValue -= 0.025f;
+                }
             }
         }
 
@@ -221,6 +223,14 @@ namespace ProjectJedi
                 if (Widgets.ButtonText(rectDebugPlus, "+", true, false, true))
                 {
                     compForce.LevelUp(true);
+                }
+                if (compForce.ForceUserLevel > 0)
+                {
+                    Rect rectDebugReset = new Rect(rectDebugPlus.x, rectDebugPlus.yMax + 1, rectDebugPlus.width, TextSize);
+                    if (Widgets.ButtonText(rectDebugReset, "~", true, false, true))
+                    {
+                        compForce.ResetPowers();
+                    }
                 }
             }
             
