@@ -136,6 +136,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>	  
     </graphicData>
+    <menuHidden>true</menuHidden>	
     <soundInteract>InteractPistol</soundInteract>
     <costStuffCount>50</costStuffCount>
     <statBases>

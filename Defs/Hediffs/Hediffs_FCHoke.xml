@@ -4,6 +4,7 @@
 
   <HediffDef>
     <defName>PJ_NoAir</defName>
+	<hediffClass>HediffWithComps</hediffClass>	
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
     <label>Asphyxia</label>
     <lethalSeverity>5</lethalSeverity>
