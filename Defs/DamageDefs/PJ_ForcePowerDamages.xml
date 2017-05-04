@@ -57,7 +57,6 @@
     <defName>PJ_FStorm</defName>
     <label>Force storm</label>
     <externalViolence>true</externalViolence>
-    <battleWound>true</battleWound>
     <deathMessage>{0} was caught in a force storm.</deathMessage>
     <hediff>Burn</hediff>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>

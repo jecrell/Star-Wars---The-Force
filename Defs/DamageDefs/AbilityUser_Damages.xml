@@ -7,7 +7,6 @@
     <label>burn</label>
     <hasForcefulImpact>true</hasForcefulImpact>
     <makesBlood>false</makesBlood>
-    <incapChanceMultiplier>1.2</incapChanceMultiplier>
     <canInterruptJobs>false</canInterruptJobs>
     <externalViolence>true</externalViolence>
     <deathMessage>{0} has been shot to death.</deathMessage>

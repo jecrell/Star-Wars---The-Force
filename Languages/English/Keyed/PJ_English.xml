@@ -55,7 +55,7 @@
 <PJ_LightsaberDefense_Desc>Increases chance to block melee attacks and deflect bullets by 15% per level.</PJ_LightsaberDefense_Desc>
 <PJ_LightsaberReflection_Desc>Increases chances of reflecting deflected bullets back at targets by 20% per level.</PJ_LightsaberReflection_Desc>
 <PJ_LightsaberAccuracy_Desc>Increases rates of landing lightsaber attacks in battle by up to 20% per point.</PJ_LightsaberAccuracy_Desc>
-<PJ_ForcePool_Desc>Increases the size of the force pool by 15% per skill point.</PJ_ForcePool_Desc>
+<PJ_ForcePool_Desc>Decreases force power force pool consumption by 15% per skill point.</PJ_ForcePool_Desc>
 
 <!-- ========== Buttons ========== -->
 

@@ -42,7 +42,7 @@ namespace ProjectJedi
 
         public void PushEffect(Thing target, int distance, bool damageOnCollision = false)
         {
-            if (target is Pawn)
+            if (target != null && target is Pawn)
             {
                 bool applyDamage;
                 Vector3 loc = PushResult(target, distance, out applyDamage);

@@ -19,7 +19,7 @@ namespace ProjectJedi
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.jedi");
             harmony.Patch(AccessTools.Method(typeof(ThingWithComps), "InitializeComps"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("InitializeComps_PostFix")), null);
             harmony.Patch(AccessTools.Method(typeof(Thing), "TakeDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("TakeDamage_PreFix")), null);
-            harmony.Patch(AccessTools.Method(typeof(Verb_MeleeAttack), "GetHitChance"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetHitChance_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(Verb_MeleeAttack), "GetNonMissChance"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetNonMissChance_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), "PreApplyDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("PreApplyDamage_PreFix")), null);
             harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawEquipment_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn), "GetGizmos"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetGizmos_PostFix")));
@@ -172,9 +172,10 @@ namespace ProjectJedi
 
         public static int nonForceUserLightsaberDamage = 10;
 
-        public static void GetHitChance_PostFix(Verb_MeleeAttack __instance, ref float __result)
+        public static void GetNonMissChance_PostFix(Verb_MeleeAttack __instance, LocalTargetInfo target, ref float __result)
         {
-
+            //if (target.Thing != null && target.Thing is Pawn)
+            //{
                 Pawn attacker = __instance.CasterPawn;
                 if (attacker != null)
                 {
@@ -189,7 +190,7 @@ namespace ProjectJedi
                                 {
                                     if (thingWithComps.def.defName.Contains("SWSaber_"))
                                     {
-                                    CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
+                                        CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
                                         if (compForce == null)
                                         {
                                             __result = 0.5f;
@@ -210,7 +211,7 @@ namespace ProjectJedi
                                                     newAccuracy += 0.2f;
                                                 }
                                             }
-                                        __result = newAccuracy;
+                                            __result = newAccuracy;
                                         }
                                     }
                                 }
@@ -218,6 +219,8 @@ namespace ProjectJedi
                         }
                     }
                 }
+            //}
+
             
         }
 
