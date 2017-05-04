@@ -46,7 +46,7 @@ namespace ProjectJedi
             {
                 bool applyDamage;
                 Vector3 loc = PushResult(target, distance, out applyDamage);
-                ((Pawn)target).needs.mood.thoughts.memories.TryGainMemoryThought(ThoughtDef.Named("PJ_ThoughtPush"), null);
+                ((Pawn)target).needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPush"), null);
                 FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
                 if (applyDamage && damageOnCollision) flyingObject.Launch(Caster, new LocalTargetInfo(loc.ToIntVec3()), target, new DamageInfo(DamageDefOf.Blunt, Rand.Range(8,10)));
                 else flyingObject.Launch(Caster, new LocalTargetInfo(loc.ToIntVec3()), target);

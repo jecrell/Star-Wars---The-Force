@@ -26,9 +26,9 @@ namespace ProjectJedi
 
         public void ExposeData()
         {
-            Scribe_Values.LookValue<string>(ref label, "label", "default");
-            Scribe_Values.LookValue<string>(ref desc, "desc", "default");
-            Scribe_Values.LookValue<int>(ref level, "level", 0);
+            Scribe_Values.Look<string>(ref label, "label", "default");
+            Scribe_Values.Look<string>(ref desc, "desc", "default");
+            Scribe_Values.Look<int>(ref level, "level", 0);
         }
     }
 }

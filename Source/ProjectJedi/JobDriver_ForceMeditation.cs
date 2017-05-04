@@ -54,7 +54,7 @@ namespace ProjectJedi
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<Rot4>(ref this.faceDir, "faceDir", default(Rot4), false);
+            Scribe_Values.Look<Rot4>(ref this.faceDir, "faceDir", default(Rot4), false);
         }
     }
 }

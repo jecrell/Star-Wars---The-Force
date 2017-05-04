@@ -12,12 +12,14 @@ namespace ProjectJedi
     {
         public static readonly int ticksToDestroy = 1800; //30 seconds
         private int ticksLeft;
-        
-        public override void SpawnSetup(Map map)
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
+
             ticksLeft = ticksToDestroy;
-            base.SpawnSetup(map);
+            base.SpawnSetup(map, respawningAfterLoad);
         }
+        
 
         public override void Tick()
         {
@@ -62,7 +64,7 @@ namespace ProjectJedi
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<int>(ref this.ticksLeft, "ticksLeft", 0);
+            Scribe_Values.Look<int>(ref this.ticksLeft, "ticksLeft", 0);
         }
     }
 }

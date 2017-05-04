@@ -94,8 +94,8 @@ namespace ProjectJedi
 
         public void ExposeData()
         {
-            Scribe_Values.LookValue<int>(ref level, "level", 0);
-            Scribe_Collections.LookList<AbilityDef>(ref abilityDefs, "abilityDefs", LookMode.Def, null);
+            Scribe_Values.Look<int>(ref level, "level", 0);
+            Scribe_Collections.Look<AbilityDef>(ref abilityDefs, "abilityDefs", LookMode.Def, null);
         }
     }
 }

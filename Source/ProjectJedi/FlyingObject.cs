@@ -73,12 +73,12 @@ namespace ProjectJedi
         public override void ExposeData()
         {
             base.ExposeData();
-            Scribe_Values.LookValue<Vector3>(ref this.origin, "origin", default(Vector3), false);
-            Scribe_Values.LookValue<Vector3>(ref this.destination, "destination", default(Vector3), false);
-            Scribe_Values.LookValue<int>(ref this.ticksToImpact, "ticksToImpact", 0, false);
-            Scribe_References.LookReference<Thing>(ref this.assignedTarget, "assignedTarget", false);
-            Scribe_References.LookReference<Thing>(ref this.launcher, "launcher", false);
-            Scribe_References.LookReference<Thing>(ref this.flyingThing, "flyingThing");
+            Scribe_Values.Look<Vector3>(ref this.origin, "origin", default(Vector3), false);
+            Scribe_Values.Look<Vector3>(ref this.destination, "destination", default(Vector3), false);
+            Scribe_Values.Look<int>(ref this.ticksToImpact, "ticksToImpact", 0, false);
+            Scribe_References.Look<Thing>(ref this.assignedTarget, "assignedTarget", false);
+            Scribe_References.Look<Thing>(ref this.launcher, "launcher", false);
+            Scribe_References.Look<Thing>(ref this.flyingThing, "flyingThing");
         }
 
         public void Launch(Thing launcher, LocalTargetInfo targ, Thing flyingThing, DamageInfo? impactDamage)

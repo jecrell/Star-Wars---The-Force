@@ -181,7 +181,7 @@ namespace ProjectJedi
                     Pawn_EquipmentTracker pawn_EquipmentTracker = attacker.equipment;
                     if (pawn_EquipmentTracker != null)
                     {
-                        foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipment)
+                        foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipmentListForReading)
                         {
                             if (thingWithComps != null)
                             {
@@ -231,7 +231,7 @@ namespace ProjectJedi
                     Pawn_EquipmentTracker pawn_EquipmentTracker = attacker.equipment;
                     if (pawn_EquipmentTracker != null)
                     {
-                        foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipment)
+                        foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipmentListForReading)
                         {
                             if (thingWithComps != null)
                             {

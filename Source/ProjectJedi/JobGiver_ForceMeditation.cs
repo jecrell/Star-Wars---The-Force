@@ -42,7 +42,7 @@ namespace ProjectJedi
             return 0f;
         }
 
-        public override ThinkResult TryIssueJobPackage(Pawn pawn)
+        public override ThinkResult TryIssueJobPackage(Pawn pawn, JobIssueParams jobParams)
         {
 
             Need_ForcePool forcePool = pawn.needs.TryGetNeed<Need_ForcePool>();
@@ -74,7 +74,7 @@ namespace ProjectJedi
                 return ThinkResult.NoJob;
             }
 
-            return base.TryIssueJobPackage(pawn);
+            return base.TryIssueJobPackage(pawn, jobParams);
         }
 
         public static IntVec3 ResolveMeditationLocation(Pawn pawn, out Thing padResult)

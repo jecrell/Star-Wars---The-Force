@@ -223,7 +223,7 @@ namespace ProjectJedi
                     Find.LetterStack.ReceiveLetter("PJ_ForceAwakensLabel".Translate(), "PJ_ForceAwakensDesc".Translate(new object[]
                     {
                         this.parent.Label
-                        }), LetterType.Good, this.parent, null);
+                        }), LetterDefOf.Good, this.parent, null);
                 }
                 SoundDef.Named("PJ_ForcePowersUnlocked").PlayOneShotOnCamera();
             }
@@ -909,21 +909,21 @@ public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string r
         public override void PostExposeData()
         {
             base.PostExposeData();
-            Scribe_Values.LookValue<float>(ref this.alignmentValue, "alignmentValue", 0.5f);
-            Scribe_Values.LookValue<int>(ref this.forceUserLevel, "forceUserLevel", 0);
-            Scribe_Values.LookValue<int>(ref this.forceUserXP, "forceUserXP");
-            Scribe_Values.LookValue<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", false);
-            //Scribe_Values.LookValue<int>(ref this.levelLightsaberOff, "levelLightsaberOff", 0);
-            //Scribe_Values.LookValue<int>(ref this.levelLightsaberDef, "levelLightsaberDef", 0);
-            //Scribe_Values.LookValue<int>(ref this.levelLightsaberAcc, "levelLightsaberAcc", 0);
-            //Scribe_Values.LookValue<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
-            //Scribe_Values.LookValue<int>(ref this.levelForcePool, "levelForcePool", 0);
-            Scribe_Values.LookValue<int>(ref this.abilityPoints, "abilityPoints", 0);
-            Scribe_Values.LookValue<int>(ref this.canMeditateTicks, "canMeditateTicks", 0);
-            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, null);
-            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, null);
-            Scribe_Collections.LookList<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, null);
-            Scribe_Collections.LookList<ForceSkill>(ref this.forceSkills, "forceSkills", LookMode.Deep, null);
+            Scribe_Values.Look<float>(ref this.alignmentValue, "alignmentValue", 0.5f);
+            Scribe_Values.Look<int>(ref this.forceUserLevel, "forceUserLevel", 0);
+            Scribe_Values.Look<int>(ref this.forceUserXP, "forceUserXP");
+            Scribe_Values.Look<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", false);
+            //Scribe_Values.Look<int>(ref this.levelLightsaberOff, "levelLightsaberOff", 0);
+            //Scribe_Values.Look<int>(ref this.levelLightsaberDef, "levelLightsaberDef", 0);
+            //Scribe_Values.Look<int>(ref this.levelLightsaberAcc, "levelLightsaberAcc", 0);
+            //Scribe_Values.Look<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
+            //Scribe_Values.Look<int>(ref this.levelForcePool, "levelForcePool", 0);
+            Scribe_Values.Look<int>(ref this.abilityPoints, "abilityPoints", 0);
+            Scribe_Values.Look<int>(ref this.canMeditateTicks, "canMeditateTicks", 0);
+            Scribe_Collections.Look<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, null);
+            Scribe_Collections.Look<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, null);
+            Scribe_Collections.Look<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, null);
+            Scribe_Collections.Look<ForceSkill>(ref this.forceSkills, "forceSkills", LookMode.Deep, null);
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {

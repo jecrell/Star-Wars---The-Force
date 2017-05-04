@@ -28,7 +28,7 @@ namespace ProjectJedi
                 }
                 else
                 {
-                    BodyPartRecord lungRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.Activities.First<Pair<PawnCapacityDef, string>>().First == PawnCapacityDefOf.Breathing);
+                    BodyPartRecord lungRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.tags.First((string s) => s == "BreathingSource" || s == "BreathingPathway") != null);
                     if (!pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().Any((Hediff_MissingPart x) => x.Part == lungRecord))
                     {
                         newDinfo.SetForcedHitPart(lungRecord);
