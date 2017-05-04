@@ -631,7 +631,7 @@ public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string r
                     {
                         firstTick = true;
                         this.Initialize();
-                        if (this.AlignmentValue == 0.0f) this.AlignmentValue = 0.5f;
+                        //if (this.AlignmentValue == 0.0f) this.AlignmentValue = 0.5f;
                         ResolveForceTab();
                         ResolveForcePowers();
                         ResolveForcePool();
