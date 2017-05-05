@@ -7,10 +7,10 @@
 	<hediffClass>HediffWithComps</hediffClass>	
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
     <label>Asphyxia</label>
-    <lethalSeverity>1</lethalSeverity>
+    <lethalSeverity>5</lethalSeverity>
 		<comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-1.1</severityPerDay>
+        <severityPerDay>-5.1</severityPerDay>
       </li>	  
     </comps>
     <stages>
@@ -34,7 +34,7 @@
       </li>
       <li>
         <label>minor</label>
-        <minSeverity>0.2</minSeverity>
+        <minSeverity>1.2</minSeverity>
         <capMods>
           <li>
             <capacity>Moving</capacity>
@@ -52,7 +52,7 @@
       </li>
       <li>
         <label>serious</label>
-        <minSeverity>0.35</minSeverity>
+        <minSeverity>2.35</minSeverity>
         <painOffset>0.15</painOffset>
         <capMods>
           <li>
@@ -71,7 +71,7 @@
       </li>
       <li>
         <label>extreme</label>
-        <minSeverity>0.62</minSeverity>
+        <minSeverity>3.62</minSeverity>
         <lifeThreatening>true</lifeThreatening>
         <painOffset>0.30</painOffset>
         <capMods>
