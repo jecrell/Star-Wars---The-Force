@@ -213,7 +213,6 @@ namespace ProjectJedi
             ForceUserLevel += 1;
             if (ForceUserLevel == 1)
             {
-
                 if (!hideNotification)
                 {
                     Messages.Message("PJ_ForcePowersUnlocked".Translate(new object[]
@@ -226,6 +225,7 @@ namespace ProjectJedi
                         }), LetterDefOf.Good, this.parent, null);
                 }
                 SoundDef.Named("PJ_ForcePowersUnlocked").PlayOneShotOnCamera();
+                AlignmentValue = 0.5f;
             }
             else
             {

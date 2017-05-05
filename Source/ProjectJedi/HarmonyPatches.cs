@@ -23,7 +23,7 @@ namespace ProjectJedi
             harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), "PreApplyDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("PreApplyDamage_PreFix")), null);
             harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DrawEquipment_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn), "GetGizmos"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetGizmos_PostFix")));
-            harmony.Patch(AccessTools.Method(typeof(Pawn_SkillTracker), "Learn"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Learn_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(SkillRecord), "Learn"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Learn_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(StorytellerUtility), "DefaultParmsNow"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DefaultParmsNow_PostFix")));
         }
 
@@ -63,13 +63,13 @@ namespace ProjectJedi
         /// <param name="sDef"></param>
         /// <param name="xp"></param>
         /// <param name="direct"></param>
-        public static void Learn_PostFix(Pawn_SkillTracker __instance, SkillDef sDef, float xp, bool direct = false)
+        public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false)
         {
-            Pawn pawn = (Pawn)AccessTools.Field(typeof(Pawn_SkillTracker), "pawn").GetValue(__instance);
+            Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue(__instance);
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
             if (compForce != null)
             {
-                if ((sDef == SkillDefOf.Melee || sDef == SkillDefOf.Shooting))
+                if ((__instance.def == SkillDefOf.Melee || __instance.def == SkillDefOf.Shooting))
                 {
                     compForce.ForceUserXP += Rand.Range(3, 6);
                 }
