@@ -7,10 +7,10 @@
 	<hediffClass>HediffWithComps</hediffClass>	
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
     <label>Asphyxia</label>
-    <lethalSeverity>5</lethalSeverity>
+    <lethalSeverity>1</lethalSeverity>
 		<comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-5.5</severityPerDay>
+        <severityPerDay>-1.1</severityPerDay>
       </li>	  
     </comps>
     <stages>
