@@ -498,10 +498,31 @@ namespace ProjectJedi
                     forceDef.changedAlignmentRate.ToString("p1")
                     });
                 }
-                pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
+                if (ForceSkillLevel("PJ_ForcePool") > 0)
                 {
+                    float poolCost = 0f;
+                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
+                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
+                    pointsDesc = "ForceAbilityDescOriginPoints".Translate(new object[]
+                    {
                     forceDef.forcePoolCost.ToString("p1")
-                });
+                    })
+
+                    + "\n" +
+
+                    "ForceAbilityDescNewPoints".Translate(new object[]
+                    {
+                    poolCost.ToString("p1")
+                    })
+                    ;
+                }
+                else
+                {
+                    pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
+                    {
+                    forceDef.forcePoolCost.ToString("p1")
+                    });
+                }
                 if (alignDesc != "") postDesc.AppendLine(alignDesc);
                 if (changeDesc != "") postDesc.AppendLine(changeDesc);
                 if (pointsDesc != "") postDesc.AppendLine(pointsDesc);

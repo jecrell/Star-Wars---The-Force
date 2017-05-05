@@ -62,5 +62,7 @@
 <ForceAbilityDescAlign>Required Alignment: {0}</ForceAbilityDescAlign>
 <ForceAbilityDescChange>Adjusts Alignment towards the {0} side by {1}</ForceAbilityDescChange>
 <ForceAbilityDescPoints>Force Power: {0}</ForceAbilityDescPoints>
+<ForceAbilityDescOriginPoints>Force Power: {0} (Original)</ForceAbilityDescOriginPoints>
+<ForceAbilityDescNewPoints>Force Power: {0} (w/ Force pool skill)</ForceAbilityDescNewPoints>
 	
 </LanguageData>

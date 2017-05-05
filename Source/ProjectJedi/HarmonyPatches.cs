@@ -69,11 +69,11 @@ namespace ProjectJedi
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
             if (compForce != null)
             {
-                if ((__instance.def == SkillDefOf.Melee || __instance.def == SkillDefOf.Shooting))
-                {
-                    compForce.ForceUserXP += Rand.Range(3, 6);
-                }
-                else if (Find.TickManager.TicksGame % 70 == 0)
+                //if ((__instance.def == SkillDefOf.Melee || __instance.def == SkillDefOf.Shooting))
+                //{
+                //    compForce.ForceUserXP += Rand.Range(3, 6);
+                //}
+                if (Find.TickManager.TicksGame % 70 == 0)
                 {
                     compForce.ForceUserXP++;
                 }
