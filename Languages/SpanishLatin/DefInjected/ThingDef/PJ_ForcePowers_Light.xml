@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Healing Self -->
+
+  <PJ_PForceHeal.label>Regeneracion de la fuerza</PJ_PForceHeal.label>
+
+
+  <!-- Force Healing Self (Apprentice) -->
+
+  <PJ_ForceHealingSelf_Apprentice.label>Regeneracion de la fuerza (Aprendiz)</PJ_ForceHealingSelf_Apprentice.label>
+  <PJ_ForceHealingSelf_Apprentice.description>Cura al usuario de manera milagrosa.</PJ_ForceHealingSelf_Apprentice.description>
+
+
+  <!-- Force Healing Self (Adept) -->
+
+  <PJ_ForceHealingSelf_Adept.label>Regeneracion de la fuerza (Aprendiz)</PJ_ForceHealingSelf_Adept.label>
+  <PJ_ForceHealingSelf_Adept.description>Cura al usuario de manera milagrosa.</PJ_ForceHealingSelf_Adept.description>
+
+
+  <!-- Force Healing Self (Master) -->
+
+  <PJ_ForceHealingSelf_Master.label>Regeneracion de la fuerza (Maestro)</PJ_ForceHealingSelf_Master.label>
+  <PJ_ForceHealingSelf_Master.description>Cura al usuario de manera milagrosa.</PJ_ForceHealingSelf_Master.description>
+
+
+  <!-- Force Heal Target (Apprentice) -->
+
+  <PJ_ForceHealingOther_Apprentice.label>Curacion de la fuerza (Aprendiz)</PJ_ForceHealingOther_Apprentice.label>
+  <PJ_ForceHealingOther_Apprentice.description>Cura a tu objetivo de manera milagrosa.</PJ_ForceHealingOther_Apprentice.description>
+
+
+  <!-- Force Heal Target (Adept) -->
+
+  <PJ_ForceHealingOther_Adept.label>Curacion de la fuerza (Adepto)</PJ_ForceHealingOther_Adept.label>
+  <PJ_ForceHealingOther_Adept.description>Cura a tu objetivo de manera milagrosa.</PJ_ForceHealingOther_Adept.description>
+
+
+  <!-- Force Heal Target (Master) -->
+
+  <PJ_ForceHealingOther_Master.label>Curacion de la fuerza (Maestro)</PJ_ForceHealingOther_Master.label>
+  <PJ_ForceHealingOther_Master.description>Cura a tu objetivo de manera milagrosa.</PJ_ForceHealingOther_Master.description>
+
+
+  <!-- Force Defense -->
+
+  <PJ_PForceDefense.label>Defensa de la fuerza</PJ_PForceDefense.label>
+
+
+  <!-- Force Defense (Apprentice) -->
+
+  <PJ_ForceDefense_Apprentice.label>Defensa de la fuerza (Aprendiz)</PJ_ForceDefense_Apprentice.label>
+  <PJ_ForceDefense_Apprentice.description>Protege al usuario del daño por un corto tiempo.</PJ_ForceDefense_Apprentice.description>
+
+
+  <!-- Force Defense (Adept) -->
+
+  <PJ_ForceDefense_Adept.label>Defensa de la fuerza (Adepto)</PJ_ForceDefense_Adept.label>
+  <PJ_ForceDefense_Adept.description>Protege al usuario del daño por un corto tiempo.</PJ_ForceDefense_Adept.description>
+
+
+  <!-- Force Defense (Master) -->
+
+  <PJ_ForceDefense_Master.label>Defensa de la fuerza (Maestro)</PJ_ForceDefense_Master.label>
+  <PJ_ForceDefense_Master.description>Protege al usuario del daño por un corto tiempo.</PJ_ForceDefense_Master.description>
+
+
+  <!-- Mind Trick -->
+
+  <PMindTrick.label>Truco Mental</PMindTrick.label>
+
+
+  <!-- Mind Trick (Apprentice) -->
+
+  <PJ_MindTrick_Apprentice.label>Truco Mental (Aprendiz)</PJ_MindTrick_Apprentice.label>
+  <PJ_MindTrick_Apprentice.description>Utiliza la fuerza para confundir a los de mente debil, causando confusion en ellos.</PJ_MindTrick_Apprentice.description>
+
+
+  <!-- Mind Trick (Adept) -->
+
+  <PJ_MindTrick_Adept.label>Truco Mental (Adepto)</PJ_MindTrick_Adept.label>
+  <PJ_MindTrick_Adept.description>Utiliza la fuerza para confundir a los de mente debil, causando confusion en ellos.</PJ_MindTrick_Adept.description>
+
+
+  <!-- Mind Trick (Master) -->
+
+  <PJ_MindTrick_Master.label>Truco Mental (Maestro)</PJ_MindTrick_Master.label>
+  <PJ_MindTrick_Master.description>Utiliza la fuerza para confundir a los de mente debil, causando confusion en ellos.</PJ_MindTrick_Master.description>
+
+
+  <!-- Force Ghost -->
+
+  <PForceGhost.label>Fantasma de la Fuerza</PForceGhost.label>
+
+
+  <!-- Force Ghost (Apprentice) -->
+
+  <PJ_ForceGhost_Apprentice.label>Fantasma de la Fuerza (Aprendiz)</PJ_ForceGhost_Apprentice.label>
+  <PJ_ForceGhost_Apprentice.description>Invoca a un maestro Jedi de epocas pasadas para que te ayude en combate.</PJ_ForceGhost_Apprentice.description>
+
+
+  <!-- Force Ghost (Adept) -->
+
+  <PJ_ForceGhost_Adept.label>Fantasma de la Fuerza (Adepto)</PJ_ForceGhost_Adept.label>
+  <PJ_ForceGhost_Adept.description>Invoca a un maestro Jedi de epocas pasadas para que te ayude en combate.</PJ_ForceGhost_Adept.description>
+
+
+  <!-- Force Ghost (Master) -->
+
+  <PJ_ForceGhost_Master.label>Fantasma de la Fuerza (Maestro)</PJ_ForceGhost_Master.label>
+  <PJ_ForceGhost_Master.description>Invoca a un maestro Jedi de epocas pasadas para que te ayude en combate.</PJ_ForceGhost_Master.description>
+
+
+</LanguageData>

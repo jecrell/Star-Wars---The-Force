@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_MindtrickThought.stages.0.label>Truco mental</PJ_MindtrickThought.stages.0.label>
+  <PJ_MindtrickThought.stages.0.description>La fuerza puede tener un fuerte efecto en los debiles de mente, utiliza esto para hacer que los insensatos se confundan.</PJ_MindtrickThought.stages.0.description>
+
+  <PJ_RageThought.stages.0.label>Furia de la fuerza</PJ_RageThought.stages.0.label>
+  <PJ_RageThought.stages.0.description>La fuerza puede tener un efecto fuerte en los debiles de mente, utiliza esto para mandar a los debiles en una furia ciega.</PJ_RageThought.stages.0.description>
+
+
+</LanguageData>

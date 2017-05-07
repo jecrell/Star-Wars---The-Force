@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ChokeCrush.label>Aplastar</PJ_ChokeCrush.label>
+  <PJ_ChokeCrush.comps.0.labelTendedWell>Vendado</PJ_ChokeCrush.comps.0.labelTendedWell>
+  <PJ_ChokeCrush.comps.0.labelTendedWellInner>Suturado</PJ_ChokeCrush.comps.0.labelTendedWellInner>
+  <PJ_ChokeCrush.comps.0.labelSolidTendedWell>Puesto</PJ_ChokeCrush.comps.0.labelSolidTendedWell>
+  <PJ_ChokeCrush.comps.2.oldLabel>Cicatriz</PJ_ChokeCrush.comps.2.oldLabel>
+  <PJ_ChokeCrush.injuryProps.destroyedLabel>Aplastado</PJ_ChokeCrush.injuryProps.destroyedLabel>
+
+
+</LanguageData>

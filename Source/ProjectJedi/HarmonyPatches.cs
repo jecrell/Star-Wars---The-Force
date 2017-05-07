@@ -56,25 +56,18 @@ namespace ProjectJedi
             }
         }
 
-        /// <summary>
+        public static int ticksUntilNextXP = 0;
+
         /// Add Force XP every time a pawn learns a skill.
-        /// </summary>
-        /// <param name="__instance"></param>
-        /// <param name="sDef"></param>
-        /// <param name="xp"></param>
-        /// <param name="direct"></param>
         public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue(__instance);
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
             if (compForce != null)
             {
-                //if ((__instance.def == SkillDefOf.Melee || __instance.def == SkillDefOf.Shooting))
-                //{
-                //    compForce.ForceUserXP += Rand.Range(3, 6);
-                //}
-                if (Find.TickManager.TicksGame % 70 == 0)
+                if (Find.TickManager.TicksGame > ticksUntilNextXP)
                 {
+                    ticksUntilNextXP = Find.TickManager.TicksGame + 70;
                     compForce.ForceUserXP++;
                 }
             }

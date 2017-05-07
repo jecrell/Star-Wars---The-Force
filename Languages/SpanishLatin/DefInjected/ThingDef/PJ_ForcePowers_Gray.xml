@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Pull -->
+
+  <PJ_PFlyingObject.label>Objeto volador</PJ_PFlyingObject.label>
+  <PJ_PFlyingObject_Equipable.label>Objeto volador</PJ_PFlyingObject_Equipable.label>
+  <PJ_PForcePull.label>Atraccion de la fuerza</PJ_PForcePull.label>
+
+
+  <!-- Force Pull (Apprentice) -->
+
+  <PJ_ForcePull_Apprentice.label>Atraccion de la fuerza (Aprendiz)</PJ_ForcePull_Apprentice.label>
+  <PJ_ForcePull_Apprentice.description>Nivel 1: Atrae objetos en el suelo hacia el usuario.</PJ_ForcePull_Apprentice.description>
+
+
+  <!-- Force Pull (Adept) -->
+
+  <PJ_ForcePull_Adept.label>Atraccion de la fuerza (adepto)</PJ_ForcePull_Adept.label>
+  <PJ_ForcePull_Adept.description>Nivel 1: Atrae objetos en el suelo hacia el usuario.\nLevel 2: Atrae y equipa objetos en el suelo automaticamente.</PJ_ForcePull_Adept.description>
+
+
+  <!-- Force Pull (Master) -->
+
+  <PJ_ForcePull_Master.label>Atraccion de la fuerza (Maestro)</PJ_ForcePull_Master.label>
+  <PJ_ForcePull_Master.description>Nivel 1: Atrae objetos en el suelo hacia el usuario.\nNivel 2: Atrae y equipa objetos en el suelo automaticamente\nLevel 3: Arrebata armas directamente desde las manos de los otros.</PJ_ForcePull_Master.description>
+
+
+  <!-- Force Push -->
+
+  <PJ_PForcePush.label>Empuje de la fuerza</PJ_PForcePush.label>
+
+
+  <!-- Force Push (Apprentice) -->
+
+  <PJ_ForcePush_Apprentice.label>Empuje de la fuerza (Aprendiz)</PJ_ForcePush_Apprentice.label>
+  <PJ_ForcePush_Apprentice.description>Level 1: Empuja a los personajes 8 metros hacia atras.</PJ_ForcePush_Apprentice.description>
+
+
+  <!-- Force Push (Adept) -->
+
+  <PJ_ForcePush_Adept.label>Empuje de la fuerza (Adepto)</PJ_ForcePush_Adept.label>
+  <PJ_ForcePush_Adept.description>Level 1: Empuja a los personajes 8 metros hacia atras.\nLevel 2: Empuja 10 metros hacia atras y aturde.</PJ_ForcePush_Adept.description>
+
+
+  <!-- Force Push (Master) -->
+
+  <PJ_ForcePush_Master.label>Empuje de la fuerza (Maestro)</PJ_ForcePush_Master.label>
+  <PJ_ForcePush_Master.description>Level 1: Empujar hacia atras 8 metros.\nLevel 2: Empuja hacia atras 10 metros junto con aturdir.\nLevel 3: Empuja hacia atras 12 metros, aturde, y daña en caso de colision contra una pared.</PJ_ForcePush_Master.description>
+
+
+  <!-- Force Speed -->
+
+  <PJ_PForceSpeed.label>Velocidad de la Fuerza</PJ_PForceSpeed.label>
+
+
+  <!-- Force Speed (Apprentice) -->
+
+  <PJ_ForceSpeed_Apprentice.label>Velocidad de la fuerza (Aprendiz)</PJ_ForceSpeed_Apprentice.label>
+  <PJ_ForceSpeed_Apprentice.description>Incrementa la velocidad de movimiento del usuario por un corto tiempo.</PJ_ForceSpeed_Apprentice.description>
+
+
+  <!-- Force Speed (Adept) -->
+
+  <PJ_ForceSpeed_Adept.label>Velocidad de la fuerza (Adepto)</PJ_ForceSpeed_Adept.label>
+  <PJ_ForceSpeed_Adept.description>Aumenta la velocidad de movimiento del usuario por un corto tiempo.</PJ_ForceSpeed_Adept.description>
+
+
+  <!-- Force Speed (Master) -->
+
+  <PJ_ForceSpeed_Master.label>Velocidad de la fuerza (Maestro)</PJ_ForceSpeed_Master.label>
+  <PJ_ForceSpeed_Master.description>Aumenta la velocidad de movimiento del usuario por un corto tiempo.</PJ_ForceSpeed_Master.description>
+
+
+</LanguageData>
