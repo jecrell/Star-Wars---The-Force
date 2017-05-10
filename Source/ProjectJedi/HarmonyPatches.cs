@@ -46,7 +46,7 @@ namespace ProjectJedi
                                 CompForceUser compForce = pawn.GetComp<CompForceUser>();
                                 if (compForce.ForceUserLevel > 0)
                                 {
-                                        __result.points += (20 * compForce.ForceUserLevel);
+                                        __result.points += (5 * compForce.ForceUserLevel);
                                 }
                             }
                         }
