@@ -74,19 +74,21 @@ namespace ProjectJedi
                             pawnTarget.equipment.TryDropEquipment(pawnTarget.equipment.Primary, out droppedEquip, pawnTarget.Position.RandomAdjacentCell8Way(), false);
                             if (droppedEquip != null)
                             {
-                                pawnTarget.needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPull"), null);
+                                if (pawnTarget.RaceProps.Humanlike) pawnTarget.needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPull"), null);
                                 FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
                                 flyingObject.Launch(Caster, Caster, droppedEquip);
                             }
                         }
                         else
                         {
+                            if (pawnTarget.RaceProps.Humanlike) pawnTarget.needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPull"), null);
                             FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
                             flyingObject.Launch(Caster, Caster, pawnTarget);    
                         }
                     }
                     else
                     {
+                        if (pawnTarget.RaceProps.Humanlike) pawnTarget.needs.mood.thoughts.memories.TryGainMemory(ThoughtDef.Named("PJ_ThoughtPull"), null);
                         FlyingObject flyingObject = (FlyingObject)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject"), target.Position, target.Map);
                         flyingObject.Launch(Caster, Caster, pawnTarget);
                     }

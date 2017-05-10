@@ -64,7 +64,7 @@
     <defName>PJ_ForcePull_Apprentice</defName>
     <label>Force Pull</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Level 1: Pulls ground objects towards the caster.</description>
+    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.35</forcePoolCost>
 	<MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -108,7 +108,7 @@
     <defName>PJ_ForcePull_Adept</defName>
     <label>Force Pull (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.</description>
+    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.28</forcePoolCost>
 	<MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -152,7 +152,7 @@
     <defName>PJ_ForcePull_Master</defName>
     <label>Force Pull (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Level 1: Pulls ground objects towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others.</description>
+    <description>Level 1: Pulls ground objects  (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others. If unarmed, force pull now pulls people or animals towards the force wielder.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.2</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">

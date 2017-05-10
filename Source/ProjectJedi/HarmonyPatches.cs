@@ -14,6 +14,7 @@ namespace ProjectJedi
     [StaticConstructorOnStartup]
     static class HarmonyPatches
     {
+
         static HarmonyPatches()
         {
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.jedi");
