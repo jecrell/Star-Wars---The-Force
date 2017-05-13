@@ -562,7 +562,7 @@ public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string r
                 {
                     if (forceDef.requiredAlignmentType != this.ForceAlignmentType)
                     {
-                        reason = "WrongAlignment";
+                        reason = "PJ_WrongAlignment";
                         return false;
                     }
                 }
@@ -571,8 +571,22 @@ public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string r
                     if (forceDef.forcePoolCost > 0 &&
                         forceDef.forcePoolCost > ForcePool.CurLevel)
                     {
-                        reason = "DrainedForcePool";
+                        reason = "PJ_DrainedForcePool";
                         return false;
+                    }
+                }
+                if (this.abilityUser != null)
+                {
+                    if (this.abilityUser.apparel != null)
+                    {
+                        if (this.abilityUser.apparel.WornApparel != null && this.abilityUser.apparel.WornApparelCount > 0)
+                        {
+                            if (this.abilityUser.apparel.WornApparel.FirstOrDefault((Apparel x) => x.def == ThingDefOf.Apparel_ShieldBelt) != null)
+                            {
+                                reason = "PJ_UsingShieldBelt";
+                                return false;
+                            }
+                        }
                     }
                 }
             }
