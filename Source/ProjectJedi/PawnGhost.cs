@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using Harmony;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,18 +13,75 @@ namespace ProjectJedi
     {
         public static readonly int ticksToDestroy = 1800; //30 seconds
         private int ticksLeft;
+        bool setup = false;
+
 
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
-
             ticksLeft = ticksToDestroy;
             base.SpawnSetup(map, respawningAfterLoad);
         }
-        
+
+        public void PowersSetup()
+        {
+            CompForceUser forcePowers = this.GetComp<CompForceUser>();
+            if (forcePowers == null)
+            {
+                ThingComp thingComp = (ThingComp)Activator.CreateInstance(typeof(CompForceUser));
+                thingComp.parent = this;
+                var comps = AccessTools.Field(typeof(ThingWithComps), "comps").GetValue(this);
+                if (comps != null)
+                {
+                    ((List<ThingComp>)comps).Add(thingComp);
+                }
+                thingComp.Initialize(null);
+            }
+            forcePowers = this.GetComp<CompForceUser>();
+            if (forcePowers != null)
+            {
+                forcePowers.AlignmentValue = 0.99f;
+                for (int o = 0; o < 10; o++)
+                {
+                    forcePowers.ForceUserLevel += 1;
+                    forcePowers.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                    forcePowers.abilityPoints -= 1;
+                }
+                for (int i = 0; i < 8; i++)
+                {
+                    forcePowers.ForceUserLevel += 1;
+                    forcePowers.LevelUpPower(forcePowers.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                    forcePowers.abilityPoints -= 1;
+                }
+            }
+        }
+                
+        public void FactionSetup()
+        {
+            Faction ghostFaction = this.Faction;
+            if (ghostFaction != null && ghostFaction != Faction.OfPlayerSilentFail)
+            {
+                foreach (Faction fac in Find.FactionManager.AllFactions)
+                {
+                    bool hostile = false;
+                    if (fac.HostileTo(Faction.OfPlayerSilentFail))
+                    {
+                        hostile = true;
+                    }
+                    ghostFaction.SetHostileTo(fac, hostile);
+                }
+            }
+        }
 
         public override void Tick()
         {
             base.Tick();
+            if (setup == false && Find.TickManager.TicksGame % 10 == 0)
+            {
+                setup = true;
+                FactionSetup();
+                PowersSetup();
+            }
+
             ticksLeft--;
             if (ticksLeft <= 0) this.Destroy();
 

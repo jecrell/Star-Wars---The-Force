@@ -427,6 +427,7 @@ namespace ProjectJedi
             {
                 if (this.abilityUser != null)
                 {
+                    if (this.abilityUser is PawnGhost) return true;
                     if (this.abilityUser.story != null)
                     {
                         if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||

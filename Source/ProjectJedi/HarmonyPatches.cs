@@ -26,6 +26,7 @@ namespace ProjectJedi
             harmony.Patch(AccessTools.Method(typeof(Pawn), "GetGizmos"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetGizmos_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(SkillRecord), "Learn"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Learn_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(StorytellerUtility), "DefaultParmsNow"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("DefaultParmsNow_PostFix")));
+            harmony.Patch(AccessTools.Method(typeof(AttackTargetsCache), "Notify_FactionHostilityChanged"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("Notify_FactionHostilityChanged_PostFix")));
         }
 
         // RimWorld.StorytellerUtility
@@ -276,7 +277,7 @@ namespace ProjectJedi
                 Pawn p = __instance as Pawn;
                 if (p != null)
                 {
-                    if (p.RaceProps != null && p.RaceProps.Humanlike)
+                    if (p.RaceProps != null && (p.RaceProps.Humanlike || p is PawnGhost))
                     {
                         ThingComp thingComp = (ThingComp)Activator.CreateInstance(typeof(CompForceUser));
                         thingComp.parent = __instance;
@@ -290,5 +291,19 @@ namespace ProjectJedi
                 }
             }
         }
+
+        public static void Notify_FactionHostilityChanged_PostFix(AttackTargetsCache __instance, Faction f1, Faction f2)
+        {
+            Map map = (Map)AccessTools.Field(typeof(AttackTargetsCache), "map").GetValue(__instance);
+            if (map != null)
+            {
+                PawnGhost ghost = (PawnGhost)map.mapPawns.AllPawnsSpawned.FirstOrDefault((Pawn x) => x is PawnGhost);
+                if (ghost != null)
+                {
+                    ghost.FactionSetup();
+                }
+            }
+        }
+
     }
 }
