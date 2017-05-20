@@ -124,10 +124,9 @@ namespace ProjectJedi
         //    return this.EnergyMax * this.ApparelScorePerEnergyMax;
         //}
         
-
-        public override void CompPostTick()
+        public override void CompPostTick(ref float severityAdjustment)
         {
-            base.CompPostTick();
+            base.CompPostTick(ref severityAdjustment);
             if (this.Pawn == null)
             {
                 this.energy = 0f;

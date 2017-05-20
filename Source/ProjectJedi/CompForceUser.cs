@@ -373,6 +373,11 @@ namespace ProjectJedi
         }
         #endregion Alignment
 
+        public override bool TryTransformPawn()
+        {
+            return IsForceUser;
+        }
+
         #region Affiliation
         //public void SetAffiliation(Faction newFaction)
         //{

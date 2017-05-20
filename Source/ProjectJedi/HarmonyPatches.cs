@@ -18,7 +18,6 @@ namespace ProjectJedi
         static HarmonyPatches()
         {
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.jedi");
-            harmony.Patch(AccessTools.Method(typeof(ThingWithComps), "InitializeComps"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("InitializeComps_PostFix")), null);
             harmony.Patch(AccessTools.Method(typeof(Thing), "TakeDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("TakeDamage_PreFix")), null);
             harmony.Patch(AccessTools.Method(typeof(Verb_MeleeAttack), "GetNonMissChance"), null, new HarmonyMethod(typeof(HarmonyPatches).GetMethod("GetNonMissChance_PostFix")));
             harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), "PreApplyDamage"), new HarmonyMethod(typeof(HarmonyPatches).GetMethod("PreApplyDamage_PreFix")), null);
@@ -269,28 +268,7 @@ namespace ProjectJedi
             }
         }
 
-        public static void InitializeComps_PostFix(ThingWithComps __instance)
-        {
-            //Log.Message("1");
-            if (__instance != null)
-            {
-                Pawn p = __instance as Pawn;
-                if (p != null)
-                {
-                    if (p.RaceProps != null && (p.RaceProps.Humanlike || p is PawnGhost))
-                    {
-                        ThingComp thingComp = (ThingComp)Activator.CreateInstance(typeof(CompForceUser));
-                        thingComp.parent = __instance;
-                        var comps = AccessTools.Field(typeof(ThingWithComps), "comps").GetValue(__instance);
-                        if (comps != null)
-                        {
-                            ((List<ThingComp>)comps).Add(thingComp);
-                        }
-                        thingComp.Initialize(null);
-                    }
-                }
-            }
-        }
+
 
         public static void Notify_FactionHostilityChanged_PostFix(AttackTargetsCache __instance, Faction f1, Faction f2)
         {
