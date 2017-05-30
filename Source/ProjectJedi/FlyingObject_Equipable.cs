@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -35,26 +36,33 @@ namespace ProjectJedi
 
         public void Equip(Pawn equipper, ThingWithComps thingWithComps)
         {
-            bool flag = false;
-            ThingWithComps thingWithComps2;
-            if (thingWithComps.def.stackLimit > 1 && thingWithComps.stackCount > 1)
+            if (thingWithComps.def.IsApparel)
             {
-                thingWithComps2 = (ThingWithComps)thingWithComps.SplitOff(1);
+                Apparel apparel = (Apparel)thingWithComps;
+                equipper.apparel.Wear(apparel, true);
+                if (equipper.outfits != null)
+                {
+                    equipper.outfits.forcedHandler.SetForced(apparel, true);
+                }
             }
             else
             {
-                thingWithComps2 = thingWithComps;
-                flag = true;
-            }
-            equipper.equipment.MakeRoomFor(thingWithComps2);
-            equipper.equipment.AddEquipment(thingWithComps2);
-            if (thingWithComps.def.soundInteract != null)
-            {
-                thingWithComps.def.soundInteract.PlayOneShot(new TargetInfo(equipper.Position, equipper.Map, false));
-            }
-            if (flag)
-            {
-                thingWithComps.DeSpawn();
+                ThingWithComps thingWithComps2;
+                if (thingWithComps.def.stackLimit > 1 && thingWithComps.stackCount > 1)
+                {
+                    thingWithComps2 = (ThingWithComps)thingWithComps.SplitOff(1);
+                }
+                else
+                {
+                    thingWithComps2 = thingWithComps;
+                    thingWithComps2.DeSpawn();
+                }
+                equipper.equipment.MakeRoomFor(thingWithComps2);
+                equipper.equipment.AddEquipment(thingWithComps2);
+                if (thingWithComps.def.soundInteract != null)
+                {
+                    thingWithComps.def.soundInteract.PlayOneShot(new TargetInfo(equipper.Position, equipper.Map, false));
+                }
             }
         }
     }

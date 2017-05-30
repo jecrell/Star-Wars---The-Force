@@ -339,7 +339,7 @@ namespace ProjectJedi
                 return alignmentValue;
             }
             set
-            {     
+            {
                 alignmentValue = Mathf.Clamp(value, 0.0f, 1.0f);
                 if (ForceUserLevel > 0) UpdateAlignment();
             }
@@ -552,13 +552,13 @@ namespace ProjectJedi
             return base.CanOverpowerTarget(user, target, abilityDef);
         }
 
-/// <summary>
-/// This section checks if the force pool allows for the casting of the spell.
-/// </summary>
-/// <param name="verbAbility"></param>
-/// <param name="reason">Why did we fail?</param>
-/// <returns></returns>
-public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
+        /// <summary>
+        /// This section checks if the force pool allows for the casting of the spell.
+        /// </summary>
+        /// <param name="verbAbility"></param>
+        /// <param name="reason">Why did we fail?</param>
+        /// <returns></returns>
+        public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
         {
             reason = "";
             ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
@@ -575,7 +575,7 @@ public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string r
                 if (ForcePool != null)
                 {
                     if (forceDef.forcePoolCost > 0 &&
-                        forceDef.forcePoolCost > ForcePool.CurLevel)
+                        ActualForceCost(forceDef) > ForcePool.CurLevel)
                     {
                         reason = "PJ_DrainedForcePool";
                         return false;
@@ -622,14 +622,16 @@ public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string r
 
                 if (ForcePool != null)
                 {
-                    float poolCost = 0f;
-                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
-                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
-                    //Log.Message("PC" + poolCost.ToString());
-                    ForcePool.UseForcePower(poolCost);
+                    ForcePool.UseForcePower(ActualForceCost(forceDef));
                 }
             }
         }
+
+        float ActualForceCost(ForceAbilityDef forceDef)
+        {
+            return forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
+        }
+
 #endregion Methods
 
         #region Initialize

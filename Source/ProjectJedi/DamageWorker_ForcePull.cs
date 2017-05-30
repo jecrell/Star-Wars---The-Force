@@ -28,8 +28,8 @@ namespace ProjectJedi
                 //Pull haulable things to us
                 if (target.def.EverHaulable && (!(target is Pawn)))
                 {
-                    //If it's equippable, equip it right away.
-                    if (target.def.equipmentType == EquipmentType.Primary)
+                    //If it's equippable or wearable, equip/wear it right away.
+                    if (target.def.equipmentType == EquipmentType.Primary || target.def.IsApparel)
                     {
                         FlyingObject_Equipable flyingObject = (FlyingObject_Equipable)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject_Equipable"), target.Position, target.Map);
                         flyingObject.Launch(Caster, Caster, target);
@@ -49,7 +49,7 @@ namespace ProjectJedi
             if (target.def.EverHaulable && (!(target is Pawn)))
             {
                 //If it's equippable, equip it right away.
-                if (target.def.equipmentType == EquipmentType.Primary)
+                if (target.def.equipmentType == EquipmentType.Primary || target.def.IsApparel)
                 {
                     FlyingObject_Equipable flyingObject = (FlyingObject_Equipable)GenSpawn.Spawn(ThingDef.Named("PJ_PFlyingObject_Equipable"), target.Position, target.Map);
                     flyingObject.Launch(Caster, Caster, target);

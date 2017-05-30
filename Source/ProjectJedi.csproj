@@ -39,8 +39,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
     </Reference>
-    <Reference Include="AbilityUser">
-      <HintPath>..\..\..\CompAbilityUser\Assemblies\AbilityUser.dll</HintPath>
+    <Reference Include="AbilityUser, Version=1.17.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\JecsTools\Assemblies\AbilityUser.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
