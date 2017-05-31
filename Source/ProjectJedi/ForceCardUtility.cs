@@ -145,7 +145,7 @@ namespace ProjectJedi
         {
             if (!sensitive) return compForce.ForceUserXP.ToString() + " / " + compForce.ForceUserXPTillNextLevel.ToString() + "\n" + "PJ_ForceXPDesc".Translate();
             return "PJ_ForceSensitiveDesc".Translate(new object[] {
-                compForce.abilityUser.LabelShort
+                compForce.AbilityUser.LabelShort
             });
 
         }
@@ -262,7 +262,7 @@ namespace ProjectJedi
             Rect rectLevel = new Rect(inRect.x, inRect.y, inRect.width * 0.7f, TextSize);
             Text.Font = GameFont.Small;
             Widgets.Label(rectLevel, "PJ_SensitiveMessage".Translate(new object[] {
-                compForce.abilityUser.LabelShort
+                compForce.AbilityUser.LabelShort
             }
             ));
             Text.Font = GameFont.Small;
@@ -331,7 +331,7 @@ namespace ProjectJedi
                         Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                         continue;
                     }
-                    else if ((i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5) && (compForce.abilityUser.Faction == Faction.OfPlayer))
+                    else if ((i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5) && (compForce.AbilityUser.Faction == Faction.OfPlayer))
                     {
                         //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
                         if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
@@ -367,7 +367,7 @@ namespace ProjectJedi
                 {
                     Widgets.DrawTextureFitted(buttonRect, power.Icon, 1.0f);
                 }
-                else if(Widgets.ButtonImage(buttonRect, power.Icon) && (compForce.abilityUser.Faction == Faction.OfPlayer))
+                else if(Widgets.ButtonImage(buttonRect, power.Icon) && (compForce.AbilityUser.Faction == Faction.OfPlayer))
                 {
                     ForceAbilityDef powerDef = power.nextLevelAbilityDef as ForceAbilityDef;
                     if (powerDef.requiredAlignmentType != ForceAlignmentType.None &&
@@ -405,7 +405,7 @@ namespace ProjectJedi
                         }), MessageSound.RejectInput);
                         return;
                     }
-                    if (compForce.abilityUser.story != null && (compForce.abilityUser.story.WorkTagIsDisabled(WorkTags.Violent) && power.abilityDef.MainVerb.isViolent))
+                    if (compForce.AbilityUser.story != null && (compForce.AbilityUser.story.WorkTagIsDisabled(WorkTags.Violent) && power.abilityDef.MainVerb.isViolent))
                     {
                         Messages.Message("IsIncapableOfViolenceLower".Translate(new object[]
                         {

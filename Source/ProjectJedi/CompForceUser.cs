@@ -275,16 +275,16 @@ namespace ProjectJedi
         public void UpdateAlignment()
         {
             //Change traits...
-            Trait jediTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
-            Trait sithTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
-            Trait grayTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
-            Trait sensitiveTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
+            Trait jediTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
+            Trait sithTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
+            Trait grayTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
+            Trait sensitiveTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
 
             //Clear traits.
-            if (jediTrait != null) LoseTrait(this.abilityUser.story.traits, jediTrait);
-            if (sithTrait != null) LoseTrait(this.abilityUser.story.traits, sithTrait);
-            if (grayTrait != null) LoseTrait(this.abilityUser.story.traits, grayTrait);
-            if (sensitiveTrait != null) LoseTrait(this.abilityUser.story.traits, sensitiveTrait);
+            if (jediTrait != null) LoseTrait(this.AbilityUser.story.traits, jediTrait);
+            if (sithTrait != null) LoseTrait(this.AbilityUser.story.traits, sithTrait);
+            if (grayTrait != null) LoseTrait(this.AbilityUser.story.traits, grayTrait);
+            if (sensitiveTrait != null) LoseTrait(this.AbilityUser.story.traits, sensitiveTrait);
 
             //Jedi
             int degree = 0;
@@ -308,19 +308,19 @@ namespace ProjectJedi
 
             if (AlignmentValue > 0.75)
             {
-                this.abilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_JediTrait, degree, true));
+                this.AbilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_JediTrait, degree, true));
                 return;
             }
             //Gray
             else if (AlignmentValue >= 0.25 && AlignmentValue <= 0.75)
             {
-                this.abilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_GrayTrait, degree, true));
+                this.AbilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_GrayTrait, degree, true));
                 return;
             }
             //Sith
             else
             {
-                this.abilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_SithTrait, degree, true));
+                this.AbilityUser.story.traits.GainTrait(new Trait(ProjectJediDefOf.PJ_SithTrait, degree, true));
                 return;
             }
 
@@ -422,7 +422,7 @@ namespace ProjectJedi
         {
             get
             {
-                return abilityUser.needs.TryGetNeed<Need_ForcePool>();
+                return AbilityUser.needs.TryGetNeed<Need_ForcePool>();
             }
         }
 
@@ -430,15 +430,15 @@ namespace ProjectJedi
         {
             get
             {
-                if (this.abilityUser != null)
+                if (this.AbilityUser != null)
                 {
-                    if (this.abilityUser is PawnGhost) return true;
-                    if (this.abilityUser.story != null)
+                    if (this.AbilityUser is PawnGhost) return true;
+                    if (this.AbilityUser.story != null)
                     {
-                        if (this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
-                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
-                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_GrayTrait) ||
-                            this.abilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive))
+                        if (this.AbilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_JediTrait) ||
+                            this.AbilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_SithTrait) ||
+                            this.AbilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_GrayTrait) ||
+                            this.AbilityUser.story.traits.HasTrait(ProjectJediDefOf.PJ_ForceSensitive))
                         {
                             return true;
                         }
@@ -453,22 +453,22 @@ namespace ProjectJedi
         {
             if (!traits.HasTrait(trait.def))
             {
-                Log.Warning(this.abilityUser + " doesn't have trait " + trait.def);
+                Log.Warning(this.AbilityUser + " doesn't have trait " + trait.def);
                 return;
             }
             traits.allTraits.Remove(trait);
-            if (this.abilityUser.workSettings != null)
+            if (this.AbilityUser.workSettings != null)
             {
-                this.abilityUser.workSettings.Notify_GainedTrait();
+                this.AbilityUser.workSettings.Notify_GainedTrait();
             }
-            //this.abilityUser.story.Notify_TraitChanged();
-            if (this.abilityUser.skills != null)
+            //this.AbilityUser.story.Notify_TraitChanged();
+            if (this.AbilityUser.skills != null)
             {
-                this.abilityUser.skills.Notify_SkillDisablesChanged();
+                this.AbilityUser.skills.Notify_SkillDisablesChanged();
             }
-            if (!this.abilityUser.Dead && this.abilityUser.RaceProps.Humanlike)
+            if (!this.AbilityUser.Dead && this.AbilityUser.RaceProps.Humanlike)
             {
-                this.abilityUser.needs.mood.thoughts.situational.Notify_SituationalThoughtsDirty();
+                this.AbilityUser.needs.mood.thoughts.situational.Notify_SituationalThoughtsDirty();
             }
         }
 
@@ -561,7 +561,7 @@ namespace ProjectJedi
         public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
         {
             reason = "";
-            ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.useAbilityProps.abilityDef;
+            ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.UseAbilityProps.abilityDef;
             if (forceDef != null)
             {
                 if (forceDef.requiredAlignmentType != ForceAlignmentType.None)
@@ -581,13 +581,13 @@ namespace ProjectJedi
                         return false;
                     }
                 }
-                if (this.abilityUser != null)
+                if (this.AbilityUser != null)
                 {
-                    if (this.abilityUser.apparel != null)
+                    if (this.AbilityUser.apparel != null)
                     {
-                        if (this.abilityUser.apparel.WornApparel != null && this.abilityUser.apparel.WornApparelCount > 0)
+                        if (this.AbilityUser.apparel.WornApparel != null && this.AbilityUser.apparel.WornApparelCount > 0)
                         {
-                            if (this.abilityUser.apparel.WornApparel.FirstOrDefault((Apparel x) => x.def == ThingDefOf.Apparel_ShieldBelt) != null)
+                            if (this.AbilityUser.apparel.WornApparel.FirstOrDefault((Apparel x) => x.def == ThingDefOf.Apparel_ShieldBelt) != null)
                             {
                                 reason = "PJ_UsingShieldBelt";
                                 return false;
@@ -599,7 +599,7 @@ namespace ProjectJedi
             return true;
         }
 
-        public override List<HediffDef> ignoredHediffs()
+        public override List<HediffDef> IgnoredHediffs()
         {
             List<HediffDef> newDefs = new List<HediffDef>();
             newDefs.Add(ProjectJediDefOf.PJ_ForceWielderHD);
@@ -637,9 +637,9 @@ namespace ProjectJedi
         #region Initialize
         public override void CompTick()
         {
-            if (abilityUser != null)
+            if (AbilityUser != null)
             {
-                if (abilityUser.Spawned)
+                if (AbilityUser.Spawned)
                 {
                     if (Find.TickManager.TicksGame > 200)
                     {
@@ -666,11 +666,11 @@ namespace ProjectJedi
         /// </summary>
         public void PostInitializeTick()
         {
-            if (this.abilityUser != null)
+            if (this.AbilityUser != null)
             {
-                if (this.abilityUser.Spawned)
+                if (this.AbilityUser.Spawned)
                 {
-                    if (this.abilityUser.story != null)
+                    if (this.AbilityUser.story != null)
                     {
                         firstTick = true;
                         this.Initialize();
@@ -687,14 +687,14 @@ namespace ProjectJedi
         {
             //PostExposeData();
             //Make the ITab
-            IEnumerable<InspectTabBase> tabs = this.abilityUser.GetInspectTabs();
+            IEnumerable<InspectTabBase> tabs = this.AbilityUser.GetInspectTabs();
             if (tabs != null && tabs.Count<InspectTabBase>() > 0)
             {
                 if (tabs.FirstOrDefault((InspectTabBase x) => x is ITab_Pawn_Force) == null)
                 {
                     try
                     {
-                        this.abilityUser.def.inspectorTabsResolved.Add(InspectTabManager.GetSharedInstance(typeof(ITab_Pawn_Force)));
+                        this.AbilityUser.def.inspectorTabsResolved.Add(InspectTabManager.GetSharedInstance(typeof(ITab_Pawn_Force)));
                     }
                     catch (Exception ex)
                     {
@@ -718,10 +718,10 @@ namespace ProjectJedi
             if (forcePowersInitialized) return;
             forcePowersInitialized = true;
 
-            Trait jediTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
-            Trait sithTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
-            Trait grayTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
-            Trait sensitiveTrait = this.abilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
+            Trait jediTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
+            Trait sithTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
+            Trait grayTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
+            Trait sensitiveTrait = this.AbilityUser.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
             
             if (jediTrait != null)
             {
@@ -933,16 +933,16 @@ namespace ProjectJedi
             //Add the hediff if no pool exists.
             if (ForcePool == null)
             {
-                Hediff forceWielderHediff = abilityUser.health.hediffSet.GetFirstHediffOfDef(ProjectJediDefOf.PJ_ForceWielderHD);
+                Hediff forceWielderHediff = AbilityUser.health.hediffSet.GetFirstHediffOfDef(ProjectJediDefOf.PJ_ForceWielderHD);
                 if (forceWielderHediff != null)
                 {
                     forceWielderHediff.Severity = 1.0f;
                 }
                 else
                 {
-                    Hediff newForceWielderHediff = HediffMaker.MakeHediff(ProjectJediDefOf.PJ_ForceWielderHD, abilityUser, null);
+                    Hediff newForceWielderHediff = HediffMaker.MakeHediff(ProjectJediDefOf.PJ_ForceWielderHD, AbilityUser, null);
                     newForceWielderHediff.Severity = 1.0f;
-                    abilityUser.health.AddHediff(newForceWielderHediff, null, null);
+                    AbilityUser.health.AddHediff(newForceWielderHediff, null, null);
                 }
             }
         }
