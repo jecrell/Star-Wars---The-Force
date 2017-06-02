@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!--[Core] <Cut.label>Tranché</Cut.label>-->
+  <!--[Core] <Cut.deathMessage>{0} a été tranché(e) en deux.</Cut.deathMessage>-->
+
+  <PJ_ForceHealDamage.label>soin de force</PJ_ForceHealDamage.label>
+
+  <PJ_FDrainDamage.label>drain de force</PJ_FDrainDamage.label>
+  <PJ_FDrainDamage.deathMessage>{0} a succombé au pouvoir du côté obscur.</PJ_FDrainDamage.deathMessage>
+
+  <PJ_FLightning.label>Eclair de force</PJ_FLightning.label>
+  <PJ_FLightning.deathMessage>{0} a succombé au pouvoir du côté obscur.</PJ_FLightning.deathMessage>
+
+  <PJ_FStorm.label>Tempete de force</PJ_FStorm.label>
+  <PJ_FStorm.deathMessage>{0} a été prit dans une tempête de force.</PJ_FStorm.deathMessage>
+
+  <PJ_MindTrickDam.label>Passe passe</PJ_MindTrickDam.label>
+  <PJ_MindTrickDam.deathMessage>{0} a vu son esprit brisé par la force.</PJ_MindTrickDam.deathMessage>
+
+  <PJ_RageDam.label>Rage de force</PJ_RageDam.label>
+  <PJ_RageDam.deathMessage>{0} a vu son esprit brisé par la force.</PJ_RageDam.deathMessage>
+
+  <PJ_FChoke.label>Etouffement</PJ_FChoke.label>
+  <PJ_FChoke.deathMessage>{0} a succombé au pouvoir du côté obscur.</PJ_FChoke.deathMessage>
+
+
+  <!-- Force Pull -->
+
+  <PJ_DForcePull.label>jeté</PJ_DForcePull.label>
+
+
+  <!-- Force Push -->
+
+  <PJ_DForcePush.label>poussé</PJ_DForcePush.label>
+
+
+</LanguageData>

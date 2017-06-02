@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Soin de soi -->
+
+  <PJ_PForceHeal.label>Soin de force</PJ_PForceHeal.label>
+
+
+  <!-- Soin de soi (Apprenti) -->
+
+  <PJ_ForceHealingSelf_Apprentice.label>Soin de soi</PJ_ForceHealingSelf_Apprentice.label>
+  <PJ_ForceHealingSelf_Apprentice.description>Soigne miraculeusement le lanceur.</PJ_ForceHealingSelf_Apprentice.description>
+
+
+  <!-- Soin de soi (Adepte) -->
+
+  <PJ_ForceHealingSelf_Adept.label>Soin de soi (Adepte)</PJ_ForceHealingSelf_Adept.label>
+  <PJ_ForceHealingSelf_Adept.description>Soigne miraculeusement le lanceur.</PJ_ForceHealingSelf_Adept.description>
+
+
+  <!-- Soin de soi (Maitre) -->
+
+  <PJ_ForceHealingSelf_Master.label>Soin de soi (Maitre)</PJ_ForceHealingSelf_Master.label>
+  <PJ_ForceHealingSelf_Master.description>Soigne miraculeusement le lanceur.</PJ_ForceHealingSelf_Master.description>
+
+
+  <!-- Soin des autres (Apprenti) -->
+
+  <PJ_ForceHealingOther_Apprentice.label>Soin des autres</PJ_ForceHealingOther_Apprentice.label>
+  <PJ_ForceHealingOther_Apprentice.description>Soigne miraculeusement la cible.</PJ_ForceHealingOther_Apprentice.description>
+
+
+  <!-- Soin des autres (Adepte) -->
+
+  <PJ_ForceHealingOther_Adept.label>Soin des autres (Adepte)</PJ_ForceHealingOther_Adept.label>
+  <PJ_ForceHealingOther_Adept.description>Soigne miraculeusement la cible.</PJ_ForceHealingOther_Adept.description>
+
+
+  <!-- Soin des autres (Maitre) -->
+
+  <PJ_ForceHealingOther_Master.label>Soin des autres (Maitre)</PJ_ForceHealingOther_Master.label>
+  <PJ_ForceHealingOther_Master.description>Soigne miraculeusement la cible.</PJ_ForceHealingOther_Master.description>
+
+
+  <!-- Bouclier de Force -->
+
+  <PJ_PForceDefense.label>Bouclier de Force</PJ_PForceDefense.label>
+
+
+  <!-- Bouclier de Force (Apprenti) -->
+
+  <PJ_ForceDefense_Apprentice.label>Bouclier de Force</PJ_ForceDefense_Apprentice.label>
+  <PJ_ForceDefense_Apprentice.description>Protège le lanceur pendant un court moment.</PJ_ForceDefense_Apprentice.description>
+
+
+  <!-- Bouclier de Force (Adepte) -->
+
+  <PJ_ForceDefense_Adept.label>Bouclier de Force (Adepte)</PJ_ForceDefense_Adept.label>
+  <PJ_ForceDefense_Adept.description>Protège le lanceur pendant un court moment.</PJ_ForceDefense_Adept.description>
+
+
+  <!-- Bouclier de Force (Maitre) -->
+
+  <PJ_ForceDefense_Master.label>Bouclier de Force (Maitre)</PJ_ForceDefense_Master.label>
+  <PJ_ForceDefense_Master.description>Protège le lanceur pendant un court moment.</PJ_ForceDefense_Master.description>
+
+
+  <!-- Passe passe -->
+
+  <PMindTrick.label>Passe passe</PMindTrick.label>
+
+
+  <!-- Passe passe (Apprenti) -->
+
+  <PJ_MindTrick_Apprentice.label>Passe passe</PJ_MindTrick_Apprentice.label>
+  <PJ_MindTrick_Apprentice.description>Utilise la force pour influencer les faibles d'esprit, les faisant errer sans but.</PJ_MindTrick_Apprentice.description>
+
+
+  <!-- Passe passe (Adepte) -->
+
+  <PJ_MindTrick_Adept.label>Passe passe (Adepte)</PJ_MindTrick_Adept.label>
+  <PJ_MindTrick_Adept.description>Utilise la force pour influencer les faibles d'esprit, les faisant errer sans but.</PJ_MindTrick_Adept.description>
+
+
+  <!-- Passe passe (Maitre) -->
+
+  <PJ_MindTrick_Master.label>Passe passe (Maitre)</PJ_MindTrick_Master.label>
+  <PJ_MindTrick_Master.description>Utilise la force pour influencer les faibles d'esprit, les faisant errer sans but.</PJ_MindTrick_Master.description>
+
+
+  <!-- Spectre de Force -->
+
+  <PForceGhost.label>Spectre de Force</PForceGhost.label>
+
+
+  <!-- Spectre de Force (Apprenti) -->
+
+  <PJ_ForceGhost_Apprentice.label>Spectre de Force</PJ_ForceGhost_Apprentice.label>
+  <PJ_ForceGhost_Apprentice.description>Invoque un spectre de force pour vous aider pendant un court moment.</PJ_ForceGhost_Apprentice.description>
+
+
+  <!-- Spectre de Force (Adepte) -->
+
+  <PJ_ForceGhost_Adept.label>Spectre de Force (Adepte)</PJ_ForceGhost_Adept.label>
+  <PJ_ForceGhost_Adept.description>Invoque un spectre de force pour vous aider pendant un court moment.</PJ_ForceGhost_Adept.description>
+
+
+  <!-- Spectre de Force (Maitre) -->
+
+  <PJ_ForceGhost_Master.label>Spectre de Force (Maitre)</PJ_ForceGhost_Master.label>
+  <PJ_ForceGhost_Master.description>Invoque un spectre de force pour vous aider pendant un court moment.</PJ_ForceGhost_Master.description>
+
+
+</LanguageData>

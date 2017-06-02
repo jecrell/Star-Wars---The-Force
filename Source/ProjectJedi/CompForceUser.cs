@@ -373,11 +373,6 @@ namespace ProjectJedi
         }
         #endregion Alignment
 
-        public override bool TryTransformPawn()
-        {
-            return IsForceUser;
-        }
-
         #region Affiliation
         //public void SetAffiliation(Faction newFaction)
         //{
@@ -447,6 +442,13 @@ namespace ProjectJedi
                 return false;
             }
         }
+
+
+        public override bool TryTransformPawn()
+        {
+            return IsForceUser;
+        }
+
 
         // RimWorld.TraitSet
         public void LoseTrait(TraitSet traits, Trait trait)

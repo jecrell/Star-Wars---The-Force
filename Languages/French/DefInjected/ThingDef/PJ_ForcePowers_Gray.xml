@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Jet de force -->
+
+  <PJ_PFlyingObject.label>Objet volant</PJ_PFlyingObject.label>
+  <PJ_PFlyingObject_Equipable.label>Objet volant</PJ_PFlyingObject_Equipable.label>
+  <PJ_PForcePull.label>Jet de force</PJ_PForcePull.label>
+
+
+  <!-- Jet de force (Apprenti) -->
+
+  <PJ_ForcePull_Apprentice.label>Jet de force</PJ_ForcePull_Apprentice.label>
+  <PJ_ForcePull_Apprentice.description>Niveau 1 : Projette des objets du sol vers le lanceur.</PJ_ForcePull_Apprentice.description>
+
+
+  <!-- Jet de force (Adepte) -->
+
+  <PJ_ForcePull_Adept.label>Jet de force (Adepte)</PJ_ForcePull_Adept.label>
+  <PJ_ForcePull_Adept.description>Niveau 1 : Projette des objets du sol vers le lanceur.\nNiveau 2 : Projette et équipe armes et armures automatiquement.</PJ_ForcePull_Adept.description>
+
+
+  <!-- Jet de force (Maitre) -->
+
+  <PJ_ForcePull_Master.label>Jet de force (Maitre)</PJ_ForcePull_Master.label>
+  <PJ_ForcePull_Master.description>Niveau 1 : Projette des objets du sol vers le lanceur.\nNiveau 2 : Projette et équipe armes et armures automatiquement.\nNiveau 3 : Peux maintenant désarmer les autres. Si ils sont désarmés, Projette les personnes ou les animaux vers le lanceur.</PJ_ForcePull_Master.description>
+
+
+  <!-- Poussée de Force -->
+
+  <PJ_PForcePush.label>Poussée de Force</PJ_PForcePush.label>
+
+
+  <!-- Poussée de Force (Apprenti) -->
+
+  <PJ_ForcePush_Apprentice.label>Poussée de Force</PJ_ForcePush_Apprentice.label>
+  <PJ_ForcePush_Apprentice.description>Niveau 1 : Pousse la cible plus loin de 8 cases.</PJ_ForcePush_Apprentice.description>
+
+
+  <!-- Poussée de Force (Adepte) -->
+
+  <PJ_ForcePush_Adept.label>Poussée de Force (Adepte)</PJ_ForcePush_Adept.label>
+  <PJ_ForcePush_Adept.description>Niveau 1 : Pousse la cible plus loin de 8 cases.\nNiveau 2 : Pousse de 10 cases et assome la cible.</PJ_ForcePush_Adept.description>
+
+
+  <!-- Poussée de Force (Maitre) -->
+
+  <PJ_ForcePush_Master.label>Poussée de Force (Maitre)</PJ_ForcePush_Master.label>
+  <PJ_ForcePush_Master.description>Niveau 1 : Pousse la cible plus loin de 8 cases.\nNiveau 2 : Pousse de 10 cases et assome la cible.\nNiveau 3 : Pousse de 12 cases, assome la cible, et endommage les murs.</PJ_ForcePush_Master.description>
+
+
+  <!-- Vitesse de Force -->
+
+  <PJ_PForceSpeed.label>Vitesse de Force</PJ_PForceSpeed.label>
+
+
+  <!-- Vitesse de Force (Apprenti) -->
+
+  <PJ_ForceSpeed_Apprentice.label>Vitesse de Force</PJ_ForceSpeed_Apprentice.label>
+  <PJ_ForceSpeed_Apprentice.description>Augmente la vitesse du lanceur pour un court moment.</PJ_ForceSpeed_Apprentice.description>
+
+
+  <!-- Vitesse de Force (Adepte) -->
+
+  <PJ_ForceSpeed_Adept.label>Vitesse de Force (Adepte)</PJ_ForceSpeed_Adept.label>
+  <PJ_ForceSpeed_Adept.description>Augmente la vitesse du lanceur pour un court moment.</PJ_ForceSpeed_Adept.description>
+
+
+  <!-- Vitesse de Force (Maitre) -->
+
+  <PJ_ForceSpeed_Master.label>Vitesse de Force (Maitre)</PJ_ForceSpeed_Master.label>
+  <PJ_ForceSpeed_Master.description>Augmente la vitesse du lanceur pour un court moment.</PJ_ForceSpeed_Master.description>
+
+
+</LanguageData>

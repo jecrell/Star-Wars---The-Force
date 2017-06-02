@@ -68,7 +68,7 @@ namespace ProjectJedi
             {
                 if (Find.TickManager.TicksGame > ticksUntilNextXP)
                 {
-                    int delay = 50;
+                    int delay = 30;
                     if (__instance.def == SkillDefOf.Intellectual) delay += 20;
                     ticksUntilNextXP = Find.TickManager.TicksGame + delay;
                     compForce.ForceUserXP++;
