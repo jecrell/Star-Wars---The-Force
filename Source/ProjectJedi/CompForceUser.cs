@@ -245,27 +245,34 @@ namespace ProjectJedi
             }
             foreach (ForcePower power in ForcePowersDark)
             {
-                this.abilityPoints += power.level;
                 power.level = 0;
-                this.RemovePawnAbility(power.abilityDef);
             }
             foreach (ForcePower power in ForcePowersGray)
             {
-                this.abilityPoints += power.level;
                 power.level = 0;
-                this.RemovePawnAbility(power.abilityDef);
             }
             foreach (ForcePower power in ForcePowersLight)
             {
-                this.abilityPoints += power.level;
                 power.level = 0;
-                this.RemovePawnAbility(power.abilityDef);
             }
+
+            List<PawnAbility> tempList = new List<PawnAbility>(this.Powers);
+            foreach (PawnAbility ability in tempList)
+            {
+                this.RemovePawnAbility(ability.powerdef);
+            }
+            tempList = null;
+
+            this.abilityPoints = this.forceUserLevel;
+            UpdateAbilities();
         }
 
         public void LevelUpPower(ForcePower power)
         {
-            this.RemovePawnAbility(power.abilityDef);
+            foreach (AbilityDef def in power.abilityDefs)
+            {
+                this.RemovePawnAbility(def);
+            }
             power.level++;
             this.AddPawnAbility(power.abilityDef);
         }
@@ -958,17 +965,57 @@ namespace ProjectJedi
             Scribe_Values.Look<int>(ref this.forceUserLevel, "forceUserLevel", 0);
             Scribe_Values.Look<int>(ref this.forceUserXP, "forceUserXP");
             Scribe_Values.Look<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", false);
-            //Scribe_Values.Look<int>(ref this.levelLightsaberOff, "levelLightsaberOff", 0);
-            //Scribe_Values.Look<int>(ref this.levelLightsaberDef, "levelLightsaberDef", 0);
-            //Scribe_Values.Look<int>(ref this.levelLightsaberAcc, "levelLightsaberAcc", 0);
-            //Scribe_Values.Look<int>(ref this.levelLightsaberRef, "levelLightsaberRef", 0);
-            //Scribe_Values.Look<int>(ref this.levelForcePool, "levelForcePool", 0);
             Scribe_Values.Look<int>(ref this.abilityPoints, "abilityPoints", 0);
             Scribe_Values.Look<int>(ref this.canMeditateTicks, "canMeditateTicks", 0);
-            Scribe_Collections.Look<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, null);
-            Scribe_Collections.Look<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, null);
-            Scribe_Collections.Look<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, null);
+            Scribe_Collections.Look<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<ForceSkill>(ref this.forceSkills, "forceSkills", LookMode.Deep, null);
+
+            if (Scribe.mode == LoadSaveMode.Saving)
+            {
+                if (ForcePowersDark != null && ForcePowersDark.Count > 0)
+                {
+                    foreach (ForcePower power in ForcePowersDark)
+                    {
+                        if (power.abilityDef != null)
+                        {
+                            if (Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            {
+                                power.ticksUntilNextCast = listPower.TicksUntilCasting;
+                            }
+                        }
+                    }
+                }
+
+                if (ForcePowersGray != null && ForcePowersGray.Count > 0)
+                {
+                    foreach (ForcePower power in ForcePowersGray)
+                    {
+                        if (power.abilityDef != null)
+                        {
+                            if (Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            {
+                                power.ticksUntilNextCast = listPower.TicksUntilCasting;
+                            }
+                        }
+                    }
+                }
+
+                if (ForcePowersLight != null && ForcePowersLight.Count > 0)
+                {
+                    foreach (ForcePower power in ForcePowersLight)
+                    {
+                        if (power.abilityDef != null)
+                        {
+                            if (Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            {
+                                power.ticksUntilNextCast = listPower.TicksUntilCasting;
+                            }
+                        }
+                    }
+                }
+            }
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
@@ -980,7 +1027,7 @@ namespace ProjectJedi
                         {
                             if (power.level > 0)
                             {
-                                this.AddPawnAbility(power.abilityDef);
+                                this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
                             }
                         }
                     }
@@ -994,7 +1041,7 @@ namespace ProjectJedi
                         {
                             if (power.level > 0)
                             {
-                                this.AddPawnAbility(power.abilityDef);
+                                this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
                             }
                         }
                     }
@@ -1008,7 +1055,7 @@ namespace ProjectJedi
                         {
                             if (power.level > 0)
                             {
-                                this.AddPawnAbility(power.abilityDef);
+                                this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
                             }
                         }
                     }

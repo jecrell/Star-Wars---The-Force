@@ -12,6 +12,7 @@ namespace ProjectJedi
     {
         public List<AbilityDef> abilityDefs;
         public int level;
+        public int ticksUntilNextCast = -1;
         public AbilityDef GetAbilityDef(int index)
         {
             AbilityDef result = null;
@@ -95,6 +96,7 @@ namespace ProjectJedi
         public void ExposeData()
         {
             Scribe_Values.Look<int>(ref level, "level", 0);
+            Scribe_Values.Look<int>(ref this.ticksUntilNextCast, "ticksUntilNextCast", -1);
             Scribe_Collections.Look<AbilityDef>(ref abilityDefs, "abilityDefs", LookMode.Def, null);
         }
     }
