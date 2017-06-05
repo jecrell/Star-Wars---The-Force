@@ -4,23 +4,23 @@
 
   <HediffDef>
     <defName>PJ_NoAir</defName>
-	<hediffClass>HediffWithComps</hediffClass>	
+	<hediffClass>HediffWithComps</hediffClass>
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
     <label>Asphyxia</label>
-    <lethalSeverity>5</lethalSeverity>
+    <lethalSeverity>1.5</lethalSeverity>
 		<comps>
       <li Class="HediffCompProperties_SeverityPerDay">
-        <severityPerDay>-5.5</severityPerDay>
-      </li>	  
+        <severityPerDay>-24.5</severityPerDay>
+      </li>
     </comps>
     <stages>
       <li>
-        <label>gasping</label>
+        <label>coughing</label>
         <everVisible>false</everVisible>
       </li>
       <li>
-        <label>choking</label>
-        <minSeverity>0.04</minSeverity>
+        <label>coughing</label>
+        <minSeverity>0.1</minSeverity>
         <capMods>
           <li>
             <capacity>Manipulation</capacity>
@@ -33,8 +33,8 @@
         </capMods>
       </li>
       <li>
-        <label>minor</label>
-        <minSeverity>0.2</minSeverity>
+        <label>gasping</label>
+        <minSeverity>0.3</minSeverity>
         <capMods>
           <li>
             <capacity>Moving</capacity>
@@ -51,8 +51,8 @@
         </capMods>
       </li>
       <li>
-        <label>serious</label>
-        <minSeverity>0.35</minSeverity>
+        <label>choking</label>
+        <minSeverity>0.5</minSeverity>
         <painOffset>0.15</painOffset>
         <capMods>
           <li>
@@ -70,8 +70,8 @@
         </capMods>
       </li>
       <li>
-        <label>extreme</label>
-        <minSeverity>0.62</minSeverity>
+        <label>suffocating</label>
+        <minSeverity>0.8</minSeverity>
         <lifeThreatening>true</lifeThreatening>
         <painOffset>0.30</painOffset>
         <capMods>

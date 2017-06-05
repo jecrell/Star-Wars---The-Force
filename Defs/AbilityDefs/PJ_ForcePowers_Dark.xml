@@ -6,7 +6,7 @@
   <!-- ================================================================= -->
   <!-- ======================== DARK POWERS ============================ -->
   <!-- ================================================================= -->
-  <!-- ================================================================= -->  
+  <!-- ================================================================= -->
 
   <!-- ===================== Force Rage =============================== -->
 
@@ -34,7 +34,7 @@
  </ThingDef>
 
   <!-- ===================== Force Rage (Apprentice) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceRage_Apprentice</defName>
     <label>Force Rage</label>
@@ -43,7 +43,7 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.22</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.015</changedAlignmentRate>	
+	<changedAlignmentRate>-0.015</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -51,12 +51,12 @@
         <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
         <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceRage</projectileDef>	
+        <projectileDef>PForceRage</projectileDef>
 		<abilityDef>PJ_ForceRage_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>60.0</SecondsToRecharge>
         <range>34</range>
-		<isViolent>false</isViolent>		
+		<isViolent>false</isViolent>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_RageSound</soundCast>
@@ -70,9 +70,9 @@
         </mentalStatesToApply>
     </MainVerb>
   </ThingDef>
-  
+
   <!-- ===================== Force Rage (Adept) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceRage_Adept</defName>
     <label>Force Rage (Adept)</label>
@@ -82,7 +82,7 @@
     <forcePoolCost>0.18</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>	
+	<changedAlignmentRate>-0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 		<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -90,12 +90,12 @@
         <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
         <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceRage</projectileDef>	
+        <projectileDef>PForceRage</projectileDef>
 		<abilityDef>PJ_ForceRage_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>20.0</SecondsToRecharge>
         <range>44</range>
-		<isViolent>false</isViolent>		
+		<isViolent>false</isViolent>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_RageSound</soundCast>
@@ -108,10 +108,10 @@
 	      </li>
         </mentalStatesToApply>
     </MainVerb>
-  </ThingDef>  
- 
+  </ThingDef>
+
   <!-- ===================== Force Rage (Master) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceRage_Master</defName>
     <label>Force Rage (Master)</label>
@@ -120,7 +120,7 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<requiredAlignmentType>Dark</requiredAlignmentType>	
+	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentRate>-0.2</changedAlignmentRate>
 	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -130,7 +130,7 @@
         <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
         <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceRage</projectileDef>	
+        <projectileDef>PForceRage</projectileDef>
 		<abilityDef>PJ_ForceRage_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10.0</SecondsToRecharge>
@@ -145,35 +145,69 @@
 	        <mentalStateDef>Berserk</mentalStateDef>
 	        <applyChance>0.95</applyChance>
 	      </li>
-        </mentalStatesToApply>		
+        </mentalStatesToApply>
     </MainVerb>
-  </ThingDef> 
+  </ThingDef>
 
- 
+
   <!-- ===================== Force Choke =============================== -->
-  
-  
- <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
-   <thingClass>AbilityUser.Projectile_Ability</thingClass>
-   <defName>PForceChoke</defName>
-   <label>force choke</label>
-   <graphicData>
-		<texPath>Weapons/Projectiles/ChokeP</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-		<shaderType>TransparentPostLight</shaderType>
-	</graphicData>
-   <projectile>
-		<flyOverhead>false</flyOverhead>
-		<damageDef>PJ_FChoke</damageDef>
-		<damageAmountBase>5</damageAmountBase>
-		<speed>105</speed>
-   </projectile>
- </ThingDef>
 
- 
+
+   <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+     <thingClass>AbilityUser.Projectile_Ability</thingClass>
+     <defName>PForceChoke</defName>
+     <label>force choke</label>
+     <graphicData>
+  		<texPath>Weapons/Projectiles/ChokeP</texPath>
+  		<graphicClass>Graphic_Single</graphicClass>
+  		<shaderType>TransparentPostLight</shaderType>
+  	</graphicData>
+     <projectile>
+  		<flyOverhead>false</flyOverhead>
+  		<damageDef>PJ_FChoke</damageDef>
+  		<damageAmountBase>5</damageAmountBase>
+  		<speed>105</speed>
+     </projectile>
+   </ThingDef>
+
+       <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+         <thingClass>AbilityUser.Projectile_Ability</thingClass>
+         <defName>PForceChokeTwo</defName>
+         <label>force choke</label>
+         <graphicData>
+      		<texPath>Weapons/Projectiles/ChokeP</texPath>
+      		<graphicClass>Graphic_Single</graphicClass>
+      		<shaderType>TransparentPostLight</shaderType>
+      	</graphicData>
+         <projectile>
+      		<flyOverhead>false</flyOverhead>
+      		<damageDef>PJ_FChoke</damageDef>
+      		<damageAmountBase>10</damageAmountBase>
+      		<speed>105</speed>
+         </projectile>
+       </ThingDef>
+
+           <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+             <thingClass>AbilityUser.Projectile_Ability</thingClass>
+             <defName>PForceChokeThree</defName>
+             <label>force choke</label>
+             <graphicData>
+          		<texPath>Weapons/Projectiles/ChokeP</texPath>
+          		<graphicClass>Graphic_Single</graphicClass>
+          		<shaderType>TransparentPostLight</shaderType>
+          	</graphicData>
+             <projectile>
+          		<flyOverhead>false</flyOverhead>
+          		<damageDef>PJ_FChoke</damageDef>
+          		<damageAmountBase>15</damageAmountBase>
+          		<speed>105</speed>
+             </projectile>
+           </ThingDef>
+
+
   <!-- ===================== Force Choke (Apprentice) =============================== -->
- 
- 
+
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceChoke_Apprentice</defName>
     <label>Force Choke</label>
@@ -182,61 +216,19 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.20</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>	
+	<changedAlignmentRate>-0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
-        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>				
+        <projectileDef>PForceChoke</projectileDef>
 		<abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10</SecondsToRecharge>
         <range>34</range>
-        <soundCast>PJ_ChokeSound</soundCast>
-        <muzzleFlashScale>20</muzzleFlashScale>
-        <isPrimary>false</isPrimary>
-		<extraDamages>
-		  <li>
-		    <damage>5</damage>
-			<damageDef>Stun</damageDef>
-			<chance>1.0</chance>
-		  </li>
-		</extraDamages>
-    </MainVerb>
-  </ThingDef>
-  
-
-  <!-- ===================== Force Choke (Adept) =============================== -->
- 
- 
-   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
-    <defName>PJ_ForceChoke_Adept</defName>
-    <label>Force Choke (Adept)</label>
-    <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
-    <description>Choke the life from your enemies.</description>
-<!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.18</forcePoolCost>
-	<requiredAlignmentType>Dark</requiredAlignmentType>
-	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.1</changedAlignmentRate>
-	<abilityPoints>2</abilityPoints>	
-    <MainVerb Class="AbilityUser.VerbProperties_Ability">
-        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
-			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
-			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
-			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
-			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
-        <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>				
-		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
-        <warmupTime>1</warmupTime>
-        <SecondsToRecharge>8</SecondsToRecharge>
-        <range>34</range>
-		<burstShotCount>2</burstShotCount>
-        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
@@ -250,9 +242,51 @@
     </MainVerb>
   </ThingDef>
 
+
+  <!-- ===================== Force Choke (Adept) =============================== -->
+
+
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
+    <defName>PJ_ForceChoke_Adept</defName>
+    <label>Force Choke (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
+    <description>Choke the life from your enemies.</description>
+<!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.18</forcePoolCost>
+	<requiredAlignmentType>Dark</requiredAlignmentType>
+	<changedAlignmentType>Dark</changedAlignmentType>
+	<changedAlignmentRate>-0.1</changedAlignmentRate>
+	<abilityPoints>2</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+        <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+        <hasStandardCommand>true</hasStandardCommand>
+        <projectileDef>PForceChokeTwo</projectileDef>
+		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
+        <warmupTime>1</warmupTime>
+        <SecondsToRecharge>8</SecondsToRecharge>
+        <range>34</range>
+		<burstShotCount>1</burstShotCount>
+        <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+        <soundCast>PJ_ChokeSound</soundCast>
+        <muzzleFlashScale>20</muzzleFlashScale>
+        <isPrimary>false</isPrimary>
+		<extraDamages>
+		  <li>
+		    <damage>15</damage>
+			<damageDef>Stun</damageDef>
+			<chance>1.0</chance>
+		  </li>
+		</extraDamages>
+    </MainVerb>
+  </ThingDef>
+
   <!-- ===================== Force Choke (Master) =============================== -->
- 
- 
+
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceChoke_Master</defName>
     <label>Force Choke (Master)</label>
@@ -262,39 +296,39 @@
     <forcePoolCost>0.15</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.15</changedAlignmentRate>	
-	<abilityPoints>3</abilityPoints>	
+	<changedAlignmentRate>-0.15</changedAlignmentRate>
+	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
-        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>true</tooltipShowExtraDamages>
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>			
+        <projectileDef>PForceChokeThree</projectileDef>
 		<abilityDef>PJ_ForceChoke_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>4.5</SecondsToRecharge>
         <range>34</range>
-		<burstShotCount>3</burstShotCount>
+		<burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<extraDamages>
 		  <li>
-		    <damage>20</damage>
+		    <damage>25</damage>
 			<damageDef>Stun</damageDef>
 			<chance>1.0</chance>
 		  </li>
 		</extraDamages>
     </MainVerb>
   </ThingDef>
-    
+
 
   <!-- ===================== Force Drain =============================== -->
-  
-  
+
+
     <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PJ_PForceDrain</defName>
@@ -319,7 +353,7 @@
  </ThingDef>
 
    <!-- ===================== Force Drain (Apprentice) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceDrain_Apprentice</defName>
     <label>Force Drain</label>
@@ -328,7 +362,7 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.30</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>	
+	<changedAlignmentRate>-0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -336,7 +370,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceDrain</projectileDef>	
+        <projectileDef>PJ_PForceDrain</projectileDef>
 		<abilityDef>PJ_ForceDrain_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>80.0</SecondsToRecharge>
@@ -347,10 +381,10 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-  </ThingDef>  
-  
+  </ThingDef>
+
    <!-- ===================== Force Drain (Adept) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceDrain_Adept</defName>
     <label>Force Drain (Adept)</label>
@@ -361,7 +395,7 @@
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>-0.15</changedAlignmentRate>
-	<abilityPoints>2</abilityPoints>	
+	<abilityPoints>2</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -369,7 +403,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceDrain</projectileDef>		
+        <projectileDef>PJ_PForceDrain</projectileDef>
 		<abilityDef>PJ_ForceDrain_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>50.0</SecondsToRecharge>
@@ -380,11 +414,11 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-  </ThingDef>    
-    
-  
+  </ThingDef>
+
+
    <!-- ===================== Force Drain (Master) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceDrain_Master</defName>
     <label>Force Drain (Master)</label>
@@ -394,8 +428,8 @@
     <forcePoolCost>0.25</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.25</changedAlignmentRate>	
-	<abilityPoints>3</abilityPoints>	
+	<changedAlignmentRate>-0.25</changedAlignmentRate>
+	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
@@ -414,11 +448,11 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-  </ThingDef>    
-  
+  </ThingDef>
+
 
   <!-- ===================== Force Lightning =============================== -->
-  
+
     <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
    <defName>PForceLightningProj</defName>
@@ -443,7 +477,7 @@
  </ThingDef>
 
    <!-- ===================== Force Lightning (Apprentice) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceLightning_Apprentice</defName>
     <label>Force Lightning</label>
@@ -452,15 +486,15 @@
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.16</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.05</changedAlignmentRate>	
+	<changedAlignmentRate>-0.05</changedAlignmentRate>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
-        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>	
+        <projectileDef>PForceLightningProj</projectileDef>
 		<abilityDef>PJ_ForceLightning_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>15</SecondsToRecharge>
@@ -474,7 +508,7 @@
     </MainVerb>
   </ThingDef>
    <!-- ===================== Force Lightning (Adept) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceLightning_Adept</defName>
     <label>Force Lightning (Adept)</label>
@@ -485,20 +519,20 @@
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>-0.15</changedAlignmentRate>
-	<abilityPoints>2</abilityPoints>	
+	<abilityPoints>2</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
-        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>	
+        <projectileDef>PForceLightningProj</projectileDef>
 		<abilityDef>PJ_ForceLightning_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10</SecondsToRecharge>
         <range>34</range>
-		<isViolent>true</isViolent>		
+		<isViolent>true</isViolent>
         <burstShotCount>2</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_LightningSound</soundCast>
@@ -508,7 +542,7 @@
   </ThingDef>
 
    <!-- ===================== Force Lightning (Master) =============================== -->
- 
+
    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceLightning_Master</defName>
     <label>Force Lightning (Master)</label>
@@ -519,15 +553,15 @@
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
 	<changedAlignmentRate>-0.25</changedAlignmentRate>
-	<abilityPoints>3</abilityPoints>	
+	<abilityPoints>3</abilityPoints>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
-        <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+        <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
 			<tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
 			<tooltipShowExtraDamages>false</tooltipShowExtraDamages>
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>	
+        <projectileDef>PForceLightningProj</projectileDef>
 		<abilityDef>PJ_ForceLightning_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>6.5</SecondsToRecharge>
@@ -539,10 +573,10 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-  </ThingDef>  
+  </ThingDef>
 
     <!-- ===================== Force Storm ============================= -->
- 
+
     <ThingDef ParentName="BaseBullet" Class="ThingDef">
    <thingClass>ProjectJedi.Projectile_ForceStorm</thingClass>
    <defName>PJ_PForceStormProj</defName>
@@ -561,10 +595,10 @@
 		<explosionSpawnChance>1</explosionSpawnChance>
    </projectile>
  </ThingDef>
- 
-  
+
+
     <!-- ===================== Force Storm (Apprentice) ============================= -->
-    
+
     <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceStorm_Apprentice</defName>
     <label>Force Storm</label>
@@ -584,12 +618,12 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceStormProj</projectileDef>	
+        <projectileDef>PJ_PForceStormProj</projectileDef>
 		<abilityDef>PJ_ForceStorm_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>60</SecondsToRecharge>
         <range>44</range>
-		<isViolent>true</isViolent>		
+		<isViolent>true</isViolent>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
 		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
@@ -611,9 +645,9 @@
         </targetParams>
     </MainVerb>
   </ThingDef>
-    
+
     <!-- ===================== Force Storm (Adept) ============================= -->
-    
+
     <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceStorm_Adept</defName>
     <label>Force Storm (Adept)</label>
@@ -623,9 +657,9 @@
     <forcePoolCost>0.22</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.19</changedAlignmentRate>	
+	<changedAlignmentRate>-0.19</changedAlignmentRate>
 	<abilityPoints>2</abilityPoints>
-	<darksideTreePointsRequired>9</darksideTreePointsRequired>	
+	<darksideTreePointsRequired>9</darksideTreePointsRequired>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -633,24 +667,24 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceStormProj</projectileDef>	
+        <projectileDef>PJ_PForceStormProj</projectileDef>
 		<abilityDef>PJ_ForceStorm_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>50</SecondsToRecharge>
         <range>44</range>
-		<isViolent>true</isViolent>		
+		<isViolent>true</isViolent>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
 		<TargetAoEProperties>
 		  <targetClass>Pawn</targetClass>
-		  <startsFromCaster>false</startsFromCaster>		
+		  <startsFromCaster>false</startsFromCaster>
 		  <showRangeOnSelect>true</showRangeOnSelect>
 		  <friendlyFire>true</friendlyFire>
 		  <maxTargets>3</maxTargets>
 		  <range>10</range>
-		</TargetAoEProperties>		
+		</TargetAoEProperties>
 		<burstShotCount>4</burstShotCount>
 		 <targetParams>
       	 <canTargetPawns>true</canTargetPawns>
@@ -660,10 +694,10 @@
 		</targetParams>
     </MainVerb>
   </ThingDef>
-  
-    
+
+
     <!-- ===================== Force Storm (Master) ============================= -->
-    
+
     <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceStorm_Master</defName>
     <label>Force Storm (Master)</label>
@@ -673,9 +707,9 @@
     <forcePoolCost>0.18</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
 	<changedAlignmentType>Dark</changedAlignmentType>
-	<changedAlignmentRate>-0.3</changedAlignmentRate>	
+	<changedAlignmentRate>-0.3</changedAlignmentRate>
 	<abilityPoints>5</abilityPoints>
-	<darksideTreePointsRequired>9</darksideTreePointsRequired>	
+	<darksideTreePointsRequired>9</darksideTreePointsRequired>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -683,12 +717,12 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceStormProj</projectileDef>	
+        <projectileDef>PJ_PForceStormProj</projectileDef>
 		<abilityDef>PJ_ForceStorm_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>30</SecondsToRecharge>
         <range>44</range>
-		<isViolent>true</isViolent>		
+		<isViolent>true</isViolent>
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
 		<AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
@@ -699,9 +733,9 @@
 		  <friendlyFire>true</friendlyFire>
 		  <maxTargets>5</maxTargets>
 		  <range>10</range>
-		</TargetAoEProperties>		
-		<burstShotCount>4</burstShotCount>		
-        <isPrimary>false</isPrimary> 
+		</TargetAoEProperties>
+		<burstShotCount>4</burstShotCount>
+        <isPrimary>false</isPrimary>
 		 <targetParams>
       	 <canTargetPawns>true</canTargetPawns>
       	 <canTargetBuildings>false</canTargetBuildings>
@@ -709,7 +743,7 @@
 		 <canTargetLocations>true</canTargetLocations>
 		</targetParams>
     </MainVerb>
-  </ThingDef>  
-  
- 
+  </ThingDef>
+
+
 </ThingDefs>

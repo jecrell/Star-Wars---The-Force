@@ -1019,6 +1019,15 @@ namespace ProjectJedi
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
+                List<PawnAbility> abilities = new List<PawnAbility>(Powers);
+                if (abilities != null && abilities.Count > 0)
+                {
+                    foreach (PawnAbility pab in abilities)
+                    {
+                        this.RemovePawnAbility(pab.powerdef);
+                    }
+                }
+
                 if (ForcePowersDark != null && ForcePowersDark.Count > 0)
                 {
                     foreach (ForcePower power in ForcePowersDark)

@@ -18,7 +18,7 @@
     <impactSoundType>Slice</impactSoundType>
     <armorCategory>Sharp</armorCategory>
   </DamageDef>
-  
+
   <DamageDef>
     <defName>PJ_ForceHealDamage</defName>
     <label>force heal</label>
@@ -28,8 +28,8 @@
     <makesBlood>false</makesBlood>
     <canInterruptJobs>false</canInterruptJobs>
   </DamageDef>
-  
-  
+
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FDrainDamage</defName>
     <label>force drain</label>
@@ -40,8 +40,8 @@
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	<armorCategory>Electric</armorCategory>
   </DamageDef>
-  
-  
+
+
 
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FLightning</defName>
@@ -52,7 +52,7 @@
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	<armorCategory>Electric</armorCategory>
   </DamageDef>
-  
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_FStorm</defName>
     <label>Force storm</label>
@@ -69,8 +69,8 @@
     <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
     <soundExplosion>PJ_LightningSound</soundExplosion>
   </DamageDef>
- 
- 
+
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_MindTrickDam</defName>
     <label>Mind trick</label>
@@ -86,7 +86,7 @@
 		</li>
 		</additionalHediffs>
   </DamageDef>
-  
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_RageDam</defName>
     <label>Force Rage</label>
@@ -102,11 +102,11 @@
 		</li>
 		</additionalHediffs>
   </DamageDef>
-  
+
   <DamageDef>
     <defName>PJ_FChoke</defName>
     <label>choke</label>
-    <workerClass>ProjectJedi.DamageWorker_ForceChoke</workerClass>  
+    <workerClass>ProjectJedi.DamageWorker_ForceChoke</workerClass>
     <externalViolence>false</externalViolence>
     <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
     <hediff>PJ_ChokeCrush</hediff>
@@ -115,33 +115,33 @@
 		<additionalHediffs>
 		<li>
 			<hediff>PJ_NoAir</hediff>
-			<severityPerDamageDealt>0.32</severityPerDamageDealt>
+			<severityPerDamageDealt>0.08</severityPerDamageDealt>
 		</li>
 		</additionalHediffs>
   </DamageDef>
-  
- <!-- Force Pull -->  
-  
+
+ <!-- Force Pull -->
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_DForcePull</defName>
     <label>pull</label>
-    <workerClass>ProjectJedi.DamageWorker_ForcePull</workerClass>  
+    <workerClass>ProjectJedi.DamageWorker_ForcePull</workerClass>
     <externalViolence>false</externalViolence>
-	<harmsHealth>false</harmsHealth>	
+	<harmsHealth>false</harmsHealth>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	<armorCategory>Electric</armorCategory>
   </DamageDef>
 
- <!-- Force Push -->  
-  
+ <!-- Force Push -->
+
   <DamageDef ParentName="LocalInjuryBase">
     <defName>PJ_DForcePush</defName>
     <label>push</label>
-    <workerClass>ProjectJedi.DamageWorker_ForcePush</workerClass>  
+    <workerClass>ProjectJedi.DamageWorker_ForcePush</workerClass>
     <externalViolence>false</externalViolence>
     <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
 	<harmsHealth>false</harmsHealth>
 	<armorCategory>Electric</armorCategory>
-  </DamageDef>  
-  
+  </DamageDef>
+
 </Defs>

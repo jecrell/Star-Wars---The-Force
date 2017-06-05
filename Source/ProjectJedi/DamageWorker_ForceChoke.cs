@@ -17,6 +17,14 @@ namespace ProjectJedi
                 return 0f;
             }
 
+            if (victim is Pawn p && p.RaceProps.IsMechanoid)
+            {
+                Messages.Message("PJ_ForceResisted".Translate(new object[] {
+                    p.Label.CapitalizeFirst(), dinfo.Instigator.LabelShort, dinfo.Def.label
+                }), MessageSound.Negative);
+                return 0f;
+            }
+
             Pawn pawn = victim as Pawn;
             if (pawn != null)
             {
