@@ -24,6 +24,7 @@ namespace ProjectJedi
         #region Variables
         private int forceUserLevel = 0;
         private int forceUserXP = 1;
+        public int ticksToLearnForceXP = -1;
         public List<ForceSkill> forceSkills;
         public List<ForcePower> forcePowersLight;
         public List<ForcePower> forcePowersGray;
@@ -967,6 +968,7 @@ namespace ProjectJedi
             Scribe_Values.Look<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", false);
             Scribe_Values.Look<int>(ref this.abilityPoints, "abilityPoints", 0);
             Scribe_Values.Look<int>(ref this.canMeditateTicks, "canMeditateTicks", 0);
+            Scribe_Values.Look<int>(ref this.ticksToLearnForceXP, "ticksToLearnForceXP", -1);
             Scribe_Collections.Look<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, new object[0]);

@@ -46,7 +46,7 @@ namespace ProjectJedi
                                 CompForceUser compForce = pawn.GetComp<CompForceUser>();
                                 if (compForce.ForceUserLevel > 0)
                                 {
-                                        __result.points += (5 * compForce.ForceUserLevel);
+                                    __result.points += (5 * compForce.ForceUserLevel);
                                 }
                             }
                         }
@@ -57,22 +57,17 @@ namespace ProjectJedi
             }
         }
 
-        public static int ticksUntilNextXP = 0;
-
         /// Add Force XP every time a pawn learns a skill.
         public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue(__instance);
-            CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
-            if (compForce != null)
+            if (pawn.TryGetComp<CompForceUser>() is CompForceUser compForce &&
+                Find.TickManager.TicksGame > compForce.ticksToLearnForceXP)
             {
-                if (Find.TickManager.TicksGame > ticksUntilNextXP)
-                {
-                    int delay = 30;
-                    if (__instance.def == SkillDefOf.Intellectual) delay += 20;
-                    ticksUntilNextXP = Find.TickManager.TicksGame + delay;
-                    compForce.ForceUserXP++;
-                }
+                int delay = 30;
+                if (__instance.def == SkillDefOf.Intellectual) delay += 20;
+                compForce.ticksToLearnForceXP = Find.TickManager.TicksGame + delay;
+                compForce.ForceUserXP++;
             }
         }
 
@@ -116,25 +111,25 @@ namespace ProjectJedi
         public static void DrawEquipment_PostFix(PawnRenderer __instance, Vector3 rootLoc)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(PawnRenderer), "pawn").GetValue(__instance);
-                if (pawn.health != null)
+            if (pawn.health != null)
+            {
+                if (pawn.health.hediffSet != null)
                 {
-                    if (pawn.health.hediffSet != null)
+                    if (pawn.health.hediffSet.hediffs != null && pawn.health.hediffSet.hediffs.Count > 0)
                     {
-                        if (pawn.health.hediffSet.hediffs != null && pawn.health.hediffSet.hediffs.Count > 0)
+                        Hediff shieldHediff = pawn.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.TryGetComp<HediffComp_Shield>() != null);
+                        if (shieldHediff != null)
                         {
-                            Hediff shieldHediff = pawn.health.hediffSet.hediffs.FirstOrDefault((Hediff x) => x.TryGetComp<HediffComp_Shield>() != null);
-                            if (shieldHediff != null)
+                            HediffComp_Shield shield = shieldHediff.TryGetComp<HediffComp_Shield>();
+                            if (shield != null)
                             {
-                                HediffComp_Shield shield = shieldHediff.TryGetComp<HediffComp_Shield>();
-                                if (shield != null)
-                                {
-                                    shield.DrawWornExtras();
-                                }
+                                shield.DrawWornExtras();
                             }
                         }
                     }
                 }
-            
+            }
+
         }
 
 
@@ -172,52 +167,52 @@ namespace ProjectJedi
         {
             //if (target.Thing != null && target.Thing is Pawn)
             //{
-                Pawn attacker = __instance.CasterPawn;
-                if (attacker != null)
+            Pawn attacker = __instance.CasterPawn;
+            if (attacker != null)
+            {
+                Pawn_EquipmentTracker pawn_EquipmentTracker = attacker.equipment;
+                if (pawn_EquipmentTracker != null)
                 {
-                    Pawn_EquipmentTracker pawn_EquipmentTracker = attacker.equipment;
-                    if (pawn_EquipmentTracker != null)
+                    foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipmentListForReading)
                     {
-                        foreach (ThingWithComps thingWithComps in pawn_EquipmentTracker.AllEquipmentListForReading)
+                        if (thingWithComps != null)
                         {
-                            if (thingWithComps != null)
+                            if (thingWithComps.def.IsMeleeWeapon)
                             {
-                                if (thingWithComps.def.IsMeleeWeapon)
+                                if (thingWithComps.def.defName.Contains("SWSaber_"))
                                 {
-                                    if (thingWithComps.def.defName.Contains("SWSaber_"))
+                                    CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
+                                    if (compForce == null)
                                     {
-                                        CompForceUser compForce = attacker.TryGetComp<CompForceUser>();
-                                        if (compForce == null)
-                                        {
-                                            __result = 0.5f;
-                                        }
-                                        else if (!compForce.IsForceUser)
-                                        {
-                                            __result = 0.5f;
-                                        }
-                                        else
-                                        {
-                                            float newAccuracy = (float)(__result / 2);
+                                        __result = 0.5f;
+                                    }
+                                    else if (!compForce.IsForceUser)
+                                    {
+                                        __result = 0.5f;
+                                    }
+                                    else
+                                    {
+                                        float newAccuracy = (float)(__result / 2);
 
-                                            int accuracyPoints = compForce.ForceSkillLevel("PJ_LightsaberAccuracy");
-                                            if (accuracyPoints > 0)
+                                        int accuracyPoints = compForce.ForceSkillLevel("PJ_LightsaberAccuracy");
+                                        if (accuracyPoints > 0)
+                                        {
+                                            for (int i = 0; i < accuracyPoints; i++)
                                             {
-                                                for (int i = 0; i < accuracyPoints; i++)
-                                                {
-                                                    newAccuracy += 0.2f;
-                                                }
+                                                newAccuracy += 0.2f;
                                             }
-                                            __result = newAccuracy;
                                         }
+                                        __result = newAccuracy;
                                     }
                                 }
                             }
                         }
                     }
                 }
+            }
             //}
 
-            
+
         }
 
         public static void TakeDamage_PreFix(Thing __instance, ref DamageInfo dinfo)
