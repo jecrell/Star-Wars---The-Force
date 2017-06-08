@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ThingDefs>
+	
+	<ThingDef ParentName="PJ_JediHatMakeableBase">
+		<defName>PJ_JediHood</defName>
+		<label>Jedi Hood</label>
+		<description>The humble hood worn by Jedi.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Hoods/JediHoodx</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<WorkToMake>500</WorkToMake>
+			<MaxHitPoints>350</MaxHitPoints>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ArmorRating_Electric>0.2</ArmorRating_Electric>
+			<Insulation_Cold>-14</Insulation_Cold>
+			<Insulation_Heat>16</Insulation_Heat>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+		</costList>
+		<equippedStatOffsets>
+			<ShootingAccuracy>0.02</ShootingAccuracy>
+			<AimingDelayFactor>-0.01</AimingDelayFactor>
+			<RecruitPrisonerChance>0.01</RecruitPrisonerChance>
+			<SocialImpact>0.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<worngraphicPath>Hoods/JediHoodx</worngraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+	<ThingDef ParentName="PJ_JediHatMakeableBase">
+		<defName>PJ_SithHood</defName>
+		<label>Sith Hood</label>
+		<description>The ominous hood worn by Sith.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Hoods/SithHood</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<WorkToMake>500</WorkToMake>
+			<MaxHitPoints>350</MaxHitPoints>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ArmorRating_Electric>0.2</ArmorRating_Electric>
+			<Insulation_Cold>-14</Insulation_Cold>
+			<Insulation_Heat>16</Insulation_Heat>
+		</statBases>
+		<costList>
+			<Steel>20</Steel>
+		</costList>
+		<equippedStatOffsets>
+			<ShootingAccuracy>0.02</ShootingAccuracy>
+			<AimingDelayFactor>-0.01</AimingDelayFactor>
+			<RecruitPrisonerChance>0.01</RecruitPrisonerChance>
+			<SocialImpact>0.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<worngraphicPath>Hoods/SithHood</worngraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+
+		<ThingDef ParentName="PJ_JediHatMakeableBase">
+		<defName>PJ_CustomHood</defName>
+		<label>Custom Hood</label>
+		<description>A customized hood for Jedi or Sith.</description>
+		<techLevel>Spacer</techLevel>
+		<graphicData>
+			<texPath>Hoods/JediHood</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<MarketValue>250</MarketValue>
+			<WorkToMake>500</WorkToMake>
+			<MaxHitPoints>350</MaxHitPoints>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ArmorRating_Electric>0.2</ArmorRating_Electric>
+			<Insulation_Cold>-14</Insulation_Cold>
+			<Insulation_Heat>16</Insulation_Heat>
+		</statBases>
+		<costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+		<equippedStatOffsets>
+			<ShootingAccuracy>0.02</ShootingAccuracy>
+			<AimingDelayFactor>-0.01</AimingDelayFactor>
+			<RecruitPrisonerChance>0.01</RecruitPrisonerChance>
+			<SocialImpact>0.05</SocialImpact>
+		</equippedStatOffsets>
+		<apparel>
+			<bodyPartGroups>
+				<li>FullHead</li>
+			</bodyPartGroups>
+			<worngraphicPath>Hoods/JediHood</worngraphicPath>
+			<layers>
+				<li>Overhead</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+	</ThingDef>
+
+</ThingDefs>
