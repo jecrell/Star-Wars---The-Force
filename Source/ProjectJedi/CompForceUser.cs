@@ -618,15 +618,11 @@ namespace ProjectJedi
 
         public override void PostAbilityAttempt(Pawn caster, AbilityDef ability)
         {
-            ForceAbilityDef forceDef = ability as ForceAbilityDef;
-            if (forceDef != null)
+            if (ability is ForceAbilityDef forceDef)
             {
                 if (forceDef.changedAlignmentType != ForceAlignmentType.None)
                 {
-                    //Log.Message("Alignment: " + AlignmentValue.ToStringPercent());
-                    //Log.Message("Alignment Change: " + forceDef.changedAlignmentRate.ToStringPercent());
                     AlignmentValue += forceDef.changedAlignmentRate;
-                    //Log.Message("New Alignment: " + AlignmentValue.ToStringPercent());
                     UpdateAlignment();
                 }
 
@@ -982,7 +978,7 @@ namespace ProjectJedi
                     {
                         if (power.abilityDef != null)
                         {
-                            if (Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (Powers != null && Powers.Count > 0 && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
                             {
                                 power.ticksUntilNextCast = listPower.TicksUntilCasting;
                             }
@@ -996,7 +992,7 @@ namespace ProjectJedi
                     {
                         if (power.abilityDef != null)
                         {
-                            if (Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (Powers != null && Powers.Count > 0 && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
                             {
                                 power.ticksUntilNextCast = listPower.TicksUntilCasting;
                             }
@@ -1010,7 +1006,7 @@ namespace ProjectJedi
                     {
                         if (power.abilityDef != null)
                         {
-                            if (Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (Powers != null && Powers.Count > 0 && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
                             {
                                 power.ticksUntilNextCast = listPower.TicksUntilCasting;
                             }

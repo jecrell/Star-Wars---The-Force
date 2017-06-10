@@ -12,7 +12,7 @@ namespace ProjectJedi
     public class ForceCardUtility
     {
         // RimWorld.CharacterCardUtility
-        public static Vector2 ForceCardSize = new Vector2(395f, 536f);
+        public static Vector2 ForceCardSize = new Vector2(425f, 536f);
 
         public static float ButtonSize = 40f;
 
@@ -34,9 +34,9 @@ namespace ProjectJedi
 
         public static float SkillsColumnHeight = 113f;
 
-        public static float SkillsColumnDivider = 114f;
+        public static float SkillsColumnDivider = 145f;
 
-        public static float SkillsTextWidth = 138f;
+        public static float SkillsTextWidth = 145f;
 
         public static float SkillsBoxSize = 18f;
 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<AU_DISABLED>Deaktiviert</AU_DISABLED>
+
+<AU_Type>Typ: </AU_Type>
+<AU_TargetAoE>Flächeneffekt</AU_TargetAoE>
+<AU_TargetSelf>Wählt sich Selbst</AU_TargetSelf>
+<AU_TargetThing>Wählt Andere</AU_TargetThing>
+<AU_TargetLocation>Wählt Bereich</AU_TargetLocation>
+<AU_Cooldown>Cooldown: </AU_Cooldown>
+<AU_Extra>Extra</AU_Extra>
+<AU_MentalStateChance>Mentaler Zustand Chance</AU_MentalStateChance>
+<AU_EffectChance>Effekt Chance</AU_EffectChance>
+<AU_PawnAbilityRecharging>{0} braucht Zeit zum Wiederauffüllen</AU_PawnAbilityRecharging>
+
+
+<AU_AoEProperties>Flächeneffekt Eigenschaften</AU_AoEProperties>
+<AU_TargetClass>Ziele: </AU_TargetClass>
+<AU_AoECharacters>Charaktere</AU_AoECharacters>
+<AU_AoEFriendlyFire>Friendly Fire: </AU_AoEFriendlyFire>
+<AU_AoEMaxTargets>Maximale Ziele: </AU_AoEMaxTargets>
+<AU_AoEStartsFromCaster>Beginnt beim Wirker: </AU_AoEStartsFromCaster>
+	
+</LanguageData>

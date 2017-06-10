@@ -61,11 +61,11 @@ namespace ProjectJedi
         public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue(__instance);
-            if (pawn.TryGetComp<CompForceUser>() is CompForceUser compForce &&
+            if (xp > 0 && pawn.TryGetComp<CompForceUser>() is CompForceUser compForce &&
                 Find.TickManager.TicksGame > compForce.ticksToLearnForceXP)
             {
-                int delay = 30;
-                if (__instance.def == SkillDefOf.Intellectual) delay += 20;
+                int delay = 130;
+                if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Growing) delay += 50;
                 compForce.ticksToLearnForceXP = Find.TickManager.TicksGame + delay;
                 compForce.ForceUserXP++;
             }
