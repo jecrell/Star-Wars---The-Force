@@ -12,7 +12,23 @@ namespace ProjectJedi
     public class ForceCardUtility
     {
         // RimWorld.CharacterCardUtility
-        public static Vector2 ForceCardSize = new Vector2(425f, 536f);
+        public static Vector2 forceCardSize = default(Vector2);
+        public static Vector2 ForceCardSize
+        {
+            get
+            {
+                if (forceCardSize == default(Vector2))
+                {
+                    forceCardSize = new Vector2(395f, 536f);
+                    if (LanguageDatabase.activeLanguage == LanguageDatabase.AllLoadedLanguages.FirstOrDefault(x => x.folderName == "German"))
+                    {
+                        forceCardSize = new Vector2(470f, 536f);
+                    }
+                }
+                return forceCardSize;
+            }
+        }
+        //public static Vector2 ForceCardSize = new Vector2(470f, 536f);  // Ideal for German version
 
         public static float ButtonSize = 40f;
 
@@ -34,9 +50,11 @@ namespace ProjectJedi
 
         public static float SkillsColumnHeight = 113f;
 
-        public static float SkillsColumnDivider = 145f;
+        public static float SkillsColumnDivider = 114f;
+        //public static float SkillsColumnDivider = 170f; // Ideal for German version
 
-        public static float SkillsTextWidth = 145f;
+        public static float SkillsTextWidth = 138f;
+        //public static float SkillsTextWidth = 170f; // Ideal for German version
 
         public static float SkillsBoxSize = 18f;
 
@@ -44,9 +62,26 @@ namespace ProjectJedi
 
         public static float PowersColumnWidth = 123f;
 
+        public static bool adjustedForLanguage = false;
+
+        public static void AdjustForLanguage()
+        { 
+            if (!adjustedForLanguage)
+            {
+                adjustedForLanguage = true;
+                if (LanguageDatabase.activeLanguage == LanguageDatabase.AllLoadedLanguages.FirstOrDefault(x => x.folderName == "German"))
+                {
+                    SkillsColumnDivider = 170f;
+                    SkillsTextWidth = 170f;
+                }
+            }
+        }
+
         // RimWorld.CharacterCardUtility
         public static void DrawForceCard(Rect rect, Pawn pawn)
         {
+            AdjustForLanguage();
+
             GUI.BeginGroup(rect);
 
             CompForceUser compForce = pawn.GetComp<CompForceUser>();
@@ -313,44 +348,48 @@ namespace ProjectJedi
         public static void SkillsPane(Rect inRect, CompForceUser compForce)
         {
             float currentYOffset = inRect.y;
-
-            foreach (ForceSkill skill in compForce.ForceSkills)
+            
+            if (!compForce?.ForceSkills.NullOrEmpty() ?? false)
             {
-                Rect lightsaberOffense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
-                Rect lightsaberOffenseLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
-                Widgets.Label(lightsaberOffenseLabel, skill.label.Translate());
-
-                TooltipHandler.TipRegion(lightsaberOffenseLabel, new TipSignal(() => skill.desc.Translate(), lightsaberOffenseLabel.GetHashCode()));
-                Rect lightsaberOffensiveBoxes = new Rect(lightsaberOffenseLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
-
-                for (int i = 1; i <= 5; i++)
+                foreach (ForceSkill skill in compForce.ForceSkills)
                 {
-                    Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
-                    if (skill.level >= i)
-                    {
-                        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
-                        continue;
-                    }
-                    else if ((i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5) && (compForce.AbilityUser.Faction == Faction.OfPlayer))
-                    {
-                        //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
-                        if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
-                        {
-                            compForce.abilityPoints--;
-                            skill.level++;
-                        }
-                        //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
-                        continue;
-                    }
-                    else
-                    {
-                        Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
-                        continue;
-                    }
-                }
+                    Rect lightsaberOffense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
+                    Rect lightsaberOffenseLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
+                    Widgets.Label(lightsaberOffenseLabel, skill.label.Translate());
 
-                currentYOffset += TextSize;
+                    TooltipHandler.TipRegion(lightsaberOffenseLabel, new TipSignal(() => skill.desc.Translate(), lightsaberOffenseLabel.GetHashCode()));
+                    Rect lightsaberOffensiveBoxes = new Rect(lightsaberOffenseLabel.xMax, currentYOffset, inRect.width - SkillsTextWidth, TextSize);
+
+                    for (int i = 1; i <= 5; i++)
+                    {
+                        Rect lightsaberCheckbox = new Rect(lightsaberOffensiveBoxes.x + (SkillsBoxSize * i), lightsaberOffensiveBoxes.y, SkillsBoxSize, TextSize);
+                        if (skill.level >= i)
+                        {
+                            Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
+                            continue;
+                        }
+                        else if ((i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5) && (compForce.AbilityUser.Faction == Faction.OfPlayer))
+                        {
+                            //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
+                            if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
+                            {
+                                compForce.abilityPoints--;
+                                skill.level++;
+                            }
+                            //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
+                            continue;
+                        }
+                        else
+                        {
+                            Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBox, 1f);
+                            continue;
+                        }
+                    }
+
+                    currentYOffset += TextSize;
+                }
             }
+            
         }
         #endregion SkillsPane
 

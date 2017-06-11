@@ -34,19 +34,19 @@
   <!-- Machtstoß (Apprentice) -->
 
   <PJ_ForcePush_Apprentice.label>Machtstoß</PJ_ForcePush_Apprentice.label>
-  <PJ_ForcePush_Apprentice.description>Stufe 1: stoßt Leute 8 Felder weit weg.</PJ_ForcePush_Apprentice.description>
+  <PJ_ForcePush_Apprentice.description>Stufe 1: stößt Leute 8 Felder weit weg.</PJ_ForcePush_Apprentice.description>
 
 
   <!-- Machtstoß (Apprentice) -->
 
   <PJ_ForcePush_Apprentice.label>Machtstoß (Lehrling)</PJ_ForcePush_Apprentice.label>
-  <PJ_ForcePush_Apprentice.description>Stufe 1: stoßt Leute 8 Felder weit weg.\nStufe 2: stößt 10 Felder weit weg und betäubt das Ziel.</PJ_ForcePush_Apprentice.description>
+  <PJ_ForcePush_Apprentice.description>Stufe 1: stößt Leute 8 Felder weit weg.\nStufe 2: stößt 10 Felder weit weg und betäubt das Ziel.</PJ_ForcePush_Apprentice.description>
 
 
   <!-- Machtstoß (Master) -->
 
   <PJ_ForcePush_Master.label>Machtstoß (Meister)</PJ_ForcePush_Master.label>
-  <PJ_ForcePush_Master.description>Stufe 1: stoßt Leute 8 Felder weit weg.\nStufe 2: stößt 10 Felder weit weg und betäubt das Ziel.\nStufe 3: stößt 12 Felder weit weg, betäubt das Ziel und fügt Wänden nun Schaden zu.</PJ_ForcePush_Master.description>
+  <PJ_ForcePush_Master.description>Stufe 1: stößt Leute 8 Felder weit weg.\nStufe 2: stößt 10 Felder weit weg und betäubt das Ziel.\nStufe 3: stößt 12 Felder weit weg, betäubt das Ziel und fügt Wänden nun Schaden zu.</PJ_ForcePush_Master.description>
 
 
   <!-- Machtsprint -->

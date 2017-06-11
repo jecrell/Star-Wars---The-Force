@@ -968,17 +968,18 @@ namespace ProjectJedi
             Scribe_Collections.Look<ForcePower>(ref this.forcePowersDark, "forcePowersDark", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<ForcePower>(ref this.forcePowersGray, "forcePowersGray", LookMode.Deep, new object[0]);
             Scribe_Collections.Look<ForcePower>(ref this.forcePowersLight, "forcePowersLight", LookMode.Deep, new object[0]);
-            Scribe_Collections.Look<ForceSkill>(ref this.forceSkills, "forceSkills", LookMode.Deep, null);
+            Scribe_Collections.Look<ForceSkill>(ref this.forceSkills, "forceSkills", LookMode.Deep, new object[0]);
 
             if (Scribe.mode == LoadSaveMode.Saving)
             {
-                if (ForcePowersDark != null && ForcePowersDark.Count > 0)
+
+                if (!ForcePowersDark.NullOrEmpty())
                 {
                     foreach (ForcePower power in ForcePowersDark)
                     {
                         if (power.abilityDef != null)
                         {
-                            if (Powers != null && Powers.Count > 0 && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
                             {
                                 power.ticksUntilNextCast = listPower.TicksUntilCasting;
                             }
@@ -986,13 +987,13 @@ namespace ProjectJedi
                     }
                 }
 
-                if (ForcePowersGray != null && ForcePowersGray.Count > 0)
+                if (!ForcePowersGray.NullOrEmpty())
                 {
                     foreach (ForcePower power in ForcePowersGray)
                     {
                         if (power.abilityDef != null)
                         {
-                            if (Powers != null && Powers.Count > 0 && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
                             {
                                 power.ticksUntilNextCast = listPower.TicksUntilCasting;
                             }
@@ -1000,13 +1001,13 @@ namespace ProjectJedi
                     }
                 }
 
-                if (ForcePowersLight != null && ForcePowersLight.Count > 0)
+                if (!ForcePowersLight.NullOrEmpty())
                 {
                     foreach (ForcePower power in ForcePowersLight)
                     {
                         if (power.abilityDef != null)
                         {
-                            if (Powers != null && Powers.Count > 0 && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
                             {
                                 power.ticksUntilNextCast = listPower.TicksUntilCasting;
                             }
@@ -1017,8 +1018,8 @@ namespace ProjectJedi
 
             if (Scribe.mode == LoadSaveMode.PostLoadInit)
             {
-                List<PawnAbility> abilities = new List<PawnAbility>(Powers);
-                if (abilities != null && abilities.Count > 0)
+                var abilities = new List<PawnAbility>(Powers);
+                if (!abilities.NullOrEmpty())
                 {
                     foreach (PawnAbility pab in abilities)
                     {
@@ -1026,7 +1027,7 @@ namespace ProjectJedi
                     }
                 }
 
-                if (ForcePowersDark != null && ForcePowersDark.Count > 0)
+                if (!ForcePowersDark.NullOrEmpty())
                 {
                     foreach (ForcePower power in ForcePowersDark)
                     {
@@ -1040,7 +1041,7 @@ namespace ProjectJedi
                     }
                 }
 
-                if (ForcePowersGray != null && ForcePowersGray.Count > 0)
+                if (!ForcePowersGray.NullOrEmpty())
                 {
                     foreach (ForcePower power in ForcePowersGray)
                     {
@@ -1054,7 +1055,7 @@ namespace ProjectJedi
                     }
                 }
 
-                if (ForcePowersLight != null && ForcePowersLight.Count > 0)
+                if (!ForcePowersLight.NullOrEmpty())
                 {
                     foreach (ForcePower power in ForcePowersLight)
                     {

@@ -12,10 +12,10 @@
 <PJ_ForceResisted>{0} widersteht {1}'s {2}.</PJ_ForceResisted>
 <PJ_ForceDrainTwo>{0} saugt {1}'s Gesundheit ab!</PJ_ForceDrainTwo>
 <PJ_ForceDrainOne>{0} saugt {1}'s Macht ab!</PJ_ForceDrainOne>
-<PJ_StufeUp>{0} ist aufgestiegen! Neue Machtpunkte verfügbar.</PJ_StufeUp>
+<PJ_LevelUp>{0} ist aufgestiegen! Neue Machtpunkte verfügbar.</PJ_LevelUp>
 <PJ_LightsidePointsRequired>Benötigt {0} für Fähigkeiten ausgegebene Punkte auf der hellen Seite</PJ_LightsidePointsRequired>
 <PJ_DarksidePointsRequired>Benötigt {0} für Fähigkeiten ausgegebene Punkte auf der dunklen Seite</PJ_DarksidePointsRequired>
-<PJ_NextStufeAlignmentMismatch>Das nächste Stufe erfordert {0} Punkte auf dieser Gesinnung. Wir sind {1}.</PJ_NextStufeAlignmentMismatch>
+<PJ_NextLevelAlignmentMismatch>Das nächste Stufe erfordert {0} Punkte auf dieser Gesinnung. Wir sind {1}.</PJ_NextLevelAlignmentMismatch>
 <PJ_CheckStarsForMoreInfo>Für genauere Informationen berühre mit der Maus über die jeweiligen Sterne.</PJ_CheckStarsForMoreInfo>
 <PJ_ForceAwakensLabel>Die Macht erwacht</PJ_ForceAwakensLabel>
 <PJ_ForceAwakensDesc>{0} hat tief in sich drin eine mysteriöse Kraft entdeckt.</PJ_ForceAwakensDesc>
@@ -39,13 +39,13 @@
 <PJ_Light>hell</PJ_Light>
 <PJ_Skills>Fähigkeiten</PJ_Skills>
 <PJ_Powers>Kräfte</PJ_Powers>
-<PJ_Stufe>Stufe</PJ_Stufe>
+<PJ_Level>Stufe</PJ_level>
 <PJ_Affiliation>Reihenfolge</PJ_Affiliation>
 <PJ_PointsAvail>Verfügbare Punkte</PJ_PointsAvail>
 <PJ_LightsaberOffense>Lichtschwert Angriff</PJ_LightsaberOffense>
 <PJ_LightsaberDefense>Lichtschwert Verteidigung</PJ_LightsaberDefense>
 <PJ_LightsaberAccuracy>Lichtschwert Genauigkeit</PJ_LightsaberAccuracy>
-<PJ_LightsaberReflection>Lichtschwert Reflektion</PJ_LightsaberReflection>
+<PJ_LightsaberReflection>Lichtschwert Reflexion</PJ_LightsaberReflection>
 <PJ_ForcePool>Machtpool</PJ_ForcePool>
 <PJ_ForceXPDesc>Für das Verwenden von Fähigkeiten bekommt ein Charakter Macht EP. Das Auswählen von Fähigkeiten steigert die EP besser als alles anderes.</PJ_ForceXPDesc>
 <PJ_AlignmentDesc>Die Gesinnung bestimmt, welche Kräfte der Charakter nutzen kann. Graue Jedis können niedrigstufige Kräfte beider Seiten nutzen. Aber höherstufige Kräfte verlangen eine größere Hingabe zur einer Seite der Macht.</PJ_AlignmentDesc>
