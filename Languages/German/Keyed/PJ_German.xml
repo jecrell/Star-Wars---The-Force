@@ -22,7 +22,7 @@
 <PJ_NotEnoughAbilityPoints>Benötigt {1} Fähigkeitspunkt. Wir haben {0}.</PJ_NotEnoughAbilityPoints>
 <PJ_PointsRequired>Benötigte Fähigkeitspunkte: {0}</PJ_PointsRequired>
 <PJ_DarkPointsRequired>Benötigte Fähigkeitspunkte der dunklen Seite: {0}</PJ_DarkPointsRequired>
-<PJ_LightPointsRequired>Benötigte Fähigkeitspunkte der hellen Seite: {0}</PJ_LightPointsRequired> 
+<PJ_LightPointsRequired>Benötigte Fähigkeitspunkte der hellen Seite: {0}</PJ_LightPointsRequired>
 <PJ_CastSuccess>Wirken erfolgreich</PJ_CastSuccess>
 <PJ_CastFailure>Wirken fehlgeschlagen</PJ_CastFailure>
 
@@ -39,7 +39,6 @@
 <PJ_Light>hell</PJ_Light>
 <PJ_Skills>Fähigkeiten</PJ_Skills>
 <PJ_Powers>Kräfte</PJ_Powers>
-<PJ_Level>Stufe</PJ_level>
 <PJ_Affiliation>Reihenfolge</PJ_Affiliation>
 <PJ_PointsAvail>Verfügbare Punkte</PJ_PointsAvail>
 <PJ_LightsaberOffense>Lichtschwert Angriff</PJ_LightsaberOffense>
@@ -67,5 +66,5 @@
 <ForceAbilityDescPoints>Machtstärke: {0}</ForceAbilityDescPoints>
 <ForceAbilityDescOriginPoints>Machtstärke: {0} (Original)</ForceAbilityDescOriginPoints>
 <ForceAbilityDescNewPoints>Machtstärke: {0} (pro/ Machtpool Fähigkeit)</ForceAbilityDescNewPoints>
-	
+
 </LanguageData>
