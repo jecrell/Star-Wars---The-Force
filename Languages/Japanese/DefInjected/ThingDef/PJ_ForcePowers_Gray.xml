@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Pull -->
+
+  <PJ_PFlyingObject.label>テレキネシス</PJ_PFlyingObject.label>
+  <PJ_PFlyingObject_Equipable.label>テレキネシス</PJ_PFlyingObject_Equipable.label>
+  <PJ_PForcePull.label>フォースプル</PJ_PForcePull.label>
+
+
+  <!-- Force Pull (Apprentice) -->
+
+  <PJ_ForcePull_Apprentice.label>フォースプル</PJ_ForcePull_Apprentice.label>
+  <PJ_ForcePull_Apprentice.description>レベル1：人や動物ではない地面に落ちている物をキャスターに向けて引っ張ります。</PJ_ForcePull_Apprentice.description>
+
+
+  <!-- Force Pull (Adept) -->
+
+  <PJ_ForcePull_Adept.label>フォースプル(達人)</PJ_ForcePull_Adept.label>
+  <PJ_ForcePull_Adept.description>レベル1：人や動物ではない地面に落ちている物をキャスターに向けて引っ張ります。\nレベル2：武器や服装を自動的に引き出し、装備します。</PJ_ForcePull_Adept.description>
+
+
+  <!-- Force Pull (Master) -->
+
+  <PJ_ForcePull_Master.label>フォースプル(導師)</PJ_ForcePull_Master.label>
+  <PJ_ForcePull_Master.description>レベル1：人や動物ではない地面に落ちている物をキャスターに向けて引っ張ります。\nレベル2：武器や服装を自動的に引き出し、装備します。\nレベル3：他人の手から武器を引き落すことができるようになりました。相手が武装解除されていれば、フォースプルは人や動物をフォースの使い手に向かって引っ張る事ができます。</PJ_ForcePull_Master.description>
+
+
+  <!-- Force Push -->
+
+  <PJ_PForcePush.label>フォースプッシュ</PJ_PForcePush.label>
+
+
+  <!-- Force Push (Apprentice) -->
+
+  <PJ_ForcePush_Apprentice.label>フォースプッシュ</PJ_ForcePush_Apprentice.label>
+  <PJ_ForcePush_Apprentice.description>レベル1：目標を8タイル分の距離吹き飛ばします。</PJ_ForcePush_Apprentice.description>
+
+
+  <!-- Force Push (Adept) -->
+
+  <PJ_ForcePush_Adept.label>フォースプッシュ(達人)</PJ_ForcePush_Adept.label>
+  <PJ_ForcePush_Adept.description>レベル1：目標を8タイル分の距離吹き飛ばします。\nレベル2：タイルを10個分の距離吹き飛ばしてターゲットをスタン(麻痺)します。</PJ_ForcePush_Adept.description>
+
+
+  <!-- Force Push (Master) -->
+
+  <PJ_ForcePush_Master.label>フォースプッシュ(導師)</PJ_ForcePush_Master.label>
+  <PJ_ForcePush_Master.description>レベル1：目標を8タイル分の距離吹き飛ばします。\nレベル2：タイルを10個分の距離吹き飛ばしてターゲットをスタン(麻痺)します。\nレベル3：12タイル分の距離吹き飛ばし、ターゲットをスタン(麻痺)させて、壁にぶつかるとダメージを与えます。</PJ_ForcePush_Master.description>
+
+
+  <!-- Force Speed -->
+
+  <PJ_PForceSpeed.label>フォーススピード</PJ_PForceSpeed.label>
+
+
+  <!-- Force Speed (Apprentice) -->
+
+  <PJ_ForceSpeed_Apprentice.label>フォーススピード</PJ_ForceSpeed_Apprentice.label>
+  <PJ_ForceSpeed_Apprentice.description>キャスターの走る速度が短時間上昇します。</PJ_ForceSpeed_Apprentice.description>
+
+
+  <!-- Force Speed (Adept) -->
+
+  <PJ_ForceSpeed_Adept.label>フォーススピード(達人)</PJ_ForceSpeed_Adept.label>
+  <PJ_ForceSpeed_Adept.description>消費フォース量が少し減少し、キャスターの走る速度が短時間上昇します。</PJ_ForceSpeed_Adept.description>
+
+
+  <!-- Force Speed (Master) -->
+
+  <PJ_ForceSpeed_Master.label>フォーススピード(導師)</PJ_ForceSpeed_Master.label>
+  <PJ_ForceSpeed_Master.description>消費フォース量が減少し、キャスターの走る速度が短時間上昇します。</PJ_ForceSpeed_Master.description>
+
+
+</LanguageData>
