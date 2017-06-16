@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!--[Core] <Cut.label>斬る</Cut.label>-->
+  <!--[Core] <Cut.deathMessage>{0} は斬られて死んだ</Cut.deathMessage>-->
+
+  <PJ_ForceHealDamage.label>フォース回復</PJ_ForceHealDamage.label>
+  <PJ_ForceHealDamage.deathMessage>{0}はフォースによって殺された。</PJ_ForceHealDamage.deathMessage>
+
+  <PJ_FDrainDamage.label>フォース吸収</PJ_FDrainDamage.label>
+  <PJ_FDrainDamage.deathMessage>{0}はダークサイドの力に倒れた。</PJ_FDrainDamage.deathMessage>
+
+  <PJ_FLightning.label>雷撃</PJ_FLightning.label>
+  <PJ_FLightning.deathMessage>{0}はダークサイドの力に倒れた。</PJ_FLightning.deathMessage>
+
+  <PJ_FStorm.label>電撃嵐</PJ_FStorm.label>
+  <PJ_FStorm.deathMessage>{0}はダークサイドの電撃嵐に巻き込まれて死んだ。</PJ_FStorm.deathMessage>
+
+  <PJ_MindTrickDam.label>精神操作</PJ_MindTrickDam.label>
+  <PJ_MindTrickDam.deathMessage>{0}は精神的なフォースのダメージに屈しました。</PJ_MindTrickDam.deathMessage>
+
+  <PJ_RageDam.label>狂戦士化</PJ_RageDam.label>
+  <PJ_RageDam.deathMessage>{0}は精神的なフォースのダメージに屈しました。</PJ_RageDam.deathMessage>
+
+  <PJ_FChoke.label>窒息</PJ_FChoke.label>
+  <PJ_FChoke.deathMessage>{0}はダークサイドの力に倒れた。</PJ_FChoke.deathMessage>
+
+
+  <!-- Force Pull -->
+
+  <PJ_DForcePull.label>フォースプル</PJ_DForcePull.label>
+  <PJ_DForcePull.deathMessage>{0}はフォースによって殺された。</PJ_DForcePull.deathMessage>
+
+
+  <!-- Force Push -->
+
+  <PJ_DForcePush.label>フォースプッシュ</PJ_DForcePush.label>
+  <PJ_DForcePush.deathMessage>{0}はフォースによって殺された。</PJ_DForcePush.deathMessage>
+
+
+</LanguageData>
