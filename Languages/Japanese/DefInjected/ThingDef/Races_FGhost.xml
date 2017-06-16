@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ForceGhostR.label>フォースゴースト</PJ_ForceGhostR.label>
+  <PJ_ForceGhostR.description>フォースによって呼び出された過去の幽霊</PJ_ForceGhostR.description>
+  <!-- No Leather: Butcher Products -->
+  <PJ_ForceGhostR_Meat.label>エクトプラズム</PJ_ForceGhostR_Meat.label>
+  <PJ_ForceGhostR_Meat.description>エクトプラズム</PJ_ForceGhostR_Meat.description>
+  <PJ_ForceGhostR_Corpse.label>フォースゴーストの残骸</PJ_ForceGhostR_Corpse.label>
+  <PJ_ForceGhostR_Corpse.description>フォースゴーストが倒された後に残ったエクトプラズム</PJ_ForceGhostR_Corpse.description>
+
+  <PJ_MeleeWeapon_ForceGladius.label>霊的なグラディウス</PJ_MeleeWeapon_ForceGladius.label>
+  <PJ_MeleeWeapon_ForceGladius.description>古代のデザインの霊的な短い剣。刺したり斬り付けるのに適しています。</PJ_MeleeWeapon_ForceGladius.description>
+
+
+</LanguageData>
