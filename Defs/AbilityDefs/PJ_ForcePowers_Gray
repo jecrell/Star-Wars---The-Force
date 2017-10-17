@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<Defs>
+<ThingDefs>
 
   <!-- ================================================================= -->
   <!-- ================================================================= -->
   <!-- ======================== GRAY POWERS ============================ -->
   <!-- ================================================================= -->
-  <!-- ================================================================= -->
-
+  <!-- ================================================================= -->  
+  
     <!-- ===================== Force Pull =============================== -->
-
+  
   <ThingDef ParentName="BaseBullet" Name="PJ_PFlyingObject">
    <defName>PJ_PFlyingObject</defName>
    <thingClass>ProjectJedi.FlyingObject</thingClass>
@@ -25,7 +25,7 @@
 		<speed>10</speed>
    </projectile>
  </ThingDef>
-
+ 
  <ThingDef ParentName="BaseBullet" Name="PJ_PFlyingObject_Equipable">
    <defName>PJ_PFlyingObject_Equipable</defName>
    <thingClass>ProjectJedi.FlyingObject_Equipable</thingClass>
@@ -41,7 +41,7 @@
 		<speed>10</speed>
    </projectile>
  </ThingDef>
-
+  
   <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForcePull">
    <defName>PJ_PForcePull</defName>
    <thingClass>AbilityUser.Projectile_Ability</thingClass>
@@ -59,8 +59,8 @@
  </ThingDef>
 
      <!-- ===================== Force Pull (Apprentice) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForcePull_Apprentice</defName>
     <label>Force Pull</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
@@ -74,13 +74,13 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePull</projectileDef>
+        <projectileDef>PJ_PForcePull</projectileDef>	
 		<abilityDef>PJ_ForcePull_Apprentice</abilityDef>
-		<isViolent>false</isViolent>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
-        <burstShotCount>1</burstShotCount>
+        <burstShotCount>1</burstShotCount>		
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
@@ -94,17 +94,17 @@
 		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>false</canTargetPawns>
-		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetBuildings>false</canTargetBuildings>		  
 		  <canTargetItems>true</canTargetItems>
 		  <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
 		  <canTargetSelf>false</canTargetSelf>
-		</targetParams>
+		</targetParams>		
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
-
+  </ThingDef>
+  
      <!-- ===================== Force Pull (Adept) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForcePull_Adept</defName>
     <label>Force Pull (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
@@ -118,7 +118,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePull</projectileDef>
+        <projectileDef>PJ_PForcePull</projectileDef>	
 		<abilityDef>PJ_ForcePull_Adept</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -135,26 +135,26 @@
 			<damageDef>PJ_DForcePull</damageDef>
 			<chance>1.0</chance>
 		  </li>
-		</extraDamages>
+		</extraDamages>		
 	    <targetParams>
 		  <canTargetPawns>false</canTargetPawns>
-		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetBuildings>false</canTargetBuildings>		  
 		  <canTargetItems>true</canTargetItems>
 		  <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
 		  <canTargetSelf>false</canTargetSelf>
-		</targetParams>
+		</targetParams>		
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
      <!-- ===================== Force Pull (Master) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForcePull_Master</defName>
     <label>Force Pull (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
     <description>Level 1: Pulls ground objects  (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others. If unarmed, force pull now pulls people or animals towards the force wielder.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.2</forcePoolCost>
+    <forcePoolCost>0.2</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -162,9 +162,9 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePull</projectileDef>
+        <projectileDef>PJ_PForcePull</projectileDef>	
 		<abilityDef>PJ_ForcePull_Master</abilityDef>
-		<isViolent>false</isViolent>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -179,19 +179,19 @@
 			<damageDef>PJ_DForcePull</damageDef>
 			<chance>1.0</chance>
 		  </li>
-		</extraDamages>
+		</extraDamages>		
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
-		  <canTargetBuildings>false</canTargetBuildings>
+		  <canTargetBuildings>false</canTargetBuildings>		  
 		  <canTargetItems>true</canTargetItems>
 		  <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
 		  <canTargetSelf>false</canTargetSelf>
-		</targetParams>
+		</targetParams>		
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
-
+  </ThingDef>  
+  
     <!-- ===================== Force Push =============================== -->
-
+  
   <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForcePush">
    <defName>PJ_PForcePush</defName>
    <thingClass>AbilityUser.Projectile_Ability</thingClass>
@@ -210,8 +210,8 @@
  </ThingDef>
 
      <!-- ===================== Force Push (Apprentice) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForcePush_Apprentice</defName>
     <label>Force Push</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
@@ -225,9 +225,9 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePush</projectileDef>
+        <projectileDef>PJ_PForcePush</projectileDef>	
 		<abilityDef>PJ_ForcePush_Apprentice</abilityDef>
-		<isViolent>false</isViolent>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -248,13 +248,13 @@
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetItems>false</canTargetItems>
 		  <canTargetSelf>false</canTargetSelf>
-		</targetParams>
+		</targetParams>				
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
-
+  </ThingDef>  
+  
      <!-- ===================== Force Push (Adept) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForcePush_Adept</defName>
     <label>Force Push (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
@@ -268,9 +268,9 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePush</projectileDef>
+        <projectileDef>PJ_PForcePush</projectileDef>	
 		<abilityDef>PJ_ForcePush_Adept</abilityDef>
-		<isViolent>false</isViolent>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -289,26 +289,26 @@
 		    <damage>20</damage>
 			<damageDef>Stun</damageDef>
 			<chance>1.0</chance>
-		  </li>
+		  </li>		  
 		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetItems>false</canTargetItems>
 		  <canTargetSelf>false</canTargetSelf>
-		</targetParams>
+		</targetParams>						
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
-
+  </ThingDef>  
+  
      <!-- ===================== Force Push (Master) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForcePush_Master</defName>
     <label>Force Push (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
     <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\nLevel 3: Pushes 12 tiles, stuns the target, and adds impact damage against walls.</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
-    <forcePoolCost>0.15</forcePoolCost>
+    <forcePoolCost>0.15</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -316,9 +316,9 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePush</projectileDef>
+        <projectileDef>PJ_PForcePush</projectileDef>	
 		<abilityDef>PJ_ForcePush_Master</abilityDef>
-		<isViolent>false</isViolent>
+		<isViolent>false</isViolent>		
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>5.0</SecondsToRecharge>
         <range>24</range>
@@ -337,19 +337,19 @@
 		    <damage>20</damage>
 			<damageDef>Stun</damageDef>
 			<chance>1.0</chance>
-		  </li>
+		  </li>		  		  
 		</extraDamages>
 	    <targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetItems>false</canTargetItems>
 		  <canTargetSelf>false</canTargetSelf>
-		</targetParams>
+		</targetParams>						
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
-
+  </ThingDef>  
+  
     <!-- ===================== Force Speed =============================== -->
-
+  
   <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceSpeed">
    <defName>PJ_PForceSpeed</defName>
    <thingClass>AbilityUser.Projectile_Ability</thingClass>
@@ -368,8 +368,8 @@
  </ThingDef>
 
      <!-- ===================== Force Speed (Apprentice) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceSpeed_Apprentice</defName>
     <label>Force Speed</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
@@ -383,7 +383,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceSpeed</projectileDef>
+        <projectileDef>PJ_PForceSpeed</projectileDef>	
 		<abilityDef>PJ_ForceSpeed_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10.0</SecondsToRecharge>
@@ -398,19 +398,19 @@
 		  <canTargetPawns>false</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
-		</targetParams>
+		</targetParams>		
 		<hediffsToApply>
 	      <li>
 	        <hediffDef>PJ_ForceSpeedHediff_One</hediffDef>
 	        <applyChance>1.0</applyChance>
 	      </li>
-        </hediffsToApply>
+        </hediffsToApply>		
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>    
 
      <!-- ===================== Force Speed (Adept) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceSpeed_Adept</defName>
     <label>Force Speed (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
@@ -424,7 +424,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceSpeed</projectileDef>
+        <projectileDef>PJ_PForceSpeed</projectileDef>	
 		<abilityDef>PJ_ForceSpeed_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>15.0</SecondsToRecharge>
@@ -439,25 +439,25 @@
 		  <canTargetPawns>false</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
-		</targetParams>
+		</targetParams>		
 		<hediffsToApply>
 	      <li>
 	        <hediffDef>PJ_ForceSpeedHediff_Two</hediffDef>
 	        <applyChance>1.0</applyChance>
 	      </li>
-        </hediffsToApply>
+        </hediffsToApply>		
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>    
 
      <!-- ===================== Force Speed (Master) =============================== -->
-
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+ 
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceSpeed_Master</defName>
     <label>Force Speed (Master)</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
     <description>Increases the running speed of the caster for a short time.</description>
 <!--    <thingClass>ThingWithComps</thingClass>   -->
-    <forcePoolCost>0.15</forcePoolCost>
+    <forcePoolCost>0.15</forcePoolCost>	
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
         <verbClass>AbilityUser.Verb_UseAbility</verbClass>
 			<tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
@@ -465,7 +465,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceSpeed</projectileDef>
+        <projectileDef>PJ_PForceSpeed</projectileDef>	
 		<abilityDef>PJ_ForceSpeed_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>30.0</SecondsToRecharge>
@@ -480,7 +480,7 @@
 		  <canTargetPawns>false</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
 		  <canTargetSelf>true</canTargetSelf>
-		</targetParams>
+		</targetParams>		
 		<hediffsToApply>
 	      <li>
 	        <hediffDef>PJ_ForceSpeedHediff_Three</hediffDef>
@@ -488,6 +488,6 @@
 	      </li>
         </hediffsToApply>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
-
-</Defs>
+  </ThingDef>    
+  
+</ThingDefs>

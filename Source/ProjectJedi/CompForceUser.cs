@@ -114,6 +114,33 @@ namespace ProjectJedi
         }
         #endregion PowerLists
 
+        //private List<ForceAbility> tempForceAbilities = null;
+        //public List<ForceAbility> AllForceAbilities
+        //{
+        //    get
+        //    {
+        //        if (tempForceAbilities == null)
+        //        {
+        //            tempForceAbilities = new List<ForceAbility>();
+        //            foreach (PawnAbility pa in AllPowers.ToList())
+        //            {
+        //                ForceAbility fa = new ForceAbility(pa.Pawn, pa.Def);
+        //                tempForceAbilities.Add(fa);
+        //            }
+        //        }
+        //        return tempForceAbilities;
+        //    }
+        //}
+
+        //public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        //{
+        //    for (int i = 0; i < AllForceAbilities.Count; i++)
+        //    {
+        //        yield return AllForceAbilities[i].GetGizmo();
+        //    }
+
+        //}
+
         #region Levels
         public int ForceUserLevel
         {
@@ -235,6 +262,7 @@ namespace ProjectJedi
                 this.parent.Label
                 }), MessageSound.Benefit);
             }
+            //this.tempForceAbilities = null;
             UpdateAlignment();
         }
         public void ResetPowers()
@@ -257,14 +285,19 @@ namespace ProjectJedi
                 power.level = 0;
             }
 
-            List<PawnAbility> tempList = new List<PawnAbility>(this.Powers);
-            foreach (PawnAbility ability in tempList)
+            List<ForceAbility> tempList = new List<ForceAbility>();
+            foreach (PawnAbility ab in this.Powers)
             {
-                this.RemovePawnAbility(ability.powerdef);
+                tempList.Add(ab as ForceAbility);
+            }
+            foreach (ForceAbility ability in tempList)
+            {
+                this.RemovePawnAbility(ability.Def);
             }
             tempList = null;
 
             this.abilityPoints = this.forceUserLevel;
+            //this.tempForceAbilities = null;
             UpdateAbilities();
         }
 
@@ -450,7 +483,7 @@ namespace ProjectJedi
                 return false;
             }
         }
-
+        
 
         public override bool TryTransformPawn()
         {
@@ -482,132 +515,9 @@ namespace ProjectJedi
             }
         }
 
-        /// <summary>
-        /// Shows the required alignment (optional), 
-        /// alignment change (optional),
-        /// and the force pool usage
-        /// </summary>
-        /// <param name="verb"></param>
-        /// <returns></returns>
-        public override string PostAbilityVerbCompDesc(VerbProperties_Ability verbDef)
-        {
-            string result = "";
-            StringBuilder postDesc = new StringBuilder();
-            ForceAbilityDef forceDef = (ForceAbilityDef)verbDef.abilityDef;
-            if (forceDef != null)
-            {
-                string alignDesc = "";
-                string changeDesc = "";
-                string pointsDesc = "";
-                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
-                {
-                    alignDesc = "ForceAbilityDescAlign".Translate(new object[]
-                    {
-                    forceDef.requiredAlignmentType.ToString(),
-                    });
-                }
-                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
-                {
-                    changeDesc = "ForceAbilityDescChange".Translate(new object[]
-                    {
-                    forceDef.changedAlignmentType.ToString(),
-                    forceDef.changedAlignmentRate.ToString("p1")
-                    });
-                }
-                if (ForceSkillLevel("PJ_ForcePool") > 0)
-                {
-                    float poolCost = 0f;
-                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
-                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
-                    pointsDesc = "ForceAbilityDescOriginPoints".Translate(new object[]
-                    {
-                    forceDef.forcePoolCost.ToString("p1")
-                    })
 
-                    + "\n" +
 
-                    "ForceAbilityDescNewPoints".Translate(new object[]
-                    {
-                    poolCost.ToString("p1")
-                    })
-                    ;
-                }
-                else
-                {
-                    pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
-                    {
-                    forceDef.forcePoolCost.ToString("p1")
-                    });
-                }
-                if (alignDesc != "") postDesc.AppendLine(alignDesc);
-                if (changeDesc != "") postDesc.AppendLine(changeDesc);
-                if (pointsDesc != "") postDesc.AppendLine(pointsDesc);
-                result = postDesc.ToString();
-            }
-            return result;
-        }
 
-        public override bool CanOverpowerTarget(Pawn user, Thing target, AbilityUser.AbilityDef abilityDef)
-        {
-            if (target is ProjectJedi.PawnGhost)
-            {
-                Messages.Message("PJ_ForceResisted".Translate(new object[]
-                    {
-                        target.LabelShort,
-                        user.LabelShort,
-                        abilityDef.label
-                    }), MessageSound.Negative);
-                return false;
-            }
-            return base.CanOverpowerTarget(user, target, abilityDef);
-        }
-
-        /// <summary>
-        /// This section checks if the force pool allows for the casting of the spell.
-        /// </summary>
-        /// <param name="verbAbility"></param>
-        /// <param name="reason">Why did we fail?</param>
-        /// <returns></returns>
-        public override bool CanCastPowerCheck(Verb_UseAbility verbAbility, out string reason)
-        {
-            reason = "";
-            ForceAbilityDef forceDef = (ForceAbilityDef)verbAbility.UseAbilityProps.abilityDef;
-            if (forceDef != null)
-            {
-                if (forceDef.requiredAlignmentType != ForceAlignmentType.None)
-                {
-                    if (forceDef.requiredAlignmentType != this.ForceAlignmentType)
-                    {
-                        reason = "PJ_WrongAlignment";
-                        return false;
-                    }
-                }
-                if (ForcePool != null)
-                {
-                    if (forceDef.forcePoolCost > 0 &&
-                        ActualForceCost(forceDef) > ForcePool.CurLevel)
-                    {
-                        reason = "PJ_DrainedForcePool";
-                        return false;
-                    }
-                }
-                if (this.AbilityUser != null)
-                {
-                    if (this.AbilityUser.apparel != null)
-                    {
-                        if (this.AbilityUser.apparel.WornApparel != null && this.AbilityUser.apparel.WornApparelCount > 0)
-                        {
-                            if (this.AbilityUser.apparel.WornApparel.FirstOrDefault((Apparel x) => x.def == ThingDefOf.Apparel_ShieldBelt) != null)
-                            {
-                                reason = "PJ_UsingShieldBelt";
-                                return false;
-                            }
-                        }
-                    }
-                }
-            }
-            return true;
-        }
 
         public override List<HediffDef> IgnoredHediffs()
         {
@@ -616,27 +526,7 @@ namespace ProjectJedi
             return newDefs;
         }
 
-        public override void PostAbilityAttempt(Pawn caster, AbilityDef ability)
-        {
-            if (ability is ForceAbilityDef forceDef)
-            {
-                if (forceDef.changedAlignmentType != ForceAlignmentType.None)
-                {
-                    AlignmentValue += forceDef.changedAlignmentRate;
-                    UpdateAlignment();
-                }
 
-                if (ForcePool != null)
-                {
-                    ForcePool.UseForcePower(ActualForceCost(forceDef));
-                }
-            }
-        }
-
-        float ActualForceCost(ForceAbilityDef forceDef)
-        {
-            return forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceSkillLevel("PJ_ForcePool")));
-        }
 
 #endregion Methods
 
@@ -660,6 +550,15 @@ namespace ProjectJedi
                                 if (forceUserXP > ForceUserXPTillNextLevel) LevelUp();
                                 //forceUserXP++;
                             }
+                            
+                            ///Ticks for each ability
+                            //if (!this.AllForceAbilities.NullOrEmpty())
+                            //{
+                            //    foreach (ForceAbility power in this.AllForceAbilities)
+                            //    {
+                            //        power.Tick();
+                            //    }
+                            //}
                         }
                         //}
                     }
@@ -979,9 +878,9 @@ namespace ProjectJedi
                     {
                         if (power.abilityDef != null)
                         {
-                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.Def == power.abilityDef) is ForceAbility listPower)
                             {
-                                power.ticksUntilNextCast = listPower.TicksUntilCasting;
+                                power.ticksUntilNextCast = listPower.CooldownTicksLeft;
                             }
                         }
                     }
@@ -993,9 +892,9 @@ namespace ProjectJedi
                     {
                         if (power.abilityDef != null)
                         {
-                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.Def == power.abilityDef) is ForceAbility listPower)
                             {
-                                power.ticksUntilNextCast = listPower.TicksUntilCasting;
+                                power.ticksUntilNextCast = listPower.CooldownTicksLeft;
                             }
                         }
                     }
@@ -1007,67 +906,74 @@ namespace ProjectJedi
                     {
                         if (power.abilityDef != null)
                         {
-                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.powerdef == power.abilityDef) is PawnAbility listPower)
+                            if (!Powers.NullOrEmpty() && Powers.FirstOrDefault(x => x.Def == power.abilityDef) is ForceAbility listPower)
                             {
-                                power.ticksUntilNextCast = listPower.TicksUntilCasting;
+                                power.ticksUntilNextCast = listPower.CooldownTicksLeft;
                             }
                         }
                     }
                 }
-            }
+            //}
 
-            if (Scribe.mode == LoadSaveMode.PostLoadInit)
-            {
-                var abilities = new List<PawnAbility>(Powers);
-                if (!abilities.NullOrEmpty())
-                {
-                    foreach (PawnAbility pab in abilities)
-                    {
-                        this.RemovePawnAbility(pab.powerdef);
-                    }
-                }
+            //if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            //{
+            //    var abilities = new List<ForceAbility>();
+            //    if (!this.Powers.NullOrEmpty())
+            //    {
+            //        foreach (PawnAbility ab in this.Powers)
+            //        {
+            //            abilities.Add(ab as ForceAbility);
+            //        }
+            //        if (!abilities.NullOrEmpty())
+            //        {
+            //            foreach (ForceAbility pab in abilities)
+            //            {
+            //                this.RemovePawnAbility(pab.Def);
+            //            }
+            //        }
+            //    }
 
-                if (!ForcePowersDark.NullOrEmpty())
-                {
-                    foreach (ForcePower power in ForcePowersDark)
-                    {
-                        if (power.abilityDef != null)
-                        {
-                            if (power.level > 0)
-                            {
-                                this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-                            }
-                        }
-                    }
-                }
+            //    if (!ForcePowersDark.NullOrEmpty())
+            //    {
+            //        foreach (ForcePower power in ForcePowersDark)
+            //        {
+            //            if (power.abilityDef != null)
+            //            {
+            //                if (power.level > 0)
+            //                {
+            //                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+            //                }
+            //            }
+            //        }
+            //    }
 
-                if (!ForcePowersGray.NullOrEmpty())
-                {
-                    foreach (ForcePower power in ForcePowersGray)
-                    {
-                        if (power.abilityDef != null)
-                        {
-                            if (power.level > 0)
-                            {
-                                this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-                            }
-                        }
-                    }
-                }
+            //    if (!ForcePowersGray.NullOrEmpty())
+            //    {
+            //        foreach (ForcePower power in ForcePowersGray)
+            //        {
+            //            if (power.abilityDef != null)
+            //            {
+            //                if (power.level > 0)
+            //                {
+            //                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+            //                }
+            //            }
+            //        }
+            //    }
 
-                if (!ForcePowersLight.NullOrEmpty())
-                {
-                    foreach (ForcePower power in ForcePowersLight)
-                    {
-                        if (power.abilityDef != null)
-                        {
-                            if (power.level > 0)
-                            {
-                                this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-                            }
-                        }
-                    }
-                }
+            //    if (!ForcePowersLight.NullOrEmpty())
+            //    {
+            //        foreach (ForcePower power in ForcePowersLight)
+            //        {
+            //            if (power.abilityDef != null)
+            //            {
+            //                if (power.level > 0)
+            //                {
+            //                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+            //                }
+            //            }
+            //        }
+            //    }
 
             }
 

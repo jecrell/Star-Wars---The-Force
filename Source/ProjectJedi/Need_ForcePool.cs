@@ -107,10 +107,10 @@ namespace ProjectJedi
 
         public void UseForcePower(float amount)
         {
-            Log.Message(this.curLevelInt.ToString());
-            Log.Message(amount.ToString());
+            //Log.Message(this.curLevelInt.ToString());
+            //Log.Message(amount.ToString());
             this.curLevelInt = Mathf.Clamp(this.curLevelInt - amount, 0f, 1.0f);
-            Log.Message(this.curLevelInt.ToString());
+            //Log.Message(this.curLevelInt.ToString());
 
         }
 
