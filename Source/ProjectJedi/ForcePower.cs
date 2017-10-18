@@ -93,6 +93,8 @@ namespace ProjectJedi
             abilityDefs = newAbilityDefs;
         }
 
+
+
         public void ExposeData()
         {
             Scribe_Values.Look<int>(ref level, "level", 0);

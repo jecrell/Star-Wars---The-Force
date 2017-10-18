@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
-<Defs>
+<ThingDefs>
 
   <!-- ================================================================= -->
   <!-- ================================================================= -->
@@ -35,7 +35,7 @@
 
   <!-- ===================== Force Rage (Apprentice) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceRage_Apprentice</defName>
     <label>Force Rage</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
@@ -69,11 +69,11 @@
 	      </li>
         </mentalStatesToApply>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
   <!-- ===================== Force Rage (Adept) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceRage_Adept</defName>
     <label>Force Rage (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
@@ -108,11 +108,11 @@
 	      </li>
         </mentalStatesToApply>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
   <!-- ===================== Force Rage (Master) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceRage_Master</defName>
     <label>Force Rage (Master)</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
@@ -147,7 +147,7 @@
 	      </li>
         </mentalStatesToApply>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
   <!-- ===================== Force Choke =============================== -->
@@ -168,7 +168,7 @@
   		<damageAmountBase>5</damageAmountBase>
   		<speed>105</speed>
      </projectile>
- </ThingDef>
+   </ThingDef>
 
        <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
          <thingClass>AbilityUser.Projectile_Ability</thingClass>
@@ -185,7 +185,7 @@
       		<damageAmountBase>10</damageAmountBase>
       		<speed>105</speed>
          </projectile>
-     </ThingDef>
+       </ThingDef>
 
            <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
              <thingClass>AbilityUser.Projectile_Ability</thingClass>
@@ -202,13 +202,13 @@
           		<damageAmountBase>15</damageAmountBase>
           		<speed>105</speed>
              </projectile>
-         </ThingDef>
+           </ThingDef>
 
 
   <!-- ===================== Force Choke (Apprentice) =============================== -->
 
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceChoke_Apprentice</defName>
     <label>Force Choke</label>
     <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
@@ -240,13 +240,13 @@
 		  </li>
 		</extraDamages>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
   <!-- ===================== Force Choke (Adept) =============================== -->
 
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceChoke_Adept</defName>
     <label>Force Choke (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
@@ -282,12 +282,12 @@
 		  </li>
 		</extraDamages>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
   <!-- ===================== Force Choke (Master) =============================== -->
 
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceChoke_Master</defName>
     <label>Force Choke (Master)</label>
     <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
@@ -323,7 +323,7 @@
 		  </li>
 		</extraDamages>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
   <!-- ===================== Force Drain =============================== -->
@@ -354,7 +354,7 @@
 
    <!-- ===================== Force Drain (Apprentice) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceDrain_Apprentice</defName>
     <label>Force Drain</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
@@ -381,11 +381,11 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
    <!-- ===================== Force Drain (Adept) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceDrain_Adept</defName>
     <label>Force Drain (Adept)</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
@@ -414,12 +414,12 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
    <!-- ===================== Force Drain (Master) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceDrain_Master</defName>
     <label>Force Drain (Master)</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
@@ -448,7 +448,7 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
   <!-- ===================== Force Lightning =============================== -->
@@ -478,7 +478,7 @@
 
    <!-- ===================== Force Lightning (Apprentice) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceLightning_Apprentice</defName>
     <label>Force Lightning</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
@@ -506,10 +506,10 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
    <!-- ===================== Force Lightning (Adept) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceLightning_Adept</defName>
     <label>Force Lightning (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
@@ -539,11 +539,11 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
    <!-- ===================== Force Lightning (Master) =============================== -->
 
-   <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+   <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceLightning_Master</defName>
     <label>Force Lightning (Master)</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
@@ -573,7 +573,7 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
     <!-- ===================== Force Storm ============================= -->
 
@@ -599,7 +599,7 @@
 
     <!-- ===================== Force Storm (Apprentice) ============================= -->
 
-    <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceStorm_Apprentice</defName>
     <label>Force Storm</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
@@ -644,11 +644,11 @@
 		 <canTargetLocations>true</canTargetLocations>
         </targetParams>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
     <!-- ===================== Force Storm (Adept) ============================= -->
 
-    <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceStorm_Adept</defName>
     <label>Force Storm (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
@@ -693,12 +693,12 @@
 		 <canTargetLocations>true</canTargetLocations>
 		</targetParams>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
     <!-- ===================== Force Storm (Master) ============================= -->
 
-    <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <ThingDef Class="ProjectJedi.ForceAbilityDef" ParentName="BaseAbility">
     <defName>PJ_ForceStorm_Master</defName>
     <label>Force Storm (Master)</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
@@ -743,7 +743,7 @@
 		 <canTargetLocations>true</canTargetLocations>
 		</targetParams>
     </MainVerb>
-</ProjectJedi.ForceAbilityDef>
+  </ThingDef>
 
 
-</Defs>
+</ThingDefs>
