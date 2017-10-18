@@ -5,6 +5,7 @@ using System.Text;
 using RimWorld;
 using Verse;
 using AbilityUser;
+using UnityEngine;
 
 namespace ProjectJedi
 {
@@ -31,6 +32,7 @@ namespace ProjectJedi
         
         public override void PostAbilityAttempt()
         {
+            //Log.Message("ForceAbility :: PostAbilityAttempt Called");
             base.PostAbilityAttempt();
             if (ForceDef.changedAlignmentType != ForceAlignmentType.None)
             {
@@ -69,7 +71,7 @@ namespace ProjectJedi
                     changeDesc = "ForceAbilityDescChange".Translate(new object[]
                     {
                     forceDef.changedAlignmentType.ToString(),
-                    forceDef.changedAlignmentRate.ToString("p1")
+                    Mathf.Abs(forceDef.changedAlignmentRate).ToString("0.##")
                     });
                 }
                 if (ForceUser.ForceSkillLevel("PJ_ForcePool") > 0)
@@ -79,14 +81,14 @@ namespace ProjectJedi
                     poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceUser.ForceSkillLevel("PJ_ForcePool")));
                     pointsDesc = "ForceAbilityDescOriginPoints".Translate(new object[]
                     {
-                    forceDef.forcePoolCost.ToString("p1")
+                    Mathf.Abs(forceDef.forcePoolCost).ToString("0.##")
                     })
 
                     + "\n" +
 
                     "ForceAbilityDescNewPoints".Translate(new object[]
                     {
-                    poolCost.ToString("p1")
+                    poolCost.ToString("0.##")
                     })
                     ;
                 }
@@ -94,7 +96,7 @@ namespace ProjectJedi
                 {
                     pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
                     {
-                    forceDef.forcePoolCost.ToString("p1")
+                    Mathf.Abs(forceDef.forcePoolCost).ToString("0.##")
                     });
                 }
                 if (alignDesc != "") postDesc.AppendLine(alignDesc);
@@ -116,7 +118,7 @@ namespace ProjectJedi
                     {
                         if (ForceDef.requiredAlignmentType != ForceUser.ForceAlignmentType)
                         {
-                            reason = "PJ_WrongAlignment";
+                            reason = "PJ_WrongAlignment".Translate(this.Pawn.LabelShort);
                             return false;
                         }
                     }
@@ -125,7 +127,7 @@ namespace ProjectJedi
                         if (ForceDef.forcePoolCost > 0 &&
                             ActualForceCost > ForceUser.ForcePool.CurLevel)
                         {
-                            reason = "PJ_DrainedForcePool";
+                            reason = "PJ_DrainedForcePool".Translate(this.Pawn.LabelShort);
                             return false;
                         }
                     }
@@ -137,7 +139,7 @@ namespace ProjectJedi
                             {
                                 if (this.AbilityUser.AbilityUser.apparel.WornApparel.FirstOrDefault((Apparel x) => x.def == ThingDefOf.Apparel_ShieldBelt) != null)
                                 {
-                                    reason = "PJ_UsingShieldBelt";
+                                    reason = "PJ_UsingShieldBelt".Translate(this.Pawn.LabelShort);
                                     return false;
                                 }
                             }
