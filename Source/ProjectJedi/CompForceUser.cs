@@ -132,14 +132,14 @@ namespace ProjectJedi
         //    }
         //}
 
-        //public override IEnumerable<Gizmo> CompGetGizmosExtra()
-        //{
-        //    for (int i = 0; i < AllForceAbilities.Count; i++)
-        //    {
-        //        yield return AllForceAbilities[i].GetGizmo();
-        //    }
+        public override IEnumerable<Gizmo> CompGetGizmosExtra()
+        {
+            for (int i = 0; i < this.AllPowers.Count; i++)
+            {
+                if (this.AllPowers[i] is ForceAbility p) yield return p.GetGizmo();
+            }
 
-        //}
+        }
 
         #region Levels
         public int ForceUserLevel
