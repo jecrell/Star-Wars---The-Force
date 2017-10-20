@@ -913,70 +913,70 @@ namespace ProjectJedi
                         }
                     }
                 }
-            //}
+                //}
 
-            //if (Scribe.mode == LoadSaveMode.PostLoadInit)
-            //{
-            //    var abilities = new List<ForceAbility>();
-            //    if (!this.Powers.NullOrEmpty())
-            //    {
-            //        foreach (PawnAbility ab in this.Powers)
-            //        {
-            //            abilities.Add(ab as ForceAbility);
-            //        }
-            //        if (!abilities.NullOrEmpty())
-            //        {
-            //            foreach (ForceAbility pab in abilities)
-            //            {
-            //                this.RemovePawnAbility(pab.Def);
-            //            }
-            //        }
-            //    }
+                if (Scribe.mode == LoadSaveMode.PostLoadInit)
+                {
+                    var abilities = new List<ForceAbility>();
+                    if (!this.Powers.NullOrEmpty())
+                    {
+                        foreach (PawnAbility ab in this.Powers)
+                        {
+                            abilities.Add(ab as ForceAbility);
+                        }
+                        if (!abilities.NullOrEmpty())
+                        {
+                            foreach (ForceAbility pab in abilities)
+                            {
+                                this.RemovePawnAbility(pab.Def);
+                            }
+                        }
+                    }
 
-            //    if (!ForcePowersDark.NullOrEmpty())
-            //    {
-            //        foreach (ForcePower power in ForcePowersDark)
-            //        {
-            //            if (power.abilityDef != null)
-            //            {
-            //                if (power.level > 0)
-            //                {
-            //                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-            //                }
-            //            }
-            //        }
-            //    }
+                    if (!ForcePowersDark.NullOrEmpty())
+                    {
+                        foreach (ForcePower power in ForcePowersDark)
+                        {
+                            if (power.abilityDef != null)
+                            {
+                                if (power.level > 0)
+                                {
+                                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+                                }
+                            }
+                        }
+                    }
 
-            //    if (!ForcePowersGray.NullOrEmpty())
-            //    {
-            //        foreach (ForcePower power in ForcePowersGray)
-            //        {
-            //            if (power.abilityDef != null)
-            //            {
-            //                if (power.level > 0)
-            //                {
-            //                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-            //                }
-            //            }
-            //        }
-            //    }
+                    if (!ForcePowersGray.NullOrEmpty())
+                    {
+                        foreach (ForcePower power in ForcePowersGray)
+                        {
+                            if (power.abilityDef != null)
+                            {
+                                if (power.level > 0)
+                                {
+                                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+                                }
+                            }
+                        }
+                    }
 
-            //    if (!ForcePowersLight.NullOrEmpty())
-            //    {
-            //        foreach (ForcePower power in ForcePowersLight)
-            //        {
-            //            if (power.abilityDef != null)
-            //            {
-            //                if (power.level > 0)
-            //                {
-            //                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-            //                }
-            //            }
-            //        }
-            //    }
+                    if (!ForcePowersLight.NullOrEmpty())
+                    {
+                        foreach (ForcePower power in ForcePowersLight)
+                        {
+                            if (power.abilityDef != null)
+                            {
+                                if (power.level > 0)
+                                {
+                                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+                                }
+                            }
+                        }
+                    }
 
+                }
             }
-
             //Log.Message("PostExposeData Called: ForceUser");
         }
         #endregion ExposeData
