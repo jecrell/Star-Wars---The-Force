@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Rage -->
+
+  <PForceRage.label>原力狂暴\n </PForceRage.label>
+
+  <!-- Force Choke -->
+
+  <PForceChoke.label>原力锁喉\n </PForceChoke.label>
+  <PForceChokeTwo.label>原力锁喉\n </PForceChokeTwo.label>
+  <PForceChokeThree.label>原力锁喉\n </PForceChokeThree.label>
+
+  <!-- Force Drain -->
+
+  <PJ_PForceDrain.label>原力抽取\n </PJ_PForceDrain.label>
+
+  <!-- Force Lightning -->
+
+  <PForceLightningProj.label>原力闪电\n </PForceLightningProj.label>
+
+  <!-- Force Storm -->
+
+  <PJ_PForceStormProj.label>原力风暴\n </PJ_PForceStormProj.label>
+
+</LanguageData>

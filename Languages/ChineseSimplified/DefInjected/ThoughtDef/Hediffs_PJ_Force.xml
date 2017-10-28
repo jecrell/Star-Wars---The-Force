@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_MindtrickThought.stages.0.label>原力控心</PJ_MindtrickThought.stages.0.label>
+  <PJ_MindtrickThought.stages.0.description>此原力技能会对意志薄弱者造成强烈影响。</PJ_MindtrickThought.stages.0.description>
+
+  <PJ_RageThought.stages.0.label>原力狂暴</PJ_RageThought.stages.0.label>
+  <PJ_RageThought.stages.0.description>此原力技能会对意志薄弱者造成强烈影响，驱使目标进入一种敌我不分的暴怒状态。</PJ_RageThought.stages.0.description>
+
+
+</LanguageData>

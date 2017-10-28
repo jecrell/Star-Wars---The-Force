@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ForceGhostR.label>原力虚灵</PJ_ForceGhostR.label>
+  <PJ_ForceGhostR.description>一个原力虚灵</PJ_ForceGhostR.description>
+  <!-- No Leather: Butcher Products -->
+  <PJ_ForceGhostR_Meat.label>虚灵肉</PJ_ForceGhostR_Meat.label>
+  <PJ_ForceGhostR_Meat.description>虚灵肉</PJ_ForceGhostR_Meat.description>
+  <PJ_ForceGhostR_Corpse.label>原力虚灵尸体</PJ_ForceGhostR_Corpse.label>
+  <PJ_ForceGhostR_Corpse.description>原力虚灵尸体</PJ_ForceGhostR_Corpse.description>
+
+  <PJ_MeleeWeapon_ForceGladius.label>[SW]虚灵短剑</PJ_MeleeWeapon_ForceGladius.label>
+  <PJ_MeleeWeapon_ForceGladius.description>一把复古的轻巧短剑。刺和砍都十分好用。</PJ_MeleeWeapon_ForceGladius.description>
+
+
+</LanguageData>

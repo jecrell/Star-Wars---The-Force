@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Healing Self (Apprentice) -->
+  
+  <PJ_ForceHealingSelf_Apprentice.label>原力治疗\n </PJ_ForceHealingSelf_Apprentice.label>
+  <PJ_ForceHealingSelf_Apprentice.description>驱使原力给自己治病疗伤。</PJ_ForceHealingSelf_Apprentice.description>
+  
+  <!-- Force Healing Self (Adept) -->
+  
+  <PJ_ForceHealingSelf_Adept.label>原力治疗\n（专家）</PJ_ForceHealingSelf_Adept.label>
+  <PJ_ForceHealingSelf_Adept.description>驱使原力给自己治病疗伤。</PJ_ForceHealingSelf_Adept.description>
+  
+  <!-- Force Healing Self (Master) -->
+  
+  <PJ_ForceHealingSelf_Master.label>原力治疗\n（大师）</PJ_ForceHealingSelf_Master.label>
+  <PJ_ForceHealingSelf_Master.description>驱使原力给自己治病疗伤。</PJ_ForceHealingSelf_Master.description>
+  
+  <!-- Force Heal Target (Apprentice) -->
+  
+  <PJ_ForceHealingOther_Apprentice.label>原力扶伤\n </PJ_ForceHealingOther_Apprentice.label>
+  <PJ_ForceHealingOther_Apprentice.description>驱使原力为目标治病疗伤。</PJ_ForceHealingOther_Apprentice.description>
+  
+  <!-- Force Heal Target (Adept) -->
+  
+  <PJ_ForceHealingOther_Adept.label>原力扶伤\n（专家）</PJ_ForceHealingOther_Adept.label>
+  <PJ_ForceHealingOther_Adept.description>驱使原力为目标治病疗伤。</PJ_ForceHealingOther_Adept.description>
+  
+  <!-- Force Heal Target (Master) -->
+  
+  <PJ_ForceHealingOther_Master.label>原力扶伤\n（大师）</PJ_ForceHealingOther_Master.label>
+  <PJ_ForceHealingOther_Master.description>驱使原力为目标治病疗伤。</PJ_ForceHealingOther_Master.description>
+  
+  <!-- Force Defense (Apprentice) -->
+  
+  <PJ_ForceDefense_Apprentice.label>原力护身\n </PJ_ForceDefense_Apprentice.label>
+  <PJ_ForceDefense_Apprentice.description>驱使原力在短时间内保护自己不受伤害。</PJ_ForceDefense_Apprentice.description>
+  
+  <!-- Force Defense (Adept) -->
+  
+  <PJ_ForceDefense_Adept.label>原力护身\n（专家）</PJ_ForceDefense_Adept.label>
+  <PJ_ForceDefense_Adept.description>驱使原力在短时间内保护自己不受伤害。</PJ_ForceDefense_Adept.description>
+  
+  <!-- Force Defense (Master) -->
+  
+  <PJ_ForceDefense_Master.label>原力护身\n（大师）</PJ_ForceDefense_Master.label>
+  <PJ_ForceDefense_Master.description>驱使原力在短时间内保护自己不受伤害。</PJ_ForceDefense_Master.description>
+  
+  <!-- Mind Trick (Apprentice) -->
+  
+  <PJ_MindTrick_Apprentice.label>原力控心\n </PJ_MindTrick_Apprentice.label>
+  <PJ_MindTrick_Apprentice.description>驱使原力支配意志薄弱的目标，使他们迷失自我。</PJ_MindTrick_Apprentice.description>
+  
+  <!-- Mind Trick (Adept) -->
+  
+  <PJ_MindTrick_Adept.label>原力控心\n（专家）</PJ_MindTrick_Adept.label>
+  <PJ_MindTrick_Adept.description>驱使原力支配意志薄弱的目标，使他们迷失自我。</PJ_MindTrick_Adept.description>
+  
+  <!-- Mind Trick (Master) -->
+  
+  <PJ_MindTrick_Master.label>原力控心\n（大师）</PJ_MindTrick_Master.label>
+  <PJ_MindTrick_Master.description>驱使原力支配意志薄弱的目标，使他们迷失自我。</PJ_MindTrick_Master.description>
+  
+  <!-- Force Ghost (Apprentice) -->
+  
+  <PJ_ForceGhost_Apprentice.label>原力虚灵\n </PJ_ForceGhost_Apprentice.label>
+  <PJ_ForceGhost_Apprentice.description>驱使原力短时间内召唤古老的虚灵支援你。</PJ_ForceGhost_Apprentice.description>
+  
+  <!-- Force Ghost (Adept) -->
+  
+  <PJ_ForceGhost_Adept.label>原力虚灵\n（专家）</PJ_ForceGhost_Adept.label>
+  <PJ_ForceGhost_Adept.description>驱使原力短时间内召唤古老的虚灵支援你。</PJ_ForceGhost_Adept.description>
+  
+  <!-- Force Ghost (Master) -->
+  
+  <PJ_ForceGhost_Master.label>原力虚灵\n（大师）</PJ_ForceGhost_Master.label>
+  <PJ_ForceGhost_Master.description>驱使原力短时间内召唤古老的虚灵支援你。</PJ_ForceGhost_Master.description>
+
+
+</LanguageData>

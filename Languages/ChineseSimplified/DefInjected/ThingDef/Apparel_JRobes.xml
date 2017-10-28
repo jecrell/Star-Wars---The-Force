@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_Jedi_Robe.label>[SW]绝地罩袍</PJ_Jedi_Robe.label>
+  <PJ_Jedi_Robe.description>一件绝地武士穿的长袍</PJ_Jedi_Robe.description>
+
+  <PJ_Sith_Robe.label>[SW]西斯罩袍</PJ_Sith_Robe.label>
+  <PJ_Sith_Robe.description>西斯人所设计的添加了黑暗元素的绝地罩袍</PJ_Sith_Robe.description>
+
+  <PJ_InnerRobes.label>[SW]束腰短袍</PJ_InnerRobes.label>
+  <PJ_InnerRobes.description>绝地武士贴身方便的传统长袍。</PJ_InnerRobes.description>
+
+
+</LanguageData>

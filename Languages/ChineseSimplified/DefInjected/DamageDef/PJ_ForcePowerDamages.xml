@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!--[Core] <Cut.label>割伤</Cut.label>-->
+  <!--[Core] <Cut.deathMessage>{0}死于割伤。</Cut.deathMessage>-->
+
+  <PJ_ForceHealDamage.label>原力治疗</PJ_ForceHealDamage.label>
+  <PJ_ForceHealDamage.deathMessage>{0}被击毙了。</PJ_ForceHealDamage.deathMessage>
+
+  <PJ_FDrainDamage.label>原力抽取</PJ_FDrainDamage.label>
+  <PJ_FDrainDamage.deathMessage>{0}臣服于黑暗面的力量。</PJ_FDrainDamage.deathMessage>
+
+  <PJ_FLightning.label>原力闪电</PJ_FLightning.label>
+  <PJ_FLightning.deathMessage>{0}{0}臣服于黑暗面的力量。</PJ_FLightning.deathMessage>
+
+  <PJ_FStorm.label>原力风暴</PJ_FStorm.label>
+  <PJ_FStorm.deathMessage>{0}被卷入了原力风暴中。</PJ_FStorm.deathMessage>
+
+  <PJ_MindTrickDam.label>原力控心</PJ_MindTrickDam.label>
+  <PJ_MindTrickDam.deathMessage>{0}屈服于精神原力的操控。</PJ_MindTrickDam.deathMessage>
+
+  <PJ_RageDam.label>原力狂暴</PJ_RageDam.label>
+  <PJ_RageDam.deathMessage>{0}屈服于精神原力的操控。</PJ_RageDam.deathMessage>
+
+  <PJ_FChoke.label>原力锁喉</PJ_FChoke.label>
+  <PJ_FChoke.deathMessage>{0}臣服于黑暗面的力量。</PJ_FChoke.deathMessage>
+
+
+  <!-- Force Pull -->
+
+  <PJ_DForcePull.label>原力抓取</PJ_DForcePull.label>
+  <PJ_DForcePull.deathMessage>{0}被击毙了。</PJ_DForcePull.deathMessage>
+
+
+  <!-- Force Push -->
+
+  <PJ_DForcePush.label>原力击退</PJ_DForcePush.label>
+  <PJ_DForcePush.deathMessage>{0}被击毙了。</PJ_DForcePush.deathMessage>
+
+
+</LanguageData>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Pull -->
+
+  <PJ_PFlyingObject.label>飞行物</PJ_PFlyingObject.label>
+  <PJ_PFlyingObject_Equipable.label>飞行物</PJ_PFlyingObject_Equipable.label>
+  <PJ_PForcePull.label>原力抓取\n </PJ_PForcePull.label>
+
+  <!-- Force Push -->
+
+  <PJ_PForcePush.label>原力击退\n </PJ_PForcePush.label>
+
+  <!-- Force Speed -->
+
+  <PJ_PForceSpeed.label>原力加速\n </PJ_PForceSpeed.label>
+
+</LanguageData>

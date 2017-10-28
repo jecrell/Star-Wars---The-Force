@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ForceSensitive.degreeDatas.0.label>原力敏感者</PJ_ForceSensitive.degreeDatas.0.label>
+  <PJ_ForceSensitive.degreeDatas.0.description>NAME拥有感知身边原力的天赋，这样的人可不多哦！</PJ_ForceSensitive.degreeDatas.0.description>
+  <PJ_ForceSensitive.degreeDatas.1.label>原力修行者</PJ_ForceSensitive.degreeDatas.1.label>
+  <PJ_ForceSensitive.degreeDatas.1.description>NAME开始掌握了原力，但还需要更进一步的训练和指导。</PJ_ForceSensitive.degreeDatas.1.description>
+
+  <PJ_JediTrait.degreeDatas.0.label>绝地学徒</PJ_JediTrait.degreeDatas.0.label>
+  <PJ_JediTrait.degreeDatas.0.description>NAME开始了努力成为一个绝地武士的阶段。</PJ_JediTrait.degreeDatas.0.description>
+  <PJ_JediTrait.degreeDatas.1.label>绝地武士</PJ_JediTrait.degreeDatas.1.label>
+  <PJ_JediTrait.degreeDatas.1.description>NAME终于获得了绝地教团的绝地武士称号。</PJ_JediTrait.degreeDatas.1.description>
+  <PJ_JediTrait.degreeDatas.2.label>绝地大师</PJ_JediTrait.degreeDatas.2.label>
+  <PJ_JediTrait.degreeDatas.2.description>NAME是绝地教团中备受尊敬的人物，一位真正的大师。</PJ_JediTrait.degreeDatas.2.description>
+  <PJ_JediTrait.degreeDatas.3.label>绝地执政官</PJ_JediTrait.degreeDatas.3.label>
+  <PJ_JediTrait.degreeDatas.3.description>NAME是绝地武士中最杰出的人物，最适合进入绝地委员会管理教团。</PJ_JediTrait.degreeDatas.3.description>
+
+  <PJ_SithTrait.degreeDatas.0.label>西斯门徒</PJ_SithTrait.degreeDatas.0.label>
+  <PJ_SithTrait.degreeDatas.0.description>NAME开始了接触黑暗原力的训练。</PJ_SithTrait.degreeDatas.0.description>
+  <PJ_SithTrait.degreeDatas.1.label>西斯裁判官</PJ_SithTrait.degreeDatas.1.label>
+  <PJ_SithTrait.degreeDatas.1.description>NAME沉迷于黑暗面，他的狂热所过之处只剩下恐怖和焦土。</PJ_SithTrait.degreeDatas.1.description>
+  <PJ_SithTrait.degreeDatas.2.label>西斯黑暗尊主</PJ_SithTrait.degreeDatas.2.label>
+  <PJ_SithTrait.degreeDatas.2.description>NAME是银河系最令人恐惧的存在，谓之西斯黑暗尊主。</PJ_SithTrait.degreeDatas.2.description>
+  <PJ_SithTrait.degreeDatas.3.label>西斯神皇</PJ_SithTrait.degreeDatas.3.label>
+  <PJ_SithTrait.degreeDatas.3.description>NAME几乎完全掌握了黑暗原力的规则，能够驱使近乎无限的能量。</PJ_SithTrait.degreeDatas.3.description>
+
+  <PJ_GrayTrait.degreeDatas.0.label>灰衣绝地学徒</PJ_GrayTrait.degreeDatas.0.label>
+  <PJ_GrayTrait.degreeDatas.0.description>NAME是原力平衡之道的探索者。</PJ_GrayTrait.degreeDatas.0.description>
+  <PJ_GrayTrait.degreeDatas.1.label>灰衣绝地武士</PJ_GrayTrait.degreeDatas.1.label>
+  <PJ_GrayTrait.degreeDatas.1.description>NAME深谙如何保持原力的平衡。</PJ_GrayTrait.degreeDatas.1.description>
+  <PJ_GrayTrait.degreeDatas.2.label>灰衣绝地大师</PJ_GrayTrait.degreeDatas.2.label>
+  <PJ_GrayTrait.degreeDatas.2.description>NAME是一位绝地大师，致力于探索生命原力。</PJ_GrayTrait.degreeDatas.2.description>
+  <PJ_GrayTrait.degreeDatas.3.label>灰衣绝地圣者</PJ_GrayTrait.degreeDatas.3.label>
+  <PJ_GrayTrait.degreeDatas.3.description>NAME掌握了和谐的生命原力，HECAP原力是生命意志的具现。</PJ_GrayTrait.degreeDatas.3.description>
+
+
+</LanguageData>

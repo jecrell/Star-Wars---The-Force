@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ChokeCrush.label>锁喉伤</PJ_ChokeCrush.label>
+  <PJ_ChokeCrush.comps.0.labelTendedWell>已包扎</PJ_ChokeCrush.comps.0.labelTendedWell>
+  <PJ_ChokeCrush.comps.0.labelTendedWellInner>已缝合</PJ_ChokeCrush.comps.0.labelTendedWellInner>
+  <PJ_ChokeCrush.comps.0.labelSolidTendedWell>已固定</PJ_ChokeCrush.comps.0.labelSolidTendedWell>
+  <PJ_ChokeCrush.comps.2.oldLabel>受重创</PJ_ChokeCrush.comps.2.oldLabel>
+  <PJ_ChokeCrush.injuryProps.destroyedLabel>被粉碎</PJ_ChokeCrush.injuryProps.destroyedLabel>
+
+
+</LanguageData>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ForceSpeedHediff_One.label>原力加速</PJ_ForceSpeedHediff_One.label>
+  <PJ_ForceSpeedHediff_Two.label>原力加速（专家）</PJ_ForceSpeedHediff_Two.label>
+  <PJ_ForceSpeedHediff_Three.label>原力加速（大师）</PJ_ForceSpeedHediff_Three.label>
+  <PJ_ForceDefenseHediff.label>原力护身</PJ_ForceDefenseHediff.label>
+  <PJ_MindTrick.label>原力控心</PJ_MindTrick.label>
+  <PJ_Rage.label>原力狂暴</PJ_Rage.label>
+
+
+</LanguageData>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_JediHood.label>[SW]绝地兜帽</PJ_JediHood.label>
+  <PJ_JediHood.description>绝地武士简陋的传统兜帽。</PJ_JediHood.description>
+
+  <PJ_SithHood.label>[SW]西斯兜帽</PJ_SithHood.label>
+  <PJ_SithHood.description>西斯武士令人恐惧的传统兜帽。</PJ_SithHood.description>
+
+  <PJ_CustomHood.label>[SW]定制兜帽</PJ_CustomHood.label>
+  <PJ_CustomHood.description>自定义材料的绝地和西斯武士风格的兜帽。</PJ_CustomHood.description>
+
+
+</LanguageData>

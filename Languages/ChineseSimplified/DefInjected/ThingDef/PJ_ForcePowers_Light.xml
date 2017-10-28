@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Healing Self -->
+
+  <PJ_PForceHeal.label>原力治疗\n </PJ_PForceHeal.label>
+
+  <!-- Force Defense -->
+
+  <PJ_PForceDefense.label>原力护身\n </PJ_PForceDefense.label>
+
+  <!-- Mind Trick -->
+
+  <PMindTrick.label>原力控心\n </PMindTrick.label>
+
+  <!-- Force Ghost -->
+
+  <PForceGhost.label>原力虚灵\n </PForceGhost.label>
+
+</LanguageData>
