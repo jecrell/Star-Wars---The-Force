@@ -914,26 +914,27 @@ namespace ProjectJedi
                     }
                 }
                 //}
+            }
 
                 if (Scribe.mode == LoadSaveMode.PostLoadInit)
                 {
-                    var abilities = new List<ForceAbility>();
-                    if (!this.Powers.NullOrEmpty())
+                var abilities = new List<ForceAbility>();
+                if (!this.Powers.NullOrEmpty())
+                {
+                    foreach (PawnAbility ab in this.Powers)
                     {
-                        foreach (PawnAbility ab in this.Powers)
+                        abilities.Add(ab as ForceAbility);
+                    }
+                    if (!abilities.NullOrEmpty())
+                    {
+                        foreach (ForceAbility pab in abilities)
                         {
-                            abilities.Add(ab as ForceAbility);
-                        }
-                        if (!abilities.NullOrEmpty())
-                        {
-                            foreach (ForceAbility pab in abilities)
-                            {
-                                this.RemovePawnAbility(pab.Def);
-                            }
+                            this.RemovePawnAbility(pab.Def);
                         }
                     }
+                }
 
-                    if (!ForcePowersDark.NullOrEmpty())
+                if (!ForcePowersDark.NullOrEmpty())
                     {
                         foreach (ForcePower power in ForcePowersDark)
                         {
@@ -974,8 +975,8 @@ namespace ProjectJedi
                             }
                         }
                     }
+                    this.UpdateAbilities();
 
-                }
             }
             //Log.Message("PostExposeData Called: ForceUser");
         }
