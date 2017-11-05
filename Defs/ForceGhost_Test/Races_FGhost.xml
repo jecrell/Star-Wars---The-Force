@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<ThingDefs>  
+<Defs>  
   
 
   <ThingDef Name="PJ_BaseFGhost" Abstract="True">
@@ -115,64 +115,60 @@
     </weaponTags>
   </PawnKindDef>
  
-
-
-	<ThingDef>
-	<thingClass>ThingWithComps</thingClass>
-	<category>Item</category>
-	<drawGUIOverlay>true</drawGUIOverlay>
-	<altitudeLayer>Item</altitudeLayer>
-	<alwaysHaulable>true</alwaysHaulable>
-	<tickerType>Never</tickerType>
-	<equipmentType>Primary</equipmentType>
-	<useHitPoints>true</useHitPoints>
-	<pathCost>10</pathCost>
-	<selectable>true</selectable>	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
     <defName>PJ_MeleeWeapon_ForceGladius</defName>
     <label>ghostly gladius</label>
     <description>An ethereal short sword of ancient design. Good for stabbing or slashing.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponMelee/Gladius</texPath>
       <graphicClass>Graphic_Single</graphicClass>
-      <onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>	  
     </graphicData>
-    <menuHidden>true</menuHidden>	
-    <soundInteract>InteractPistol</soundInteract>
+    <techLevel>Medieval</techLevel>
     <costStuffCount>50</costStuffCount>
+    <weaponTags>
+      <li>PJ_Lightsaber</li>
+    </weaponTags>
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>0.85</Mass>
-      <MeleeWeapon_DamageAmount>60</MeleeWeapon_DamageAmount>
-      <MeleeWeapon_Cooldown>1.95</MeleeWeapon_Cooldown>
-      <MaxHitPoints>100</MaxHitPoints>
-	  <Flammability>0.0</Flammability>
-	  <DeteriorationRate>0</DeteriorationRate>
-	  <Beauty>6</Beauty>
-	  <SellPriceFactor>1.0</SellPriceFactor>	  
+      <Weapon_Bulk>0.5</Weapon_Bulk>
     </statBases>
 	<tradeability>Never</tradeability>
 	<destroyOnDrop>true</destroyOnDrop>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
       <li>Metallic</li>
+      <li>Woody</li>
     </stuffCategories>
-		<comps>
-			<li Class="CompProperties_Forbiddable"/>
-			<li>
-				<compClass>CompEquippable</compClass>
-			</li>
-		</comps>	
-    <verbs>
+    <tools>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <hasStandardCommand>true</hasStandardCommand>
-        <meleeDamageDef>Cut</meleeDamageDef>
+        <label>handle</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.95</cooldownTime>
       </li>
-    </verbs>
-    <techLevel>Industrial</techLevel>
-	<weaponTags>
-      <li>PJ_Lightsaber</li>
-    </weaponTags>
-  </ThingDef> 
+      <li>
+        <label>point</label>
+        <capacities>
+          <li>Stab</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.95</cooldownTime>
+      </li>
+      <li>
+        <label>edge</label>
+        <capacities>
+          <li>Cut</li>
+        </capacities>
+        <power>14.5</power>
+        <cooldownTime>1.95</cooldownTime>
+      </li>
+    </tools>
+    <recipeMaker>
+	    <researchPrerequisite>Smithing</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
  
-</ThingDefs>
+</Defs>

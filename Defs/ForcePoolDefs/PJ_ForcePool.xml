@@ -2,7 +2,7 @@
 <Defs>
 
   <NeedDef>
-    <DefName>PJ_ForcePool</DefName>
+    <defName>PJ_ForcePool</defName>
     <needClass>ProjectJedi.Need_ForcePool</needClass>
     <label>force pool</label>
     <description>Colonist's Current force pool level</description>
@@ -34,7 +34,7 @@
     <stages>
         <li>
           <label>hidden</label>
-          <everVisible>false</everVisible>
+          <becomeVisible>false</becomeVisible>
         </li>
     </stages>
   </HediffDef>

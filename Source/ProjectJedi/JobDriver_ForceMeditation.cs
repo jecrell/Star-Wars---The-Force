@@ -11,6 +11,11 @@ namespace ProjectJedi
     {
         private Rot4 faceDir;
 
+        public override bool TryMakePreToilReservations()
+        {
+            return true;
+        }
+
         [DebuggerHidden]
         protected override IEnumerable<Toil> MakeNewToils()
         {
@@ -20,12 +25,12 @@ namespace ProjectJedi
             {
                 initAction = delegate
                 {
-                    this.faceDir = ((!this.CurJob.def.faceDir.IsValid) ? Rot4.Random : this.CurJob.def.faceDir);
+                    this.faceDir = ((!this.job.def.faceDir.IsValid) ? Rot4.Random : this.job.def.faceDir);
 
                 },
                 tickAction = delegate
                 {
-                    this.pawn.Drawer.rotator.FaceCell(this.pawn.Position + this.faceDir.FacingCell);
+                    this.pawn.rotationTracker.FaceCell(this.pawn.Position + this.faceDir.FacingCell);
                     this.pawn.GainComfortFromCellIfPossible();
                     if (this.pawn.TryGetComp<CompForceUser>() != null)
                     {

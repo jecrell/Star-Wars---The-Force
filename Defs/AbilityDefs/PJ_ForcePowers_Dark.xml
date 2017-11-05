@@ -51,7 +51,7 @@
         <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
         <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceRage</projectileDef>
+        <defaultProjectile>PForceRage</defaultProjectile>
 		<abilityDef>PJ_ForceRage_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>60.0</SecondsToRecharge>
@@ -90,7 +90,7 @@
         <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
         <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceRage</projectileDef>
+        <defaultProjectile>PForceRage</defaultProjectile>
 		<abilityDef>PJ_ForceRage_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>20.0</SecondsToRecharge>
@@ -130,7 +130,7 @@
         <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
         <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceRage</projectileDef>
+        <defaultProjectile>PForceRage</defaultProjectile>
 		<abilityDef>PJ_ForceRage_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10.0</SecondsToRecharge>
@@ -224,7 +224,7 @@
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChoke</projectileDef>
+        <defaultProjectile>PForceChoke</defaultProjectile>
 		<abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10</SecondsToRecharge>
@@ -264,7 +264,7 @@
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChokeTwo</projectileDef>
+        <defaultProjectile>PForceChokeTwo</defaultProjectile>
 		<abilityDef>PJ_ForceChoke_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>8</SecondsToRecharge>
@@ -305,7 +305,7 @@
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceChokeThree</projectileDef>
+        <defaultProjectile>PForceChokeThree</defaultProjectile>
 		<abilityDef>PJ_ForceChoke_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>4.5</SecondsToRecharge>
@@ -370,14 +370,14 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceDrain</projectileDef>
+        <defaultProjectile>PJ_PForceDrain</defaultProjectile>
 		<abilityDef>PJ_ForceDrain_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>80.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
@@ -403,14 +403,14 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceDrain</projectileDef>
+        <defaultProjectile>PJ_PForceDrain</defaultProjectile>
 		<abilityDef>PJ_ForceDrain_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>50.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
@@ -437,14 +437,14 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceDrain</projectileDef>
+        <defaultProjectile>PJ_PForceDrain</defaultProjectile>
 		<abilityDef>PJ_ForceDrain_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>20.0</SecondsToRecharge>
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
@@ -494,7 +494,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>
+        <defaultProjectile>PForceLightningProj</defaultProjectile>
 		<abilityDef>PJ_ForceLightning_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>15</SecondsToRecharge>
@@ -527,7 +527,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>
+        <defaultProjectile>PForceLightningProj</defaultProjectile>
 		<abilityDef>PJ_ForceLightning_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10</SecondsToRecharge>
@@ -561,7 +561,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceLightningProj</projectileDef>
+        <defaultProjectile>PForceLightningProj</defaultProjectile>
 		<abilityDef>PJ_ForceLightning_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>6.5</SecondsToRecharge>
@@ -592,7 +592,7 @@
 		<damageDef>PJ_FStorm</damageDef>
 		<damageAmountBase>1</damageAmountBase>
 		<speed>75</speed>
-		<explosionSpawnChance>1</explosionSpawnChance>
+		<postExplosionSpawnChance>1</postExplosionSpawnChance>
    </projectile>
  </ThingDef>
 
@@ -618,7 +618,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceStormProj</projectileDef>
+        <defaultProjectile>PJ_PForceStormProj</defaultProjectile>
 		<abilityDef>PJ_ForceStorm_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>60</SecondsToRecharge>
@@ -667,7 +667,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceStormProj</projectileDef>
+        <defaultProjectile>PJ_PForceStormProj</defaultProjectile>
 		<abilityDef>PJ_ForceStorm_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>50</SecondsToRecharge>
@@ -717,7 +717,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceStormProj</projectileDef>
+        <defaultProjectile>PJ_PForceStormProj</defaultProjectile>
 		<abilityDef>PJ_ForceStorm_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>30</SecondsToRecharge>

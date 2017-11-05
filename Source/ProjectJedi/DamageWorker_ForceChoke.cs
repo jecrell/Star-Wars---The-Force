@@ -9,20 +9,23 @@ namespace ProjectJedi
 {
     public class DamageWorker_ForceChoke : DamageWorker
     {
-        public override float Apply(DamageInfo dinfo, Thing victim)
+        public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
+            DamageResult result = DamageResult.MakeNew();
+            result.totalDamageDealt = 0f;
+
             if (victim is ProjectJedi.PawnGhost)
             {
-                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageSound.Negative);
-                return 0f;
+                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageTypeDefOf.NegativeEvent);
+                return result;
             }
 
             if (victim is Pawn p && p.RaceProps.IsMechanoid)
             {
                 Messages.Message("PJ_ForceResisted".Translate(new object[] {
                     p.Label.CapitalizeFirst(), dinfo.Instigator.LabelShort, dinfo.Def.label
-                }), MessageSound.Negative);
-                return 0f;
+                }), MessageTypeDefOf.NegativeEvent);
+                return result;
             }
 
             Pawn pawn = victim as Pawn;
@@ -32,20 +35,20 @@ namespace ProjectJedi
                 BodyPartRecord neckRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.label == "neck");
                 if (!pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().Any((Hediff_MissingPart x) => x.Part == neckRecord))
                 {
-                    newDinfo.SetForcedHitPart(neckRecord);
+                    newDinfo.SetHitPart(neckRecord);
                 }
                 else
                 {
                     BodyPartRecord lungRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.tags.First((string s) => s == "BreathingSource" || s == "BreathingPathway") != null);
                     if (!pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().Any((Hediff_MissingPart x) => x.Part == lungRecord))
                     {
-                        newDinfo.SetForcedHitPart(lungRecord);
+                        newDinfo.SetHitPart(lungRecord);
                     }
                 }
                 DamageWorker_AddInjury newWorker = new DamageWorker_AddInjury();
                 return newWorker.Apply(newDinfo, victim);
             }
-            return 0f;
+            return result;
         }
         
     }

@@ -35,12 +35,14 @@ namespace ProjectJedi
            //Log.Message("Placeholder: Master");
         }
         
-        public override float Apply(DamageInfo dinfo, Thing victim)
+        public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
+            DamageResult result = DamageResult.MakeNew();
+            result.totalDamageDealt = 0f;
             if (victim is ProjectJedi.PawnGhost)
             {
-                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageSound.Negative);
-                return 0f;
+                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageTypeDefOf.NegativeEvent);
+                return result;
             }
 
             int amount = dinfo.Amount;
@@ -60,7 +62,7 @@ namespace ProjectJedi
                     Log.Error(this.def.label + " only works with damages 1, 2, or 3");
                     break;
             }
-            return 0f;
+            return result;
         }
     }
 }

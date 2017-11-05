@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<DefPackage-SoundDef>
+<Defs>
 
   <SoundDef>
     <defName>PJ_ForcePowersUnlocked</defName>  
@@ -167,4 +167,4 @@
       </li>
     </subSounds>
   </SoundDef>
-</DefPackage-SoundDef>
+</Defs>

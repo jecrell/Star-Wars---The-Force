@@ -62,11 +62,11 @@ namespace ProjectJedi
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue(__instance);
             if (xp > 0 && pawn.TryGetComp<CompForceUser>() is CompForceUser compForce &&
-                Find.TickManager.TicksGame > compForce.ticksToLearnForceXP)
+                Find.TickManager.TicksGame > compForce.ForceData.TicksUntilXPGain)
             {
                 int delay = 130;
                 if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Growing) delay += 50;
-                compForce.ticksToLearnForceXP = Find.TickManager.TicksGame + delay;
+                compForce.ForceData.TicksUntilXPGain = Find.TickManager.TicksGame + delay;
                 compForce.ForceUserXP++;
             }
         }

@@ -27,7 +27,7 @@ namespace ProjectJedi
                 return 0f;
             }
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
-            if (compForce.canMeditateTicks > Find.TickManager.TicksAbs)
+            if (compForce.ForceData.TicksUntilMeditate > Find.TickManager.TicksAbs)
             {
                 return 0f;
             }
@@ -64,7 +64,7 @@ namespace ProjectJedi
                 return ThinkResult.NoJob;
             }
 
-            if (compForce.canMeditateTicks > Find.TickManager.TicksAbs)
+            if (compForce.ForceData.TicksUntilMeditate > Find.TickManager.TicksAbs)
             {
                 return ThinkResult.NoJob;
             }
@@ -111,7 +111,7 @@ namespace ProjectJedi
             Thing padResult = null;
             IntVec3 c = ResolveMeditationLocation(pawn, out padResult);
             CompForceUser compForce = pawn.TryGetComp<CompForceUser>();
-            compForce.canMeditateTicks = Find.TickManager.TicksGame + 6000;
+            compForce.ForceData.TicksUntilMeditate = Find.TickManager.TicksGame + 6000;
             if (padResult != null) return new Job(DefDatabase<JobDef>.GetNamed("PJ_ForceMeditationJob"), padResult);
             else return new Job(DefDatabase<JobDef>.GetNamed("PJ_ForceMeditationJob"), c);
 

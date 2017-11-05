@@ -37,7 +37,7 @@ namespace ProjectJedi
                 //    strikeLoc = CellFinderLoose.RandomCellWith((IntVec3 sq) => sq.Standable(victim.Map) && !victim.Map.roofGrid.Roofed(sq), victim.Map, 1000);
                 //}
                 this.boltMesh = LightningBoltMeshPool.RandomBoltMesh;
-                GenExplosion.DoExplosion(strikeLoc, victim.Map, 1.9f, DamageDefOf.Flame, null, null, null, null, null, 0f, 1, false, null, 0f, 1);
+                GenExplosion.DoExplosion(strikeLoc, victim.Map, 1.9f, DamageDefOf.Flame, null, -1, null, null, null, null, 0f, 1, false, null, 0f, 1);
                 Vector3 loc = strikeLoc.ToVector3Shifted();
                 for (int i = 0; i < 4; i++)
                 {

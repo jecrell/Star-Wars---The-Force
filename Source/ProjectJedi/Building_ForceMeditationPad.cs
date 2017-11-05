@@ -26,7 +26,7 @@ namespace ProjectJedi
                 {
                     if (selPawn.CanReserveAndReach(this, PathEndMode.ClosestTouch, Danger.Deadly))
                     {
-                        compForce.canMeditateTicks = Find.TickManager.TicksGame + 6000;
+                        compForce.ForceData.TicksUntilMeditate = Find.TickManager.TicksGame + 6000;
                         Job newJob = new Job(DefDatabase<JobDef>.GetNamed("PJ_ForceMeditationJob"), this);
                         selPawn.jobs.TryTakeOrderedJob(newJob);
                         selPawn.mindState.ResetLastDisturbanceTick();
@@ -41,7 +41,7 @@ namespace ProjectJedi
                 {
                     yield return new FloatMenuOption("PJ_ForceMeditate".Translate() + " (" + "PJ_ForceMeditate_NeedForceUsersOnly".Translate() + ")", null, MenuOptionPriority.Default, null, null, 0f, null, null);
                 }
-                else if (compForce != null && compForce.canMeditateTicks > Find.TickManager.TicksGame)
+                else if (compForce != null && compForce.ForceData.TicksUntilMeditate > Find.TickManager.TicksGame)
                 {
                     yield return new FloatMenuOption("PJ_ForceMeditate".Translate() + " (" + "PJ_ForceMeditate_NeedRest".Translate() + ")", null, MenuOptionPriority.Default, null, null, 0f, null, null);
                 }

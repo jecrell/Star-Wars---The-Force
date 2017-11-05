@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 
 
-<ThinkTrees>
+<Defs>
 
   <ThinkTreeDef>
     <defName>PJ_ForceGhostAI</defName>
@@ -44,4 +44,4 @@
 	</ThinkTreeDef>
 
   
-</ThinkTrees>
+</Defs>

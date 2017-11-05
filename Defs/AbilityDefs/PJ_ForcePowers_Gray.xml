@@ -74,7 +74,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePull</projectileDef>
+        <defaultProjectile>PJ_PForcePull</defaultProjectile>
 		<abilityDef>PJ_ForcePull_Apprentice</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -118,7 +118,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePull</projectileDef>
+        <defaultProjectile>PJ_PForcePull</defaultProjectile>
 		<abilityDef>PJ_ForcePull_Adept</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -162,7 +162,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePull</projectileDef>
+        <defaultProjectile>PJ_PForcePull</defaultProjectile>
 		<abilityDef>PJ_ForcePull_Master</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -225,7 +225,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePush</projectileDef>
+        <defaultProjectile>PJ_PForcePush</defaultProjectile>
 		<abilityDef>PJ_ForcePush_Apprentice</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -268,7 +268,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePush</projectileDef>
+        <defaultProjectile>PJ_PForcePush</defaultProjectile>
 		<abilityDef>PJ_ForcePush_Adept</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -316,7 +316,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForcePush</projectileDef>
+        <defaultProjectile>PJ_PForcePush</defaultProjectile>
 		<abilityDef>PJ_ForcePush_Master</abilityDef>
 		<isViolent>false</isViolent>
         <warmupTime>1</warmupTime>
@@ -383,7 +383,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceSpeed</projectileDef>
+        <defaultProjectile>PJ_PForceSpeed</defaultProjectile>
 		<abilityDef>PJ_ForceSpeed_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>10.0</SecondsToRecharge>
@@ -424,7 +424,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceSpeed</projectileDef>
+        <defaultProjectile>PJ_PForceSpeed</defaultProjectile>
 		<abilityDef>PJ_ForceSpeed_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>15.0</SecondsToRecharge>
@@ -465,7 +465,7 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PJ_PForceSpeed</projectileDef>
+        <defaultProjectile>PJ_PForceSpeed</defaultProjectile>
 		<abilityDef>PJ_ForceSpeed_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>30.0</SecondsToRecharge>

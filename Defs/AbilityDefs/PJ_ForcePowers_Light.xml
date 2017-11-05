@@ -48,11 +48,11 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceHealingSelf_Apprentice</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceHeal</projectileDef>
+        <defaultProjectile>PJ_PForceHeal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>2</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
@@ -87,11 +87,11 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceHealingSelf_Adept</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceHeal</projectileDef>
+        <defaultProjectile>PJ_PForceHeal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>60.0</SecondsToRecharge>
         <range>2</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
         <targetable>false</targetable>
@@ -125,11 +125,11 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceHealingSelf_Master</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceHeal</projectileDef>
+        <defaultProjectile>PJ_PForceHeal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>30.0</SecondsToRecharge>
         <range>2</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <targetable>false</targetable>
         <isPrimary>false</isPrimary>
@@ -162,11 +162,11 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceHealingOther_Apprentice</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceHeal</projectileDef>
+        <defaultProjectile>PJ_PForceHeal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>16</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<targetParams>
@@ -197,11 +197,11 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceHealingOther_Adept</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceHeal</projectileDef>
+        <defaultProjectile>PJ_PForceHeal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>90.0</SecondsToRecharge>
         <range>16</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<targetParams>
@@ -232,11 +232,11 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceHealingOther_Master</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceHeal</projectileDef>
+        <defaultProjectile>PJ_PForceHeal</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>60.0</SecondsToRecharge>
         <range>16</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<targetParams>
@@ -287,7 +287,7 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceDefense_Apprentice</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceDefense</projectileDef>
+        <defaultProjectile>PJ_PForceDefense</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>85.0</SecondsToRecharge>
         <range>2</range>
@@ -331,7 +331,7 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceDefense_Adept</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceDefense</projectileDef>
+        <defaultProjectile>PJ_PForceDefense</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>55.0</SecondsToRecharge>
         <range>2</range>
@@ -375,7 +375,7 @@
         <hasStandardCommand>true</hasStandardCommand>
 		<abilityDef>PJ_ForceDefense_Master</abilityDef>
 		<isViolent>false</isViolent>
-        <projectileDef>PJ_PForceDefense</projectileDef>
+        <defaultProjectile>PJ_PForceDefense</defaultProjectile>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>35.0</SecondsToRecharge>
         <range>2</range>
@@ -434,12 +434,12 @@
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PMindTrick</projectileDef>
+        <defaultProjectile>PMindTrick</defaultProjectile>
 		<abilityDef>PJ_MindTrick_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>70.0</SecondsToRecharge>
         <range>34</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
@@ -471,12 +471,12 @@
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PMindTrick</projectileDef>
+        <defaultProjectile>PMindTrick</defaultProjectile>
 		<abilityDef>PJ_MindTrick_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>50.0</SecondsToRecharge>
         <range>44</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
@@ -508,13 +508,13 @@
 			<tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PMindTrick</projectileDef>
+        <defaultProjectile>PMindTrick</defaultProjectile>
 		<abilityDef>PJ_MindTrick_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>30.0</SecondsToRecharge>
 		<isViolent>false</isViolent>
         <range>50</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<mentalStatesToApply>
@@ -565,13 +565,13 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceGhost</projectileDef>
+        <defaultProjectile>PForceGhost</defaultProjectile>
 		<abilityDef>PJ_ForceGhost_Apprentice</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
 		<stopBurstWithoutLos>false</stopBurstWithoutLos>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
@@ -613,12 +613,12 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceGhost</projectileDef>
+        <defaultProjectile>PForceGhost</defaultProjectile>
 		<abilityDef>PJ_ForceGhost_Adept</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<stopBurstWithoutLos>false</stopBurstWithoutLos>
@@ -661,12 +661,12 @@
 			<tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
 			<tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
         <hasStandardCommand>true</hasStandardCommand>
-        <projectileDef>PForceGhost</projectileDef>
+        <defaultProjectile>PForceGhost</defaultProjectile>
 		<abilityDef>PJ_ForceGhost_Master</abilityDef>
         <warmupTime>1</warmupTime>
         <SecondsToRecharge>120.0</SecondsToRecharge>
         <range>34</range>
-        <soundCast>MessageBenefit</soundCast>
+        <soundCast>MessagePositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>

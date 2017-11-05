@@ -43,14 +43,14 @@ namespace ProjectJedi
                 for (int o = 0; o < 10; o++)
                 {
                     forcePowers.ForceUserLevel += 1;
-                    forcePowers.ForceSkills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
-                    forcePowers.abilityPoints -= 1;
+                    forcePowers.ForceData.Skills.InRandomOrder<ForceSkill>().First((ForceSkill x) => x.level < 4).level++;
+                    forcePowers.ForceData.AbilityPoints -= 1;
                 }
                 for (int i = 0; i < 8; i++)
                 {
                     forcePowers.ForceUserLevel += 1;
-                    forcePowers.LevelUpPower(forcePowers.ForcePowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
-                    forcePowers.abilityPoints -= 1;
+                    forcePowers.LevelUpPower(forcePowers.ForceData.PowersLight.InRandomOrder<ForcePower>().First((ForcePower x) => x.level < 2));
+                    forcePowers.ForceData.AbilityPoints -= 1;
                 }
             }
         }

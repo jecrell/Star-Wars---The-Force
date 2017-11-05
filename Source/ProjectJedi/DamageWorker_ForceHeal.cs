@@ -1,16 +1,19 @@
-﻿using System.Linq;
+﻿using RimWorld;
+using System.Linq;
 using Verse;
 
 namespace ProjectJedi
 {
     public class DamageWorker_ForceHeal : DamageWorker
     {
-        public override float Apply(DamageInfo dinfo, Thing thing)
+        public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {
+            DamageResult result = DamageResult.MakeNew();
+            result.totalDamageDealt = 0f;
             if (thing is ProjectJedi.PawnGhost)
             {
-                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageSound.Negative);
-                return 0f;
+                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageTypeDefOf.NegativeEvent);
+                return result;
             }
 
             Pawn pawn = thing as Pawn;
@@ -39,7 +42,7 @@ namespace ProjectJedi
                     }
                 }
             }
-            return 0f;
+            return result;
         }
     }
 }

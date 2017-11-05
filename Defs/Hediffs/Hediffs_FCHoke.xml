@@ -16,7 +16,7 @@
     <stages>
       <li>
         <label>coughing</label>
-        <everVisible>false</everVisible>
+        <becomeVisible>false</becomeVisible>
       </li>
       <li>
         <label>coughing</label>

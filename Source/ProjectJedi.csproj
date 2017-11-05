@@ -97,7 +97,8 @@
     <Compile Include="ProjectJedi\Building_ForceMeditationPad.cs" />
     <Compile Include="ProjectJedi\ForcePower.cs" />
     <Compile Include="ProjectJedi\ForceSkill.cs" />
-    <Compile Include="ProjectJedi\ForceUserUtility.cs" />
+    <Compile Include="ProjectJedi\ForceData.cs" />
+    <Compile Include="ProjectJedi\ForceUtility.cs" />
     <Compile Include="ProjectJedi\HarmonyPatches.cs" />
     <Compile Include="ProjectJedi\HediffComp_Shield.cs" />
     <Compile Include="ProjectJedi\Gizmo_HediffShieldStatus.cs" />

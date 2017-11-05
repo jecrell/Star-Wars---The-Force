@@ -7,12 +7,14 @@ namespace ProjectJedi
 {
     public class DamageWorker_ForceDrain : DamageWorker
     {
-        public override float Apply(DamageInfo dinfo, Thing thing)
+        public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {
+            DamageResult result = DamageResult.MakeNew();
+            result.totalDamageDealt = 0f;
             if (thing is ProjectJedi.PawnGhost)
             {
-                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageSound.Negative);
-                return 0f;
+                Messages.Message("PJ_ForceGhostResisted".Translate(), MessageTypeDefOf.NegativeEvent);
+                return result;
             }
 
             Pawn pawn = thing as Pawn;
@@ -48,14 +50,14 @@ namespace ProjectJedi
                                                 {
                                                     caster.Label,
                                                     pawn.Label
-                                                }), MessageSound.Silent);
+                                                }), MessageTypeDefOf.SilentInput);
                                             for (int i = 0; i < Mathf.Min(victimForceInt, maxPoolDamage); i++)
                                             {
                                                 if (casterPool.CurLevel >= 0.99f) break;
                                                 casterPool.CurLevel += 0.01f;
                                                 victimForcePool.CurLevel -= 0.05f;
                                             }
-                                            return 0f;
+                                            return result;
                                         }
                                     }
                                 }
@@ -66,7 +68,7 @@ namespace ProjectJedi
                             {
                                caster.Label,
                                pawn.Label
-                            }), MessageSound.Silent);
+                            }), MessageTypeDefOf.SilentInput);
 
                         foreach (BodyPartRecord rec in pawn.health.hediffSet.GetNotMissingParts().InRandomOrder<BodyPartRecord>())
                         {
@@ -103,7 +105,7 @@ namespace ProjectJedi
 
             }
 
-            return 0f;
+            return result;
 
         }
     }

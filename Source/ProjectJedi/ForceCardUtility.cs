@@ -155,9 +155,9 @@ namespace ProjectJedi
                     Rect rectPowersGray = new Rect(rectPowers.x + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
                     Rect rectPowersLight = new Rect(rectPowers.x + PowersColumnWidth + PowersColumnWidth, rectPowers.y, PowersColumnWidth, PowersColumnHeight);
 
-                    PowersGUIHandler(rectPowersDark, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersDark, TexButton.PJTex_ForcePointDark);
-                    PowersGUIHandler(rectPowersGray, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersGray, TexButton.PJTex_ForcePointGray);
-                    PowersGUIHandler(rectPowersLight, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForcePowersLight, TexButton.PJTex_ForcePointLight);
+                    PowersGUIHandler(rectPowersDark, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForceData.PowersDark, TexButton.PJTex_ForcePointDark);
+                    PowersGUIHandler(rectPowersGray, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForceData.PowersGray, TexButton.PJTex_ForcePointGray);
+                    PowersGUIHandler(rectPowersLight, pawn.GetComp<CompForceUser>(), pawn.GetComp<CompForceUser>().ForceData.PowersLight, TexButton.PJTex_ForcePointLight);
                 }
                 else
                 {
@@ -273,7 +273,7 @@ namespace ProjectJedi
 
             Rect rectPointsAvail = new Rect(inRect.x, rectLevel.yMax, inRect.width, TextSize);
             Text.Font = GameFont.Tiny;
-            Widgets.Label(rectPointsAvail, compForce.abilityPoints + " " + "PJ_PointsAvail".Translate());
+            Widgets.Label(rectPointsAvail, compForce.ForceData.AbilityPoints + " " + "PJ_PointsAvail".Translate());
             Text.Font = GameFont.Small;
 
             //0 points available
@@ -349,9 +349,9 @@ namespace ProjectJedi
         {
             float currentYOffset = inRect.y;
             
-            if (!compForce?.ForceSkills.NullOrEmpty() ?? false)
+            if (!compForce?.ForceData.Skills.NullOrEmpty() ?? false)
             {
-                foreach (ForceSkill skill in compForce.ForceSkills)
+                foreach (ForceSkill skill in compForce.ForceData.Skills)
                 {
                     Rect lightsaberOffense = new Rect(inRect.x, currentYOffset, inRect.width, TextSize);
                     Rect lightsaberOffenseLabel = new Rect(inRect.x, currentYOffset, SkillsTextWidth, TextSize);
@@ -368,12 +368,12 @@ namespace ProjectJedi
                             Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxFull, 1f);
                             continue;
                         }
-                        else if ((i - skill.level == 1 && compForce.abilityPoints > 0 && skill.level < 5) && (compForce.AbilityUser.Faction == Faction.OfPlayer))
+                        else if ((i - skill.level == 1 && compForce.ForceData.AbilityPoints > 0 && skill.level < 5) && (compForce.AbilityUser.Faction == Faction.OfPlayer))
                         {
                             //TooltipHandler.TipRegion(rectRename, "RenameTemple".Translate());
                             if (Widgets.ButtonImage(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize - 4), TexButton.PJTex_SkillBoxAdd))
                             {
-                                compForce.abilityPoints--;
+                                compForce.ForceData.AbilityPoints--;
                                 skill.level++;
                             }
                             //Widgets.DrawTextureFitted(new Rect(lightsaberCheckbox.x, lightsaberCheckbox.y, lightsaberCheckbox.width - 2, TextSize), TexButton.PJTex_SkillBoxAdd, 1f);
@@ -402,7 +402,7 @@ namespace ProjectJedi
                 
                 Rect buttonRect = new Rect(inRect.x, buttonYOffset, ForceButtonSize, ForceButtonSize);
                 TooltipHandler.TipRegion(buttonRect, () => power.abilityDef.label + "\n\n" + power.abilityDef.description + "\n\n" + "PJ_CheckStarsForMoreInfo".Translate(), 398462);
-                if (compForce.abilityPoints == 0 || power.level >= 3)
+                if (compForce.ForceData.AbilityPoints == 0 || power.level >= 3)
                 {
                     Widgets.DrawTextureFitted(buttonRect, power.Icon, 1.0f);
                 }
@@ -416,7 +416,7 @@ namespace ProjectJedi
                         {
                             powerDef.requiredAlignmentType.ToString(),
                             compForce.ForceAlignmentType.ToString()
-                        }), MessageSound.RejectInput);
+                        }),  MessageTypeDefOf.RejectInput);
                         return;
                     }
                     if (compForce.LightsidePoints < powerDef.lightsideTreePointsRequired)
@@ -424,7 +424,7 @@ namespace ProjectJedi
                         Messages.Message("PJ_LightsidePointsRequired".Translate(new object[]
                         {
                             powerDef.lightsideTreePointsRequired
-                        }), MessageSound.RejectInput);
+                        }), MessageTypeDefOf.RejectInput);
                         return;
                     }
                     if (compForce.DarksidePoints < powerDef.darksideTreePointsRequired)
@@ -432,16 +432,16 @@ namespace ProjectJedi
                         Messages.Message("PJ_DarksidePointsRequired".Translate(new object[]
                         {  
                             powerDef.darksideTreePointsRequired
-                        }), MessageSound.RejectInput);
+                        }), MessageTypeDefOf.RejectInput);
                         return;
                     }
-                    if (compForce.abilityPoints < powerDef.abilityPoints)
+                    if (compForce.ForceData.AbilityPoints < powerDef.abilityPoints)
                     {
                         Messages.Message("PJ_NotEnoughAbilityPoints".Translate(new object[]
                         {
-                            compForce.abilityPoints,
+                            compForce.ForceData.AbilityPoints,
                             powerDef.abilityPoints
-                        }), MessageSound.RejectInput);
+                        }), MessageTypeDefOf.RejectInput);
                         return;
                     }
                     if (compForce.AbilityUser.story != null && (compForce.AbilityUser.story.WorkTagIsDisabled(WorkTags.Violent) && power.abilityDef.MainVerb.isViolent))
@@ -449,11 +449,11 @@ namespace ProjectJedi
                         Messages.Message("IsIncapableOfViolenceLower".Translate(new object[]
                         {
                             compForce.parent.LabelShort
-                        }), MessageSound.RejectInput);
+                        }), MessageTypeDefOf.RejectInput);
                         return;
                     }
                     compForce.LevelUpPower(power);
-                    compForce.abilityPoints -= powerDef.abilityPoints;
+                    compForce.ForceData.AbilityPoints -= powerDef.abilityPoints;
                 }
                 for (int i = 0; i < 3; i++)
                 {

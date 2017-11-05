@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<HediffDefs>
+<Defs>
 
 
  <HediffDef>
@@ -179,4 +179,4 @@
     </stages>
   </ThoughtDef>
   
-</HediffDefs>
+</Defs>

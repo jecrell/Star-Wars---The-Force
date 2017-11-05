@@ -11,7 +11,7 @@ namespace ProjectJedi
 {
     public class ForceAbility : PawnAbility
     {
-        public CompForceUser ForceUser => ForceUserUtility.GetForceUser(this.Pawn);
+        public CompForceUser ForceUser => ForceUtility.GetForceUser(this.Pawn);
         public ForceAbilityDef ForceDef => Def as ForceAbilityDef;
 
         public ForceAbility() : base()
@@ -22,6 +22,13 @@ namespace ProjectJedi
         {
             this.abilityUser = abilityUser as CompForceUser;
         }
+
+
+        public ForceAbility(AbilityData abilityData) : base(abilityData)
+        {
+            this.abilityUser = abilityData.Pawn.AllComps.FirstOrDefault(x => x.GetType() == abilityData.AbilityClass) as CompForceUser;
+        }
+
 
         public ForceAbility(Pawn user, AbilityDef pdef) : base(user, pdef)
         {
@@ -135,7 +142,7 @@ namespace ProjectJedi
                 {
                     if (forceDef?.requiredAlignmentType != ForceAlignmentType.None)
                     {
-                        if (forceDef?.requiredAlignmentType != ForceUserUtility.GetForceAlignmentType(Pawn))
+                        if (forceDef?.requiredAlignmentType != ForceUtility.GetForceAlignmentType(Pawn))
                         {
                             reason = "PJ_WrongAlignment".Translate(this.Pawn.LabelShort);
                             return false;
@@ -144,7 +151,7 @@ namespace ProjectJedi
                     if (ForceUser?.ForcePool != null)
                     {
                         if (forceDef?.forcePoolCost > 0 &&
-                            ActualForceCost > ForceUserUtility.GetForcePool(this.Pawn)?.CurLevel)
+                            ActualForceCost > ForceUtility.GetForcePool(this.Pawn)?.CurLevel)
                         {
                             reason = "PJ_DrainedForcePool".Translate(this.Pawn.LabelShort);
                             return false;
@@ -180,7 +187,8 @@ namespace ProjectJedi
                         target.Thing.LabelShort,
                         AbilityUser.AbilityUser.LabelShort,
                         this.Def.label
-                    }), MessageSound.Negative);
+                        
+                    }), MessageTypeDefOf.NegativeEvent);
                 return false;
             }
             return base.CanOverpowerTarget(context, target, out reason);
