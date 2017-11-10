@@ -103,8 +103,8 @@
       <Weapon_Bulk>0.5</Weapon_Bulk>
     </statBases>
 	<tradeability>Never</tradeability>
-	<destroyOnDrop>true</destroyOnDrop>
-	<menuHidden>true</menuHidden>
+		<menuHidden>true</menuHidden>
+		<destroyOnDrop>true</destroyOnDrop>
     <equippedAngleOffset>-65</equippedAngleOffset>
     <stuffCategories>
       <li>Metallic</li>
