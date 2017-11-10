@@ -635,7 +635,7 @@
 		  <maxTargets>2</maxTargets>
 		  <range>10</range>
 		</TargetAoEProperties>
-		<burstShotCount>4</burstShotCount>
+		<burstShotCount>1</burstShotCount>
         <isPrimary>false</isPrimary>
 		 <targetParams>
       	 <canTargetPawns>true</canTargetPawns>
@@ -685,7 +685,7 @@
 		  <maxTargets>3</maxTargets>
 		  <range>10</range>
 		</TargetAoEProperties>
-		<burstShotCount>4</burstShotCount>
+		<burstShotCount>1</burstShotCount>
 		 <targetParams>
       	 <canTargetPawns>true</canTargetPawns>
       	 <canTargetBuildings>false</canTargetBuildings>
@@ -734,7 +734,7 @@
 		  <maxTargets>5</maxTargets>
 		  <range>10</range>
 		</TargetAoEProperties>
-		<burstShotCount>4</burstShotCount>
+		<burstShotCount>1</burstShotCount>
         <isPrimary>false</isPrimary>
 		 <targetParams>
       	 <canTargetPawns>true</canTargetPawns>

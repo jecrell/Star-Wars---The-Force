@@ -37,7 +37,7 @@ namespace ProjectJedi
             return ForceAlignmentType.None;
         }
 
-        public static Need_ForcePool GetForcePool(Pawn pawn)
+        public static Need_ForcePool GetForcePool(this Pawn pawn)
         {
             if (pawn.GetComp<CompForceUser>() is CompForceUser forceUser)
             {

@@ -764,6 +764,7 @@ namespace ProjectJedi
         {
             base.PostExposeData();
 
+            Scribe_Values.Look<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", false);
             Scribe_Deep.Look<ForceData>(ref this.forceData, "forceData", new object[] { this });
 
             //if (Scribe.mode == LoadSaveMode.Saving)

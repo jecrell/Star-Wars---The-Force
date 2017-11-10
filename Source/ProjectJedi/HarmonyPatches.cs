@@ -61,8 +61,8 @@ namespace ProjectJedi
         public static void Learn_PostFix(SkillRecord __instance, float xp, bool direct = false)
         {
             Pawn pawn = (Pawn)AccessTools.Field(typeof(SkillRecord), "pawn").GetValue(__instance);
-            if (xp > 0 && pawn.TryGetComp<CompForceUser>() is CompForceUser compForce &&
-                Find.TickManager.TicksGame > compForce.ForceData.TicksUntilXPGain)
+            if (xp > 0 && pawn?.TryGetComp<CompForceUser>() is CompForceUser compForce &&
+                Find.TickManager.TicksGame > compForce?.ForceData?.TicksUntilXPGain)
             {
                 int delay = 130;
                 if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Growing) delay += 50;

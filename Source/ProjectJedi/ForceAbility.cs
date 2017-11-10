@@ -41,12 +41,15 @@ namespace ProjectJedi
         {
             //Log.Message("ForceAbility :: PostAbilityAttempt Called");
             base.PostAbilityAttempt();
-            if (ForceDef.changedAlignmentType != ForceAlignmentType.None)
+            if (ForceDef?.changedAlignmentType != ForceAlignmentType.None)
             {
                 ForceUser.AlignmentValue += ForceDef.changedAlignmentRate;
                 ForceUser.UpdateAlignment();
             }
-            Pawn.needs.TryGetNeed<Need_ForcePool>().UseForcePower(ActualForceCost);
+            if (Pawn.needs.TryGetNeed<Need_ForcePool>() is Need_ForcePool fp)
+            {
+                fp.UseForcePower(ActualForceCost);
+            }
         }
 
         /// <summary>

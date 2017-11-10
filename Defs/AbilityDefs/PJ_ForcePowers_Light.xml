@@ -587,6 +587,7 @@
 		    <def>PJ_ForceGhostR</def>
 			<kindDef>PJ_ForceGhost</kindDef>
 			<spawnCount>1</spawnCount>
+			<temporary>true</temporary>
 		  </li>
 		</thingsToSpawn>
     </MainVerb>
@@ -635,6 +636,7 @@
 		    <def>PJ_ForceGhostR</def>
 			<kindDef>PJ_ForceGhost</kindDef>
 			<spawnCount>1</spawnCount>
+			<temporary>true</temporary>
 		  </li>
 		</thingsToSpawn>
     </MainVerb>
@@ -683,6 +685,7 @@
 		    <def>PJ_ForceGhostR</def>
 			<kindDef>PJ_ForceGhost</kindDef>
 			<spawnCount>1</spawnCount>
+			<temporary>true</temporary>
 		  </li>
 		</thingsToSpawn>
     </MainVerb>
