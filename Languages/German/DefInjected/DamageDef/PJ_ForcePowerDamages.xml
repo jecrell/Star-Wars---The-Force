@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!--[Core] <Cut.label>Schnitt</Cut.label>-->
+  <!--[Core] <Cut.deathMessage>{0} wurde zerschnitten</Cut.deathMessage>-->
+
+  <PJ_ForceHealDamage.label>Macht Heilung</PJ_ForceHealDamage.label>
+
+  <PJ_FDrainDamage.label>Machtabzug</PJ_FDrainDamage.label>
+  <PJ_FDrainDamage.deathMessage>{0} erlag der dunklen Seite der Macht.</PJ_FDrainDamage.deathMessage>
+
+  <PJ_FLightning.label>Blitz</PJ_FLightning.label>
+  <PJ_FLightning.deathMessage>{0} erlag der dunklen Seite der Macht.</PJ_FLightning.deathMessage>
+
+  <PJ_FStorm.label>Machtsturm</PJ_FStorm.label>
+  <PJ_FStorm.deathMessage>{0} wurde in einem Machtsturm gefangen.</PJ_FStorm.deathMessage>
+
+  <PJ_MindTrickDam.label>Gedankentrick</PJ_MindTrickDam.label>
+  <PJ_MindTrickDam.deathMessage>{0} erlag mentalen Schaden.</PJ_MindTrickDam.deathMessage>
+
+  <PJ_RageDam.label>Machtwut</PJ_RageDam.label>
+  <PJ_RageDam.deathMessage>{0} erlag mentalen Schaden.</PJ_RageDam.deathMessage>
+
+  <PJ_FChoke.label>Würgen</PJ_FChoke.label>
+  <PJ_FChoke.deathMessage>{0} erlag der dunklen Seite der Macht.</PJ_FChoke.deathMessage>
+
+
+  <!-- Force Pull -->
+
+  <PJ_DForcePull.label>Heranziehen</PJ_DForcePull.label>
+
+
+  <!-- Force Push -->
+
+  <PJ_DForcePush.label>Wegschieben</PJ_DForcePush.label>
+
+
+</LanguageData>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_Jedi_Robe.label>ジェダイローブ</PJ_Jedi_Robe.label>
+  <PJ_Jedi_Robe.description>ジェダイのローブです。</PJ_Jedi_Robe.description>
+
+  <PJ_Sith_Robe.label>シスローブ</PJ_Sith_Robe.label>
+  <PJ_Sith_Robe.description>ダークサイドのジェダイローブです。</PJ_Sith_Robe.description>
+
+  <PJ_InnerRobes.label>ジェダイチュニック</PJ_InnerRobes.label>
+  <PJ_InnerRobes.description>ジェダイが着ているシンプルなチュニックです。</PJ_InnerRobes.description>
+
+
+</LanguageData>

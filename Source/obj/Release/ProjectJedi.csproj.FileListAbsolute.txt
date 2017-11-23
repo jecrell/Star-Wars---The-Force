@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ProjectJedi\Assemblies\ProjectJedi.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\ProjectJedi\Source\obj\Release\ProjectJedi.dll
+E:\Steam2\steamapps\common\RimWorld\Mods\Star-Wars---The-Force-A18\Source\obj\Release\ProjectJedi.csprojResolveAssemblyReference.cache
+E:\Steam2\steamapps\common\RimWorld\Mods\Star-Wars---The-Force-A18\Source\obj\Release\ProjectJedi.dll
+E:\Steam2\steamapps\common\RimWorld\Mods\Star-Wars---The-Force-A18\Assemblies\ProjectJedi.dll

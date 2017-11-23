@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Force Pull -->
+
+  <PJ_PFlyingObject.label>fliegendes Objekt</PJ_PFlyingObject.label>
+  <PJ_PFlyingObject_Equipable.label>fliegendes Objekt</PJ_PFlyingObject_Equipable.label>
+  <PJ_PForcePull.label>Machtziehen</PJ_PForcePull.label>
+
+
+  <!-- Force Pull (Apprentice) -->
+
+  <PJ_ForcePull_Apprentice.label>Machtziehen</PJ_ForcePull_Apprentice.label>
+  <PJ_ForcePull_Apprentice.description>Stufe 1: Zieht Bodenobjekte (keine Leute oder Tiere) in Richtung des Wirkers.</PJ_ForcePull_Apprentice.description>
+
+
+  <!-- Force Pull (Apprentice) -->
+
+  <PJ_ForcePull_Apprentice.label>Machtziehen(Lehrling)</PJ_ForcePull_Apprentice.label>
+  <PJ_ForcePull_Apprentice.description>Stufe 1: Zieht Bodenobjekte (keine Leute oder Tiere) in Richtung des Wirkers.\nStufe 2: Zieht heran und rüstet Waffen und Gegenstände automatisch aus.</PJ_ForcePull_Apprentice.description>
+
+
+  <!-- Force Pull (Master) -->
+
+  <PJ_ForcePull_Master.label>Machtziehen(Meister)</PJ_ForcePull_Master.label>
+  <PJ_ForcePull_Master.description>Stufe 1: Zieht Bodenobjekte (keine Leute oder Tiere) in Richtung des Wirkers.\nStufe 2: Zieht heran und rüstet Waffen und Gegenstände automatisch aus.\nStufe 3:Entwaffnet nun. Wenn unbewaffnet zieht das Machtziehen sogar Leute oder Tiere an..</PJ_ForcePull_Master.description>
+
+
+  <!-- Machtstoß -->
+
+  <PJ_PForcePush.label>Machtstoß</PJ_PForcePush.label>
+
+
+  <!-- Machtstoß (Apprentice) -->
+
+  <PJ_ForcePush_Apprentice.label>Machtstoß</PJ_ForcePush_Apprentice.label>
+  <PJ_ForcePush_Apprentice.description>Stufe 1: stößt Leute 8 Felder weit weg.</PJ_ForcePush_Apprentice.description>
+
+
+  <!-- Machtstoß (Apprentice) -->
+
+  <PJ_ForcePush_Apprentice.label>Machtstoß (Lehrling)</PJ_ForcePush_Apprentice.label>
+  <PJ_ForcePush_Apprentice.description>Stufe 1: stößt Leute 8 Felder weit weg.\nStufe 2: stößt 10 Felder weit weg und betäubt das Ziel.</PJ_ForcePush_Apprentice.description>
+
+
+  <!-- Machtstoß (Master) -->
+
+  <PJ_ForcePush_Master.label>Machtstoß (Meister)</PJ_ForcePush_Master.label>
+  <PJ_ForcePush_Master.description>Stufe 1: stößt Leute 8 Felder weit weg.\nStufe 2: stößt 10 Felder weit weg und betäubt das Ziel.\nStufe 3: stößt 12 Felder weit weg, betäubt das Ziel und fügt Wänden nun Schaden zu.</PJ_ForcePush_Master.description>
+
+
+  <!-- Machtsprint -->
+
+  <PJ_PForceSpeed.label>Machtsprint</PJ_PForceSpeed.label>
+
+
+  <!-- Machtsprint (Apprentice) -->
+
+  <PJ_ForceSpeed_Apprentice.label>Machtsprint</PJ_ForceSpeed_Apprentice.label>
+  <PJ_ForceSpeed_Apprentice.description>Erhöht für kurze Zeit die Sprintgeschwindigkeit des Wirkes.</PJ_ForceSpeed_Apprentice.description>
+
+
+  <!-- Machtsprint (Apprentice) -->
+
+  <PJ_ForceSpeed_Apprentice.label>Machtsprint (Lehrling)</PJ_ForceSpeed_Apprentice.label>
+  <PJ_ForceSpeed_Apprentice.description>Erhöht für kurze Zeit die Sprintgeschwindigkeit des Wirkes.</PJ_ForceSpeed_Apprentice.description>
+
+
+  <!-- Machtsprint (Master) -->
+
+  <PJ_ForceSpeed_Master.label>Machtsprint (Meister)</PJ_ForceSpeed_Master.label>
+  <PJ_ForceSpeed_Master.description>Erhöht für kurze Zeit die Sprintgeschwindigkeit des Wirkes.</PJ_ForceSpeed_Master.description>
+
+
+</LanguageData>

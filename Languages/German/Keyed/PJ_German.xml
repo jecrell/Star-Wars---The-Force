@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+<!-- =========== 5/13/17 ========== -->
+<PJ_UsingShieldBelt>Das Schild blockiert deine Kräfte.</PJ_UsingShieldBelt>
+<PJ_DrainedForcePool>{0} muss seine Macht aufladen.</PJ_DrainedForcePool>
+<PJ_WrongAlignment>{0} hat falsche Gesinnung.</PJ_WrongAlignment>
+
+
+<!-- =========== Messages ======== -->
+<PJ_ForceGhostResisted>Der Geist widersteht.</PJ_ForceGhostResisted>
+<PJ_ForceResisted>{0} widersteht {1}'s {2}.</PJ_ForceResisted>
+<PJ_ForceDrainTwo>{0} saugt {1}'s Gesundheit ab!</PJ_ForceDrainTwo>
+<PJ_ForceDrainOne>{0} saugt {1}'s Macht ab!</PJ_ForceDrainOne>
+<PJ_LevelUp>{0} ist aufgestiegen! Neue Machtpunkte verfügbar.</PJ_LevelUp>
+<PJ_LightsidePointsRequired>Benötigt {0} für Fähigkeiten ausgegebene Punkte auf der hellen Seite</PJ_LightsidePointsRequired>
+<PJ_DarksidePointsRequired>Benötigt {0} für Fähigkeiten ausgegebene Punkte auf der dunklen Seite</PJ_DarksidePointsRequired>
+<PJ_NextLevelAlignmentMismatch>Das nächste Stufe erfordert {0} Punkte auf dieser Gesinnung. Wir sind {1}.</PJ_NextLevelAlignmentMismatch>
+<PJ_CheckStarsForMoreInfo>Für genauere Informationen berühre mit der Maus über die jeweiligen Sterne.</PJ_CheckStarsForMoreInfo>
+<PJ_ForceAwakensLabel>Die Macht erwacht</PJ_ForceAwakensLabel>
+<PJ_ForceAwakensDesc>{0} hat tief in sich drin eine mysteriöse Kraft entdeckt.</PJ_ForceAwakensDesc>
+<PJ_NotEnoughAbilityPoints>Benötigt {1} Fähigkeitspunkt. Wir haben {0}.</PJ_NotEnoughAbilityPoints>
+<PJ_PointsRequired>Benötigte Fähigkeitspunkte: {0}</PJ_PointsRequired>
+<PJ_DarkPointsRequired>Benötigte Fähigkeitspunkte der dunklen Seite: {0}</PJ_DarkPointsRequired>
+<PJ_LightPointsRequired>Benötigte Fähigkeitspunkte der hellen Seite: {0}</PJ_LightPointsRequired>
+<PJ_CastSuccess>Wirken erfolgreich</PJ_CastSuccess>
+<PJ_CastFailure>Wirken fehlgeschlagen</PJ_CastFailure>
+
+<!-- ============= Float Menus ============= -->
+<PJ_ForceMeditate>Meditiere</PJ_ForceMeditate>
+<PJ_ForceMeditate_NeedForceUsersOnly>nur für Machtnutzer</PJ_ForceMeditate_NeedForceUsersOnly>
+<PJ_ForceMeditate_NeedRest>Versuche es später noch einmal</PJ_ForceMeditate_NeedRest>
+
+<!-- ============= UI ============ -->
+<PJ_TabForce>Macht</PJ_TabForce>
+<PJ_Alignment>Gesinnung</PJ_Alignment>
+<PJ_Dark>dunkel</PJ_Dark>
+<PJ_Gray>grau</PJ_Gray>
+<PJ_Light>hell</PJ_Light>
+<PJ_Skills>Fähigkeiten</PJ_Skills>
+<PJ_Powers>Kräfte</PJ_Powers>
+<PJ_Affiliation>Reihenfolge</PJ_Affiliation>
+<PJ_PointsAvail>Verfügbare Punkte</PJ_PointsAvail>
+<PJ_LightsaberOffense>Lichtschwert Angriff</PJ_LightsaberOffense>
+<PJ_LightsaberDefense>Lichtschwert Verteidigung</PJ_LightsaberDefense>
+<PJ_LightsaberAccuracy>Lichtschwert Genauigkeit</PJ_LightsaberAccuracy>
+<PJ_LightsaberReflection>Lichtschwert Reflexion</PJ_LightsaberReflection>
+<PJ_ForcePool>Machtpool</PJ_ForcePool>
+<PJ_ForceXPDesc>Für das Verwenden von Fähigkeiten bekommt ein Charakter Macht EP. Das Auswählen von Fähigkeiten steigert die EP besser als alles anderes.</PJ_ForceXPDesc>
+<PJ_AlignmentDesc>Die Gesinnung bestimmt, welche Kräfte der Charakter nutzen kann. Graue Jedis können niedrigstufige Kräfte beider Seiten nutzen. Aber höherstufige Kräfte verlangen eine größere Hingabe zur einer Seite der Macht.</PJ_AlignmentDesc>
+<PJ_ForceSensitiveDesc>{0} fühlt etwas aufwühlendes in sich.... Benutze seine/ihre Kräfte und schau ihm/ihr zu </PJ_ForceSensitiveDesc>
+<PJ_SensitiveMessage>Etwas erwacht.....</PJ_SensitiveMessage>
+<PJ_ForcePowersUnlocked>{0} kann nun die Macht kontrollieren.</PJ_ForcePowersUnlocked>
+
+<!-- =========== Skills ========== -->
+<PJ_LightsaberOffense_Desc>Verbessert Lichtschwertschaden um 20% pro Fähigkeitspunkt. Alle Machtnutzer starten mit halben Schaden bei Lichtschwertern, bis sie in der Fähigkeit aufsteigen. Nicht Machtnutzer machen maximal 10 Schaden.</PJ_LightsaberOffense_Desc>
+<PJ_LightsaberDefense_Desc>Verbessert die Chance einen Nahkampfangriff zu blocken und Kugeln abzulenken um 15% pro Stufe.</PJ_LightsaberDefense_Desc>
+<PJ_LightsaberReflection_Desc>Verbessert die Chance Kugeln zurück zum Angreifer zu schleudern um 20% pro Stufe.</PJ_LightsaberReflection_Desc>
+<PJ_LightsaberAccuracy_Desc>Verbessert die Genauigkeit mit der Lichtschwertangriffe treffen um 20% pro Stufe.</PJ_LightsaberAccuracy_Desc>
+<PJ_ForcePool_Desc>Verringert die erforderliche Menge an Macht um 15% pro Stufe.</PJ_ForcePool_Desc>
+
+<!-- ========== Buttons ========== -->
+
+<ForceAbilityDescAlign>Erforderliche Gesinnung: {0}</ForceAbilityDescAlign>
+<ForceAbilityDescChange>Passt die Gesinnung in Richtung der {0} Seite um {1} an</ForceAbilityDescChange>
+<ForceAbilityDescPoints>Machtstärke: {0}</ForceAbilityDescPoints>
+<ForceAbilityDescOriginPoints>Machtstärke: {0} (Original)</ForceAbilityDescOriginPoints>
+<ForceAbilityDescNewPoints>Machtstärke: {0} (pro/ Machtpool Fähigkeit)</ForceAbilityDescNewPoints>
+
+</LanguageData>

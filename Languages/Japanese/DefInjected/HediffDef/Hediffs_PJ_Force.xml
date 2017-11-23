@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ForceSpeedHediff_One.label>フォーススピードLv1</PJ_ForceSpeedHediff_One.label>
+  <PJ_ForceSpeedHediff_Two.label>フォーススピードLv2</PJ_ForceSpeedHediff_Two.label>
+  <PJ_ForceSpeedHediff_Three.label>フォーススピードLv3</PJ_ForceSpeedHediff_Three.label>
+  <PJ_ForceDefenseHediff.label>フォース防御</PJ_ForceDefenseHediff.label>
+  <PJ_MindTrick.label>精神操作</PJ_MindTrick.label>
+  <PJ_Rage.label>狂戦士化</PJ_Rage.label>
+
+
+</LanguageData>

@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A36BEEB2-7379-475B-B537-827E34571962}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectJedi</RootNamespace>
+    <AssemblyName>ProjectJedi</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="0Harmony, Version=1.0.9.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Harmony1091\0Harmony.dll</HintPath>
+    </Reference>
+    <Reference Include="AbilityUser, Version=1.17.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\JecsTools-A18\Assemblies\AbilityUser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CompActivatableEffect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\JecsTools-A18\Assemblies\CompActivatableEffect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompDeflector, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\JecsTools-A18\Assemblies\CompDeflector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompOversizedWeapon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\JecsTools-A18\Assemblies\CompOversizedWeapon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompSlotLoadable, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\JecsTools-A18\Assemblies\CompSlotLoadable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEngine">
+      <HintPath>..\..\..\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProjectJedi\Buttons.cs" />
+    <Compile Include="ProjectJedi\CompForceUser.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceChoke.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceDrain.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceHeal.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForceLeveled.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForcePull.cs" />
+    <Compile Include="ProjectJedi\DamageWorker_ForcePush.cs" />
+    <Compile Include="ProjectJedi\FlyingObject.cs" />
+    <Compile Include="ProjectJedi\FlyingObject_Equipable.cs" />
+    <Compile Include="ProjectJedi\ForceAbility.cs" />
+    <Compile Include="ProjectJedi\ForceAbilityDef.cs" />
+    <Compile Include="ProjectJedi\ForceAlignmentType.cs" />
+    <Compile Include="ProjectJedi\ForceCardUtility.cs" />
+    <Compile Include="ProjectJedi\Building_ForceMeditationPad.cs" />
+    <Compile Include="ProjectJedi\ForcePower.cs" />
+    <Compile Include="ProjectJedi\ForceSkill.cs" />
+    <Compile Include="ProjectJedi\ForceData.cs" />
+    <Compile Include="ProjectJedi\ForceUtility.cs" />
+    <Compile Include="ProjectJedi\HarmonyPatches.cs" />
+    <Compile Include="ProjectJedi\HediffComp_Shield.cs" />
+    <Compile Include="ProjectJedi\Gizmo_HediffShieldStatus.cs" />
+    <Compile Include="ProjectJedi\ITab_Pawn_Force.cs" />
+    <Compile Include="ProjectJedi\JobDriver_ForceMeditation.cs" />
+    <Compile Include="ProjectJedi\JobGiver_ForceMeditation.cs" />
+    <Compile Include="ProjectJedi\Need_ForcePool.cs" />
+    <Compile Include="ProjectJedi\PawnGhost.cs" />
+    <Compile Include="ProjectJedi\Projectile_ForceStorm.cs" />
+    <Compile Include="ProjectJedi\ProjectJediDefOf.cs" />
+    <Compile Include="ProjectJedi\ThinkNode_ModNeedPercentageAbove.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

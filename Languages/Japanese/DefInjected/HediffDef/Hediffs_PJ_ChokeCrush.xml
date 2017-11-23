@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ChokeCrush.label>潰れた</PJ_ChokeCrush.label>
+  <PJ_ChokeCrush.comps.0.labelTendedWell>包帯</PJ_ChokeCrush.comps.0.labelTendedWell>
+  <PJ_ChokeCrush.comps.0.labelTendedWellInner>縫合</PJ_ChokeCrush.comps.0.labelTendedWellInner>
+  <PJ_ChokeCrush.comps.0.labelSolidTendedWell>セット</PJ_ChokeCrush.comps.0.labelSolidTendedWell>
+  <PJ_ChokeCrush.comps.2.oldLabel>壊れた</PJ_ChokeCrush.comps.2.oldLabel>
+  <PJ_ChokeCrush.injuryProps.destroyedLabel>潰れた</PJ_ChokeCrush.injuryProps.destroyedLabel>
+
+
+</LanguageData>

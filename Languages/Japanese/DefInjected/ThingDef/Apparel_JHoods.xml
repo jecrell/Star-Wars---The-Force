@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_JediHood.label>ジェダイフード</PJ_JediHood.label>
+  <PJ_JediHood.description>ジェダイが着用した質素なフード。</PJ_JediHood.description>
+
+  <PJ_SithHood.label>シスフード</PJ_SithHood.label>
+  <PJ_SithHood.description>シスが着用した不吉なフード。</PJ_SithHood.description>
+
+  <PJ_CustomHood.label>カスタムフード</PJ_CustomHood.label>
+  <PJ_CustomHood.description>ジェダイとシス向けのカスタムフードです。</PJ_CustomHood.description>
+
+
+</LanguageData>

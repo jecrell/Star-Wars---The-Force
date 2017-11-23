@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <PJ_ForceGhostR.label>Machtgeist</PJ_ForceGhostR.label>
+  <PJ_ForceGhostR.description>Ein Machtgeist</PJ_ForceGhostR.description>
+  <!-- No Leather: Butcher Products -->
+  <PJ_ForceGhostR_Meat.label>Ektoplasma</PJ_ForceGhostR_Meat.label>
+  <PJ_ForceGhostR_Meat.description>Ektoplasma</PJ_ForceGhostR_Meat.description>
+  <PJ_ForceGhostR_Corpse.label>Machtgeist Leiche</PJ_ForceGhostR_Corpse.label>
+  <PJ_ForceGhostR_Corpse.description>Machtgeist Leiche</PJ_ForceGhostR_Corpse.description>
+
+  <PJ_MeleeWeapon_ForceGladius.label>geisterhaftes Gladius</PJ_MeleeWeapon_ForceGladius.label>
+  <PJ_MeleeWeapon_ForceGladius.description>Ein körperloses Schwert mit altem Design. Gut zum stechen und schneiden.</PJ_MeleeWeapon_ForceGladius.description>
+
+
+</LanguageData>
