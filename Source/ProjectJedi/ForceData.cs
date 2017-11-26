@@ -29,6 +29,9 @@ namespace ProjectJedi
 
         private Faction affiliation = null;
         private int ticksAffiliation = 0;
+
+        public bool TabResolved = false;
+
         #endregion
 
         #region Properties
