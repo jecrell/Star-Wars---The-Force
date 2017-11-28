@@ -45,3 +45,12 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# RimWorld DLLs
+Assemblies/Assembly-CSharp-firstpass.dll
+Assemblies/Assembly-CSharp.dll
+Assemblies/NAudio.dll
+Assemblies/NVorbis.dll
+Assemblies/TextMeshPro-1.0.55.56.0b11.dll
+Assemblies/UnityEngineUI.dll
+Assemblies/UnityEngine.dll
