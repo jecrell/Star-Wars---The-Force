@@ -7,3 +7,6 @@ C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Star-Wars---The-Forc
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\Release\ProjectJedi.csprojResolveAssemblyReference.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\Release\ProjectJedi.csproj.CoreCompileInputs.cache
 C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\Release\ProjectJedi.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Assemblies\ProjectJedi.dll
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\Release\ProjectJedi.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\Release\ProjectJedi.dll

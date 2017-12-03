@@ -480,7 +480,7 @@ namespace ProjectJedi
                         // {
                         if (this.IsForceUser)
                         {
-                            if (!this.ForceData.Initialized)
+                            if (!this.ForceData.ForcePowersInitialized)
                             {
                                 this.PostInitializeTick();
                                 this.ForceData.TabResolved = true;
@@ -525,7 +525,7 @@ namespace ProjectJedi
                 {
                     if (this.AbilityUser.story != null)
                     {
-                        this.ForceData.Initialized = true;
+                        this.ForceData.ForcePowersInitialized = true;
                         this.Initialize();
                         // if (ForceData.Alignment == 0.0f) ForceData.Alignment = 0.5f;
                         this.ResolveForceTab();
@@ -870,113 +870,25 @@ namespace ProjectJedi
             base.PostExposeData();
             Scribe_Deep.Look<ForceData>(ref this.forceData, "forceData", new object[] { this });
 
-            // if (Scribe.mode == LoadSaveMode.Saving)
-            // {
-
-            // if (!ForceData.PowersDark.NullOrEmpty())
-            // {
-            // foreach (ForcePower power in ForceData.PowersDark)
-            // {
-            // if (power.abilityDef != null)
-            // {
-            // if (!AbilityData.Powers.NullOrEmpty() && AbilityData.Powers.FirstOrDefault(x => x.Def == power.abilityDef) is ForceAbility listPower)
-            // {
-            // power.ticksUntilNextCast = listPower.CooldownTicksLeft;
-            // }
-            // }
-            // }
-            // }
-
-            // if (!ForceData.PowersGray.NullOrEmpty())
-            // {
-            // foreach (ForcePower power in ForceData.PowersGray)
-            // {
-            // if (power.abilityDef != null)
-            // {
-            // if (!AbilityData.Powers.NullOrEmpty() && AbilityData.Powers.FirstOrDefault(x => x.Def == power.abilityDef) is ForceAbility listPower)
-            // {
-            // power.ticksUntilNextCast = listPower.CooldownTicksLeft;
-            // }
-            // }
-            // }
-            // }
-
-            // if (!ForceData.PowersLight.NullOrEmpty())
-            // {
-            // foreach (ForcePower power in ForceData.PowersLight)
-            // {
-            // if (power.abilityDef != null)
-            // {
-            // if (!AbilityData.Powers.NullOrEmpty() && AbilityData.Powers.FirstOrDefault(x => x.Def == power.abilityDef) is ForceAbility listPower)
-            // {
-            // power.ticksUntilNextCast = listPower.CooldownTicksLeft;
-            // }
-            // }
-            // }
-            // }
-            // //}
-            // }
-
-            // if (Scribe.mode == LoadSaveMode.PostLoadInit)
-            // {
-            // var abilities = new List<ForceAbility>();
-            // if (!this.AbilityData.Powers.NullOrEmpty())
-            // {
-            // foreach (PawnAbility ab in this.AbilityData.Powers)
-            // {
-            // abilities.Add(ab as ForceAbility);
-            // }
-            // if (!abilities.NullOrEmpty())
-            // {
-            // foreach (ForceAbility pab in abilities)
-            // {
-            // this.RemovePawnAbility(pab.Def);
-            // }
-            // }
-            // }
-
-            // if (!ForceData.PowersDark.NullOrEmpty())
-            // {
-            // foreach (ForcePower power in ForceData.PowersDark)
-            // {
-            // if (power.abilityDef != null)
-            // {
-            // if (power.level > 0)
-            // {
-            // this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-            // }
-            // }
-            // }
-            // }
-
-            // if (!ForceData.PowersGray.NullOrEmpty())
-            // {
-            // foreach (ForcePower power in ForceData.PowersGray)
-            // {
-            // if (power.abilityDef != null)
-            // {
-            // if (power.level > 0)
-            // {
-            // this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-            // }
-            // }
-            // }
-            // }
-
-            // if (!ForceData.PowersLight.NullOrEmpty())
-            // {
-            // foreach (ForcePower power in ForceData.PowersLight)
-            // {
-            // if (power.abilityDef != null)
-            // {
-            // if (power.level > 0)
-            // {
-            // this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
-            // }
-            // }
-            // }
+            if (Scribe.mode == LoadSaveMode.PostLoadInit)
+            {
+                var abilities = new List<ForceAbility>();
+                if (this.ForceData != null && ForceData.Powers.Count() > 0)
+                {
+                    foreach (ForcePower power in ForceData.Powers)
+                    {
+                        if (power.abilityDef != null)
+                        {
+                            if (power.level > 0)
+                            {
+                                if (this.AbilityData.Powers.FirstOrDefault(x => x.Def == power.abilityDef) == null)
+                                    this.AddPawnAbility(power.abilityDef, true, power.ticksUntilNextCast);
+                            }
+                        }
+                    }
+                }
+                #endregion ExposeData
+            }
         }
-
-        #endregion ExposeData
     }
 }

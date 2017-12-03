@@ -35,7 +35,6 @@ namespace ProjectJedi
         #endregion
 
         #region Properties
-        public bool Initialized { get => initialized; set => initialized = value; }
         public bool ForcePowersInitialized { get => forcePowersInitialized; set => forcePowersInitialized = value; }
 
         public int Level { get => level; set => level = value; }
