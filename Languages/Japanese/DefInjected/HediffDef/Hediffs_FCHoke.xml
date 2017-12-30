@@ -7,6 +7,7 @@
   <PJ_NoAir.stages.2.label>息切れする</PJ_NoAir.stages.2.label>
   <PJ_NoAir.stages.3.label>呼吸できない</PJ_NoAir.stages.3.label>
   <PJ_NoAir.stages.4.label>窒息死する</PJ_NoAir.stages.4.label>
+  <PJ_NoAir.labelNoun>窒息仮死</PJ_NoAir.labelNoun>
 
 
 </LanguageData>
