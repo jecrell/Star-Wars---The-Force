@@ -12,3 +12,6 @@ D:\SteamLibrary\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\
 D:\SteamLibrary\steamapps\common\RimWorld\Mods\Star-Wars---The-Force\Source\obj\Debug\ProjectJedi.dll
 E:\Steam2\steamapps\common\RimWorld\Mods\Star-Wars---The-Force-A18\Source\obj\Debug\ProjectJedi.csprojResolveAssemblyReference.cache
 E:\Steam2\steamapps\common\RimWorld\Mods\Star-Wars---The-Force-A18\Source\obj\Debug\ProjectJedi.dll
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Star-Wars---The-Force\Assemblies\ProjectJedi.dll
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Star-Wars---The-Force\Source\obj\Debug\ProjectJedi.csprojResolveAssemblyReference.cache
+D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Star-Wars---The-Force\Source\obj\Debug\ProjectJedi.dll

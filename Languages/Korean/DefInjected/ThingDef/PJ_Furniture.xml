@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PJ_ForceMedPadJ.label>명상 패드 (제다이)</PJ_ForceMedPadJ.label>
+  <PJ_ForceMedPadJ.description>명상읠 위한 편안한 패드입니다. 또한 일반 의자로도 사용 가능합니다.</PJ_ForceMedPadJ.description>
+  <PJ_ForceMedPadJ_Blueprint.label>먕상 패드 (제다이) (청사진)</PJ_ForceMedPadJ_Blueprint.label>
+  <PJ_ForceMedPadJ_Blueprint_Install.label>먕상 패드 (제다이) (청사진)</PJ_ForceMedPadJ_Blueprint_Install.label>
+  <PJ_ForceMedPadJ_Frame.label>먕상 패드 (제다이) (건설중)</PJ_ForceMedPadJ_Frame.label>
+  <PJ_ForceMedPadJ_Frame.description>명상읠 위한 편안한 패드입니다. 또한 일반 의자로도 사용 가능합니다.</PJ_ForceMedPadJ_Frame.description>
+  <PJ_ForceMedPadS.label>명상 패드 (시스)</PJ_ForceMedPadS.label>
+  <PJ_ForceMedPadS.description>명상읠 위한 편안한 패드입니다. 또한 일반 의자로도 사용 가능합니다.</PJ_ForceMedPadS.description>
+  <PJ_ForceMedPadS_Blueprint.label>먕상 패드 (시스) (청사진)</PJ_ForceMedPadS_Blueprint.label>
+  <PJ_ForceMedPadS_Blueprint_Install.label>먕상 패드 (시스) (청사진)</PJ_ForceMedPadS_Blueprint_Install.label>
+  <PJ_ForceMedPadS_Frame.label>먕상 패드 (시스) (건설중)</PJ_ForceMedPadS_Frame.label>
+  <PJ_ForceMedPadS_Frame.description>명상읠 위한 편안한 패드입니다. 또한 일반 의자로도 사용 가능합니다.</PJ_ForceMedPadS_Frame.description>
+</LanguageData>

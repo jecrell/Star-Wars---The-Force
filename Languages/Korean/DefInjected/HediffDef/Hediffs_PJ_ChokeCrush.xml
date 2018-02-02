@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PJ_ChokeCrush.label>부서진</PJ_ChokeCrush.label>
+  <PJ_ChokeCrush.comps.0.labelTendedWell>붕대를 감다</PJ_ChokeCrush.comps.0.labelTendedWell>
+  <PJ_ChokeCrush.comps.0.labelTendedWellInner>봉합 하다</PJ_ChokeCrush.comps.0.labelTendedWellInner>
+  <PJ_ChokeCrush.comps.0.labelSolidTendedWell>놓다</PJ_ChokeCrush.comps.0.labelSolidTendedWell>
+  <PJ_ChokeCrush.comps.2.oldLabel>흉터</PJ_ChokeCrush.comps.2.oldLabel>
+  <PJ_ChokeCrush.injuryProps.destroyedLabel>부서지다</PJ_ChokeCrush.injuryProps.destroyedLabel>
+</LanguageData>

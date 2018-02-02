@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Force Rage -->
+  <PForceRage.label>포스 레이지</PForceRage.label>
+  <!-- Force Choke -->
+  <PForceChoke.label>포스 초크</PForceChoke.label>
+  <PForceChokeTwo.label>포스 초크</PForceChokeTwo.label>
+  <PForceChokeThree.label>포스 초크</PForceChokeThree.label>
+  <!-- Force Drain -->
+  <PJ_PForceDrain.label>포스 드레인</PJ_PForceDrain.label>
+  <!-- Force Lightning -->
+  <PForceLightningProj.label>포스 라이트닝</PForceLightningProj.label>
+  <!-- Force Storm -->
+  <PJ_PForceStormProj.label>포스 스톰</PJ_PForceStormProj.label>
+</LanguageData>

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Laser.label>화상</Laser.label>
+  <Laser.deathMessage>{0} 가 총에 맞아 죽었습니다.</Laser.deathMessage>
+</LanguageData>

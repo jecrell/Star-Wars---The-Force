@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Force Pull -->
+  <PJ_PFlyingObject.label>비행 물체</PJ_PFlyingObject.label>
+  <PJ_PFlyingObject_Equipable.label>비행 물체</PJ_PFlyingObject_Equipable.label>
+  <PJ_PForcePull.label>포스 풀</PJ_PForcePull.label>
+  <!-- Force Push -->
+  <PJ_PForcePush.label>포스 푸쉬</PJ_PForcePush.label>
+  <!-- Force Speed -->
+  <PJ_PForceSpeed.label>포스 스피드</PJ_PForceSpeed.label>
+</LanguageData>

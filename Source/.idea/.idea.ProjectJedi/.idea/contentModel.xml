@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\mattw\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_ProjectJedi.-1884939022.00" t="ExcludeRecursive" />
+    <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Star-Wars---The-Force\Assemblies" t="ExcludeRecursive" />
+    <e p="D:\SteamLibrary\steamapps\common\RimWorld\ModsWorkspace\Star-Wars---The-Force\Source" t="IncludeRecursive">
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="ProjectJedi" t="Include">
+        <e p="Building_ForceMeditationPad.cs" t="Include" />
+        <e p="Buttons.cs" t="Include" />
+        <e p="CompForceUser.cs" t="Include" />
+        <e p="DamageWorker_ForceChoke.cs" t="Include" />
+        <e p="DamageWorker_ForceDrain.cs" t="Include" />
+        <e p="DamageWorker_ForceHeal.cs" t="Include" />
+        <e p="DamageWorker_ForceLeveled.cs" t="Include" />
+        <e p="DamageWorker_ForcePull.cs" t="Include" />
+        <e p="DamageWorker_ForcePush.cs" t="Include" />
+        <e p="FlyingObject.cs" t="Include" />
+        <e p="FlyingObject_Equipable.cs" t="Include" />
+        <e p="ForceAbility.cs" t="Include" />
+        <e p="ForceAbilityDef.cs" t="Include" />
+        <e p="ForceAlignmentType.cs" t="Include" />
+        <e p="ForceCardUtility.cs" t="Include" />
+        <e p="ForceData.cs" t="Include" />
+        <e p="ForcePower.cs" t="Include" />
+        <e p="ForceSkill.cs" t="Include" />
+        <e p="ForceUtility.cs" t="Include" />
+        <e p="Gizmo_HediffShieldStatus.cs" t="Include" />
+        <e p="HarmonyPatches.cs" t="Include" />
+        <e p="HediffComp_Shield.cs" t="Include" />
+        <e p="ITab_Pawn_Force.cs" t="Include" />
+        <e p="JobDriver_ForceMeditation.cs" t="Include" />
+        <e p="JobGiver_ForceMeditation.cs" t="Include" />
+        <e p="Need_ForcePool.cs" t="Include" />
+        <e p="PawnGhost.cs" t="Include" />
+        <e p="Projectile_ForceStorm.cs" t="Include" />
+        <e p="ProjectJediDefOf.cs" t="Include" />
+        <e p="ThinkNode_ModNeedPercentageAbove.cs" t="Include" />
+      </e>
+      <e p="ProjectJedi.csproj" t="IncludeRecursive" />
+      <e p="ProjectJedi.sln" t="IncludeFlat" />
+      <e p="Properties" t="Include">
+        <e p="AssemblyInfo.cs" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

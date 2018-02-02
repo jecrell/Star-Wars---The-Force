@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Force Healing Self -->
+  <PJ_PForceHeal.label>포스 힐링</PJ_PForceHeal.label>
+  <!-- Force Defense -->
+  <PJ_PForceDefense.label>포스 디펜스</PJ_PForceDefense.label>
+  <!-- Mind Trick -->
+  <PMindTrick.label>마인드 트릭</PMindTrick.label>
+  <!-- Force Ghost -->
+  <PForceGhost.label>포스 고스트</PForceGhost.label>
+</LanguageData>

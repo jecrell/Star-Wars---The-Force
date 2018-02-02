@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Force Pull (Apprentice) -->
+  <PJ_ForcePull_Apprentice.label>포스 풀</PJ_ForcePull_Apprentice.label>
+  <PJ_ForcePull_Apprentice.description>레벨 1 : 땅에 있는 물건을 시전자쪽으로 당깁니다. (사람이나 동물 불가능)</PJ_ForcePull_Apprentice.description>
+  <!-- Force Pull (Adept) -->
+  <PJ_ForcePull_Adept.label>포스 풀 (숙달)</PJ_ForcePull_Adept.label>
+  <PJ_ForcePull_Adept.description>레벨 1 : 땅에 있는 물건을 시전자쪽으로 당깁니다. (사람이나 동물 불가능)\n레벨2 : 무기와 의복을 당겨서 장착합니다.</PJ_ForcePull_Adept.description>
+  <!-- Force Pull (Master) -->
+  <PJ_ForcePull_Master.label>포스 풀 (달인)</PJ_ForcePull_Master.label>
+  <PJ_ForcePull_Master.description>레벨 1 : 땅에 있는 물건을 시전자쪽으로 당깁니다. (사람이나 동물 불가능)\n레벨2 : 무기와 의복을 당겨서 장착합니다.\n레벨 3 : 다른 사람 손에서 무기를 뺏어 올 수 있습니다. 이제 비무장 상태인 사람이나 동물도 시전자쪽으로 당깁니다.</PJ_ForcePull_Master.description>
+  <!-- Force Push (Apprentice) -->
+  <PJ_ForcePush_Apprentice.label>포스 푸쉬</PJ_ForcePush_Apprentice.label>
+  <PJ_ForcePush_Apprentice.description>레벨 1 : 상대를 8 타일만큼 밀어냅니다.</PJ_ForcePush_Apprentice.description>
+  <!-- Force Push (Adept) -->
+  <PJ_ForcePush_Adept.label>포스 푸쉬 (숙달)</PJ_ForcePush_Adept.label>
+  <PJ_ForcePush_Adept.description>레벨 1 : 상대를 8 타일만큼 밀어냅니다.\n레벨 2 : 상대를 10 타일만큼 밀어내고 기절시킵니다.</PJ_ForcePush_Adept.description>
+  <!-- Force Push (Master) -->
+  <PJ_ForcePush_Master.label>포스 푸쉬 (달인)</PJ_ForcePush_Master.label>
+  <PJ_ForcePush_Master.description>레벨 1 : 상대를 8 타일만큼 밀어냅니다.\n레벨 2 : 상대를 10 타일만큼 밀어내고 기절시킵니다.\n레벨 3 : 상대를 12 타일만큼 밀어내고 기절 시킵니다. 추가로 벽에 부딪힌 것 같은 충격을 가합니다.</PJ_ForcePush_Master.description>
+  <!-- Force Speed (Apprentice) -->
+  <PJ_ForceSpeed_Apprentice.label>포스 스피드</PJ_ForceSpeed_Apprentice.label>
+  <PJ_ForceSpeed_Apprentice.description>짧은 시간동안 시전자의 달리기 속도를 상승 시킵니다.</PJ_ForceSpeed_Apprentice.description>
+  <!-- Force Speed (Adept) -->
+  <PJ_ForceSpeed_Adept.label>포스 스피드 (숙달)</PJ_ForceSpeed_Adept.label>
+  <PJ_ForceSpeed_Adept.description>짧은 시간동안 시전자의 달리기 속도를 상승 시킵니다.</PJ_ForceSpeed_Adept.description>
+  <!-- Force Speed (Master) -->
+  <PJ_ForceSpeed_Master.label>포스 스피드 (달인)</PJ_ForceSpeed_Master.label>
+  <PJ_ForceSpeed_Master.description>짧은 시간동안 시전자의 달리기 속도를 상승 시킵니다.</PJ_ForceSpeed_Master.description>
+</LanguageData>

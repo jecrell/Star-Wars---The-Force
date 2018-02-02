@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PJ_JediHood.label>제다이 후드</PJ_JediHood.label>
+  <PJ_JediHood.description>제다이가 입었던 겸손한 후드</PJ_JediHood.description>
+  <PJ_SithHood.label>시스 후드</PJ_SithHood.label>
+  <PJ_SithHood.description>시스가 입었던 불길한 후드</PJ_SithHood.description>
+  <PJ_CustomHood.label>커스텀 후드</PJ_CustomHood.label>
+  <PJ_CustomHood.description>제다이나 시스를 위한 커스텀 후드</PJ_CustomHood.description>
+</LanguageData>

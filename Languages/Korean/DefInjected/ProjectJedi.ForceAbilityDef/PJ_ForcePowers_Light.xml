@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Force Healing Self (Apprentice) -->
+  <PJ_ForceHealingSelf_Apprentice.label>자신 치료</PJ_ForceHealingSelf_Apprentice.label>
+  <PJ_ForceHealingSelf_Apprentice.description>기적적으로 시전자를 치료합니다.</PJ_ForceHealingSelf_Apprentice.description>
+  <!-- Force Healing Self (Adept) -->
+  <PJ_ForceHealingSelf_Adept.label>자신 치료 (숙달)</PJ_ForceHealingSelf_Adept.label>
+  <PJ_ForceHealingSelf_Adept.description>기적적으로 시전자를 치료합니다.</PJ_ForceHealingSelf_Adept.description>
+  <!-- Force Healing Self (Master) -->
+  <PJ_ForceHealingSelf_Master.label>자신 치료 (달인)</PJ_ForceHealingSelf_Master.label>
+  <PJ_ForceHealingSelf_Master.description>기적적으로 시전자를 치료합니다.</PJ_ForceHealingSelf_Master.description>
+  <!-- Force Heal Target (Apprentice) -->
+  <PJ_ForceHealingOther_Apprentice.label>타인 치료</PJ_ForceHealingOther_Apprentice.label>
+  <PJ_ForceHealingOther_Apprentice.description>기적적으로 대상자를 치료합니다.</PJ_ForceHealingOther_Apprentice.description>
+  <!-- Force Heal Target (Adept) -->
+  <PJ_ForceHealingOther_Adept.label>타인 치료 (숙달)</PJ_ForceHealingOther_Adept.label>
+  <PJ_ForceHealingOther_Adept.description>기적적으로 대상자를 치료합니다.</PJ_ForceHealingOther_Adept.description>
+  <!-- Force Heal Target (Master) -->
+  <PJ_ForceHealingOther_Master.label>타인 치료 (달인)</PJ_ForceHealingOther_Master.label>
+  <PJ_ForceHealingOther_Master.description>기적적으로 대상자를 치료합니다.</PJ_ForceHealingOther_Master.description>
+  <!-- Force Defense (Apprentice) -->
+  <PJ_ForceDefense_Apprentice.label>포스 디펜스</PJ_ForceDefense_Apprentice.label>
+  <PJ_ForceDefense_Apprentice.description>짧은 시간 동안 시전자를 피해로부터 보호합니다.</PJ_ForceDefense_Apprentice.description>
+  <!-- Force Defense (Adept) -->
+  <PJ_ForceDefense_Adept.label>포스 디펜스 (숙달)</PJ_ForceDefense_Adept.label>
+  <PJ_ForceDefense_Adept.description>짧은 시간 동안 시전자를 피해로부터 보호합니다.</PJ_ForceDefense_Adept.description>
+  <!-- Force Defense (Master) -->
+  <PJ_ForceDefense_Master.label>포스 디펜스 (달인)</PJ_ForceDefense_Master.label>
+  <PJ_ForceDefense_Master.description>짧은 시간 동안 시전자를 피해로부터 보호합니다.</PJ_ForceDefense_Master.description>
+  <!-- Mind Trick (Apprentice) -->
+  <PJ_MindTrick_Apprentice.label>마인드 트릭</PJ_MindTrick_Apprentice.label>
+  <PJ_MindTrick_Apprentice.description>포스릃 사용하여 약한 마음을 가진 사람들을 목적없이 방황하게 만듭니다.</PJ_MindTrick_Apprentice.description>
+  <!-- Mind Trick (Adept) -->
+  <PJ_MindTrick_Adept.label>마인드 트릭 (숙달)</PJ_MindTrick_Adept.label>
+  <PJ_MindTrick_Adept.description>포스릃 사용하여 약한 마음을 가진 사람들을 목적없이 방황하게 만듭니다.</PJ_MindTrick_Adept.description>
+  <!-- Mind Trick (Master) -->
+  <PJ_MindTrick_Master.label>마인드 트릭 (달인)</PJ_MindTrick_Master.label>
+  <PJ_MindTrick_Master.description>포스릃 사용하여 약한 마음을 가진 사람들을 목적없이 방황하게 만듭니다.</PJ_MindTrick_Master.description>
+  <!-- Force Ghost (Apprentice) -->
+  <PJ_ForceGhost_Apprentice.label>포스 고스트</PJ_ForceGhost_Apprentice.label>
+  <PJ_ForceGhost_Apprentice.description>짧은 시간 동안 시전자를 돕는 과거의 유령을 소환합니다.</PJ_ForceGhost_Apprentice.description>
+  <!-- Force Ghost (Adept) -->
+  <PJ_ForceGhost_Adept.label>포스 고스트 (숙달)</PJ_ForceGhost_Adept.label>
+  <PJ_ForceGhost_Adept.description>짧은 시간 동안 시전자를 돕는 과거의 유령을 소환합니다.</PJ_ForceGhost_Adept.description>
+  <!-- Force Ghost (Master) -->
+  <PJ_ForceGhost_Master.label>포스 고스트 (달인)</PJ_ForceGhost_Master.label>
+  <PJ_ForceGhost_Master.description>짧은 시간 동안 시전자를 돕는 과거의 유령을 소환합니다.</PJ_ForceGhost_Master.description>
+</LanguageData>

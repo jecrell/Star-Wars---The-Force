@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <!-- Force Rage (Apprentice) -->
+  <PJ_ForceRage_Apprentice.label>포스 레이지</PJ_ForceRage_Apprentice.label>
+  <PJ_ForceRage_Apprentice.description>포스의 어두운 면을 사용하여 적을 분노하게 만듭니다. 대상은 분노로 보이는 모든 것을 공격합니다.</PJ_ForceRage_Apprentice.description>
+  <!-- Force Rage (Adept) -->
+  <PJ_ForceRage_Adept.label>포스 레이지 (숙달)</PJ_ForceRage_Adept.label>
+  <PJ_ForceRage_Adept.description>포스의 어두운 면을 사용하여 적을 분노하게 만듭니다. 대상은 분노로 보이는 모든 것을 공격합니다.</PJ_ForceRage_Adept.description>
+  <!-- Force Rage (Master) -->
+  <PJ_ForceRage_Master.label>포스 레이지 (달인)</PJ_ForceRage_Master.label>
+  <PJ_ForceRage_Master.description>포스의 어두운 면을 사용하여 적을 분노하게 만듭니다. 대상은 분노로 보이는 모든 것을 공격합니다.</PJ_ForceRage_Master.description>
+  <!-- Force Choke (Apprentice) -->
+  <PJ_ForceChoke_Apprentice.label>포스 초크</PJ_ForceChoke_Apprentice.label>
+  <PJ_ForceChoke_Apprentice.description>적을 질식 시킵니다.</PJ_ForceChoke_Apprentice.description>
+  <!-- Force Choke (Adept) -->
+  <PJ_ForceChoke_Adept.label>포스 초크 (숙달)</PJ_ForceChoke_Adept.label>
+  <PJ_ForceChoke_Adept.description>적을 질식 시킵니다.</PJ_ForceChoke_Adept.description>
+  <!-- Force Choke (Master) -->
+  <PJ_ForceChoke_Master.label>포스 초크 (달인)</PJ_ForceChoke_Master.label>
+  <PJ_ForceChoke_Master.description>적을 질식 시킵니다.</PJ_ForceChoke_Master.description>
+  <!-- Force Drain (Apprentice) -->
+  <PJ_ForceDrain_Apprentice.label>포스 드레인</PJ_ForceDrain_Apprentice.label>
+  <PJ_ForceDrain_Apprentice.description>다른 실체의 생명력을 배제합니다.</PJ_ForceDrain_Apprentice.description>
+  <!-- Force Drain (Adept) -->
+  <PJ_ForceDrain_Adept.label>포스 드레인 (숙달)</PJ_ForceDrain_Adept.label>
+  <PJ_ForceDrain_Adept.description>다른 실체의 생명력을 배제합니다.</PJ_ForceDrain_Adept.description>
+  <!-- Force Drain (Master) -->
+  <PJ_ForceDrain_Master.label>포스 드레인 (달인)</PJ_ForceDrain_Master.label>
+  <PJ_ForceDrain_Master.description>다른 실체의 생명력을 배제합니다.</PJ_ForceDrain_Master.description>
+  <!-- Force Lightning (Apprentice) -->
+  <PJ_ForceLightning_Apprentice.label>포스 라이트닝</PJ_ForceLightning_Apprentice.label>
+  <PJ_ForceLightning_Apprentice.description>순도 높은 어두운 힘으로 적을 후려칩니다.</PJ_ForceLightning_Apprentice.description>
+  <!-- Force Lightning (Adept) -->
+  <PJ_ForceLightning_Adept.label>포스 라이트닝 (숙달)</PJ_ForceLightning_Adept.label>
+  <PJ_ForceLightning_Adept.description>순도 높은 어두운 힘으로 적을 후려칩니다.</PJ_ForceLightning_Adept.description>
+  <!-- Force Lightning (Master) -->
+  <PJ_ForceLightning_Master.label>포스 라이트닝 (달인)</PJ_ForceLightning_Master.label>
+  <PJ_ForceLightning_Master.description>순도 높은 어두운 힘으로 적을 후려칩니다.</PJ_ForceLightning_Master.description>
+  <!-- Force Storm (Apprentice) -->
+  <PJ_ForceStorm_Apprentice.label>포스 스톰</PJ_ForceStorm_Apprentice.label>
+  <PJ_ForceStorm_Apprentice.description>한 지역에 순도 높은 어두운 힘을 쏟아 부어 큰 피해를 입힙니다. </PJ_ForceStorm_Apprentice.description>
+  <!-- Force Storm (Adept) -->
+  <PJ_ForceStorm_Adept.label>포스 스톰 (숙달)</PJ_ForceStorm_Adept.label>
+  <PJ_ForceStorm_Adept.description>한 지역에 순도 높은 어두운 힘을 쏟아 부어 큰 피해를 입힙니다. </PJ_ForceStorm_Adept.description>
+  <!-- Force Storm (Master) -->
+  <PJ_ForceStorm_Master.label>포스 스톰 (달인)</PJ_ForceStorm_Master.label>
+  <PJ_ForceStorm_Master.description>한 지역에 순도 높은 어두운 힘을 쏟아 부어 큰 피해를 입힙니다. </PJ_ForceStorm_Master.description>
+</LanguageData>

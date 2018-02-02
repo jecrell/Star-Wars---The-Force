@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PJ_ForceGhostR.label>포스 고스트</PJ_ForceGhostR.label>
+  <PJ_ForceGhostR.description>포스 고스트입니다.</PJ_ForceGhostR.description>
+  <!-- No Leather: Butcher Products -->
+  <PJ_ForceGhostR_Meat.label>심령체</PJ_ForceGhostR_Meat.label>
+  <PJ_ForceGhostR_Meat.description>심령체</PJ_ForceGhostR_Meat.description>
+  <PJ_ForceGhostR_Corpse.label>포스 고스트 시체</PJ_ForceGhostR_Corpse.label>
+  <PJ_ForceGhostR_Corpse.description>포스 고스트 시체</PJ_ForceGhostR_Corpse.description>
+  <PJ_MeleeWeapon_ForceGladius.label>유령의 글라디우스</PJ_MeleeWeapon_ForceGladius.label>
+  <PJ_MeleeWeapon_ForceGladius.description>고대 디자인의 미묘한 단검. 찌르거나 벨때 좋습니다.</PJ_MeleeWeapon_ForceGladius.description>
+  <PJ_MeleeWeapon_ForceGladius.tools.0.label>핸들</PJ_MeleeWeapon_ForceGladius.tools.0.label>
+  <PJ_MeleeWeapon_ForceGladius.tools.1.label>포인트</PJ_MeleeWeapon_ForceGladius.tools.1.label>
+  <PJ_MeleeWeapon_ForceGladius.tools.2.label>날</PJ_MeleeWeapon_ForceGladius.tools.2.label>
+</LanguageData>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <PJ_Jedi_Robe.label>제다이 로브</PJ_Jedi_Robe.label>
+  <PJ_Jedi_Robe.description>제다이의 로브입니다.</PJ_Jedi_Robe.description>
+  <PJ_Sith_Robe.label>시스 로브</PJ_Sith_Robe.label>
+  <PJ_Sith_Robe.description>다크 사이드 버전의 제다이 로브</PJ_Sith_Robe.description>
+  <PJ_InnerRobes.label>제다이 복장</PJ_InnerRobes.label>
+  <PJ_InnerRobes.description>제다이가 입었던 간단한 튜닉</PJ_InnerRobes.description>
+</LanguageData>
