@@ -37,7 +37,7 @@ namespace ProjectJedi
         
         public override DamageResult Apply(DamageInfo dinfo, Thing victim)
         {
-            DamageResult result = DamageResult.MakeNew();
+            DamageResult result = new DamageWorker.DamageResult();
             result.totalDamageDealt = 0f;
             if (victim is ProjectJedi.PawnGhost)
             {
@@ -45,7 +45,7 @@ namespace ProjectJedi
                 return result;
             }
 
-            int amount = dinfo.Amount;
+            int amount = (int)dinfo.Amount;
             caster = dinfo.Instigator as Pawn;
             switch (amount)
             {

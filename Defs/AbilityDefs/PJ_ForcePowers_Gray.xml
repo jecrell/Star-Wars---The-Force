@@ -64,7 +64,7 @@
     <defName>PJ_ForcePull_Apprentice</defName>
     <label>Force Pull</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.</description>
+    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.35</forcePoolCost>
 	<MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -108,7 +108,7 @@
     <defName>PJ_ForcePull_Adept</defName>
     <label>Force Pull (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.</description>
+    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.28</forcePoolCost>
 	<MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -152,7 +152,7 @@
     <defName>PJ_ForcePull_Master</defName>
     <label>Force Pull (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
-    <description>Level 1: Pulls ground objects  (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others. If unarmed, force pull now pulls people or animals towards the force wielder.</description>
+    <description>Level 1: Pulls ground objects  (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others. If unarmed, force pull now pulls people or animals towards the force wielder.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.2</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -215,7 +215,7 @@
     <defName>PJ_ForcePush_Apprentice</defName>
     <label>Force Push</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
-    <description>Level 1: Pushes characters away by 8 tiles.</description>
+    <description>Level 1: Pushes characters away by 8 tiles.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.35</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -258,7 +258,7 @@
     <defName>PJ_ForcePush_Adept</defName>
     <label>Force Push (Adept)</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
-    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.</description>
+    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.25</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -306,7 +306,7 @@
     <defName>PJ_ForcePush_Master</defName>
     <label>Force Push (Master)</label>
     <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
-    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\nLevel 3: Pushes 12 tiles, stuns the target, and adds impact damage against walls.</description>
+    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\nLevel 3: Pushes 12 tiles, stuns the target, and adds impact damage against walls.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.15</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -373,7 +373,7 @@
     <defName>PJ_ForceSpeed_Apprentice</defName>
     <label>Force Speed</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
-    <description>Increases the running speed of the caster for a short time.</description>
+    <description>Increases the running speed of the caster for a short time.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.35</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -414,7 +414,7 @@
     <defName>PJ_ForceSpeed_Adept</defName>
     <label>Force Speed (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
-    <description>Increases the running speed of the caster for a short time.</description>
+    <description>Increases the running speed of the caster for a short time.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.25</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">
@@ -455,7 +455,7 @@
     <defName>PJ_ForceSpeed_Master</defName>
     <label>Force Speed (Master)</label>
     <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
-    <description>Increases the running speed of the caster for a short time.</description>
+    <description>Increases the running speed of the caster for a short time.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass>   -->
     <forcePoolCost>0.15</forcePoolCost>
     <MainVerb Class="AbilityUser.VerbProperties_Ability">

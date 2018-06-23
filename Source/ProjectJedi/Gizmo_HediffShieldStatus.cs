@@ -13,17 +13,14 @@ namespace ProjectJedi
 
         private static readonly Texture2D EmptyShieldBarTex = SolidColorMaterials.NewSolidColorTexture(Color.clear);
 
-        public override float Width
+        public override float GetWidth(float maxWidth)
         {
-            get
-            {
-                return 140f;
-            }
+            return 140f;
         }
 
-        public override GizmoResult GizmoOnGUI(Vector2 topLeft)
+        public override GizmoResult GizmoOnGUI(Vector2 topLeft, float maxWidth)
         {
-            Rect overRect = new Rect(topLeft.x, topLeft.y, this.Width, 75f);
+            Rect overRect = new Rect(topLeft.x, topLeft.y, this.GetWidth(maxWidth), 75f);
             Find.WindowStack.ImmediateWindow(984688, overRect, WindowLayer.GameUI, delegate
             {
                 Rect rect = overRect.AtZero().ContractedBy(6f);

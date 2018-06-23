@@ -13,24 +13,23 @@ namespace ProjectJedi
         {
             BodyPartRecord rec = null;
             BodyPartRecord neckRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.label == "neck");
-            if (!pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().Any((Hediff_MissingPart x) => x.Part == neckRecord))
+            if (pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().All(x => x.Part != neckRecord))
             {
                 rec = neckRecord;
             }
             else
             {
-                BodyPartRecord lungRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.tags.First((string s) => s == "BreathingSource" || s == "BreathingPathway") != null);
-                if (!pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().Any((Hediff_MissingPart x) => x.Part == lungRecord))
+                BodyPartRecord lungRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.tags.First(s => s.defName == "BreathingSource" || s.defName == "BreathingPathway") != null);
+                if (pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().All(x => x.Part != lungRecord))
                 {
                     rec = lungRecord;
                 }
             }
             return rec;
         }
-
-        protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo, ref DamageWorker.DamageResult result)
+        protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo, DamageResult result)
         {
-            base.FinalizeAndAddInjury(pawn, totalDamage, dinfo, ref result);
+            base.FinalizeAndAddInjury(pawn, totalDamage, dinfo, result);
         }
     }
     //public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)

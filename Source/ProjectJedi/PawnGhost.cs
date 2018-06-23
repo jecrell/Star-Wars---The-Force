@@ -59,12 +59,8 @@ namespace ProjectJedi
             {
                 foreach (Faction fac in Find.FactionManager.AllFactions)
                 {
-                    bool hostile = false;
-                    if (fac.HostileTo(Faction.OfPlayerSilentFail))
-                    {
-                        hostile = true;
-                    }
-                    ghostFaction.SetHostileTo(fac, hostile);
+                    bool hostile = fac.HostileTo(Faction.OfPlayerSilentFail);
+                    ghostFaction.TrySetRelationKind(fac, FactionRelationKind.Hostile);
                 }
             }
         }

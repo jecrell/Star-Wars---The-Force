@@ -3,7 +3,7 @@
 
 	<FactionDef Abstract="True" Name="PJ_GhostFacBase">
 		<label>Force Ghost</label>
-		<description>Former jedi masters who have become one with the force, yet retained their persona.</description>
+		<description>Former jedi masters who have become one with the force, yet retained their persona.\n\n(Star Wars - The Force)</description>
 		<pawnsPlural>Force ghosts</pawnsPlural>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<fixedName>Force ghosts</fixedName>
@@ -25,7 +25,7 @@
   
 	<FactionDef Abstract="True" Name="PJ_AffiliateFaction">
 		<label>Force Ghost</label>
-		<description>Former jedi masters who have become one with the force, yet retained their persona.</description>
+		<description>Former jedi masters who have become one with the force, yet retained their persona.\n\n(Star Wars - The Force)</description>
 		<pawnsPlural>Force ghosts</pawnsPlural>
 		
     <factionBaseSelectionWeight>0.00001</factionBaseSelectionWeight>
@@ -64,7 +64,7 @@
   <FactionDef ParentName="PJ_AffiliateFaction">
 		<defName>PJ_Affiliate_JediOrder</defName>
 		<label>Jedi Order</label>
-<description>An ancient monastic peacekeeping organization unified by its belief and observance of the light side of the Force.</description>
+<description>An ancient monastic peacekeeping organization unified by its belief and observance of the light side of the Force.\n\n(Star Wars - The Force)</description>
 	<fixedName>The Jedi Order</fixedName>
     <pawnsPlural>Jedi</pawnsPlural>
     <leaderTitle>Grand Master</leaderTitle>

@@ -134,19 +134,19 @@ namespace ProjectJedi
 
         public void ExposeData()
         {
-            Scribe_References.Look<Pawn>(ref this.pawn, "pawn");
-            Scribe_Values.Look<float>(ref this.alignment, "alignment", 0.5f);
-            Scribe_Values.Look<int>(ref this.level, "level", 0);
-            Scribe_Values.Look<int>(ref this.xp, "xp");
-            Scribe_Values.Look<bool>(ref this.forcePowersInitialized, "forcePowersInitialized", true);
-            Scribe_Values.Look<int>(ref this.abilityPoints, "abilityPoints", 0);
-            Scribe_Values.Look<int>(ref this.ticksUntilMeditate, "ticksUntilMeditate", 0);
-            Scribe_Values.Look<int>(ref this.ticksUntilXPGain, "ticksUntilXPGain", -1);
-            Scribe_Values.Look<int>(ref this.ticksAffiliation, "ticksAffiliation", -1);
-            Scribe_Collections.Look<ForceSkill>(ref this.skills, "skills", LookMode.Deep, new object[0]);
-            Scribe_Collections.Look<ForcePower>(ref this.powersDark, "powersDark", LookMode.Deep, new object[0]);
-            Scribe_Collections.Look<ForcePower>(ref this.powersGray, "powersGray", LookMode.Deep, new object[0]);
-            Scribe_Collections.Look<ForcePower>(ref this.powersLight, "powersLight", LookMode.Deep, new object[0]);
+            Scribe_References.Look<Pawn>(ref this.pawn, "forceDataPawn");
+            Scribe_Values.Look<float>(ref this.alignment, "forceDataAlignment", 0.5f);
+            Scribe_Values.Look<int>(ref this.level, "forceDataLevel", 0);
+            Scribe_Values.Look<int>(ref this.xp, "forceDataXp");
+            Scribe_Values.Look<bool>(ref this.forcePowersInitialized, "forceDataPowersInitialized", true);
+            Scribe_Values.Look<int>(ref this.abilityPoints, "forceDataAbilityPoints", 0);
+            Scribe_Values.Look<int>(ref this.ticksUntilMeditate, "forceDataTicksUntilMeditate", 0);
+            Scribe_Values.Look<int>(ref this.ticksUntilXPGain, "forceDataTicksUntilXPGain", -1);
+            Scribe_Values.Look<int>(ref this.ticksAffiliation, "forceDataTicksAffiliation", -1);
+            Scribe_Collections.Look<ForceSkill>(ref this.skills, "forceDataSkills", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<ForcePower>(ref this.powersDark, "forceDataPowersDark", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<ForcePower>(ref this.powersGray, "forceDataPowersGray", LookMode.Deep, new object[0]);
+            Scribe_Collections.Look<ForcePower>(ref this.powersLight, "forceDataPowersLight", LookMode.Deep, new object[0]);
 
 
         }

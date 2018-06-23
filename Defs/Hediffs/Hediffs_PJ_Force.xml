@@ -135,7 +135,7 @@
     <stages>
       <li>
         <label>Mind Trick</label>
-        <description>The force can have a strong effect on the weak minded.</description>
+        <description>The force can have a strong effect on the weak minded.\n\n(Star Wars - The Force)</description>
         <baseMoodEffect>2</baseMoodEffect>
       </li>
     </stages>
@@ -173,7 +173,7 @@
     <stages>
       <li>
         <label>Force Rage</label>
-        <description>The force can have a strong effect on the weak minded. This discipline drives the target into an insensate rage.</description>
+        <description>The force can have a strong effect on the weak minded. This discipline drives the target into an insensate rage.\n\n(Star Wars - The Force)</description>
         <baseMoodEffect>1</baseMoodEffect>
       </li>
     </stages>

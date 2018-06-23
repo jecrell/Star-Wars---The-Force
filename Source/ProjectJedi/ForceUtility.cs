@@ -30,7 +30,7 @@ namespace ProjectJedi
 
         public static ForceAlignmentType GetForceAlignmentType(Pawn pawn)
         {
-            if (pawn.GetComp<CompForceUser>() is CompForceUser forceUser)
+            if (pawn?.GetComp<CompForceUser>() is CompForceUser forceUser)
             {
                 return forceUser.ForceAlignmentType;
             }
@@ -39,7 +39,7 @@ namespace ProjectJedi
 
         public static Need_ForcePool GetForcePool(this Pawn pawn)
         {
-            if (pawn.GetComp<CompForceUser>() is CompForceUser forceUser)
+            if (pawn?.GetComp<CompForceUser>() is CompForceUser forceUser)
             {
                 return forceUser.ForcePool;
             }
@@ -48,7 +48,7 @@ namespace ProjectJedi
 
         public static CompForceUser GetForceUser(Pawn pawn)
         {
-            if (pawn.GetComp<CompForceUser>() is CompForceUser forceUser)
+            if (pawn?.GetComp<CompForceUser>() is CompForceUser forceUser)
             {
                 return forceUser;
             }

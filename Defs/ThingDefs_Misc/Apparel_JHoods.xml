@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
-	<ThingDef ParentName="PJ_JediHatMakeableBase">
+	<ThingDef ParentName="HatMakeableBase">
 		<defName>PJ_JediHood</defName>
 		<label>Jedi Hood</label>
-		<description>The humble hood worn by Jedi.</description>
+		<description>The humble hood worn by Jedi.\n\n(Star Wars - The Force)</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Hoods/JediHoodx</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+		    <Mass>0.5</Mass>
 			<MarketValue>250</MarketValue>
 			<WorkToMake>500</WorkToMake>
 			<MaxHitPoints>350</MaxHitPoints>
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.15</ArmorRating_Heat>
-			<ArmorRating_Electric>0.2</ArmorRating_Electric>
+			 
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
 			<Insulation_Cold>-14</Insulation_Cold>
 			<Insulation_Heat>16</Insulation_Heat>
 		</statBases>
@@ -44,23 +45,24 @@
 		</apparel>
 	</ThingDef>
 
-	<ThingDef ParentName="PJ_JediHatMakeableBase">
+	<ThingDef ParentName="HatMakeableBase">
 		<defName>PJ_SithHood</defName>
 		<label>Sith Hood</label>
-		<description>The ominous hood worn by Sith.</description>
+		<description>The ominous hood worn by Sith.\n\n(Star Wars - The Force)</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Hoods/SithHood</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+		    <Mass>0.5</Mass>
 			<MarketValue>250</MarketValue>
 			<WorkToMake>500</WorkToMake>
 			<MaxHitPoints>350</MaxHitPoints>
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.15</ArmorRating_Heat>
-			<ArmorRating_Electric>0.2</ArmorRating_Electric>
+			 
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
 			<Insulation_Cold>-14</Insulation_Cold>
 			<Insulation_Heat>16</Insulation_Heat>
 		</statBases>
@@ -88,23 +90,24 @@
 	</ThingDef>
 
 
-		<ThingDef ParentName="PJ_JediHatMakeableBase">
+	<ThingDef ParentName="HatMakeableBase">
 		<defName>PJ_CustomHood</defName>
 		<label>Custom Hood</label>
-		<description>A customized hood for Jedi or Sith.</description>
+		<description>A customized hood for Jedi or Sith.\n\n(Star Wars - The Force)</description>
 		<techLevel>Spacer</techLevel>
 		<graphicData>
 			<texPath>Hoods/JediHood</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 		</graphicData>
 		<statBases>
+		    <Mass>0.5</Mass>
 			<MarketValue>250</MarketValue>
 			<WorkToMake>500</WorkToMake>
 			<MaxHitPoints>350</MaxHitPoints>
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.15</ArmorRating_Heat>
-			<ArmorRating_Electric>0.2</ArmorRating_Electric>
+			 
+			<ArmorRating_Heat>0.2</ArmorRating_Heat>
 			<Insulation_Cold>-14</Insulation_Cold>
 			<Insulation_Heat>16</Insulation_Heat>
 		</statBases>

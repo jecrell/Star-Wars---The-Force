@@ -5,7 +5,7 @@
     <defName>PJ_ForcePool</defName>
     <needClass>ProjectJedi.Need_ForcePool</needClass>
     <label>force pool</label>
-    <description>Colonist's Current force pool level</description>
+    <description>Colonist's Current force pool level\n\n(Star Wars - The Force)</description>
 	<onlyIfCausedByHediff>true</onlyIfCausedByHediff>
     <showOnNeedList>true</showOnNeedList>
     <minIntelligence>Humanlike</minIntelligence>

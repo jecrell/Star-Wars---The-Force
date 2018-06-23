@@ -1,48 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs> 
 
-  <ThingDef Name="BuildingBase" Abstract="True">
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
-    <selectable>true</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>true</leaveResourcesWhenKilled>
-    <filthLeaving>BuildingRubble</filthLeaving>
-  </ThingDef>
-
-
-  <ThingDef Name="FurnitureBase" ParentName="BuildingBase" Abstract="True">
-    <comps>
-      <li>
-        <compClass>CompQuality</compClass>
-      </li>
-    </comps>
-    <designationCategory>Furniture</designationCategory>
-    <minifiedDef>MinifiedFurniture</minifiedDef>
-    <tradeTags>
-      <li>Furniture</li>
-    </tradeTags>
-  </ThingDef>
-  
-  <ThingDef Name="ArtableFurnitureBase" ParentName="FurnitureBase" Abstract="True">
-    <comps>
-      <li Class="CompProperties_Art">
-        <nameMaker>ArtName_Furniture</nameMaker>
-        <descriptionMaker>ArtDescription_Furniture</descriptionMaker>
-        <minQualityForArtistic>Excellent</minQualityForArtistic>
-      </li>
-    </comps>
-    <inspectorTabs>
-      <li>ITab_Art</li>
-    </inspectorTabs>
-  </ThingDef>
-
-
-
-		<ThingDef ParentName="ArtableFurnitureBase">
+	<ThingDef ParentName="ArtableFurnitureBase">
 		<defName>PJ_ForceMedPadJ</defName>
 		<thingClass>ProjectJedi.Building_ForceMeditationPad</thingClass>
 		<label>Meditation pad (Jedi)</label>
@@ -70,7 +29,7 @@
 			<Beauty>4</Beauty>
 			<Comfort>1.5</Comfort>
 		</statBases>
-		<description>A comfortable pad to sit for meditation. Also works as a normal chair.</description>
+		<description>A comfortable pad to sit for meditation. Also works as a normal chair.\n\n(Star Wars - The Force)</description>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<stuffCategories>
 			<li>Leathery</li>
@@ -85,7 +44,7 @@
 		<rotatable>false</rotatable>
 	</ThingDef>
 	
-		<ThingDef ParentName="ArtableFurnitureBase">
+	<ThingDef ParentName="ArtableFurnitureBase">
 		<defName>PJ_ForceMedPadS</defName>
 		<thingClass>ProjectJedi.Building_ForceMeditationPad</thingClass>		
 		<label>Meditation pad (Sith)</label>
@@ -113,7 +72,7 @@
 			<Beauty>4</Beauty>
 			<Comfort>1.5</Comfort>
 		</statBases>
-		<description>A comfortable pad to sit for meditation. Also works as a normal chair.</description>
+		<description>A comfortable pad to sit for meditation. Also works as a normal chair.\n\n(Star Wars - The Force)</description>
 		<socialPropernessMatters>true</socialPropernessMatters>
 		<stuffCategories>
 			<li>Leathery</li>

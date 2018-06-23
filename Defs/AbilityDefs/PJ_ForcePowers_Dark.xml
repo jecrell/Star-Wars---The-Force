@@ -22,7 +22,7 @@
 		<flyOverhead>true</flyOverhead>
 		<damageDef>EMP</damageDef>
 		<damageAmountBase>0</damageAmountBase>
-		<speed>105</speed>
+		<speed>999</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
     <preFiringFinalIntensity>10</preFiringFinalIntensity>
@@ -39,7 +39,7 @@
     <defName>PJ_ForceRage_Apprentice</defName>
     <label>Force Rage</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
-    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.22</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
@@ -77,7 +77,7 @@
     <defName>PJ_ForceRage_Adept</defName>
     <label>Force Rage (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
-    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.18</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
@@ -116,7 +116,7 @@
     <defName>PJ_ForceRage_Master</defName>
     <label>Force Rage (Master)</label>
     <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
-    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.</description>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.05</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
@@ -166,7 +166,7 @@
   		<flyOverhead>false</flyOverhead>
   		<damageDef>PJ_FChoke</damageDef>
   		<damageAmountBase>5</damageAmountBase>
-  		<speed>105</speed>
+  		<speed>999</speed>
      </projectile>
  </ThingDef>
 
@@ -183,7 +183,7 @@
       		<flyOverhead>false</flyOverhead>
       		<damageDef>PJ_FChoke</damageDef>
       		<damageAmountBase>10</damageAmountBase>
-      		<speed>105</speed>
+      		<speed>999</speed>
          </projectile>
      </ThingDef>
 
@@ -200,7 +200,7 @@
           		<flyOverhead>false</flyOverhead>
           		<damageDef>PJ_FChoke</damageDef>
           		<damageAmountBase>15</damageAmountBase>
-          		<speed>105</speed>
+          		<speed>999</speed>
              </projectile>
          </ThingDef>
 
@@ -212,7 +212,7 @@
     <defName>PJ_ForceChoke_Apprentice</defName>
     <label>Force Choke</label>
     <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
-    <description>Choke the life from your enemies.</description>
+    <description>Choke the life from your enemies.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.20</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
@@ -250,7 +250,7 @@
     <defName>PJ_ForceChoke_Adept</defName>
     <label>Force Choke (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
-    <description>Choke the life from your enemies.</description>
+    <description>Choke the life from your enemies.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.18</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -291,7 +291,7 @@
     <defName>PJ_ForceChoke_Master</defName>
     <label>Force Choke (Master)</label>
     <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
-    <description>Choke the life from your enemies.</description>
+    <description>Choke the life from your enemies.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.15</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -341,7 +341,7 @@
 		<flyOverhead>false</flyOverhead>
 		<damageDef>PJ_FDrainDamage</damageDef>
 		<damageAmountBase>2</damageAmountBase>
-		<speed>125</speed>
+		<speed>999</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
     <preFiringFinalIntensity>20</preFiringFinalIntensity>
@@ -358,7 +358,7 @@
     <defName>PJ_ForceDrain_Apprentice</defName>
     <label>Force Drain</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
-    <description>Drain another entity of lifeforce.</description>
+    <description>Drain another entity of lifeforce.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.30</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
@@ -377,7 +377,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessagePositiveEvent</soundCast>
+        <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
@@ -389,7 +389,7 @@
     <defName>PJ_ForceDrain_Adept</defName>
     <label>Force Drain (Adept)</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
-    <description>Drain another entity of lifeforce.</description>
+    <description>Drain another entity of lifeforce.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.28</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -410,7 +410,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessagePositiveEvent</soundCast>
+        <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
@@ -423,7 +423,7 @@
     <defName>PJ_ForceDrain_Master</defName>
     <label>Force Drain (Master)</label>
     <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
-    <description>Drain another entity of lifeforce.</description>
+    <description>Drain another entity of lifeforce.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.25</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -444,7 +444,7 @@
         <range>24</range>
         <burstShotCount>1</burstShotCount>
         <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
-        <soundCast>MessagePositiveEvent</soundCast>
+        <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
     </MainVerb>
@@ -465,7 +465,7 @@
 		<flyOverhead>false</flyOverhead>
 		<damageDef>PJ_FLightning</damageDef>
 		<damageAmountBase>22</damageAmountBase>
-		<speed>105</speed>
+		<speed>999</speed>
    </projectile>
     <preFiringInitialIntensity>0</preFiringInitialIntensity>
     <preFiringFinalIntensity>20</preFiringFinalIntensity>
@@ -482,7 +482,7 @@
     <defName>PJ_ForceLightning_Apprentice</defName>
     <label>Force Lightning</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
-    <description>Lash out with pure dark side energy.</description>
+    <description>Lash out with pure dark side energy.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.16</forcePoolCost>
 	<changedAlignmentType>Dark</changedAlignmentType>
@@ -513,7 +513,7 @@
     <defName>PJ_ForceLightning_Adept</defName>
     <label>Force Lightning (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
-    <description>Lash out with pure dark side energy.</description>
+    <description>Lash out with pure dark side energy.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.13</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -547,7 +547,7 @@
     <defName>PJ_ForceLightning_Master</defName>
     <label>Force Lightning (Master)</label>
     <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
-    <description>Lash out with pure dark side energy.</description>
+    <description>Lash out with pure dark side energy.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.10</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -603,7 +603,7 @@
     <defName>PJ_ForceStorm_Apprentice</defName>
     <label>Force Storm</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
-    <description>Lash out with pure dark side energy at an area, causing great damage.</description>
+    <description>Lash out with pure dark side energy at an area, causing great damage.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.26</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -652,7 +652,7 @@
     <defName>PJ_ForceStorm_Adept</defName>
     <label>Force Storm (Adept)</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
-    <description>Lash out with pure dark side energy at an area, causing great damage.</description>
+    <description>Lash out with pure dark side energy at an area, causing great damage.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.22</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>
@@ -702,7 +702,7 @@
     <defName>PJ_ForceStorm_Master</defName>
     <label>Force Storm (Master)</label>
     <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
-    <description>Lash out with pure dark side energy at an area, causing great damage.</description>
+    <description>Lash out with pure dark side energy at an area, causing great damage.\n\n(Star Wars - The Force)</description>
 <!--    <thingClass>ThingWithComps</thingClass> -->
     <forcePoolCost>0.18</forcePoolCost>
 	<requiredAlignmentType>Dark</requiredAlignmentType>

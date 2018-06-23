@@ -19,7 +19,7 @@ namespace ProjectJedi
         protected float speed = 30.0f;
         protected int ticksToImpact;
         protected Thing launcher;
-        protected Thing assignedTarget;
+        protected Thing usedTarget;
         protected Thing flyingThing;
         public DamageInfo? impactDamage;
 
@@ -76,7 +76,7 @@ namespace ProjectJedi
             Scribe_Values.Look<Vector3>(ref this.origin, "origin", default(Vector3), false);
             Scribe_Values.Look<Vector3>(ref this.destination, "destination", default(Vector3), false);
             Scribe_Values.Look<int>(ref this.ticksToImpact, "ticksToImpact", 0, false);
-            Scribe_References.Look<Thing>(ref this.assignedTarget, "assignedTarget", false);
+            Scribe_References.Look<Thing>(ref this.usedTarget, "usedTarget", false);
             Scribe_References.Look<Thing>(ref this.launcher, "launcher", false);
             Scribe_References.Look<Thing>(ref this.flyingThing, "flyingThing");
         }
@@ -102,7 +102,7 @@ namespace ProjectJedi
             this.flyingThing = flyingThing;
             if (targ.Thing != null)
             {
-                this.assignedTarget = targ.Thing;
+                this.usedTarget = targ.Thing;
             }
             this.destination = targ.Cell.ToVector3Shifted() + new Vector3(Rand.Range(-0.3f, 0.3f), 0f, Rand.Range(-0.3f, 0.3f));
             this.ticksToImpact = this.StartingTicksToImpact;
@@ -156,15 +156,15 @@ namespace ProjectJedi
 
         private void ImpactSomething()
         {
-            if (this.assignedTarget != null)
+            if (this.usedTarget != null)
             {
-                Pawn pawn = this.assignedTarget as Pawn;
+                Pawn pawn = this.usedTarget as Pawn;
                 if (pawn != null && pawn.GetPosture() != PawnPosture.Standing && (this.origin - this.destination).MagnitudeHorizontalSquared() >= 20.25f && Rand.Value > 0.2f)
                 {
                     this.Impact(null);
                     return;
                 }
-                this.Impact(this.assignedTarget);
+                this.Impact(this.usedTarget);
                 return;
             }
             else

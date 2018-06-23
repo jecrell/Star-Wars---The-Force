@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<ThingDef ParentName="PJ_JediApparelMakeableBase">
+	<ThingDef ParentName="ApparelMakeableBase">
     <defName>PJ_Jedi_Robe</defName>
     <label>Jedi Robe</label>
-    <description>A Jedi's Robes</description>
+    <description>A Jedi's Robes\n\n(Star Wars - The Force)</description>
     <techLevel>Spacer</techLevel>
 	<recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -25,8 +25,8 @@
       <Mass>0.5</Mass>
       <ArmorRating_Blunt>0.93</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.93</ArmorRating_Sharp>
-	  <ArmorRating_Heat>0.98</ArmorRating_Heat>
-	  <ArmorRating_Electric>0.95</ArmorRating_Electric>
+	   
+	  <ArmorRating_Heat>0.95</ArmorRating_Heat>
       <Insulation_Cold>-30</Insulation_Cold>
 	  <Insulation_Heat>30</Insulation_Heat>
     </statBases>
@@ -69,10 +69,10 @@
     </apparel>
   </ThingDef>
   
-  	<ThingDef ParentName="PJ_JediApparelMakeableBase">
+  	<ThingDef ParentName="ApparelMakeableBase">
     <defName>PJ_Sith_Robe</defName>
     <label>Sith robes</label>
-    <description>A Dark Side version of Jedi Robes</description>
+    <description>A Dark Side version of Jedi Robes\n\n(Star Wars - The Force)</description>
     <techLevel>Spacer</techLevel>
 	<recipeMaker>
       <researchPrerequisite>ComplexClothing</researchPrerequisite>
@@ -94,7 +94,7 @@
      <ArmorRating_Blunt>0.93</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.93</ArmorRating_Sharp>
 	  <ArmorRating_Heat>0.98</ArmorRating_Heat>
-	  <ArmorRating_Electric>0.95</ArmorRating_Electric>
+	   
       <Insulation_Cold>-30</Insulation_Cold>
 	  <Insulation_Heat>30</Insulation_Heat>
     </statBases>
@@ -137,10 +137,10 @@
     </apparel>
   </ThingDef>
   
-    <ThingDef ParentName="PJ_JediApparelMakeableBase">
+    <ThingDef ParentName="ApparelMakeableBase">
     <defName>PJ_InnerRobes</defName>
     <label>Jedi garb</label>
-    <description>The simple tunic worn by Jedi</description>
+    <description>The simple tunic worn by Jedi\n\n(Star Wars - The Force)</description>
     <graphicData>
       <texPath>Robes/JediGarb</texPath>
       <graphicClass>Graphic_Single</graphicClass>
