@@ -34,7 +34,7 @@ namespace ProjectJedi
     }
     //public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
     //    {
-    //        DamageResult result = DamageResult.MakeNew();
+    //        DamageResult result = new DamageResult();
     //        result.totalDamageDealt = 0f;
 
     //        if (victim is ProjectJedi.PawnGhost)

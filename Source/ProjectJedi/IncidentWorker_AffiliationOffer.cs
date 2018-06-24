@@ -16,9 +16,9 @@ namespace ProjectJedi.ProjectJedi
 
         private static readonly IntRange RaidDelay = new IntRange(1000, 2500);
 
-        protected override bool CanFireNowSub(IIncidentTarget target)
+        protected override bool CanFireNowSub(IncidentParms parms)
         {
-            return base.CanFireNowSub(target); 
+            return base.CanFireNowSub(parms); 
         }
 
         public Faction ResolveFaction()
@@ -76,7 +76,7 @@ namespace ProjectJedi.ProjectJedi
             diaNode.options.Add(diaOption);
             string text2 = "RefugeeChasedRejected".Translate(new object[]
             {
-                refugee.NameStringShort
+                refugee.Name.ToStringShort
             });
             DiaNode diaNode2 = new DiaNode(text2);
             DiaOption diaOption2 = new DiaOption("OK".Translate());
