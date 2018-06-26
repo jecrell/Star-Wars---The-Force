@@ -74,7 +74,7 @@ namespace ProjectJedi
                         {
                             if (maxInjuries > 0)
                             {
-                                pawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, new IntRange(5, 10).RandomInRange, -1, caster, rec));
+                                pawn.TakeDamage(new DamageInfo(DamageDefOf.Burn, new IntRange(5, 10).RandomInRange, 1f, -1, caster, rec));
                                 maxInjuries--;
                                 maxHeals++;
                             }

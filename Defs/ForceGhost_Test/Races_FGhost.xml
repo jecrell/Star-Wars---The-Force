@@ -47,14 +47,14 @@
     </statBases>
     <verbs>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
         <defaultCooldownTime>1</defaultCooldownTime>
         <meleeDamageBaseAmount>21</meleeDamageBaseAmount>
         <meleeDamageDef>Cut</meleeDamageDef>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
       </li>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
         <defaultCooldownTime>0.75</defaultCooldownTime>
         <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
         <meleeDamageDef>Blunt</meleeDamageDef>

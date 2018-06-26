@@ -67,7 +67,7 @@ namespace ProjectJedi
                 Find.TickManager.TicksGame > compForce?.ForceData?.TicksUntilXPGain)
             {
                 int delay = 130;
-                if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Growing) delay += 50;
+                if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Plants) delay += 50;
                 compForce.ForceData.TicksUntilXPGain = Find.TickManager.TicksGame + delay;
                 compForce.ForceUserXP++;
             }
