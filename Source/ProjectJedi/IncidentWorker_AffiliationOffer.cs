@@ -62,7 +62,7 @@ namespace ProjectJedi.ProjectJedi
                 GenSpawn.Spawn(refugee, spawnSpot, map);
                 refugee.SetFaction(Faction.OfPlayer, null);
                 Find.CameraDriver.JumpTo(spawnSpot);
-                IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(Find.Storyteller.def, IncidentCategory.ThreatBig, map);
+                IncidentParms incidentParms = StorytellerUtility.DefaultParmsNow(IncidentCategory.ThreatBig, map);
                 incidentParms.forced = true;
                 incidentParms.faction = enemyFac;
                 incidentParms.raidStrategy = RaidStrategyDefOf.ImmediateAttack;

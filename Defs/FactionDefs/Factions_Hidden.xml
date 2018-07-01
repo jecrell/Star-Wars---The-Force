@@ -28,7 +28,7 @@
 		<description>Former jedi masters who have become one with the force, yet retained their persona.\n\n(Star Wars - The Force)</description>
 		<pawnsPlural>Force ghosts</pawnsPlural>
 		
-    <factionBaseSelectionWeight>0.00001</factionBaseSelectionWeight>
+    <factionsettlementGenerationWeight>0.00001</factionsettlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
 	<hidden>true</hidden>
 	<earliestRaidDays>2147483</earliestRaidDays>
@@ -73,7 +73,7 @@
     </caravanTraderKinds>	
     <pawnGroupMakers>
       <li>
-        <kindDef>Normal</kindDef>
+        <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
           <PJ_ScoutTrooper>20</PJ_ScoutTrooper>
@@ -96,7 +96,7 @@
         </guards>
       </li>
       <li>
-        <kindDef>FactionBase</kindDef>
+        <kindDef>Settlement</kindDef>
         <options>
           <PJ_ImpSoldier>200</PJ_ImpSoldier>
           <PJ_ImpCommander>5</PJ_ImpCommander>
