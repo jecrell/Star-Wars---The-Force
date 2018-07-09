@@ -26,7 +26,7 @@
 			<Steel>20</Steel>
 		</costList>
 		<equippedStatOffsets>
-			<ShootingAccuracy>0.02</ShootingAccuracy>
+			<ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
 			<AimingDelayFactor>-0.01</AimingDelayFactor>
 			<RecruitPrisonerChance>0.01</RecruitPrisonerChance>
 			<SocialImpact>0.05</SocialImpact>
@@ -70,7 +70,7 @@
 			<Steel>20</Steel>
 		</costList>
 		<equippedStatOffsets>
-			<ShootingAccuracy>0.02</ShootingAccuracy>
+			<ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
 			<AimingDelayFactor>-0.01</AimingDelayFactor>
 			<RecruitPrisonerChance>0.01</RecruitPrisonerChance>
 			<SocialImpact>0.05</SocialImpact>
@@ -117,7 +117,7 @@
       <li>Leathery</li>
     </stuffCategories>
 		<equippedStatOffsets>
-			<ShootingAccuracy>0.02</ShootingAccuracy>
+			<ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
 			<AimingDelayFactor>-0.01</AimingDelayFactor>
 			<RecruitPrisonerChance>0.01</RecruitPrisonerChance>
 			<SocialImpact>0.05</SocialImpact>

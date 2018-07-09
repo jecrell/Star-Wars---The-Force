@@ -28,7 +28,7 @@
 		<description>Former jedi masters who have become one with the force, yet retained their persona.\n\n(Star Wars - The Force)</description>
 		<pawnsPlural>Force ghosts</pawnsPlural>
 		
-    <factionsettlementGenerationWeight>0.00001</factionsettlementGenerationWeight>
+    <settlementSelectionWeight>0.00001</settlementSelectionWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
 	<hidden>true</hidden>
 	<earliestRaidDays>2147483</earliestRaidDays>

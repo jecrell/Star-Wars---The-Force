@@ -20,7 +20,7 @@
 				<rectW>(0.15625,0,0.84375,0.625)</rectW>
 			</damageData>
 		</graphicData>
-		<altitudeLayer>Buildings</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
 			<MaxHitPoints>220</MaxHitPoints>
 			<WorkToBuild>7800</WorkToBuild>
@@ -63,7 +63,7 @@
 				<rectW>(0.15625,0,0.84375,0.625)</rectW>
 			</damageData>
 		</graphicData>
-		<altitudeLayer>Buildings</altitudeLayer>
+		<altitudeLayer>Building</altitudeLayer>
 		<statBases>
 			<MaxHitPoints>220</MaxHitPoints>
 			<WorkToBuild>7800</WorkToBuild>
