@@ -19,7 +19,7 @@
     <statBases>
       <WorkToMake>10000</WorkToMake>
       <Mass>0.85</Mass>
-      <Weapon_Bulk>0.5</Weapon_Bulk>
+      
     </statBases>
 	<tradeability>None</tradeability>
 		<menuHidden>true</menuHidden>
