@@ -19,7 +19,6 @@
       <ComfyTemperatureMax>450</ComfyTemperatureMax>
     </statBases>
     <race>
-      <meatColor>(250,100,140)</meatColor>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
       <predator>true</predator>

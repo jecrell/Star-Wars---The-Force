@@ -11,7 +11,7 @@ namespace ProjectJedi
     {
         private Rot4 faceDir;
 
-        public override bool TryMakePreToilReservations()
+        public override bool TryMakePreToilReservations(bool somethin)
         {
             return true;
         }
