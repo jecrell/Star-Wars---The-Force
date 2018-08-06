@@ -37,7 +37,7 @@
     <raidCommonality>0.00001</raidCommonality>
     <canSiege>false</canSiege>
     <canStageAttacks>false</canStageAttacks>
-    <appreciative>false</appreciative>
+    
 		<fixedName>Force ghosts</fixedName>
 		<techLevel>Ultra</techLevel>
 		<backstoryCategory>Civil</backstoryCategory>
@@ -82,7 +82,7 @@
       <li>
         <kindDef>Trader</kindDef>
         <traders>
-          <TownTrader>1</TownTrader>
+          <Town_Trader>1</Town_Trader>
         </traders>
         <carriers>
           <Muffalo>1</Muffalo>
