@@ -17,10 +17,9 @@
 			<MaxHitPoints>350</MaxHitPoints>
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-			 
 			<ArmorRating_Heat>0.2</ArmorRating_Heat>
-			<Insulation_Cold>-14</Insulation_Cold>
-			<Insulation_Heat>16</Insulation_Heat>
+			<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
 		</statBases>
 		<costList>
 			<Steel>20</Steel>
@@ -61,10 +60,9 @@
 			<MaxHitPoints>350</MaxHitPoints>
 			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
-			 
 			<ArmorRating_Heat>0.2</ArmorRating_Heat>
-			<Insulation_Cold>-14</Insulation_Cold>
-			<Insulation_Heat>16</Insulation_Heat>
+			<StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
+			<StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
 		</statBases>
 		<costList>
 			<Steel>20</Steel>
