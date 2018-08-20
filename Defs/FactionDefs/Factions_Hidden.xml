@@ -8,7 +8,7 @@
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<fixedName>Force ghosts</fixedName>
 		<techLevel>Ultra</techLevel>
-		<backstoryCategory>Civil</backstoryCategory>
+		<backstoryCategories><li>Civil</li></backstoryCategories>
 		<hidden>true</hidden>
 		<rescueesCanJoin>false</rescueesCanJoin>
 		<autoFlee>false</autoFlee>
@@ -40,7 +40,7 @@
     
 		<fixedName>Force ghosts</fixedName>
 		<techLevel>Ultra</techLevel>
-		<backstoryCategory>Civil</backstoryCategory>
+		<backstoryCategories><li>Civil</li></backstoryCategories>
 		<rescueesCanJoin>false</rescueesCanJoin>
 		<autoFlee>false</autoFlee>
 		<hairTags>
