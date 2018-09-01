@@ -6,6 +6,7 @@
   <!-- No Leather: Butcher Products -->
   <Meat_PJ_ForceGhostR.label>エクトプラズム</Meat_PJ_ForceGhostR.label>
   <Meat_PJ_ForceGhostR.description>エクトプラズム</Meat_PJ_ForceGhostR.description>
+  <PJ_ForceGhostR.race.meatLabel>エクトプラズム</PJ_ForceGhostR.race.meatLabel>
   <Corpse_PJ_ForceGhostR.label>フォースゴーストの残骸</Corpse_PJ_ForceGhostR.label>
   <Corpse_PJ_ForceGhostR.description>フォースゴーストが倒された後に残ったエクトプラズム\n\n(スターウォーズ－フォース)</Corpse_PJ_ForceGhostR.description>
 
