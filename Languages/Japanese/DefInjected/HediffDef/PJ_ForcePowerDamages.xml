@@ -5,7 +5,7 @@
   <PJ_ForceBurn.comps.0.labelTendedWell>包帯</PJ_ForceBurn.comps.0.labelTendedWell>
   <PJ_ForceBurn.comps.0.labelTendedWellInner>縫合</PJ_ForceBurn.comps.0.labelTendedWellInner>
   <PJ_ForceBurn.comps.0.labelSolidTendedWell>セット</PJ_ForceBurn.comps.0.labelSolidTendedWell>
-  <PJ_ForceBurn.comps.HediffComp_GetsPermanent.permanentLabel>古傷(やけど)</PJ_ForceBurn.comps.HediffComp_GetsPermanent.permanentLabel>
+  <PJ_ForceBurn.comps.2.permanentLabel>古傷(やけど)</PJ_ForceBurn.comps.2.permanentLabel>
   <PJ_ForceBurn.injuryProps.destroyedLabel>焼け落ちる</PJ_ForceBurn.injuryProps.destroyedLabel>
   <PJ_ForceBurn.labelNoun>フォースによるやけど</PJ_ForceBurn.labelNoun>
 
