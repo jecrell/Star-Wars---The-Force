@@ -8,5 +8,6 @@
   <PJ_ForceBurn.comps.2.permanentLabel>古傷(やけど)</PJ_ForceBurn.comps.2.permanentLabel>
   <PJ_ForceBurn.injuryProps.destroyedLabel>焼け落ちる</PJ_ForceBurn.injuryProps.destroyedLabel>
   <PJ_ForceBurn.labelNoun>フォースによるやけど</PJ_ForceBurn.labelNoun>
+  <PJ_ForceBurn.labelNounPretty>{1}の中の{0}</PJ_ForceBurn.labelNounPretty>
 
 </LanguageData>
