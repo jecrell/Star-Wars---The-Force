@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
 
-  <!--[Core] <Cut.label>斬る</Cut.label>-->
-  <!--[Core] <Cut.deathMessage>{0} は斬られて死んだ</Cut.deathMessage>-->
-
   <PJ_ForceHealDamage.label>フォース回復</PJ_ForceHealDamage.label>
   <PJ_ForceHealDamage.deathMessage>{0}はフォースによって殺された。</PJ_ForceHealDamage.deathMessage>
 
@@ -36,6 +33,5 @@
 
   <PJ_DForcePush.label>フォースプッシュ</PJ_DForcePush.label>
   <PJ_DForcePush.deathMessage>{0}はフォースによって殺された。</PJ_DForcePush.deathMessage>
-
 
 </LanguageData>

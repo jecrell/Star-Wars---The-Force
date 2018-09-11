@@ -2,15 +2,13 @@
 <LanguageData>
 
   <PJ_ForceGhostR.label>フォースゴースト</PJ_ForceGhostR.label>
-  <PJ_ForceGhostR.description>フォースによって呼び出された過去の幽霊</PJ_ForceGhostR.description>
+  <PJ_ForceGhostR.description>フォースによって呼び出された過去の幽霊\n\n(スターウォーズ－フォース)</PJ_ForceGhostR.description>
   <!-- No Leather: Butcher Products -->
-  <PJ_ForceGhostR_Meat.label>エクトプラズム</PJ_ForceGhostR_Meat.label>
-  <PJ_ForceGhostR_Meat.description>エクトプラズム</PJ_ForceGhostR_Meat.description>
-  <PJ_ForceGhostR_Corpse.label>フォースゴーストの残骸</PJ_ForceGhostR_Corpse.label>
-  <PJ_ForceGhostR_Corpse.description>フォースゴーストが倒された後に残ったエクトプラズム</PJ_ForceGhostR_Corpse.description>
-
-  <PJ_MeleeWeapon_ForceGladius.label>霊的なグラディウス</PJ_MeleeWeapon_ForceGladius.label>
-  <PJ_MeleeWeapon_ForceGladius.description>古代のデザインの霊的な短い剣。刺したり斬り付けるのに適しています。</PJ_MeleeWeapon_ForceGladius.description>
+  <Meat_PJ_ForceGhostR.label>エクトプラズム</Meat_PJ_ForceGhostR.label>
+  <Meat_PJ_ForceGhostR.description>エクトプラズム</Meat_PJ_ForceGhostR.description>
+  <PJ_ForceGhostR.race.meatLabel>エクトプラズム</PJ_ForceGhostR.race.meatLabel>
+  <Corpse_PJ_ForceGhostR.label>フォースゴーストの残骸</Corpse_PJ_ForceGhostR.label>
+  <Corpse_PJ_ForceGhostR.description>フォースゴーストが倒された後に残ったエクトプラズム\n\n(スターウォーズ－フォース)</Corpse_PJ_ForceGhostR.description>
 
 
 </LanguageData>
