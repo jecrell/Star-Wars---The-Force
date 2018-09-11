@@ -2,36 +2,36 @@
 <LanguageData>
 
   <PJ_ForceSensitive.degreeDatas.0.label>Machtsensitiv</PJ_ForceSensitive.degreeDatas.0.label>
-  <PJ_ForceSensitive.degreeDatas.0.description>NAME hat die Fähigkeit die Macht, die uns umgibt zu spüren.</PJ_ForceSensitive.degreeDatas.0.description>
+  <PJ_ForceSensitive.degreeDatas.0.description>[PAWN_nameDef] hat die Fähigkeit die Macht, die uns umgibt zu spüren.</PJ_ForceSensitive.degreeDatas.0.description>
   <PJ_ForceSensitive.degreeDatas.1.label>Macht Lehrling</PJ_ForceSensitive.degreeDatas.1.label>
-  <PJ_ForceSensitive.degreeDatas.1.description>NAME begann damit die Macht zu nutzen, benötigt aber noch weiteres Training und Führung.</PJ_ForceSensitive.degreeDatas.1.description>
+  <PJ_ForceSensitive.degreeDatas.1.description>[PAWN_nameDef] begann damit die Macht zu nutzen, benötigt aber noch weiteres Training und Führung.</PJ_ForceSensitive.degreeDatas.1.description>
 
   <PJ_JediTrait.degreeDatas.0.label>Jedi</PJ_JediTrait.degreeDatas.0.label>
-  <PJ_JediTrait.degreeDatas.0.description>NAME hat die Reise begonnen ein Jediritter zu werden.</PJ_JediTrait.degreeDatas.0.description>
+  <PJ_JediTrait.degreeDatas.0.description>[PAWN_nameDef] hat die Reise begonnen ein Jediritter zu werden.</PJ_JediTrait.degreeDatas.0.description>
   <PJ_JediTrait.degreeDatas.1.label>Jediritter</PJ_JediTrait.degreeDatas.1.label>
-  <PJ_JediTrait.degreeDatas.1.description>NAME erreichte den Rang eines Ritters innerhalb des Jediordens.</PJ_JediTrait.degreeDatas.1.description>
+  <PJ_JediTrait.degreeDatas.1.description>[PAWN_nameDef] erreichte den Rang eines Ritters innerhalb des Jediordens.</PJ_JediTrait.degreeDatas.1.description>
   <PJ_JediTrait.degreeDatas.2.label>Jedimeister</PJ_JediTrait.degreeDatas.2.label>
-  <PJ_JediTrait.degreeDatas.2.description>NAME ist unter den am meist respektiertesten im Jediorden, ein wahrer Meister..</PJ_JediTrait.degreeDatas.2.description>
+  <PJ_JediTrait.degreeDatas.2.description>[PAWN_nameDef] ist unter den am meist respektiertesten im Jediorden, ein wahrer Meister..</PJ_JediTrait.degreeDatas.2.description>
   <PJ_JediTrait.degreeDatas.3.label>Jedikonsulat</PJ_JediTrait.degreeDatas.3.label>
-  <PJ_JediTrait.degreeDatas.3.description>NAME ist in der Reihe der Elitejedi, die welche dazu bestimmt sind im Rat zu dienen.</PJ_JediTrait.degreeDatas.3.description>
+  <PJ_JediTrait.degreeDatas.3.description>[PAWN_nameDef] ist in der Reihe der Elitejedi, die welche dazu bestimmt sind im Rat zu dienen.</PJ_JediTrait.degreeDatas.3.description>
 
   <PJ_SithTrait.degreeDatas.0.label>Sith</PJ_SithTrait.degreeDatas.0.label>
-  <PJ_SithTrait.degreeDatas.0.description>NAME begann die Reise zur dunklen Seite der Macht.</PJ_SithTrait.degreeDatas.0.description>
+  <PJ_SithTrait.degreeDatas.0.description>[PAWN_nameDef] begann die Reise zur dunklen Seite der Macht.</PJ_SithTrait.degreeDatas.0.description>
   <PJ_SithTrait.degreeDatas.1.label>Sith Imperator</PJ_SithTrait.degreeDatas.1.label>
-  <PJ_SithTrait.degreeDatas.1.description>NAME ist der dunklen Seite ergeben, verbreitet Terror und erhitzt die Gemüter.</PJ_SithTrait.degreeDatas.1.description>
+  <PJ_SithTrait.degreeDatas.1.description>[PAWN_nameDef] ist der dunklen Seite ergeben, verbreitet Terror und erhitzt die Gemüter.</PJ_SithTrait.degreeDatas.1.description>
   <PJ_SithTrait.degreeDatas.2.label>Sith Lord</PJ_SithTrait.degreeDatas.2.label>
-  <PJ_SithTrait.degreeDatas.2.description>NAME ist unter den Meistgefürchtetsten in der Galaxy, den Dunklen Sithlords.</PJ_SithTrait.degreeDatas.2.description>
+  <PJ_SithTrait.degreeDatas.2.description>[PAWN_nameDef] ist unter den Meistgefürchtetsten in der Galaxy, den Dunklen Sithlords.</PJ_SithTrait.degreeDatas.2.description>
   <PJ_SithTrait.degreeDatas.3.label>Sith Meister</PJ_SithTrait.degreeDatas.3.label>
-  <PJ_SithTrait.degreeDatas.3.description>NAME ist der dunklen Seite ergeben, in der Lage nahezu grenzenlose Macht anzuzapfen.</PJ_SithTrait.degreeDatas.3.description>
+  <PJ_SithTrait.degreeDatas.3.description>[PAWN_nameDef] ist der dunklen Seite ergeben, in der Lage nahezu grenzenlose Macht anzuzapfen.</PJ_SithTrait.degreeDatas.3.description>
 
   <PJ_GrayTrait.degreeDatas.0.label>Grauer Padawan</PJ_GrayTrait.degreeDatas.0.label>
-  <PJ_GrayTrait.degreeDatas.0.description>NAME erkundet das Gleichgewicht der Macht.</PJ_GrayTrait.degreeDatas.0.description>
+  <PJ_GrayTrait.degreeDatas.0.description>[PAWN_nameDef] erkundet das Gleichgewicht der Macht.</PJ_GrayTrait.degreeDatas.0.description>
   <PJ_GrayTrait.degreeDatas.1.label>Grauer Jedi</PJ_GrayTrait.degreeDatas.1.label>
-  <PJ_GrayTrait.degreeDatas.1.description>NAME widmet sich der Aufrechterhaltung des Gleichgewichts der Macht.</PJ_GrayTrait.degreeDatas.1.description>
+  <PJ_GrayTrait.degreeDatas.1.description>[PAWN_nameDef] widmet sich der Aufrechterhaltung des Gleichgewichts der Macht.</PJ_GrayTrait.degreeDatas.1.description>
   <PJ_GrayTrait.degreeDatas.2.label>Grauer Meister</PJ_GrayTrait.degreeDatas.2.label>
-  <PJ_GrayTrait.degreeDatas.2.description>NAME ist ein Jedimeister, der der 'lebenden Macht' ergeben ist.</PJ_GrayTrait.degreeDatas.2.description>
+  <PJ_GrayTrait.degreeDatas.2.description>[PAWN_nameDef] ist ein Jedimeister, der der 'lebenden Macht' ergeben ist.</PJ_GrayTrait.degreeDatas.2.description>
   <PJ_GrayTrait.degreeDatas.3.label>Grauer Weiser</PJ_GrayTrait.degreeDatas.3.label>
-  <PJ_GrayTrait.degreeDatas.3.description>NAME ist auf die lebende Macht eingestimmt. HECAP sieht sich selbst als Erweiterung ihres Willens.</PJ_GrayTrait.degreeDatas.3.description>
+  <PJ_GrayTrait.degreeDatas.3.description>[PAWN_nameDef] ist auf die lebende Macht eingestimmt. [PAWN_pronoun] sieht sich selbst als Erweiterung ihres Willens.</PJ_GrayTrait.degreeDatas.3.description>
 
 
 </LanguageData>
