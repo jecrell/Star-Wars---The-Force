@@ -85,6 +85,7 @@
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>1</damage>
@@ -129,6 +130,7 @@
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>2</damage>
@@ -173,6 +175,7 @@
         <soundCast>PJ_PullSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>3</damage>
@@ -236,6 +239,7 @@
         <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>1</damage>
@@ -279,6 +283,7 @@
         <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>2</damage>
@@ -327,6 +332,7 @@
         <soundCast>PJ_PushSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>3</damage>
@@ -393,6 +399,7 @@
         <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -434,6 +441,7 @@
         <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -475,6 +483,7 @@
         <soundCast>PJ_SpeedSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>

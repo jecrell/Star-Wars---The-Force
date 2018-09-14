@@ -62,6 +62,7 @@
         <soundCast>PJ_RageSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+        <canCastInMelee>true</canCastInMelee>
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>Berserk</mentalStateDef>
@@ -101,6 +102,7 @@
         <soundCast>PJ_RageSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>Berserk</mentalStateDef>
@@ -140,6 +142,7 @@
         <soundCast>PJ_RageSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>Berserk</mentalStateDef>
@@ -232,6 +235,7 @@
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>10</damage>
@@ -274,6 +278,7 @@
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>15</damage>
@@ -315,6 +320,7 @@
         <soundCast>PJ_ChokeSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<extraDamages>
 		  <li>
 		    <damage>25</damage>
@@ -380,6 +386,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
     </MainVerb>
 </ProjectJedi.ForceAbilityDef>
 
@@ -413,6 +420,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
     </MainVerb>
 </ProjectJedi.ForceAbilityDef>
 
@@ -447,6 +455,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
     </MainVerb>
 </ProjectJedi.ForceAbilityDef>
 
@@ -505,6 +514,7 @@
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
     </MainVerb>
 </ProjectJedi.ForceAbilityDef>
    <!-- ===================== Force Lightning (Adept) =============================== -->
@@ -538,6 +548,7 @@
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
     </MainVerb>
 </ProjectJedi.ForceAbilityDef>
 
@@ -572,6 +583,7 @@
         <soundCast>PJ_LightningSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
     </MainVerb>
 </ProjectJedi.ForceAbilityDef>
 

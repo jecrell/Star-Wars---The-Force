@@ -55,6 +55,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
         <targetable>false</targetable>
 		<targetParams>
@@ -94,6 +95,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
         <targetable>false</targetable>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
@@ -133,6 +135,7 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <targetable>false</targetable>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -169,6 +172,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
@@ -204,6 +208,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
@@ -239,6 +244,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<targetParams>
 		  <canTargetPawns>true</canTargetPawns>
 		  <canTargetBuildings>false</canTargetBuildings>
@@ -294,6 +300,7 @@
         <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -338,6 +345,7 @@
         <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -382,6 +390,7 @@
         <soundCast>PJ_DefSound</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
    	    <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
 		<targetParams>
 		  <canTargetPawns>false</canTargetPawns>
@@ -443,6 +452,7 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
+         <canCastInMelee>true</canCastInMelee>
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>WanderConfused</mentalStateDef>
@@ -480,6 +490,7 @@
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
 		<isViolent>false</isViolent>
+         <canCastInMelee>true</canCastInMelee>
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>WanderConfused</mentalStateDef>
@@ -517,6 +528,7 @@
         <soundCast>Message_PositiveEvent</soundCast>
         <muzzleFlashScale>20</muzzleFlashScale>
         <isPrimary>false</isPrimary>
+         <canCastInMelee>true</canCastInMelee>
 		<mentalStatesToApply>
 	      <li>
 	        <mentalStateDef>WanderConfused</mentalStateDef>
