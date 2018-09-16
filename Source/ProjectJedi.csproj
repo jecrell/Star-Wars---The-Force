@@ -43,25 +43,43 @@
       <HintPath>..\..\JecsTools\Assemblies\AbilityUser.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="AbilityUser, Version=1.18.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\JecsTools-master\Assemblies\AbilityUser.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp, Version=0.19.6814.14609, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
     </Reference>
     <Reference Include="CompActivatableEffect">
       <HintPath>..\..\JecsTools\Assemblies\CompActivatableEffect.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="CompActivatableEffect, Version=1.18.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\JecsTools-master\Assemblies\CompActivatableEffect.dll</HintPath>
+    </Reference>
     <Reference Include="CompDeflector">
       <HintPath>..\..\JecsTools\Assemblies\CompDeflector.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="CompDeflector, Version=1.18.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\JecsTools-master\Assemblies\CompDeflector.dll</HintPath>
     </Reference>
     <Reference Include="CompOversizedWeapon">
       <HintPath>..\..\JecsTools\Assemblies\CompOversizedWeapon.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="CompOversizedWeapon, Version=1.18.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\JecsTools-master\Assemblies\CompOversizedWeapon.dll</HintPath>
+    </Reference>
     <Reference Include="CompSlotLoadable">
       <HintPath>..\..\JecsTools\Assemblies\CompSlotLoadable.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="CompSlotLoadable, Version=1.18.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\JecsTools-master\Assemblies\CompSlotLoadable.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -72,6 +90,9 @@
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\RimWorldWin_Data\Managed\UnityEngine.dll</HintPath>
       <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\..\RimWorldWin64_Data\Managed\UnityEngine.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
