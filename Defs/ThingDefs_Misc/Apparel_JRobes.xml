@@ -23,9 +23,12 @@
     <statBases>
       <WorkToMake>700</WorkToMake>
       <Mass>0.5</Mass>
-      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.70</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.70</StuffEffectMultiplierInsulation_Heat>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.56</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.47</ArmorRating_Heat>
+      <Insulation_Cold>16</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
     </statBases>
 		<equippedStatOffsets>
 			<ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
@@ -88,9 +91,12 @@
     <statBases>
       <WorkToMake>700</WorkToMake>
       <Mass>0.5</Mass>
-      <StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
-      <StuffEffectMultiplierInsulation_Cold>0.70</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.70</StuffEffectMultiplierInsulation_Heat>
+      <ArmorRating_Sharp>1.00</ArmorRating_Sharp>
+      <ArmorRating_Blunt>0.56</ArmorRating_Blunt>
+      <ArmorRating_Heat>0.47</ArmorRating_Heat>
+      <Insulation_Cold>16</Insulation_Cold>
+      <Insulation_Heat>6</Insulation_Heat>
+      <EquipDelay>2</EquipDelay>
     </statBases>
 		<equippedStatOffsets>
 			<ShootingAccuracyPawn>0.05</ShootingAccuracyPawn>
@@ -151,10 +157,9 @@
     <statBases>
       <WorkToMake>5000</WorkToMake>
       <Mass>0.25</Mass>
-      <ArmorRating_Blunt>0.03</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.03</ArmorRating_Sharp>
-      <StuffEffectMultiplierInsulation_Cold>0.30</StuffEffectMultiplierInsulation_Cold>
-      <StuffEffectMultiplierInsulation_Heat>0.30</StuffEffectMultiplierInsulation_Heat>
+      <StuffEffectMultiplierArmor>0.53</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.90</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.90</StuffEffectMultiplierInsulation_Heat>
     </statBases>
     <apparel>
       <bodyPartGroups>
