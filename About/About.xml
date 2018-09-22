@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-
 <ModMetaData>
-	<name>Star Wars - The Force</name>
-	<author>Jecrell and Xen</author>
-	<targetVersion>0.19.0</targetVersion>
-	<description>Version 1.1.0.0
+  <name>Star Wars - The Force</name>
+  <author>Jecrell and Xen</author>
+  <targetVersion>0.19.0</targetVersion>
+  <description>1.19.0.2
 
 	Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
 
-	Programming by Jecrell.
-	Assets and XML by Xen.
+	C# Programming by Jecrell.
+	C# Fixes, Assets and XML by Xen.
 	Logo/Art designed by Harrison Gaushell (harrisongaushell.com)
 
 	Contributors:
@@ -17,5 +16,5 @@
 	Cpt. Ohu (Code - Ability Verb)
 
 	Patreon Patrons:
-	Jedi Master Ailan, Shane Malley, Michin, TheDayDude, Dakota Pohlman, Falloutmonk, Legless, Slick Liquid,  Don Butterblume, Karol Rybak, Mathias Broxvall, Nemuri Hime, Hannah Forster, Christian Hermansen, NiNe Bottles of Rum, Populous25, Steven James, Marcus Sireanu, Michael Lauder, Thom Black\n\n(Star Wars - The Force)</description>
+	Jedi Master Ailan, Shane Malley, Michin, TheDayDude, Dakota Pohlman, Falloutmonk, Legless, Slick Liquid,  Don Butterblume, Karol Rybak, Mathias Broxvall, Nemuri Hime, Hannah Forster, Christian Hermansen, NiNe Bottles of Rum, Populous25, Steven James, Marcus Sireanu, Michael Lauder, Thom Black</description>
 </ModMetaData>
