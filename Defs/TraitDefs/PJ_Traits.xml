@@ -3,7 +3,7 @@
 
   <TraitDef>
     <defName>PJ_ForceSensitive</defName>
-    <commonality>0.1</commonality>
+    <commonality>0.2</commonality>
     <degreeDatas>	
       <li>
         <label>Force Sensitive</label>
