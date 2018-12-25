@@ -108,6 +108,7 @@
     <Compile Include="ProjectJedi\PawnGhost.cs" />
     <Compile Include="ProjectJedi\Projectile_ForceStorm.cs" />
     <Compile Include="ProjectJedi\ProjectJediDefOf.cs" />
+    <Compile Include="ProjectJedi\ForceDataGenerator.cs" />
     <Compile Include="ProjectJedi\ThinkNode_ModNeedPercentageAbove.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
