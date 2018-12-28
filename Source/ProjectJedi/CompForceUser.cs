@@ -37,7 +37,7 @@ namespace ProjectJedi
                 {
                     //this.forceData = new ForceData(this);
                     // generating a unique force user
-                    this.forceData = ForceDataGenerator.RandomForceData(this);
+                    this.forceData = ForceDataGenerator.ForceDataForUser(this);
                 }
 
                 return this.forceData;

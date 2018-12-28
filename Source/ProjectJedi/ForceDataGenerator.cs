@@ -1,33 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
-using Verse;
+﻿using Verse;
 
 namespace ProjectJedi
 {
     public static class ForceDataGenerator
     {
-        public static ForceData RandomForceData(CompForceUser newUser)
+        public static ForceData ForceDataForUser(CompForceUser newUser)
         {
             ForceData forceData = new ForceData(newUser);
-
-            // are his powers discovered?
-            // the older the pawn more chance to have his powers discovered
-            if(new IntRange(1, 101).RandomInRange > forceData?.Pawn.ageTracker.AgeBiologicalYears)
+            
+            // has the pawn begun training in the way of the force?
+            if(IsPawnForceSensitive(newUser.AbilityUser))
             {
                 return forceData;
             }
 
             // generate the level
-            int forceLevel = Mathf.Clamp(forceData.Pawn.skills.skills
-                                                  .Select(skill => skill.Level)
-                                                  .Sum() / forceData.Pawn.skills.skills.Count, 1, 50);
+            int forceLevel = GetPawnForceLevel(newUser.AbilityUser);
             forceData.Level = forceLevel;
-
-            //select side
-            forceData.Alignment = new FloatRange(0f, 1f).RandomInRange;
 
             while(forceLevel != 0)
             {
@@ -53,7 +42,46 @@ namespace ProjectJedi
                 }
             }
 
+            //select side
+            forceData.Alignment = new FloatRange(0f, 1f).RandomInRange;
+
             return forceData;
-        } 
+        }
+        
+        public static bool IsPawnForceSensitive(Pawn pawn)
+        {
+            var sensitiveTrait = pawn.story.traits.GetTrait(ProjectJediDefOf.PJ_ForceSensitive);
+            if(sensitiveTrait == null)
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        public static int GetPawnForceLevel(Pawn pawn)
+        {
+            int maxLevel = 0;
+
+            var jediTrait = pawn.story.traits.GetTrait(ProjectJediDefOf.PJ_JediTrait);
+            var sithTrait = pawn.story.traits.GetTrait(ProjectJediDefOf.PJ_SithTrait);
+            var grayTrait = pawn.story.traits.GetTrait(ProjectJediDefOf.PJ_GrayTrait);
+
+            if(jediTrait != null)
+            {
+                maxLevel = jediTrait.Degree;
+            }
+            if(sithTrait != null)
+            {
+                maxLevel = sithTrait.Degree;
+            }
+            if(grayTrait != null)
+            {
+                maxLevel = grayTrait.Degree;
+            }
+
+            maxLevel *= 5;
+            return new IntRange(maxLevel - 4, maxLevel).RandomInRange;
+        }
     }
 }
