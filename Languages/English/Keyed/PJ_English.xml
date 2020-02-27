@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
 
+
+<!-- =========== 4/4/19 ========== -->
+<PJ_SettingsForceXPDelay_Num>Force XP Gain Delay ({0}x) (Tip: Lower is faster XP Gain)</PJ_SettingsForceXPDelay_Num>
+
 <!-- =========== 5/13/17 ========== -->
 <PJ_UsingShieldBelt>The shield blocks your power.</PJ_UsingShieldBelt>
 <PJ_DrainedForcePool>{0} needs to recover their force powers.</PJ_DrainedForcePool>

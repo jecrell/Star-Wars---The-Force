@@ -256,7 +256,7 @@ namespace ProjectJedi
 
         public void LevelUpPower(ForcePower power)
         {
-            foreach (AbilityDef def in power.abilityDefs)
+            foreach (AbilityUser.AbilityDef def in power.abilityDefs)
             {
                 this.RemovePawnAbility(def);
             }
@@ -442,7 +442,7 @@ namespace ProjectJedi
             traits.allTraits.Remove(trait);
             if (this.AbilityUser.workSettings != null)
             {
-                this.AbilityUser.workSettings.Notify_GainedTrait();
+                this.AbilityUser.workSettings.EnableAndInitialize();
             }
 
             // this.AbilityUser.story.Notify_TraitChanged();

@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -444,7 +444,7 @@ namespace ProjectJedi
                         }), MessageTypeDefOf.RejectInput);
                         return;
                     }
-                    if (compForce.AbilityUser.story != null && (compForce.AbilityUser.story.WorkTagIsDisabled(WorkTags.Violent) && power.abilityDef.MainVerb.isViolent))
+                    if (compForce.AbilityUser.story != null && (compForce.AbilityUser.WorkTagIsDisabled(WorkTags.Violent) && power.abilityDef.MainVerb.isViolent))
                     {
                         Messages.Message("IsIncapableOfViolenceLower".Translate(new object[]
                         {

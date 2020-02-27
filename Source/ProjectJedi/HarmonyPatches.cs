@@ -1,4 +1,4 @@
-﻿using Harmony;
+﻿using HarmonyLib;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,7 @@ namespace ProjectJedi
     {
         static HarmonyPatches()
         {
-            HarmonyInstance harmony = HarmonyInstance.Create("rimworld.jecrell.jedi");
+            var harmony = new Harmony("rimworld.jecrell.jedi");
             harmony.Patch(AccessTools.Method(typeof(Thing), nameof(Thing.TakeDamage)),
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(TakeDamage_PreFix)), null);
             harmony.Patch(AccessTools.Method(typeof(Verb_MeleeAttack), "GetNonMissChance"), null,
@@ -66,8 +66,8 @@ namespace ProjectJedi
             if (xp > 0 && pawn?.TryGetComp<CompForceUser>() is CompForceUser compForce &&
                 Find.TickManager.TicksGame > compForce?.ForceData?.TicksUntilXPGain)
             {
-                int delay = 130;
-                if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Plants) delay += 50;
+                int delay = (int)(130 * ModInfo.forceXPDelayFactor);
+                if (__instance.def == SkillDefOf.Intellectual || __instance.def == SkillDefOf.Plants) delay += (int)(50 * ModInfo.forceXPDelayFactor);
                 compForce.ForceData.TicksUntilXPGain = Find.TickManager.TicksGame + delay;
                 compForce.ForceUserXP++;
             }

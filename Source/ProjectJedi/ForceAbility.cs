@@ -30,7 +30,7 @@ namespace ProjectJedi
         }
 
 
-        public ForceAbility(Pawn user, AbilityDef pdef) : base(user, pdef)
+        public ForceAbility(Pawn user, AbilityUser.AbilityDef pdef) : base(user, pdef)
         {
 
         }
