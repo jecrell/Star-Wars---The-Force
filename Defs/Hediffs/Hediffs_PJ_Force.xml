@@ -6,6 +6,7 @@
     <defName>PJ_ForceSpeedHediff_One</defName>
 	<hediffClass>HediffWithComps</hediffClass>
 	<label>Force Speed</label>
+  <description>The force can allow a user to move with great speed.</description>
     <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>	
@@ -32,6 +33,7 @@
     <defName>PJ_ForceSpeedHediff_Two</defName>
 	<hediffClass>HediffWithComps</hediffClass>
 	<label>Force Speed</label>
+  <description>The force can allow a user to move with great speed.</description>
     <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>	
@@ -58,6 +60,7 @@
     <defName>PJ_ForceSpeedHediff_Three</defName>
 	<hediffClass>HediffWithComps</hediffClass>
 	<label>Force Speed</label>
+  <description>The force can allow a user to move with great speed.</description>
     <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>	
@@ -84,6 +87,7 @@
     <defName>PJ_ForceDefenseHediff</defName>
 	<hediffClass>HediffWithComps</hediffClass>
 	<label>Force Defense</label>
+  <description>Let go of your conscious self, and act on instinct.</description>
     <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>	
@@ -106,6 +110,7 @@
     <defName>PJ_MindTrick</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>Mind Trick</label>
+    <description>The force can have a strong influence on the weak-minded.</description>
     <defaultLabelColor>(1,0.3,0.5)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>
@@ -145,6 +150,7 @@
     <defName>PJ_Rage</defName>
     <hediffClass>HediffWithComps</hediffClass>
     <label>Force Rage</label>
+    <description>The dark side of the force can send person into a berzerker fury.</description>
     <defaultLabelColor>(1,0,0)</defaultLabelColor>
     <scenarioCanAdd>false</scenarioCanAdd>
     <maxSeverity>1.0</maxSeverity>

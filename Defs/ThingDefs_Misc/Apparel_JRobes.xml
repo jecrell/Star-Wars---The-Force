@@ -49,7 +49,6 @@
 			<MedicalOperationSpeed>0.03</MedicalOperationSpeed>
 			<WorkSpeedGlobal>0.025</WorkSpeedGlobal>
 			<MiningSpeed>0.05</MiningSpeed>
-			<SmithingSpeed>0.028</SmithingSpeed>
 		</equippedStatOffsets>
     <apparel>
       <bodyPartGroups>
@@ -117,7 +116,6 @@
 			<MedicalOperationSpeed>0.03</MedicalOperationSpeed>
 			<WorkSpeedGlobal>0.025</WorkSpeedGlobal>
 			<MiningSpeed>0.05</MiningSpeed>
-			<SmithingSpeed>0.028</SmithingSpeed>
 		</equippedStatOffsets>
     <apparel>
       <bodyPartGroups>

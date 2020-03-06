@@ -442,7 +442,7 @@ namespace ProjectJedi
             traits.allTraits.Remove(trait);
             if (this.AbilityUser.workSettings != null)
             {
-                this.AbilityUser.workSettings.EnableAndInitialize();
+                this.AbilityUser.workSettings.EnableAndInitializeIfNotAlreadyInitialized();
             }
 
             // this.AbilityUser.story.Notify_TraitChanged();

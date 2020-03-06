@@ -21,6 +21,7 @@
   <HediffDef>
     <defName>PJ_ForceWielderHD</defName>
     <hediffClass>HediffWithComps</hediffClass>
+    <description>The force is strong with this one.</description>
 	<isBad>false</isBad>
     <defaultLabelColor>(0.8, 0.8, 0.35)</defaultLabelColor>
     <initialSeverity>1.0</initialSeverity>	

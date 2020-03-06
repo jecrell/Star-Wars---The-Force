@@ -2,9 +2,10 @@
 <ModMetaData>
   <name>Star Wars - The Force</name>
   <author>Jecrell and Xen</author>
-  <supportedVersons>
-  	<li>1.0</li>
+  <supportedVersions>
+  	<li>1.1</li>
   </supportedVersions>
+  <packageId>PJedi.starwars.Force</packageId>
   <description>1.20.0.1 (10-22-2018)
 
 	Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
@@ -37,4 +38,14 @@ This should address some wacky behavior.
 RimWorld 1.0 version
 
 </description>
+<modDependencies>
+    <li>
+      <packageId>jecrell.jecstools</packageId>
+      <displayName>JecsTools</displayName>
+      <downloadUrl>https://github.com/jecrell/JecsTools</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>jecrell.jecstools</li>
+  </loadAfter>
 </ModMetaData>

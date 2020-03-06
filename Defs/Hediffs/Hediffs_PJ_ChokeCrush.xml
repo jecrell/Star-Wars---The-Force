@@ -4,6 +4,7 @@
 	<HediffDef ParentName="InjuryBase">
 		<defName>PJ_ChokeCrush</defName>
 		<label>crush</label>
+    <description>All too easy.</description>
 		<tendable>true</tendable>
     <comps>
       <li Class="HediffCompProperties_TendDuration">

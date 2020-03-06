@@ -6,6 +6,7 @@
 		<defName>PJ_ForceBurn</defName>
 		<label>force burn</label>
     <labelNoun>a force burn wound</labelNoun>
+    <description>a force-burn wound</description>
     <comps>
       <li Class="HediffCompProperties_TendDuration">
         <labelTendedWell>bandaged</labelTendedWell>

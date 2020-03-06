@@ -8,6 +8,7 @@
     <defaultLabelColor>(0.8, 0.8, 1)</defaultLabelColor>
     <label>Asphyxia</label>
     <labelNoun>asphyxia</labelNoun>
+    <description>I find your lack of faith disturbing.</description>
 	<initialSeverity>0.001</initialSeverity>
     <lethalSeverity>1.5</lethalSeverity>
 		<comps>
