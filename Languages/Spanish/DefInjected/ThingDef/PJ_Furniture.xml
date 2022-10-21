@@ -1,17 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceMedPadJ.label>Cojin de meditacion (Jedi)</PJ_ForceMedPadJ.label>
   <PJ_ForceMedPadJ.description>Un comodo cojín en el cual los Jedi pueden meditar, claro - Tambien puede ser usado como silla.</PJ_ForceMedPadJ.description>
   <PJ_ForceMedPadJ_Blueprint.label>Cojin de meditacion(Jedi) (blueprint)</PJ_ForceMedPadJ_Blueprint.label>
   <PJ_ForceMedPadJ_Blueprint_Install.label>Cojin de meditacion (Jedi) (blueprint)</PJ_ForceMedPadJ_Blueprint_Install.label>
   <PJ_ForceMedPadJ_Frame.label>Cojin de meditacion (Jedi) (building)</PJ_ForceMedPadJ_Frame.label>
-
   <PJ_ForceMedPadS.label>Cojin de meditacion (Sith)</PJ_ForceMedPadS.label>
   <PJ_ForceMedPadS.description>Un comodo cojín en el cual los Sith pueden meditar, claro - Tambien puede ser usado como silla.</PJ_ForceMedPadS.description>
   <PJ_ForceMedPadS_Blueprint.label>Cojin de meditacion (Sith) (blueprint)</PJ_ForceMedPadS_Blueprint.label>
   <PJ_ForceMedPadS_Blueprint_Install.label>Cojin de meditacion (Sith) (blueprint)</PJ_ForceMedPadS_Blueprint_Install.label>
   <PJ_ForceMedPadS_Frame.label>Cojin de meditacion (Sith) (building)</PJ_ForceMedPadS_Frame.label>
-
-
 </LanguageData>

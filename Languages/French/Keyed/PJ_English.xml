@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- =========== 5/13/17 ========== -->
   <PJ_UsingShieldBelt>Le bouclier bloque vos pouvoirs</PJ_UsingShieldBelt>
   <PJ_DrainedForcePool>{0} a besoin de récuperer de la Force.</PJ_DrainedForcePool>
   <PJ_WrongAlignment>{0} a le mauvais alignement.</PJ_WrongAlignment>
-
-
   <!-- =========== Messages ======== -->
   <PJ_ForceGhostResisted>Le Spectre résiste</PJ_ForceGhostResisted>
   <PJ_ForceResisted>{0} a resisté à l'{2} de {1}.</PJ_ForceResisted>
@@ -25,12 +22,10 @@
   <PJ_LightPointsRequired>Nec {0} points lumineux</PJ_LightPointsRequired>
   <PJ_CastSuccess>Succes</PJ_CastSuccess>
   <PJ_CastFailure>Echec</PJ_CastFailure>
-
   <!-- ============= Float Menus ============= -->
   <PJ_ForceMeditate>Médite</PJ_ForceMeditate>
   <PJ_ForceMeditate_NeedForceUsersOnly>Utilisateur de Force uniquement</PJ_ForceMeditate_NeedForceUsersOnly>
   <PJ_ForceMeditate_NeedRest>Essaye a nouveau plus tard</PJ_ForceMeditate_NeedRest>
-
   <!-- ============= UI ============ -->
   <PJ_TabForce>Force</PJ_TabForce>
   <PJ_Alignment>alignement</PJ_Alignment>
@@ -52,20 +47,16 @@
   <PJ_ForceSensitiveDesc>{0} peut sentir une intense impulsion... Utilise ses compétences, et observe les grandir.</PJ_ForceSensitiveDesc>
   <PJ_SensitiveMessage>quelque chose se reveille...</PJ_SensitiveMessage>
   <PJ_ForcePowersUnlocked>{0} a commence à controler la force.</PJ_ForcePowersUnlocked>
-
   <!-- =========== Skills ========== -->
   <PJ_LightsaberOffense_Desc>Augmente les dégats du sabre laser de 20% par point. Tout utilisateur de la force fait la moitié des dégats jusqu'à ce qu'il augmente cette compétence. Pour les autres, c'est 10 point de dégats.</PJ_LightsaberOffense_Desc>
   <PJ_LightsaberDefense_Desc>Augmente les chances de parer les attaques de mélée et de disperser les balles de 15% par niveau.</PJ_LightsaberDefense_Desc>
   <PJ_LightsaberReflection_Desc>Augmente les chances de renvoyer les balles dispersés sur le tireur de 20% par niveau.</PJ_LightsaberReflection_Desc>
   <PJ_LightsaberAccuracy_Desc>Augmente la precision des attaques au sabre laser de 20% par niveau.</PJ_LightsaberAccuracy_Desc>
   <PJ_ForcePool_Desc>Diminue le montant de force puisée dans vos reserves par les pouvoirs de 15% par niveau.</PJ_ForcePool_Desc>
-
   <!-- ========== Buttons ========== -->
-
   <ForceAbilityDescAlign>Nécessite un alignement: {0}</ForceAbilityDescAlign>
   <ForceAbilityDescChange>Augmente ton alignement vers le côte {0} de {1}</ForceAbilityDescChange>
   <ForceAbilityDescPoints>Force Power: {0}</ForceAbilityDescPoints>
   <ForceAbilityDescOriginPoints>Force Power: {0} (Original)</ForceAbilityDescOriginPoints>
   <ForceAbilityDescNewPoints>Force Power: {0} (w/ Force pool skill)</ForceAbilityDescNewPoints>
-
 </LanguageData>

@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A36BEEB2-7379-475B-B537-827E34571962}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectJedi</RootNamespace>
+    <AssemblyName>ProjectJedi</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\1.2\Assemblies\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ModInfo.cs" />
+    <Compile Include="Buttons.cs" />
+    <Compile Include="CompForceUser.cs" />
+    <Compile Include="DamageWorker_ForceChoke.cs" />
+    <Compile Include="DamageWorker_ForceDrain.cs" />
+    <Compile Include="DamageWorker_ForceHeal.cs" />
+    <Compile Include="DamageWorker_ForceLeveled.cs" />
+    <Compile Include="DamageWorker_ForcePull.cs" />
+    <Compile Include="DamageWorker_ForcePush.cs" />
+    <Compile Include="FlyingObject.cs" />
+    <Compile Include="FlyingObject_Equipable.cs" />
+    <Compile Include="ForceAbility.cs" />
+    <Compile Include="ForceAbilityDef.cs" />
+    <Compile Include="ForceAlignmentType.cs" />
+    <Compile Include="ForceCardUtility.cs" />
+    <Compile Include="Building_ForceMeditationPad.cs" />
+    <Compile Include="ForcePower.cs" />
+    <Compile Include="ForceSkill.cs" />
+    <Compile Include="ForceData.cs" />
+    <Compile Include="ForceUtility.cs" />
+    <Compile Include="HarmonyPatches.cs" />
+    <Compile Include="HediffComp_Shield.cs" />
+    <Compile Include="Gizmo_HediffShieldStatus.cs" />
+    <Compile Include="ITab_Pawn_Force.cs" />
+    <Compile Include="JobDriver_ForceMeditation.cs" />
+    <Compile Include="JobGiver_ForceMeditation.cs" />
+    <Compile Include="ModMain.cs" />
+    <Compile Include="Need_ForcePool.cs" />
+    <Compile Include="PawnGhost.cs" />
+    <Compile Include="Projectile_ForceStorm.cs" />
+    <Compile Include="ProjectJediDefOf.cs" />
+    <Compile Include="ThinkNode_ModNeedPercentageAbove.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.2.2753</Version>
+<ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.0.2</Version>
+<ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AbilityUser">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2195729899\1.2\Assemblies\AbilityUser.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompActivatableEffect">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2195729899\1.2\Assemblies\CompActivatableEffect.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompDeflector">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2195729899\1.2\Assemblies\CompDeflector.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompOversizedWeapon">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2195729899\1.2\Assemblies\CompOversizedWeapon.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="CompSlotLoadable">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2195729899\1.2\Assemblies\CompSlotLoadable.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

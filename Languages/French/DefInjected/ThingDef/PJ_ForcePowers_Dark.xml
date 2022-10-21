@@ -1,119 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Rage de Force -->
-
   <PForceRage.label>Rage de Force</PForceRage.label>
-
-
   <!-- Rage de Force (Apprenti) -->
-
   <PJ_ForceRage_Apprentice.label>Rage de Force</PJ_ForceRage_Apprentice.label>
   <PJ_ForceRage_Apprentice.description>Utilise le coté obscur de la Force pour rendre une cible enragé, elle attaque ce qu'elle voit dans une colère noire.</PJ_ForceRage_Apprentice.description>
-
-
   <!-- Rage de Force (Adepte) -->
-
   <PJ_ForceRage_Adept.label>Rage de Force (Adepte)</PJ_ForceRage_Adept.label>
   <PJ_ForceRage_Adept.description>Utilise le coté obscur de la Force pour rendre une cible enragé, elle attaque ce qu'elle voit dans une colère noire.</PJ_ForceRage_Adept.description>
-
-
   <!-- Rage de Force (Maitre) -->
-
   <PJ_ForceRage_Master.label>Rage de Force (Maitre)</PJ_ForceRage_Master.label>
   <PJ_ForceRage_Master.description>Utilise le coté obscur de la Force pour rendre une cible enragé, elle attaque ce qu'elle voit dans une colère noire.</PJ_ForceRage_Master.description>
-
-
   <!-- Etranglement de Force -->
-
   <PForceChoke.label>Etranglement de Force</PForceChoke.label>
-
-
   <!-- Etranglement de Force (Apprenti) -->
-
   <PJ_ForceChoke_Apprentice.label>Etranglement de Force</PJ_ForceChoke_Apprentice.label>
   <PJ_ForceChoke_Apprentice.description>Briser la vie de vos ennemis.</PJ_ForceChoke_Apprentice.description>
-
-
   <!-- Etranglement de Force (Adepte) -->
-
   <PJ_ForceChoke_Adept.label>Etranglement de Force (Adepte)</PJ_ForceChoke_Adept.label>
   <PJ_ForceChoke_Adept.description>Briser la vie de vos ennemis.</PJ_ForceChoke_Adept.description>
-
-
   <!-- Etranglement de Force (Maitre) -->
-
   <PJ_ForceChoke_Master.label>Etranglement de Force (Maitre)</PJ_ForceChoke_Master.label>
   <PJ_ForceChoke_Master.description>Briser la vie de vos ennemis.</PJ_ForceChoke_Master.description>
-
-
   <!-- Drain de Force -->
-
   <PJ_PForceDrain.label>Drain de Force</PJ_PForceDrain.label>
-
-
   <!-- Drain de Force (Apprenti) -->
-
   <PJ_ForceDrain_Apprentice.label>Drain de Force</PJ_ForceDrain_Apprentice.label>
   <PJ_ForceDrain_Apprentice.description>Aspirer la force vitale de la cible.</PJ_ForceDrain_Apprentice.description>
-
-
   <!-- Drain de Force (Adepte) -->
-
   <PJ_ForceDrain_Adept.label>Drain de Force (Adepte)</PJ_ForceDrain_Adept.label>
   <PJ_ForceDrain_Adept.description>Aspirer la force vitale de la cible.</PJ_ForceDrain_Adept.description>
-
-
   <!-- Drain de Force (Maitre) -->
-
   <PJ_ForceDrain_Master.label>Drain de Force (Maitre)</PJ_ForceDrain_Master.label>
   <PJ_ForceDrain_Master.description>Aspirer la force vitale de la cible.</PJ_ForceDrain_Master.description>
-
-
   <!-- Eclair de Force -->
-
   <PForceLightningProj.label>Eclair de Force</PForceLightningProj.label>
-
-
   <!-- Eclair de Force (Apprenti) -->
-
   <PJ_ForceLightning_Apprentice.label>Eclair de Force</PJ_ForceLightning_Apprentice.label>
   <PJ_ForceLightning_Apprentice.description>Dechainez la fureur du coté obscur.</PJ_ForceLightning_Apprentice.description>
-
-
   <!-- Eclair de Force (Adepte) -->
-
   <PJ_ForceLightning_Adept.label>Eclair de Force (Adepte)</PJ_ForceLightning_Adept.label>
   <PJ_ForceLightning_Adept.description>Dechainez la fureur du coté obscur.</PJ_ForceLightning_Adept.description>
-
-
   <!-- Eclair de Force (Maitre) -->
-
   <PJ_ForceLightning_Master.label>Eclair de Force (Maitre)</PJ_ForceLightning_Master.label>
   <PJ_ForceLightning_Master.description>Dechainez la fureur du coté obscur.</PJ_ForceLightning_Master.description>
-
-
   <!-- tempête de Force -->
-
   <PJ_PForceStormProj.label>tempête de Force</PJ_PForceStormProj.label>
-
-
   <!-- tempête de Force (Apprenti) -->
-
   <PJ_ForceStorm_Apprentice.label>tempête de Force</PJ_ForceStorm_Apprentice.label>
   <PJ_ForceStorm_Apprentice.description>Dechainez la fureur du coté obscur sur une zone, causant d'importants dégats.</PJ_ForceStorm_Apprentice.description>
-
-
   <!-- tempête de Force (Adepte) -->
-
   <PJ_ForceStorm_Adept.label>tempête de Force (Adepte)</PJ_ForceStorm_Adept.label>
   <PJ_ForceStorm_Adept.description>Dechainez la fureur du coté obscur sur une zone, causant d'importants dégats.</PJ_ForceStorm_Adept.description>
-
-
   <!-- tempête de Force (Maitre) -->
-
   <PJ_ForceStorm_Master.label>tempête de Force (Maitre)</PJ_ForceStorm_Master.label>
   <PJ_ForceStorm_Master.description>Dechainez la fureur du coté obscur sur une zone, causant d'importants dégats.</PJ_ForceStorm_Master.description>
-
-
 </LanguageData>

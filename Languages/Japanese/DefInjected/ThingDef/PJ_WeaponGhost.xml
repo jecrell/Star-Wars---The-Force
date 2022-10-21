@@ -1,11 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_MeleeWeapon_ForceGladius.label>霊的なグラディウス</PJ_MeleeWeapon_ForceGladius.label>
   <PJ_MeleeWeapon_ForceGladius.description>古代のデザインの霊的な短い剣。刺したり斬り付けるのに適しています。\n\n(スターウォーズ－フォース)</PJ_MeleeWeapon_ForceGladius.description>
   <PJ_MeleeWeapon_ForceGladius.tools.0.label>柄</PJ_MeleeWeapon_ForceGladius.tools.0.label>
   <PJ_MeleeWeapon_ForceGladius.tools.1.label>切っ先</PJ_MeleeWeapon_ForceGladius.tools.1.label>
   <PJ_MeleeWeapon_ForceGladius.tools.2.label>刃先</PJ_MeleeWeapon_ForceGladius.tools.2.label>
-
-
 </LanguageData>

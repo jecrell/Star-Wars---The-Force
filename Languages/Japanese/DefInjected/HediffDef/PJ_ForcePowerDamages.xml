@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceBurn.label>やけど(フォース)</PJ_ForceBurn.label>
   <PJ_ForceBurn.comps.0.labelTendedWell>包帯</PJ_ForceBurn.comps.0.labelTendedWell>
   <PJ_ForceBurn.comps.0.labelTendedWellInner>縫合</PJ_ForceBurn.comps.0.labelTendedWellInner>
@@ -9,5 +8,4 @@
   <PJ_ForceBurn.injuryProps.destroyedLabel>焼け落ちる</PJ_ForceBurn.injuryProps.destroyedLabel>
   <PJ_ForceBurn.labelNoun>フォースによるやけど</PJ_ForceBurn.labelNoun>
   <PJ_ForceBurn.labelNounPretty>{1}の中の{0}</PJ_ForceBurn.labelNounPretty>
-
 </LanguageData>

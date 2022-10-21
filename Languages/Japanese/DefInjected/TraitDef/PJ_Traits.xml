@@ -1,11 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceSensitive.degreeDatas.0.label>フォース=センシティブ</PJ_ForceSensitive.degreeDatas.0.label>
   <PJ_ForceSensitive.degreeDatas.0.description>[PAWN_nameDef]は私たちを取り巻くライブフォースを感じることができます。\n\n(スターウォーズ－フォース)</PJ_ForceSensitive.degreeDatas.0.description>
   <PJ_ForceSensitive.degreeDatas.1.label>フォース=アプレンティス</PJ_ForceSensitive.degreeDatas.1.label>
   <PJ_ForceSensitive.degreeDatas.1.description>[PAWN_nameDef]はフォースを制御し始めましたが、さらなる訓練と指導が必要です。\n\n(スターウォーズ－フォース)</PJ_ForceSensitive.degreeDatas.1.description>
-
   <PJ_JediTrait.degreeDatas.0.label>ジェダイ</PJ_JediTrait.degreeDatas.0.label>
   <PJ_JediTrait.degreeDatas.0.description>[PAWN_nameDef]はジェダイナイトになるための道を歩き始めました。\n\n(スターウォーズ－フォース)</PJ_JediTrait.degreeDatas.0.description>
   <PJ_JediTrait.degreeDatas.1.label>ジェダイナイト</PJ_JediTrait.degreeDatas.1.label>
@@ -14,7 +12,6 @@
   <PJ_JediTrait.degreeDatas.2.description>[PAWN_nameDef]は真のマスターであるジェダイオーダーの中で最も尊敬されています。\n\n(スターウォーズ－フォース)</PJ_JediTrait.degreeDatas.2.description>
   <PJ_JediTrait.degreeDatas.3.label>ジェダイカウンシル</PJ_JediTrait.degreeDatas.3.label>
   <PJ_JediTrait.degreeDatas.3.description>[PAWN_nameDef]は選ばれたジェダイの階級に属し、ジェダイ評議会に奉仕する仕事に適している人物です。\n\n(スターウォーズ－フォース)</PJ_JediTrait.degreeDatas.3.description>
-
   <PJ_SithTrait.degreeDatas.0.label>シス</PJ_SithTrait.degreeDatas.0.label>
   <PJ_SithTrait.degreeDatas.0.description>[PAWN_nameDef]はフォースのダークサイドへの旅を始めました。\n\n(スターウォーズ－フォース)</PJ_SithTrait.degreeDatas.0.description>
   <PJ_SithTrait.degreeDatas.1.label>シスの尋問官</PJ_SithTrait.degreeDatas.1.label>
@@ -23,7 +20,6 @@
   <PJ_SithTrait.degreeDatas.2.description>[PAWN_nameDef]は銀河の中で最も恐れられているシスの暗黒卿です。\n\n(スターウォーズ－フォース)</PJ_SithTrait.degreeDatas.2.description>
   <PJ_SithTrait.degreeDatas.3.label>シスマスター</PJ_SithTrait.degreeDatas.3.label>
   <PJ_SithTrait.degreeDatas.3.description>[PAWN_nameDef]はフォースのダークサイドに完全に同調し、無限のパワーへと近づきました。\n\n(スターウォーズ－フォース)</PJ_SithTrait.degreeDatas.3.description>
-
   <PJ_GrayTrait.degreeDatas.0.label>グレイパダワン</PJ_GrayTrait.degreeDatas.0.label>
   <PJ_GrayTrait.degreeDatas.0.description>[PAWN_nameDef]は統合されたフォースのバランスを模索しています。\n\n(スターウォーズ－フォース)</PJ_GrayTrait.degreeDatas.0.description>
   <PJ_GrayTrait.degreeDatas.1.label>グレイジェダイ</PJ_GrayTrait.degreeDatas.1.label>
@@ -32,6 +28,4 @@
   <PJ_GrayTrait.degreeDatas.2.description>[PAWN_nameDef]はジェダイマスターであり、「ライブフォース」に専念しています。\n\n(スターウォーズ－フォース)</PJ_GrayTrait.degreeDatas.2.description>
   <PJ_GrayTrait.degreeDatas.3.label>グレイセージ</PJ_GrayTrait.degreeDatas.3.label>
   <PJ_GrayTrait.degreeDatas.3.description>[PAWN_nameDef]はライブフォースに順応しています。[PAWN_pronoun]は[PAWN_pronoun]自身の生き方をフォースの意志の延長線とみなしています。\n\n(スターウォーズ－フォース)</PJ_GrayTrait.degreeDatas.3.description>
-
-
 </LanguageData>

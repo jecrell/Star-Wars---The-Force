@@ -1,10 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_GhostFaction.label>フォースゴースト</PJ_GhostFaction.label>
   <PJ_GhostFaction.description>その力でフォースと一体化した元ジェダイマスター。まだ彼らの人格を保持しています。\n\n(スターウォーズ－フォース)</PJ_GhostFaction.description>
   <PJ_GhostFaction.fixedName>フォースゴースト</PJ_GhostFaction.fixedName>
   <PJ_GhostFaction.pawnsPlural>フォースゴースト達</PJ_GhostFaction.pawnsPlural>
   <PJ_GhostFaction.pawnSingular>ゴースト</PJ_GhostFaction.pawnSingular>
-
 </LanguageData>

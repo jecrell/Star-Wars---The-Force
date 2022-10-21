@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceGhostR.label>フォースゴースト</PJ_ForceGhostR.label>
   <PJ_ForceGhostR.description>フォースによって呼び出された過去の幽霊\n\n(スターウォーズ－フォース)</PJ_ForceGhostR.description>
   <!-- No Leather: Butcher Products -->
@@ -9,6 +8,4 @@
   <PJ_ForceGhostR.race.meatLabel>エクトプラズム</PJ_ForceGhostR.race.meatLabel>
   <Corpse_PJ_ForceGhostR.label>フォースゴーストの残骸</Corpse_PJ_ForceGhostR.label>
   <Corpse_PJ_ForceGhostR.description>フォースゴーストが倒された後に残ったエクトプラズム\n\n(スターウォーズ－フォース)</Corpse_PJ_ForceGhostR.description>
-
-
 </LanguageData>

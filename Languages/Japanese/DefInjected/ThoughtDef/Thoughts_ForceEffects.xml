@@ -1,11 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ThoughtPull.stages.0.label>フォースプル</PJ_ThoughtPull.stages.0.label>
   <PJ_ThoughtPull.stages.0.description>ねえ！ 私を引っ張らないで！\n\n(スターウォーズ－フォース)</PJ_ThoughtPull.stages.0.description>
-
   <PJ_ThoughtPush.stages.0.label>フォースプッシュ</PJ_ThoughtPush.stages.0.label>
   <PJ_ThoughtPush.stages.0.description>ねえ！ 私を押さないで！\n\n(スターウォーズ－フォース)</PJ_ThoughtPush.stages.0.description>
-
-
 </LanguageData>

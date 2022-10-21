@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceSpeedHediff_One.label>Velocidad de la fuerza</PJ_ForceSpeedHediff_One.label>
   <PJ_ForceSpeedHediff_Two.label>Velocidad de la fuerza</PJ_ForceSpeedHediff_Two.label>
   <PJ_ForceSpeedHediff_Three.label>Velocidad de la fuerza</PJ_ForceSpeedHediff_Three.label>
   <PJ_ForceDefenseHediff.label>Defenza de la fuerza</PJ_ForceDefenseHediff.label>
   <PJ_MindTrick.label>Truco mental</PJ_MindTrick.label>
   <PJ_Rage.label>Furia de la fuerza</PJ_Rage.label>
-
-
 </LanguageData>

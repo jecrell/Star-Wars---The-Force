@@ -1,75 +1,64 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
-
-<!-- =========== 4/4/19 ========== -->
-<PJ_SettingsForceXPDelay_Num>Force XP Gain Delay ({0}x) (Tip: Lower is faster XP Gain)</PJ_SettingsForceXPDelay_Num>
-
-<!-- =========== 5/13/17 ========== -->
-<PJ_UsingShieldBelt>The shield blocks your power.</PJ_UsingShieldBelt>
-<PJ_DrainedForcePool>{0} needs to recover their force powers.</PJ_DrainedForcePool>
-<PJ_WrongAlignment>{0} has the wrong alignment.</PJ_WrongAlignment>
-
-
-<!-- =========== Messages ======== -->
-<PJ_ForceGhostResisted>The ghost resists.</PJ_ForceGhostResisted>
-<PJ_ForceResisted>{0} resists {1}'s {2}.</PJ_ForceResisted>
-<PJ_ForceDrainTwo>{0} is draining {1}'s health!</PJ_ForceDrainTwo>
-<PJ_ForceDrainOne>{0} is draining {1}'s force pool!</PJ_ForceDrainOne>
-<PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
-<PJ_LightsidePointsRequired>Requires {0} points spent on light side abilities</PJ_LightsidePointsRequired>
-<PJ_DarksidePointsRequired>Requires {0} points spent on dark side abilities</PJ_DarksidePointsRequired>
-<PJ_NextLevelAlignmentMismatch>The next level requires {0} side alignment. We are {1}.</PJ_NextLevelAlignmentMismatch>
-<PJ_CheckStarsForMoreInfo>Hover your mouse over the adjacent stars for detailed information on each level of this power.</PJ_CheckStarsForMoreInfo>
-<PJ_ForceAwakensLabel>The Force Awakens</PJ_ForceAwakensLabel>
-<PJ_ForceAwakensDesc>{0} has discovered deep within themselves a mysterious power.</PJ_ForceAwakensDesc>
-<PJ_NotEnoughAbilityPoints>Requires {1} ability points. We have {0}.</PJ_NotEnoughAbilityPoints>
-<PJ_PointsRequired>Req Ability Points: {0}</PJ_PointsRequired>
-<PJ_DarkPointsRequired>Req Darkside Points: {0}</PJ_DarkPointsRequired>
-<PJ_LightPointsRequired>Req Lightside Points: {0}</PJ_LightPointsRequired> 
-<PJ_CastSuccess>Cast Success</PJ_CastSuccess>
-<PJ_CastFailure>Cast Failure</PJ_CastFailure>
-
-<!-- ============= Float Menus ============= -->
-<PJ_ForceMeditate>Meditate</PJ_ForceMeditate>
-<PJ_ForceMeditate_NeedForceUsersOnly>Force wielders only</PJ_ForceMeditate_NeedForceUsersOnly>
-<PJ_ForceMeditate_NeedRest>Try again later</PJ_ForceMeditate_NeedRest>
-
-<!-- ============= UI ============ -->
-<PJ_TabForce>Force</PJ_TabForce>
-<PJ_Alignment>alignment</PJ_Alignment>
-<PJ_Dark>dark</PJ_Dark>
-<PJ_Gray>gray</PJ_Gray>
-<PJ_Light>light</PJ_Light>
-<PJ_Skills>skills</PJ_Skills>
-<PJ_Powers>powers</PJ_Powers>
-<PJ_Level>level</PJ_Level>
-<PJ_Affiliation>order</PJ_Affiliation>
-<PJ_PointsAvail>points available</PJ_PointsAvail>
-<PJ_LightsaberOffense>Lightsaber Offense</PJ_LightsaberOffense>
-<PJ_LightsaberDefense>Lightsaber Defense</PJ_LightsaberDefense>
-<PJ_LightsaberAccuracy>Lightsaber Accuracy</PJ_LightsaberAccuracy>
-<PJ_LightsaberReflection>Lightsaber Reflection</PJ_LightsaberReflection>
-<PJ_ForcePool>Force Pool</PJ_ForcePool>
-<PJ_ForceXPDesc>Force XP is gained whenever a character uses their skills. Select skills increase force XP more than others.</PJ_ForceXPDesc>
-<PJ_AlignmentDesc>Alignment determines what abilities a character can use. Gray Jedi can use low levels of both light and dark powers. However, higher level abilities require commitment to the dark or light side of the force.</PJ_AlignmentDesc>
-<PJ_ForceSensitiveDesc>{0} can feel something stirring within... Utilize their skills and watch them grow.</PJ_ForceSensitiveDesc>
-<PJ_SensitiveMessage>Something is awakening...</PJ_SensitiveMessage>
-<PJ_ForcePowersUnlocked>{0} has begun to control the force.</PJ_ForcePowersUnlocked>
-
-<!-- =========== Skills ========== -->
-<PJ_LightsaberOffense_Desc>Increases lightsaber damage by 20% per skill point. All force users start with half damage on lightsabers until leveling this skill. Non-force users can only deal a maximum of 10 damage.</PJ_LightsaberOffense_Desc>
-<PJ_LightsaberDefense_Desc>Increases chance to block melee attacks and deflect bullets by 15% per level.</PJ_LightsaberDefense_Desc>
-<PJ_LightsaberReflection_Desc>Increases chances of reflecting deflected bullets back at targets by 20% per level.</PJ_LightsaberReflection_Desc>
-<PJ_LightsaberAccuracy_Desc>Increases rates of landing lightsaber attacks in battle by up to 20% per point.</PJ_LightsaberAccuracy_Desc>
-<PJ_ForcePool_Desc>Decreases force power force pool consumption by 15% per skill point.</PJ_ForcePool_Desc>
-
-<!-- ========== Buttons ========== -->
-
-<ForceAbilityDescAlign>Required Alignment: {0}</ForceAbilityDescAlign>
-<ForceAbilityDescChange>Adjusts Alignment towards the {0} side by {1}</ForceAbilityDescChange>
-<ForceAbilityDescPoints>Force Power: {0}</ForceAbilityDescPoints>
-<ForceAbilityDescOriginPoints>Force Power: {0} (Original)</ForceAbilityDescOriginPoints>
-<ForceAbilityDescNewPoints>Force Power: {0} (w/ Force pool skill)</ForceAbilityDescNewPoints>
-	
+  <!-- =========== 4/4/19 ========== -->
+  <PJ_SettingsForceXPDelay_Num>Force XP Gain Delay ({0}x) (Tip: Lower is faster XP Gain)</PJ_SettingsForceXPDelay_Num>
+  <!-- =========== 5/13/17 ========== -->
+  <PJ_UsingShieldBelt>The shield blocks your power.</PJ_UsingShieldBelt>
+  <PJ_DrainedForcePool>{0} needs to recover their force powers.</PJ_DrainedForcePool>
+  <PJ_WrongAlignment>{0} has the wrong alignment.</PJ_WrongAlignment>
+  <!-- =========== Messages ======== -->
+  <PJ_ForceGhostResisted>The ghost resists.</PJ_ForceGhostResisted>
+  <PJ_ForceResisted>{0} resists {1}'s {2}.</PJ_ForceResisted>
+  <PJ_ForceDrainTwo>{0} is draining {1}'s health!</PJ_ForceDrainTwo>
+  <PJ_ForceDrainOne>{0} is draining {1}'s force pool!</PJ_ForceDrainOne>
+  <PJ_LevelUp>{0} has leveled up! New force points available.</PJ_LevelUp>
+  <PJ_LightsidePointsRequired>Requires {0} points spent on light side abilities</PJ_LightsidePointsRequired>
+  <PJ_DarksidePointsRequired>Requires {0} points spent on dark side abilities</PJ_DarksidePointsRequired>
+  <PJ_NextLevelAlignmentMismatch>The next level requires {0} side alignment. We are {1}.</PJ_NextLevelAlignmentMismatch>
+  <PJ_CheckStarsForMoreInfo>Hover your mouse over the adjacent stars for detailed information on each level of this power.</PJ_CheckStarsForMoreInfo>
+  <PJ_ForceAwakensLabel>The Force Awakens</PJ_ForceAwakensLabel>
+  <PJ_ForceAwakensDesc>{0} has discovered deep within themselves a mysterious power.</PJ_ForceAwakensDesc>
+  <PJ_NotEnoughAbilityPoints>Requires {1} ability points. We have {0}.</PJ_NotEnoughAbilityPoints>
+  <PJ_PointsRequired>Req Ability Points: {0}</PJ_PointsRequired>
+  <PJ_DarkPointsRequired>Req Darkside Points: {0}</PJ_DarkPointsRequired>
+  <PJ_LightPointsRequired>Req Lightside Points: {0}</PJ_LightPointsRequired>
+  <PJ_CastSuccess>Cast Success</PJ_CastSuccess>
+  <PJ_CastFailure>Cast Failure</PJ_CastFailure>
+  <!-- ============= Float Menus ============= -->
+  <PJ_ForceMeditate>Meditate</PJ_ForceMeditate>
+  <PJ_ForceMeditate_NeedForceUsersOnly>Force wielders only</PJ_ForceMeditate_NeedForceUsersOnly>
+  <PJ_ForceMeditate_NeedRest>Try again later</PJ_ForceMeditate_NeedRest>
+  <!-- ============= UI ============ -->
+  <PJ_TabForce>Force</PJ_TabForce>
+  <PJ_Alignment>alignment</PJ_Alignment>
+  <PJ_Dark>dark</PJ_Dark>
+  <PJ_Gray>gray</PJ_Gray>
+  <PJ_Light>light</PJ_Light>
+  <PJ_Skills>skills</PJ_Skills>
+  <PJ_Powers>powers</PJ_Powers>
+  <PJ_Level>level</PJ_Level>
+  <PJ_Affiliation>order</PJ_Affiliation>
+  <PJ_PointsAvail>points available</PJ_PointsAvail>
+  <PJ_LightsaberOffense>Lightsaber Offense</PJ_LightsaberOffense>
+  <PJ_LightsaberDefense>Lightsaber Defense</PJ_LightsaberDefense>
+  <PJ_LightsaberAccuracy>Lightsaber Accuracy</PJ_LightsaberAccuracy>
+  <PJ_LightsaberReflection>Lightsaber Reflection</PJ_LightsaberReflection>
+  <PJ_ForcePool>Force Pool</PJ_ForcePool>
+  <PJ_ForceXPDesc>Force XP is gained whenever a character uses their skills. Select skills increase force XP more than others.</PJ_ForceXPDesc>
+  <PJ_AlignmentDesc>Alignment determines what abilities a character can use. Gray Jedi can use low levels of both light and dark powers. However, higher level abilities require commitment to the dark or light side of the force.</PJ_AlignmentDesc>
+  <PJ_ForceSensitiveDesc>{0} can feel something stirring within... Utilize their skills and watch them grow.</PJ_ForceSensitiveDesc>
+  <PJ_SensitiveMessage>Something is awakening...</PJ_SensitiveMessage>
+  <PJ_ForcePowersUnlocked>{0} has begun to control the force.</PJ_ForcePowersUnlocked>
+  <!-- =========== Skills ========== -->
+  <PJ_LightsaberOffense_Desc>Increases lightsaber damage by 20% per skill point. All force users start with half damage on lightsabers until leveling this skill. Non-force users can only deal a maximum of 10 damage.</PJ_LightsaberOffense_Desc>
+  <PJ_LightsaberDefense_Desc>Increases chance to block melee attacks and deflect bullets by 15% per level.</PJ_LightsaberDefense_Desc>
+  <PJ_LightsaberReflection_Desc>Increases chances of reflecting deflected bullets back at targets by 20% per level.</PJ_LightsaberReflection_Desc>
+  <PJ_LightsaberAccuracy_Desc>Increases rates of landing lightsaber attacks in battle by up to 20% per point.</PJ_LightsaberAccuracy_Desc>
+  <PJ_ForcePool_Desc>Decreases force power force pool consumption by 15% per skill point.</PJ_ForcePool_Desc>
+  <!-- ========== Buttons ========== -->
+  <ForceAbilityDescAlign>Required Alignment: {0}</ForceAbilityDescAlign>
+  <ForceAbilityDescChange>Adjusts Alignment towards the {0} side by {1}</ForceAbilityDescChange>
+  <ForceAbilityDescPoints>Force Power: {0}</ForceAbilityDescPoints>
+  <ForceAbilityDescOriginPoints>Force Power: {0} (Original)</ForceAbilityDescOriginPoints>
+  <ForceAbilityDescNewPoints>Force Power: {0} (w/ Force pool skill)</ForceAbilityDescNewPoints>
 </LanguageData>

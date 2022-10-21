@@ -1,119 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Machtwut -->
-
   <PForceRage.label>Machtwut</PForceRage.label>
-
-
   <!-- Machtwut (Apprentice) -->
-
   <PJ_ForceRage_Apprentice.label>Machtwut</PJ_ForceRage_Apprentice.label>
   <PJ_ForceRage_Apprentice.description>Lässt einen Feind, mit dieser Kraft der dunklen Seite, vor Wut toben und ihn alles was er sieht in blinder Wut angreifen.</PJ_ForceRage_Apprentice.description>
-
-
   <!-- Machtwut (Apprentice) -->
-
   <PJ_ForceRage_Apprentice.label>Machtwut (Lehrling)</PJ_ForceRage_Apprentice.label>
   <PJ_ForceRage_Apprentice.description>Lässt einen Feind, mit dieser Kraft der dunklen Seite, vor Wut toben und ihn alles was er sieht in blinder Wut angreifen.</PJ_ForceRage_Apprentice.description>
-
-
   <!-- Machtwut (Master) -->
-
   <PJ_ForceRage_Master.label>Machtwut (Meister)</PJ_ForceRage_Master.label>
   <PJ_ForceRage_Master.description>Lässt einen Feind, mit dieser Kraft der dunklen Seite, vor Wut toben und ihn alles was er sieht in blinder Wut angreifen.</PJ_ForceRage_Master.description>
-
-
   <!-- Machtwürgegriff -->
-
   <PForceChoke.label>Machtwürgegriff</PForceChoke.label>
-
-
   <!-- Machtwürgegriff (Apprentice) -->
-
   <PJ_ForceChoke_Apprentice.label>Machtwürgegriff</PJ_ForceChoke_Apprentice.label>
   <PJ_ForceChoke_Apprentice.description>Würge deinen Gegner zu Tode.</PJ_ForceChoke_Apprentice.description>
-
-
   <!-- Machtwürgegriff (Apprentice) -->
-
   <PJ_ForceChoke_Apprentice.label>Machtwürgegriff (Lehrling)</PJ_ForceChoke_Apprentice.label>
   <PJ_ForceChoke_Apprentice.description>Würge deinen Gegner zu Tode.</PJ_ForceChoke_Apprentice.description>
-
-
   <!-- Machtwürgegriff (Master) -->
-
   <PJ_ForceChoke_Master.label>Machtwürgegriff (Meister)</PJ_ForceChoke_Master.label>
   <PJ_ForceChoke_Master.description>Würge deinen Gegner zu Tode.</PJ_ForceChoke_Master.description>
-
-
   <!-- Machtabsaugen -->
-
   <PJ_PForceDrain.label>Machtabsaugen</PJ_PForceDrain.label>
-
-
   <!-- Machtabsaugen (Apprentice) -->
-
   <PJ_ForceDrain_Apprentice.label>Machtabsaugen</PJ_ForceDrain_Apprentice.label>
   <PJ_ForceDrain_Apprentice.description>Entziehe einem Wesen die Macht.</PJ_ForceDrain_Apprentice.description>
-
-
   <!-- Machtabsaugen (Apprentice) -->
-
   <PJ_ForceDrain_Apprentice.label>Machtabsaugen (Lehrling)</PJ_ForceDrain_Apprentice.label>
   <PJ_ForceDrain_Apprentice.description>Entziehe einem Wesen die Macht.</PJ_ForceDrain_Apprentice.description>
-
-
   <!-- Machtabsaugen (Master) -->
-
   <PJ_ForceDrain_Master.label>Machtabsaugen (Meister)</PJ_ForceDrain_Master.label>
   <PJ_ForceDrain_Master.description>Entziehe einem Wesen die Macht.</PJ_ForceDrain_Master.description>
-
-
   <!-- Machtblitz -->
-
   <PForceLightningProj.label>Machtblitz</PForceLightningProj.label>
-
-
   <!-- Machtblitz (Apprentice) -->
-
   <PJ_ForceLightning_Apprentice.label>Machtblitz</PJ_ForceLightning_Apprentice.label>
   <PJ_ForceLightning_Apprentice.description>Schlage mit der Kraft der puren dunklen Seite um dich.</PJ_ForceLightning_Apprentice.description>
-
-
   <!-- Machtblitz (Apprentice) -->
-
   <PJ_ForceLightning_Apprentice.label>Machtblitz (Lehrling)</PJ_ForceLightning_Apprentice.label>
   <PJ_ForceLightning_Apprentice.description>Schlage mit der Kraft der puren dunklen Seite um dich.</PJ_ForceLightning_Apprentice.description>
-
-
   <!-- Machtblitz (Master) -->
-
   <PJ_ForceLightning_Master.label>Machtblitz (Meister)</PJ_ForceLightning_Master.label>
   <PJ_ForceLightning_Master.description>Schlage mit der Kraft der puren dunklen Seite um dich.</PJ_ForceLightning_Master.description>
-
-
   <!-- Machtsturm -->
-
   <PJ_PForceStormProj.label>Machtsturm</PJ_PForceStormProj.label>
-
-
   <!-- Machtsturm (Apprentice) -->
-
   <PJ_ForceStorm_Apprentice.label>Machtsturm</PJ_ForceStorm_Apprentice.label>
   <PJ_ForceStorm_Apprentice.description>Entfache die pure Kraft der dunklen Seite in einem Bereich und verursache immensen Schaden.</PJ_ForceStorm_Apprentice.description>
-
-
   <!-- Machtsturm (Apprentice) -->
-
   <PJ_ForceStorm_Apprentice.label>Machtsturm (Lehrling)</PJ_ForceStorm_Apprentice.label>
   <PJ_ForceStorm_Apprentice.description>Entfache die pure Kraft der dunklen Seite in einem Bereich und verursache immensen Schaden.</PJ_ForceStorm_Apprentice.description>
-
-
   <!-- Machtsturm (Master) -->
-
   <PJ_ForceStorm_Master.label>Machtsturm (Meister)</PJ_ForceStorm_Master.label>
   <PJ_ForceStorm_Master.description>Entfache die pure Kraft der dunklen Seite in einem Bereich und verursache immensen Schaden.</PJ_ForceStorm_Master.description>
-
-
 </LanguageData>

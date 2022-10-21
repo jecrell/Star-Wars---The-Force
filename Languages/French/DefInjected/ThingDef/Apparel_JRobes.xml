@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_Jedi_Robe.label>Bure Jedi</PJ_Jedi_Robe.label>
   <PJ_Jedi_Robe.description>Une bure Jedi</PJ_Jedi_Robe.description>
-
   <PJ_Sith_Robe.label>Bure Sith</PJ_Sith_Robe.label>
   <PJ_Sith_Robe.description>La version "cote obscur" de la bure Jedi</PJ_Sith_Robe.description>
-
   <PJ_InnerRobes.label>Toge Jedi</PJ_InnerRobes.label>
   <PJ_InnerRobes.description>La simple tunique Jedi</PJ_InnerRobes.description>
-
-
 </LanguageData>

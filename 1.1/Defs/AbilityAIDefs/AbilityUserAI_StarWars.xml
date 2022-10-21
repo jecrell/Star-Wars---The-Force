@@ -1,0 +1,740 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+Document made by ChJees
+-->
+<Defs>
+  <!-- Core for force users. -->
+  <AbilityUserAI.AbilityUserAIProfileDef Name="BaseForceAbilityUserAI" Abstract="True">
+    <compAbilityUserClass>ProjectJedi.CompForceUser</compAbilityUserClass>
+    <!-- Allowed abilities -->
+    <abilities>
+      <li>StarWars_ForcePull_Lv1</li>
+      <li>StarWars_ForcePull_Lv2</li>
+      <li>StarWars_ForcePull_Lv3</li>
+      <li>StarWars_ForcePush_Lv1</li>
+      <li>StarWars_ForcePush_Lv2</li>
+      <li>StarWars_ForcePush_Lv3</li>
+      <li>StarWars_ForceSpeed_Lv1</li>
+      <li>StarWars_ForceSpeed_Lv2</li>
+      <li>StarWars_ForceSpeed_Lv3</li>
+    </abilities>
+    <!-- Decision tree which helps pick ability to use. -->
+    <decisionTree>
+      <subNodes>
+        <!-- In combat -->
+        <li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+          <subNodes>
+            <!-- Try heal themselves first. -->
+            <li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+              <maxHealth>0.8</maxHealth>
+              <subNodes>
+                <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                  <tags>
+                    <li>Heal</li>
+                    <li>Self</li>
+                  </tags>
+                </li>
+              </subNodes>
+            </li>
+            <!-- Try heal others second. -->
+            <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+              <tags>
+                <li>Heal</li>
+                <li>Ally</li>
+              </tags>
+            </li>
+            <li Class="AbilityUserAI.AbilityDecisionConditionalNode_HasEnemyTarget">
+              <subNodes>
+                <!-- Attempt to Disarm if we can. -->
+                <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetIsArmed">
+                  <subNodes>
+                    <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+                      <maxDistance>12.0</maxDistance>
+                      <subNodes>
+                        <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                          <tags>
+                            <li>Disarm</li>
+                          </tags>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+                <!-- Using ranged weapon, more defensive ability use. -->
+                <li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingRangedWeapon">
+                  <subNodes>
+                    <!-- Bridge the gap. Keep them away! -->
+                    <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+                      <maxDistance>16.0</maxDistance>
+                      <subNodes>
+                        <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                          <tags>
+                            <li>GapBuilder</li>
+                          </tags>
+                        </li>
+                      </subNodes>
+                    </li>
+                    <!-- Close the gap. Only to get to the enemy.-->
+                    <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+                      <minDistance>60.0</minDistance>
+                      <subNodes>
+                        <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                          <tags>
+                            <li>GapCloser</li>
+                            <li>Self</li>
+                          </tags>
+                        </li>
+                      </subNodes>
+                    </li>
+                    <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+                      <maxDistance>20.0</maxDistance>
+                      <subNodes>
+                        <!-- Use defensive abilities. -->
+                        <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                          <tags>
+                            <li>Defensive</li>
+                          </tags>
+                          <blacklistedTags>
+                            <li>GapCloser</li>
+                          </blacklistedTags>
+                        </li>
+                      </subNodes>
+                    </li>
+                    <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+                      <maxDistance>50.0</maxDistance>
+                      <subNodes>
+                        <!-- Use offensive abilities. -->
+                        <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                          <tags>
+                            <li>Offensive</li>
+                          </tags>
+                          <blacklistedTags>
+                            <li>GapCloser</li>
+                          </blacklistedTags>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+                <!-- Using melee weapon, agressive ability use. -->
+                <li Class="AbilityUserAI.AbilityDecisionConditionalNode_UsingMeleeWeapon">
+                  <countUnarmed>false</countUnarmed>
+                  <subNodes>
+                    <!-- Close the gap. -->
+                    <li Class="AbilityUserAI.AbilityDecisionConditionalNode_EnemyTargetDistance">
+                      <minDistance>6.0</minDistance>
+                      <subNodes>
+                        <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                          <tags>
+                            <li>GapCloser</li>
+                            <li>Self</li>
+                          </tags>
+                        </li>
+                      </subNodes>
+                    </li>
+                    <!-- Use offensive abilities. -->
+                    <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                      <tags>
+                        <li>Offensive</li>
+                      </tags>
+                    </li>
+                    <!-- Use defensive abilities. -->
+                    <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                      <tags>
+                        <li>Defensive</li>
+                      </tags>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+          </subNodes>
+        </li>
+        <!-- Out of combat -->
+        <li Class="AbilityUserAI.AbilityDecisionConditionalNode_InCombat">
+          <invert>true</invert>
+          <subNodes>
+            <!-- Try heal themselves first. -->
+            <li Class="AbilityUserAI.AbilityDecisionConditionalNode_CasterHealth">
+              <maxHealth>0.99</maxHealth>
+              <subNodes>
+                <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+                  <tags>
+                    <li>Heal</li>
+                    <li>Self</li>
+                  </tags>
+                </li>
+              </subNodes>
+            </li>
+            <!-- Try heal others second. -->
+            <li Class="AbilityUserAI.AbilityDecisionNode_PickAbilityWithMatchingTags">
+              <tags>
+                <li>Heal</li>
+                <li>Ally</li>
+              </tags>
+              <blacklistedTags>
+                <li>Offensive</li>
+              </blacklistedTags>
+            </li>
+          </subNodes>
+        </li>
+      </subNodes>
+    </decisionTree>
+  </AbilityUserAI.AbilityUserAIProfileDef>
+  <!-- Gray and Force Apprentice, able to use both sides. -->
+  <AbilityUserAI.AbilityUserAIProfileDef ParentName="BaseForceAbilityUserAI">
+    <defName>StarWars_Gray</defName>
+    <matchingTraits>
+      <li>PJ_GrayTrait</li>
+      <li>PJ_ForceSensitive</li>
+    </matchingTraits>
+  </AbilityUserAI.AbilityUserAIProfileDef>
+  <!-- Sith -->
+  <AbilityUserAI.AbilityUserAIProfileDef ParentName="BaseForceAbilityUserAI">
+    <defName>StarWars_Sith</defName>
+    <matchingTraits>
+      <li>PJ_SithTrait</li>
+    </matchingTraits>
+    <abilities>
+      <li>StarWars_ForceRage_Lv1</li>
+      <li>StarWars_ForceRage_Lv2</li>
+      <li>StarWars_ForceRage_Lv3</li>
+      <li>StarWars_ForceChoke_Lv1</li>
+      <li>StarWars_ForceChoke_Lv2</li>
+      <li>StarWars_ForceChoke_Lv3</li>
+      <li>StarWars_ForceDrain_Lv1</li>
+      <li>StarWars_ForceDrain_Lv2</li>
+      <li>StarWars_ForceDrain_Lv3</li>
+      <li>StarWars_ForceLightning_Lv1</li>
+      <li>StarWars_ForceLightning_Lv2</li>
+      <li>StarWars_ForceLightning_Lv3</li>
+      <li>StarWars_ForceStorm_Lv1</li>
+      <li>StarWars_ForceStorm_Lv2</li>
+      <li>StarWars_ForceStorm_Lv3</li>
+    </abilities>
+  </AbilityUserAI.AbilityUserAIProfileDef>
+  <!-- Jedi -->
+  <AbilityUserAI.AbilityUserAIProfileDef ParentName="BaseForceAbilityUserAI">
+    <defName>StarWars_Jedi</defName>
+    <matchingTraits>
+      <li>PJ_JediTrait</li>
+    </matchingTraits>
+    <abilities>
+      <li>StarWars_ForceHealingSelf_Lv1</li>
+      <li>StarWars_ForceHealingSelf_Lv2</li>
+      <li>StarWars_ForceHealingSelf_Lv3</li>
+      <li>StarWars_ForceHealingOther_Lv1</li>
+      <li>StarWars_ForceHealingOther_Lv2</li>
+      <li>StarWars_ForceHealingOther_Lv3</li>
+      <li>StarWars_ForceDefense_Lv1</li>
+      <li>StarWars_ForceDefense_Lv2</li>
+      <li>StarWars_ForceDefense_Lv3</li>
+      <li>StarWars_MindTrick_Lv1</li>
+      <li>StarWars_MindTrick_Lv2</li>
+      <li>StarWars_MindTrick_Lv3</li>
+      <li>StarWars_ForceGhost_Lv1</li>
+      <li>StarWars_ForceGhost_Lv2</li>
+      <li>StarWars_ForceGhost_Lv3</li>
+    </abilities>
+  </AbilityUserAI.AbilityUserAIProfileDef>
+  <!-- Abilities -->
+  <!-- Ability Base -->
+  <AbilityUserAI.AbilityAIDef Name="BaseForceAbilityAI" Abstract="True">
+    <maxRange>60.0</maxRange>
+    <tags>
+      <li>Force</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Gray Force User -->
+  <!-- Force Pull -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForcePull_Lv1</defName>
+    <ability>PJ_ForcePull_Apprentice</ability>
+    <power>1.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>GapCloser</li>
+      <li>Utility</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForcePull_Lv2</defName>
+    <ability>PJ_ForcePull_Adept</ability>
+    <power>2.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>GapCloser</li>
+      <li>Utility</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForcePull_Lv3</defName>
+    <ability>PJ_ForcePull_Master</ability>
+    <power>3.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>GapCloser</li>
+      <li>Utility</li>
+      <li>Single</li>
+      <li>Disarm</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Push -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForcePush_Lv1</defName>
+    <ability>PJ_ForcePush_Apprentice</ability>
+    <power>1.0</power>
+    <tags>
+      <li>Defensive</li>
+      <li>GapBuilder</li>
+      <li>Utility</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForcePush_Lv2</defName>
+    <ability>PJ_ForcePush_Adept</ability>
+    <power>2.0</power>
+    <tags>
+      <li>Defensive</li>
+      <li>GapBuilder</li>
+      <li>Utility</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForcePush_Lv3</defName>
+    <ability>PJ_ForcePush_Master</ability>
+    <power>3.0</power>
+    <tags>
+      <li>Defensive</li>
+      <li>GapBuilder</li>
+      <li>Utility</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Speed -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceSpeed_Lv1</defName>
+    <ability>PJ_ForceSpeed_Apprentice</ability>
+    <minRange>10.0</minRange>
+    <maxRange>9999.0</maxRange>
+    <power>8.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <usedOnCaster>true</usedOnCaster>
+    <tags>
+      <li>GapCloser</li>
+      <li>Utility</li>
+      <li>Self</li>
+    </tags>
+    <!-- If one of these exist on the caster we should not cast this. -->
+    <appliedHediffs>
+      <li>PJ_ForceSpeedHediff_One</li>
+      <li>PJ_ForceSpeedHediff_Two</li>
+      <li>PJ_ForceSpeedHediff_Three</li>
+    </appliedHediffs>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceSpeed_Lv2</defName>
+    <ability>PJ_ForceSpeed_Adept</ability>
+    <minRange>10.0</minRange>
+    <maxRange>9999.0</maxRange>
+    <power>10.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <usedOnCaster>true</usedOnCaster>
+    <tags>
+      <li>GapCloser</li>
+      <li>Utility</li>
+      <li>Self</li>
+    </tags>
+    <appliedHediffs>
+      <li>PJ_ForceSpeedHediff_One</li>
+      <li>PJ_ForceSpeedHediff_Two</li>
+      <li>PJ_ForceSpeedHediff_Three</li>
+    </appliedHediffs>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceSpeed_Lv3</defName>
+    <ability>PJ_ForceSpeed_Master</ability>
+    <minRange>10.0</minRange>
+    <maxRange>9999.0</maxRange>
+    <power>12.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <usedOnCaster>true</usedOnCaster>
+    <tags>
+      <li>GapCloser</li>
+      <li>Utility</li>
+      <li>Self</li>
+    </tags>
+    <appliedHediffs>
+      <li>PJ_ForceSpeedHediff_One</li>
+      <li>PJ_ForceSpeedHediff_Two</li>
+      <li>PJ_ForceSpeedHediff_Three</li>
+    </appliedHediffs>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Dark Side\Sith Force User -->
+  <!-- Force Rage -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceRage_Lv1</defName>
+    <ability>PJ_ForceRage_Apprentice</ability>
+    <minRange>10.0</minRange>
+    <power>1.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceRage_Lv2</defName>
+    <ability>PJ_ForceRage_Adept</ability>
+    <minRange>10.0</minRange>
+    <power>2.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceRage_Lv3</defName>
+    <ability>PJ_ForceRage_Master</ability>
+    <minRange>10.0</minRange>
+    <power>3.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Choke -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceChoke_Lv1</defName>
+    <ability>PJ_ForceChoke_Apprentice</ability>
+    <power>4.0</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Defensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceChoke_Lv2</defName>
+    <ability>PJ_ForceChoke_Adept</ability>
+    <power>5.0</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Defensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceChoke_Lv3</defName>
+    <ability>PJ_ForceChoke_Master</ability>
+    <power>6.0</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Defensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Drain -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceDrain_Lv1</defName>
+    <ability>PJ_ForceDrain_Apprentice</ability>
+    <power>7.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Heal</li>
+      <li>Self</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceDrain_Lv2</defName>
+    <ability>PJ_ForceDrain_Adept</ability>
+    <power>8.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Heal</li>
+      <li>Self</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceDrain_Lv3</defName>
+    <ability>PJ_ForceDrain_Master</ability>
+    <power>9.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Heal</li>
+      <li>Self</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Lightning -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceLightning_Lv1</defName>
+    <ability>PJ_ForceLightning_Apprentice</ability>
+    <power>10.0</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceLightning_Lv2</defName>
+    <ability>PJ_ForceLightning_Adept</ability>
+    <power>11.0</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceLightning_Lv3</defName>
+    <ability>PJ_ForceLightning_Master</ability>
+    <power>12.0</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Storm -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceStorm_Lv1</defName>
+    <ability>PJ_ForceStorm_Apprentice</ability>
+    <minRange>10.0</minRange>
+    <abilityRadius>10</abilityRadius>
+    <workerClass>AbilityUserAI.AbilityWorker_AreaOfEffect</workerClass>
+    <power>2.5</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Mass</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceStorm_Lv2</defName>
+    <ability>PJ_ForceStorm_Adept</ability>
+    <minRange>10.0</minRange>
+    <abilityRadius>10</abilityRadius>
+    <workerClass>AbilityUserAI.AbilityWorker_AreaOfEffect</workerClass>
+    <power>4.5</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Mass</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceStorm_Lv3</defName>
+    <ability>PJ_ForceStorm_Master</ability>
+    <minRange>10.0</minRange>
+    <abilityRadius>10</abilityRadius>
+    <workerClass>AbilityUserAI.AbilityWorker_AreaOfEffect</workerClass>
+    <power>6.5</power>
+    <needSeeingTarget>true</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Mass</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Light Side\Jedi Force User -->
+  <!-- Force Heal Self -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceHealingSelf_Lv1</defName>
+    <ability>PJ_ForceHealingSelf_Apprentice</ability>
+    <usedOnCaster>true</usedOnCaster>
+    <power>1.0</power>
+    <tags>
+      <li>Heal</li>
+      <li>Self</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceHealingSelf_Lv2</defName>
+    <ability>PJ_ForceHealingSelf_Adept</ability>
+    <usedOnCaster>true</usedOnCaster>
+    <power>2.0</power>
+    <tags>
+      <li>Heal</li>
+      <li>Self</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceHealingSelf_Lv3</defName>
+    <ability>PJ_ForceHealingSelf_Master</ability>
+    <usedOnCaster>true</usedOnCaster>
+    <power>3.0</power>
+    <tags>
+      <li>Heal</li>
+      <li>Self</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Heal Other -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceHealingOther_Lv1</defName>
+    <ability>PJ_ForceHealingOther_Apprentice</ability>
+    <workerClass>AbilityUserAI.AbilityWorker_HealAlly</workerClass>
+    <maxRange>16.0</maxRange>
+    <canTargetAlly>true</canTargetAlly>
+    <needEnemyTarget>false</needEnemyTarget>
+    <power>1.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Heal</li>
+      <li>Ally</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceHealingOther_Lv2</defName>
+    <ability>PJ_ForceHealingOther_Adept</ability>
+    <workerClass>AbilityUserAI.AbilityWorker_HealAlly</workerClass>
+    <maxRange>16.0</maxRange>
+    <canTargetAlly>true</canTargetAlly>
+    <needEnemyTarget>false</needEnemyTarget>
+    <power>2.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Heal</li>
+      <li>Ally</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceHealingOther_Lv3</defName>
+    <ability>PJ_ForceHealingOther_Master</ability>
+    <workerClass>AbilityUserAI.AbilityWorker_HealAlly</workerClass>
+    <maxRange>16.0</maxRange>
+    <canTargetAlly>true</canTargetAlly>
+    <needEnemyTarget>false</needEnemyTarget>
+    <power>3.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Heal</li>
+      <li>Ally</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Defense -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceDefense_Lv1</defName>
+    <ability>PJ_ForceDefense_Apprentice</ability>
+    <usedOnCaster>true</usedOnCaster>
+    <power>4.0</power>
+    <tags>
+      <li>Defensive</li>
+      <li>Self</li>
+    </tags>
+    <appliedHediffs>
+      <li>PJ_ForceDefenseHediff</li>
+    </appliedHediffs>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceDefense_Lv2</defName>
+    <ability>PJ_ForceDefense_Adept</ability>
+    <usedOnCaster>true</usedOnCaster>
+    <power>5.0</power>
+    <tags>
+      <li>Defensive</li>
+      <li>Self</li>
+    </tags>
+    <appliedHediffs>
+      <li>PJ_ForceDefenseHediff</li>
+    </appliedHediffs>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceDefense_Lv3</defName>
+    <ability>PJ_ForceDefense_Master</ability>
+    <usedOnCaster>true</usedOnCaster>
+    <power>6.0</power>
+    <tags>
+      <li>Defensive</li>
+      <li>Self</li>
+    </tags>
+    <appliedHediffs>
+      <li>PJ_ForceDefenseHediff</li>
+    </appliedHediffs>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Mind Trick -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_MindTrick_Lv1</defName>
+    <ability>PJ_MindTrick_Apprentice</ability>
+    <maxRange>34.0</maxRange>
+    <power>1.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Defensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_MindTrick_Lv2</defName>
+    <ability>PJ_MindTrick_Adept</ability>
+    <maxRange>44.0</maxRange>
+    <power>1.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Defensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_MindTrick_Lv3</defName>
+    <ability>PJ_MindTrick_Master</ability>
+    <maxRange>50.0</maxRange>
+    <power>1.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Defensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <!-- Force Ghost -->
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceGhost_Lv1</defName>
+    <ability>PJ_ForceGhost_Apprentice</ability>
+    <power>20.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceGhost_Lv2</defName>
+    <ability>PJ_ForceGhost_Adept</ability>
+    <power>30.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+  <AbilityUserAI.AbilityAIDef ParentName="BaseForceAbilityAI">
+    <defName>StarWars_ForceGhost_Lv3</defName>
+    <ability>PJ_ForceGhost_Master</ability>
+    <power>40.0</power>
+    <needSeeingTarget>false</needSeeingTarget>
+    <tags>
+      <li>Offensive</li>
+      <li>Single</li>
+    </tags>
+  </AbilityUserAI.AbilityAIDef>
+</Defs>

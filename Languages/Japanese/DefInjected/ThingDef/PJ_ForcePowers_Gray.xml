@@ -1,21 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Force Pull -->
-
   <PJ_PFlyingObject.label>念動力</PJ_PFlyingObject.label>
   <PJ_PFlyingObject_Equipable.label>念動力(装備)</PJ_PFlyingObject_Equipable.label>
   <PJ_PForcePull.label>フォースプル</PJ_PForcePull.label>
-
-
   <!-- Force Push -->
-
   <PJ_PForcePush.label>フォースプッシュ</PJ_PForcePush.label>
-
-
   <!-- Force Speed -->
-
   <PJ_PForceSpeed.label>フォーススピード</PJ_PForceSpeed.label>
-
-
 </LanguageData>

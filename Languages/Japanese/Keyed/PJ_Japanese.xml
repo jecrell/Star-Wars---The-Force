@@ -1,12 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- =========== 5/13/17 ========== -->
   <PJ_UsingShieldBelt>シールドでフォースが妨害されています。</PJ_UsingShieldBelt>
   <PJ_DrainedForcePool>{0}はフォースを回復する必要があります。</PJ_DrainedForcePool>
   <PJ_WrongAlignment>{0}の属性が間違っています。</PJ_WrongAlignment>
-
-
   <!-- =========== Messages ======== -->
   <PJ_ForceGhostResisted>フォースゴーストは抵抗した。</PJ_ForceGhostResisted>
   <PJ_ForceResisted>{0}は{1}の{2}に抵抗した。</PJ_ForceResisted>
@@ -25,12 +22,10 @@
   <PJ_LightPointsRequired>必要ライトサイドポイント:{0}</PJ_LightPointsRequired>
   <PJ_CastSuccess>力の使用に成功</PJ_CastSuccess>
   <PJ_CastFailure>力の使用に失敗</PJ_CastFailure>
-
   <!-- ============= Float Menus ============= -->
   <PJ_ForceMeditate>瞑想</PJ_ForceMeditate>
   <PJ_ForceMeditate_NeedForceUsersOnly>フォースを使える者のみ可能</PJ_ForceMeditate_NeedForceUsersOnly>
   <PJ_ForceMeditate_NeedRest>あとでもう一度試してください</PJ_ForceMeditate_NeedRest>
-
   <!-- ============= UI ============ -->
   <PJ_TabForce>フォース</PJ_TabForce>
   <PJ_Alignment>属性</PJ_Alignment>
@@ -52,20 +47,16 @@
   <PJ_ForceSensitiveDesc>{0}は自分の何かが揺さぶられているように感じます...自分のスキルを活かし、成長するのを体感してください。</PJ_ForceSensitiveDesc>
   <PJ_SensitiveMessage>何かが目覚めた....</PJ_SensitiveMessage>
   <PJ_ForcePowersUnlocked>{0}はフォースを制御できるようになり始めました。</PJ_ForcePowersUnlocked>
-
   <!-- =========== Skills ========== -->
   <PJ_LightsaberOffense_Desc>ライトセーバーのダメージがスキルポイントにつき20％増加します。すべてのフォースユーザーはこのスキルをレベルアップするまでライトセーバーのダメージが半分になります。フォースを使えないユーザーは最大で10ダメージまでしか引き出せません。</PJ_LightsaberOffense_Desc>
   <PJ_LightsaberDefense_Desc>近接攻撃をブロックし、遠隔射撃武器の弾丸をレベルごとに15％ずつ逸らす成功率が増えます。</PJ_LightsaberDefense_Desc>
   <PJ_LightsaberReflection_Desc>逸らす事に成功した弾丸を目標に対して反射する成功率がレベルごとに20％ずつ増えます。</PJ_LightsaberReflection_Desc>
   <PJ_LightsaberAccuracy_Desc>戦闘中にライトセーバーによる攻撃の命中確率が１ポイントにつき最大20％増加します。</PJ_LightsaberAccuracy_Desc>
   <PJ_ForcePool_Desc>フォース容量から消費されるフォースパワーを1ポイントにつき15%減少てきます。</PJ_ForcePool_Desc>
-
   <!-- ========== Buttons ========== -->
-
   <ForceAbilityDescAlign>必要な属性:{0}</ForceAbilityDescAlign>
   <ForceAbilityDescChange>{0}サイドへの属性の変更を{1}で行います</ForceAbilityDescChange>
   <ForceAbilityDescPoints>フォースパワー:{0}</ForceAbilityDescPoints>
   <ForceAbilityDescOriginPoints>フォースパワー:{0}(初期値)</ForceAbilityDescOriginPoints>
   <ForceAbilityDescNewPoints>フォースパワー:{0}(w/フォース容量スキル)</ForceAbilityDescNewPoints>
-
 </LanguageData>

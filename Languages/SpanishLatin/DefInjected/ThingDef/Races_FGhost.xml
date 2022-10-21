@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceGhostR.label>Fantasma de la fuerza</PJ_ForceGhostR.label>
   <PJ_ForceGhostR.description>Un fantasma de la fuerza</PJ_ForceGhostR.description>
   <!-- No Leather: Butcher Products -->
@@ -8,9 +7,6 @@
   <PJ_ForceGhostR_Meat.description>ectoplasma</PJ_ForceGhostR_Meat.description>
   <PJ_ForceGhostR_Corpse.label>Cuerpo de fantasma de la fuerza</PJ_ForceGhostR_Corpse.label>
   <PJ_ForceGhostR_Corpse.description>Cuerpo de fantasma de la fuerza</PJ_ForceGhostR_Corpse.description>
-
   <PJ_MeleeWeapon_ForceGladius.label>Gladius fantasmal</PJ_MeleeWeapon_ForceGladius.label>
   <PJ_MeleeWeapon_ForceGladius.description>Una arma eteréa de diseño ancestral, buena para cortar y apuñalar.</PJ_MeleeWeapon_ForceGladius.description>
-
-
 </LanguageData>

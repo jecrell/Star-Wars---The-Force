@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <AbilityUser.AbilityDef Name="BaseForceAbility" Abstract="True">
+    <abilityClass>ProjectJedi.ForceAbility</abilityClass>
+    <uiIconPath>UI/Glow_Corrupt</uiIconPath>
+  </AbilityUser.AbilityDef>
+</Defs>

@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_NoAir.label>窒息</PJ_NoAir.label>
   <PJ_NoAir.stages.0.label>咳き込む</PJ_NoAir.stages.0.label>
   <PJ_NoAir.stages.1.label>咳き込む</PJ_NoAir.stages.1.label>
@@ -8,6 +7,4 @@
   <PJ_NoAir.stages.3.label>呼吸できない</PJ_NoAir.stages.3.label>
   <PJ_NoAir.stages.4.label>窒息死する</PJ_NoAir.stages.4.label>
   <PJ_NoAir.labelNoun>窒息仮死</PJ_NoAir.labelNoun>
-
-
 </LanguageData>

@@ -1,19 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceMedPadJ.label>瞑想マット(ジェダイ)</PJ_ForceMedPadJ.label>
   <PJ_ForceMedPadJ.description>ジェダイ用にデザインされた瞑想のために座る快適なマット。通常の椅子としても機能します。\n\n(スターウォーズ－フォース)</PJ_ForceMedPadJ.description>
   <Blueprint_PJ_ForceMedPadJ.label>瞑想マット(ジェダイ)(設計)</Blueprint_PJ_ForceMedPadJ.label>
   <Blueprint_Install_PJ_ForceMedPadJ.label>瞑想マット(ジェダイ)(移動先)</Blueprint_Install_PJ_ForceMedPadJ.label>
   <Frame_PJ_ForceMedPadJ.label>瞑想マット(ジェダイ)(施工)</Frame_PJ_ForceMedPadJ.label>
   <Frame_PJ_ForceMedPadJ.description>ジェダイ用にデザインされた瞑想のために座る快適なマット。通常の椅子としても機能します。\n\n(スターウォーズ－フォース)</Frame_PJ_ForceMedPadJ.description>
-
   <PJ_ForceMedPadS.label>瞑想マット(シス)</PJ_ForceMedPadS.label>
   <PJ_ForceMedPadS.description>シス用にデザインされた瞑想のために座る快適なマット。通常の椅子としても機能します。\n\n(スターウォーズ－フォース)</PJ_ForceMedPadS.description>
   <Blueprint_PJ_ForceMedPadS.label>瞑想マット(シス)(設計)</Blueprint_PJ_ForceMedPadS.label>
   <Blueprint_Install_PJ_ForceMedPadS.label>瞑想マット(シス)(移動先)</Blueprint_Install_PJ_ForceMedPadS.label>
   <Frame_PJ_ForceMedPadS.label>瞑想マット(シス)(施工)</Frame_PJ_ForceMedPadS.label>
   <Frame_PJ_ForceMedPadS.description>シス用にデザインされた瞑想のために座る快適なマット。通常の椅子としても機能します。\n\n(スターウォーズ－フォース)</Frame_PJ_ForceMedPadS.description>
-
-
 </LanguageData>

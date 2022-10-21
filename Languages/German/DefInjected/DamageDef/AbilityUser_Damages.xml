@@ -1,8 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <Laser.label>brennen</Laser.label>
   <Laser.deathMessage>{0} wurde erschoßen.</Laser.deathMessage>
-
-
 </LanguageData>

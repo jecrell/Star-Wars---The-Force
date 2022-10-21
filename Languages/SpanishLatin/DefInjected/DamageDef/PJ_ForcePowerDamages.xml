@@ -1,38 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!--[Core] <Cut.label>cortante</Cut.label>-->
   <!--[Core] <Cut.deathMessage>{0} ha recibido un corte mortal.</Cut.deathMessage>-->
-
   <PJ_ForceHealDamage.label>Medicina de la Fuerza</PJ_ForceHealDamage.label>
-
   <PJ_FDrainDamage.label>Drenar fuerza</PJ_FDrainDamage.label>
   <PJ_FDrainDamage.deathMessage>{0} Ha sucumbido al poder del lado oscuro.</PJ_FDrainDamage.deathMessage>
-
   <PJ_FLightning.label>Trueno</PJ_FLightning.label>
   <PJ_FLightning.deathMessage>{0} Ha sucumbido al poder del lado oscuro.</PJ_FLightning.deathMessage>
-
   <PJ_FStorm.label>Tormenta de FUerza</PJ_FStorm.label>
   <PJ_FStorm.deathMessage>{0} Fue atrapado en una tormenta de la fuerza.</PJ_FStorm.deathMessage>
-
   <PJ_MindTrickDam.label>Truco mental</PJ_MindTrickDam.label>
   <PJ_MindTrickDam.deathMessage>{0} Ha sucumbido a daño mental causado por la Fuerza.</PJ_MindTrickDam.deathMessage>
-
   <PJ_RageDam.label>Furia de la Fuerza</PJ_RageDam.label>
   <PJ_RageDam.deathMessage>{0} Ha sucumbido a daño mental de la fuerza.</PJ_RageDam.deathMessage>
-
   <PJ_FChoke.label>Ahorcar</PJ_FChoke.label>
   <PJ_FChoke.deathMessage>{0} Ha sucumbido al poder del lado oscuro.</PJ_FChoke.deathMessage>
-
-
   <!-- Force Pull -->
-
   <PJ_DForcePull.label>Atraer</PJ_DForcePull.label>
-
-
   <!-- Force Push -->
-
   <PJ_DForcePush.label>Empujar</PJ_DForcePush.label>
-
-
 </LanguageData>

@@ -1,53 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
+using AbilityUser;
 using Verse;
 
 namespace ProjectJedi
 {
-    public class ForceAbilityDef : AbilityUser.AbilityDef
+    public class ForceAbilityDef : AbilityDef
     {
-        public float forcePoolCost = 0.0f;
-
         public int abilityPoints = 1;
 
+        public float changedAlignmentRate = 0.0f;
+
+        public ForceAlignmentType changedAlignmentType = ForceAlignmentType.None;
+
         public int darksideTreePointsRequired = 0;
+        public float forcePoolCost = 0.0f;
 
         public int lightsideTreePointsRequired = 0;
 
         public ForceAlignmentType requiredAlignmentType = ForceAlignmentType.None;
 
-        public ForceAlignmentType changedAlignmentType = ForceAlignmentType.None;
-
-        public float changedAlignmentRate = 0.0f;
-
 
         public string GetPointDesc()
         {
-            string result = "";
-            StringBuilder s = new StringBuilder();
-            s.AppendLine("PJ_PointsRequired".Translate(new object[]
-                {
-                this.abilityPoints
-                }));
+            var s = new StringBuilder();
+            s.AppendLine("PJ_PointsRequired".Translate(abilityPoints));
             if (darksideTreePointsRequired > 0)
             {
-                s.AppendLine("PJ_DarkPointsRequired".Translate(new object[]
-                {
-                    this.darksideTreePointsRequired
-                }));
+                s.AppendLine("PJ_DarkPointsRequired".Translate(darksideTreePointsRequired));
             }
+
             if (lightsideTreePointsRequired > 0)
             {
-                s.AppendLine("PJ_LightPointsRequired".Translate(new object[]
-                {
-                    this.lightsideTreePointsRequired
-                }));
+                s.AppendLine("PJ_LightPointsRequired".Translate(lightsideTreePointsRequired));
             }
-            result = s.ToString();
+
+            var result = s.ToString();
             return result;
         }
     }
-
 }

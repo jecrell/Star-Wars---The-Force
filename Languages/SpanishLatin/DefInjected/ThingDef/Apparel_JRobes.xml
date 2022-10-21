@@ -1,14 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_Jedi_Robe.label>Tunica Jedi</PJ_Jedi_Robe.label>
   <PJ_Jedi_Robe.description>La tunica de un Jedi</PJ_Jedi_Robe.description>
-
   <PJ_Sith_Robe.label>Tunica Sith</PJ_Sith_Robe.label>
   <PJ_Sith_Robe.description>Version de la tunica Jedi utilizada por los oscuros Sith.</PJ_Sith_Robe.description>
-
   <PJ_InnerRobes.label>Prenda Jedi</PJ_InnerRobes.label>
   <PJ_InnerRobes.description>Simple vestimenta Jedi</PJ_InnerRobes.description>
-
-
 </LanguageData>

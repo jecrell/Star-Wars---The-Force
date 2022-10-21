@@ -1,31 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Force Rage -->
-
   <PForceRage.label>狂戦士化</PForceRage.label>
-
-
   <!-- Force Choke -->
-
   <PForceChoke.label>窒息</PForceChoke.label>
   <PForceChokeTwo.label>窒息Lv2</PForceChokeTwo.label>
   <PForceChokeThree.label>窒息Lv3</PForceChokeThree.label>
-
-
   <!-- Force Drain -->
-
   <PJ_PForceDrain.label>フォース吸収</PJ_PForceDrain.label>
-
-
   <!-- Force Lightning -->
-
   <PForceLightningProj.label>雷撃</PForceLightningProj.label>
-
-
   <!-- Force Storm -->
-
   <PJ_PForceStormProj.label>電撃嵐</PJ_PForceStormProj.label>
-
-
 </LanguageData>

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using Verse;
-using RimWorld;
 
 namespace ProjectJedi
 {
@@ -12,24 +8,28 @@ namespace ProjectJedi
         protected override BodyPartRecord ChooseHitPart(DamageInfo dinfo, Pawn pawn)
         {
             BodyPartRecord rec = null;
-            BodyPartRecord neckRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.label == "neck");
+            var neckRecord = pawn.def.race.body.AllParts.FirstOrDefault(x => x.def.label == "neck");
             if (pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().All(x => x.Part != neckRecord))
             {
                 rec = neckRecord;
             }
             else
             {
-                BodyPartRecord lungRecord = pawn.def.race.body.AllParts.FirstOrDefault((BodyPartRecord x) => x.def.tags.First(s => s.defName == "BreathingSource" || s.defName == "BreathingPathway") != null);
+                var lungRecord = pawn.def.race.body.AllParts.FirstOrDefault(x =>
+                    x.def.tags.Any(s => s.defName == "BreathingSource" || s.defName == "BreathingPathway"));
                 if (pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().All(x => x.Part != lungRecord))
                 {
                     rec = lungRecord;
                 }
             }
+
             return rec;
         }
-        protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo, DamageResult result)
+
+        protected override void ApplySpecialEffectsToPart(Pawn pawn, float totalDamage, DamageInfo dinfo,
+            DamageResult result)
         {
-            base.FinalizeAndAddInjury(pawn, totalDamage, dinfo, result);
+            FinalizeAndAddInjury(pawn, totalDamage, dinfo, result);
         }
     }
     //public override DamageWorker.DamageResult Apply(DamageInfo dinfo, Thing victim)
@@ -73,6 +73,6 @@ namespace ProjectJedi
     //        }
     //        return result;
     //    }
-        
+
     //}
 }

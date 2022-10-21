@@ -1,12 +1,21 @@
-	Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
 
-	C# Programming by Jecrell.
-	C# Fixes, Assets and XML by Xen.
-	Logo/Art designed by Harrison Gaushell (harrisongaushell.com)
+[h1]Adds RPG-leveling, alignment, and force powers to RimWorld.[/h1]
 
-	Contributors:
-	Nackblad (Art)
-	Cpt. Ohu (Code - Ability Verb)
+[h1]Quick start notes:[/h1]
+For a character to gain force powers, they must start with the force sensitive trait. After spending time working, they will discover their force powers through gaining force XP. Low level force powers can be used by both dark and light sides of the force. Penultimate powers are restricted for pure dark or pure light force wielders.
 
-	Patreon Patrons:
-	Jedi Master Ailan, Shane Malley, Michin, TheDayDude, Dakota Pohlman, Falloutmonk, Legless, Slick Liquid,  Don Butterblume, Karol Rybak, Mathias Broxvall, Nemuri Hime, Hannah Forster, Christian Hermansen, NiNe Bottles of Rum, Populous25, Steven James, Marcus Sireanu, Michael Lauder, Thom Black
+[h1]::::: Load Order:::::
+Star Wars mods need to go below JecsTools. 
+Putting Cults below The Force fixes alignment issues.[/h1]
+
+Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
+
+[list]
+[*]Programming by Jecrell.
+[*]Assets and XML by Xen.
+[*]Logo/Art designed by Harrison Gaushell ([url=http://www.harrisongaushell.com]Website[/url])
+[*]Nackblad (Jedi robes)
+[*]Cpt. Ohu (Code - Ability Verb)
+[*]Spanish translation by [url=http://steamcommunity.com/id/HUOAAAAAAAAAAH/]Bub[/url].
+[*]French translation by [url=http://steamcommunity.com/profiles/76561198015106010/]MrFootman[/url].
+[*]German translation by [url=http://steamcommunity.com/id/Lauri7x3/]Lauri7x3[/url]

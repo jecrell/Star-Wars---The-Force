@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>PJ_ForceMeditationJob</defName>
+    <driverClass>ProjectJedi.JobDriver_ForceMeditation</driverClass>
+    <reportString>performing force meditation.</reportString>
+  </JobDef>
+</Defs>

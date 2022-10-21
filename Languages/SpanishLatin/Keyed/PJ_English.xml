@@ -1,66 +1,58 @@
-<?xml version="1.0" encoding="utf-8" ?>
+ï»¿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
-
-<!-- =========== Messages ======== -->
-<PJ_ForceGhostResisted>El fantasma se resiste.</PJ_ForceGhostResisted>
-<PJ_ForceResisted>{0} resists {1}'s {2}.</PJ_ForceResisted>
-<PJ_ForceDrainTwo>{0} Esta drenando la salud de {1} !</PJ_ForceDrainTwo>
-<PJ_ForceDrainOne>{0} Esta drenando la fuerza de {1} !</PJ_ForceDrainOne>
-<PJ_LevelUp>{0} Ha subido de nivel! Nuevos puntos de fuerza disponibles.</PJ_LevelUp>
-<WrongAlignment>{0} Ha sido asignado a la alineacion incorrecta.</WrongAlignment>
-<PJ_LightsidePointsRequired>Requires {0} Puntos gastados en habilidades del lado de la luz</PJ_LightsidePointsRequired>
-<PJ_DarksidePointsRequired>Requiere {0} puntos gastados en el lado oscuro</PJ_DarksidePointsRequired>
-<PJ_NextLevelAlignmentMismatch>El siguiente nivel requiere {0} De alineacion. Nosotros tenemos {1}.</PJ_NextLevelAlignmentMismatch>
-<PJ_CheckStarsForMoreInfo>Pasa tu mouse por cada estrella para obtener mas informacion respecto a los poderes.</PJ_CheckStarsForMoreInfo>
-<PJ_ForceAwakensLabel>La fuerza despierta</PJ_ForceAwakensLabel>
-<PJ_ForceAwakensDesc>{0} Ha descubierto tener un misterioso poder interior.</PJ_ForceAwakensDesc>
-<DrainedForcePool>{0} Necesita regenerar sus poderes de la fuerza.</DrainedForcePool>
-<PJ_NotEnoughAbilityPoints>Requiere {1} Puntos de habilidad. Tenemos {0}.</PJ_NotEnoughAbilityPoints>
-<PJ_PointsRequired>Req Ability Points: {0}</PJ_PointsRequired>
-<PJ_DarkPointsRequired>Req Darkside Points: {0}</PJ_DarkPointsRequired>
-<PJ_LightPointsRequired>Req Lightside Points: {0}</PJ_LightPointsRequired> 
-<PJ_CastSuccess>Excito de casting</PJ_CastSuccess>
-<PJ_CastFailure>Fallo de casting</PJ_CastFailure>
-
-<!-- ============= Float Menus ============= -->
-<PJ_ForceMeditate>Meditar</PJ_ForceMeditate>
-<PJ_ForceMeditate_NeedForceUsersOnly>Solo puede ser utilizado por usuarios de la fuerza</PJ_ForceMeditate_NeedForceUsersOnly>
-<PJ_ForceMeditate_NeedRest>Intentalo despues</PJ_ForceMeditate_NeedRest>
-
-<!-- ============= UI ============ -->
-<PJ_TabForce>Fuerza</PJ_TabForce>
-<PJ_Alignment>Alineacion</PJ_Alignment>
-<PJ_Dark>dark</PJ_Dark>
-<PJ_Gray>gray</PJ_Gray>
-<PJ_Light>light</PJ_Light>
-<PJ_Skills>Habilidades</PJ_Skills>
-<PJ_Powers>Poderes</PJ_Powers>
-<PJ_Level>Nivel</PJ_Level>
-<PJ_Affiliation>Orden</PJ_Affiliation>
-<PJ_PointsAvail>Puntos disponibles</PJ_PointsAvail>
-<PJ_LightsaberOffense>Ofensiva de sable de luz</PJ_LightsaberOffense>
-<PJ_LightsaberDefense>Defensiva de sable de luz</PJ_LightsaberDefense>
-<PJ_LightsaberAccuracy>Precision con sable de luz</PJ_LightsaberAccuracy>
-<PJ_LightsaberReflection>Defleccion de sable de luz</PJ_LightsaberReflection>
-<PJ_ForcePool>Fuerza acumulada</PJ_ForcePool>
-<PJ_ForceXPDesc>La XP de la fuerza se obtiene al poner tus habilidades en uso. Ciertas habilidades de la fuerza aumentan la XP mas rapido que otras.</PJ_ForceXPDesc>
-<PJ_AlignmentDesc>La alineacion determina que habilidades puede usar un Jedi. Los Jedis grises pueden usar niveles bajos de ambas habilidades oscuras y de la luz. Sin embargo, las habilidades de mas alto nivel requieren comprometerse con el lado de la luz, o el oscuro.</PJ_AlignmentDesc>
-<PJ_ForceSensitiveDesc>{0} Puede sentir una fuerza sacudirse en su interior.. Manten un ojo puesto - Y ayuda a que desarrolle sus habilidades.</PJ_ForceSensitiveDesc>
-<PJ_SensitiveMessage>Algo esta despertando...</PJ_SensitiveMessage>
-<PJ_ForcePowersUnlocked>{0} Puede controlar la fuerza.</PJ_ForcePowersUnlocked>
-
-<!-- =========== Skills ========== -->
-<PJ_LightsaberOffense_Desc>Incrementa el daño con el sable de luz un 20% por punto de habilidad gastado, Todos los usuarios de la fuerza empiezan con solo la mitad del daño posible hasta gastar almenos un punto en esta habilidad. Los que no sepan usar la fuerza solo pueden infligir 10 de daño.</PJ_LightsaberOffense_Desc>
-<PJ_LightsaberDefense_Desc>Incrementa la chance de bloquear ataques de melé y deflectar proyectiles por un 15% por nivel.</PJ_LightsaberDefense_Desc>
-<PJ_LightsaberReflection_Desc>Incrementa las chances de devolver los proyectiles deflectados por un 20% por nivel.</PJ_LightsaberReflection_Desc>
-<PJ_LightsaberAccuracy_Desc>Incrementa las probabilidades de lograr un golpe directo con tu sable de luz por un 20% por nivel.</PJ_LightsaberAccuracy_Desc>
-<PJ_ForcePool_Desc>Incrementa la cantidad de fuerza que puedes acumular por un 15% por nivel..</PJ_ForcePool_Desc>
-
-<!-- ========== Buttons ========== -->
-
-<ForceAbilityDescAlign>Alineacion Requerida: {0}</ForceAbilityDescAlign>
-<ForceAbilityDescChange>Ajusta la alineacion hacia {0} por {1}</ForceAbilityDescChange>
-<ForceAbilityDescPoints>Poder de la Fuerza: {0}</ForceAbilityDescPoints>
-	
+  <!-- =========== Messages ======== -->
+  <PJ_ForceGhostResisted>El fantasma se resiste.</PJ_ForceGhostResisted>
+  <PJ_ForceResisted>{0} resists {1}'s {2}.</PJ_ForceResisted>
+  <PJ_ForceDrainTwo>{0} Esta drenando la salud de {1} !</PJ_ForceDrainTwo>
+  <PJ_ForceDrainOne>{0} Esta drenando la fuerza de {1} !</PJ_ForceDrainOne>
+  <PJ_LevelUp>{0} Ha subido de nivel! Nuevos puntos de fuerza disponibles.</PJ_LevelUp>
+  <WrongAlignment>{0} Ha sido asignado a la alineacion incorrecta.</WrongAlignment>
+  <PJ_LightsidePointsRequired>Requires {0} Puntos gastados en habilidades del lado de la luz</PJ_LightsidePointsRequired>
+  <PJ_DarksidePointsRequired>Requiere {0} puntos gastados en el lado oscuro</PJ_DarksidePointsRequired>
+  <PJ_NextLevelAlignmentMismatch>El siguiente nivel requiere {0} De alineacion. Nosotros tenemos {1}.</PJ_NextLevelAlignmentMismatch>
+  <PJ_CheckStarsForMoreInfo>Pasa tu mouse por cada estrella para obtener mas informacion respecto a los poderes.</PJ_CheckStarsForMoreInfo>
+  <PJ_ForceAwakensLabel>La fuerza despierta</PJ_ForceAwakensLabel>
+  <PJ_ForceAwakensDesc>{0} Ha descubierto tener un misterioso poder interior.</PJ_ForceAwakensDesc>
+  <DrainedForcePool>{0} Necesita regenerar sus poderes de la fuerza.</DrainedForcePool>
+  <PJ_NotEnoughAbilityPoints>Requiere {1} Puntos de habilidad. Tenemos {0}.</PJ_NotEnoughAbilityPoints>
+  <PJ_PointsRequired>Req Ability Points: {0}</PJ_PointsRequired>
+  <PJ_DarkPointsRequired>Req Darkside Points: {0}</PJ_DarkPointsRequired>
+  <PJ_LightPointsRequired>Req Lightside Points: {0}</PJ_LightPointsRequired>
+  <PJ_CastSuccess>Excito de casting</PJ_CastSuccess>
+  <PJ_CastFailure>Fallo de casting</PJ_CastFailure>
+  <!-- ============= Float Menus ============= -->
+  <PJ_ForceMeditate>Meditar</PJ_ForceMeditate>
+  <PJ_ForceMeditate_NeedForceUsersOnly>Solo puede ser utilizado por usuarios de la fuerza</PJ_ForceMeditate_NeedForceUsersOnly>
+  <PJ_ForceMeditate_NeedRest>Intentalo despues</PJ_ForceMeditate_NeedRest>
+  <!-- ============= UI ============ -->
+  <PJ_TabForce>Fuerza</PJ_TabForce>
+  <PJ_Alignment>Alineacion</PJ_Alignment>
+  <PJ_Dark>dark</PJ_Dark>
+  <PJ_Gray>gray</PJ_Gray>
+  <PJ_Light>light</PJ_Light>
+  <PJ_Skills>Habilidades</PJ_Skills>
+  <PJ_Powers>Poderes</PJ_Powers>
+  <PJ_Level>Nivel</PJ_Level>
+  <PJ_Affiliation>Orden</PJ_Affiliation>
+  <PJ_PointsAvail>Puntos disponibles</PJ_PointsAvail>
+  <PJ_LightsaberOffense>Ofensiva de sable de luz</PJ_LightsaberOffense>
+  <PJ_LightsaberDefense>Defensiva de sable de luz</PJ_LightsaberDefense>
+  <PJ_LightsaberAccuracy>Precision con sable de luz</PJ_LightsaberAccuracy>
+  <PJ_LightsaberReflection>Defleccion de sable de luz</PJ_LightsaberReflection>
+  <PJ_ForcePool>Fuerza acumulada</PJ_ForcePool>
+  <PJ_ForceXPDesc>La XP de la fuerza se obtiene al poner tus habilidades en uso. Ciertas habilidades de la fuerza aumentan la XP mas rapido que otras.</PJ_ForceXPDesc>
+  <PJ_AlignmentDesc>La alineacion determina que habilidades puede usar un Jedi. Los Jedis grises pueden usar niveles bajos de ambas habilidades oscuras y de la luz. Sin embargo, las habilidades de mas alto nivel requieren comprometerse con el lado de la luz, o el oscuro.</PJ_AlignmentDesc>
+  <PJ_ForceSensitiveDesc>{0} Puede sentir una fuerza sacudirse en su interior.. Manten un ojo puesto - Y ayuda a que desarrolle sus habilidades.</PJ_ForceSensitiveDesc>
+  <PJ_SensitiveMessage>Algo esta despertando...</PJ_SensitiveMessage>
+  <PJ_ForcePowersUnlocked>{0} Puede controlar la fuerza.</PJ_ForcePowersUnlocked>
+  <!-- =========== Skills ========== -->
+  <PJ_LightsaberOffense_Desc>Incrementa el daï¿½o con el sable de luz un 20% por punto de habilidad gastado, Todos los usuarios de la fuerza empiezan con solo la mitad del daï¿½o posible hasta gastar almenos un punto en esta habilidad. Los que no sepan usar la fuerza solo pueden infligir 10 de daï¿½o.</PJ_LightsaberOffense_Desc>
+  <PJ_LightsaberDefense_Desc>Incrementa la chance de bloquear ataques de melï¿½ y deflectar proyectiles por un 15% por nivel.</PJ_LightsaberDefense_Desc>
+  <PJ_LightsaberReflection_Desc>Incrementa las chances de devolver los proyectiles deflectados por un 20% por nivel.</PJ_LightsaberReflection_Desc>
+  <PJ_LightsaberAccuracy_Desc>Incrementa las probabilidades de lograr un golpe directo con tu sable de luz por un 20% por nivel.</PJ_LightsaberAccuracy_Desc>
+  <PJ_ForcePool_Desc>Incrementa la cantidad de fuerza que puedes acumular por un 15% por nivel..</PJ_ForcePool_Desc>
+  <!-- ========== Buttons ========== -->
+  <ForceAbilityDescAlign>Alineacion Requerida: {0}</ForceAbilityDescAlign>
+  <ForceAbilityDescChange>Ajusta la alineacion hacia {0} por {1}</ForceAbilityDescChange>
+  <ForceAbilityDescPoints>Poder de la Fuerza: {0}</ForceAbilityDescPoints>
 </LanguageData>

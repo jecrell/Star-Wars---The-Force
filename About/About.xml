@@ -1,51 +1,112 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Star Wars - The Force</name>
-  <author>Jecrell and Xen</author>
+  <name>Star Wars - The Force (Continued)</name>
+  <packageId>Mlie.StarWarsTheForce</packageId>
+  <author>Xen and Jecrell</author>
+  <url>https://github.com/emipa606/StarWarsTheForce</url>
   <supportedVersions>
-  	<li>1.1</li>
+    <li>1.1</li>
+    <li>1.2</li>
+    <li>1.3</li>
   </supportedVersions>
-  <packageId>PJedi.starwars.Force</packageId>
-  <description>1.20.0.1 (10-22-2018)
-
-	Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
-
-	C# Programming by Jecrell.
-	C# Fixes, Assets and XML by Xen.
-	Logo/Art designed by Harrison Gaushell (harrisongaushell.com)
-
-	Contributors:
-	Nackblad (Art)
-	Cpt. Ohu (Code - Ability Verb)
-
-	Patreon Patrons:
-	Jedi Master Ailan, Shane Malley, Michin, TheDayDude, Dakota Pohlman, Falloutmonk, Legless, Slick Liquid,  Don Butterblume, Karol Rybak, Mathias Broxvall, Nemuri Hime, Hannah Forster, Christian Hermansen, NiNe Bottles of Rum, Populous25, Steven James, Marcus Sireanu, Michael Lauder, Thom Black
-
-Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
-
-These are the most excellent rim dwellers who support me: 
-Maaxar, Shibby Says, TheJagermeister, Cory Bonifay, Kiya Nicoll, Matt Harris, Paul Fenwick, Grendalloffen, Martin K. Bonde, Bentley Alsup, Eric Idema, MasterScootie, GoSu, Josh McCabe, spook, Clifford Campbell, J, CrankyPeanut, E_T, Finwej, Jan Koutsky, Audrin Navarro, Михаил Юрченко, John Kanady, Luis Figueroa, Midgeman, Nate Haug, Nemuri Hime, Richard Paul, SilentWeirdo, Calum, Calhoun Cattell, Keith Thoma, Tim Stillson, Dick Jones, Patrick, Nathan Getman, Populous25, Sharp Spook, Steven James, Marcus Sireanu, Mark, Emily Shaw, Drachken, Zalson, Baron Xot, Nicholas Bateman, Christopher, Justin Andres, Luis Salvatierra, TinyFloatingTurtle, George Chong Chuang Ming, John Boehr, Oliver White, roxxploxx, Robin Hager, Brachiaraidos, That Guy, Toc Anastar, Karol Rybak, Allic, Austin Harbert, Yewty, Evan Hwang, Ryan Brock, Jonathan Holzinger, MC, Alexander, Kevin Reagan, Alex Mederer, Toss Antilles, Chelsea Archambeau, Aron Glasser, Dan Winn, Fredric Sundberg, Sarah Banks, ted stevens
-
-========================
-Changelog
-========================
-1.20.0.1 (10-22-2018)
-========================
-This should address some wacky behavior.
-
-1.20.0.0 (10-19-2018)
-========================
-RimWorld 1.0 version
-
-</description>
-<modDependencies>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
     <li>
       <packageId>jecrell.jecstools</packageId>
       <displayName>JecsTools</displayName>
-      <downloadUrl>https://github.com/jecrell/JecsTools</downloadUrl>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2195729899</steamWorkshopUrl>
     </li>
   </modDependencies>
   <loadAfter>
+    <li>brrainz.harmony</li>
     <li>jecrell.jecstools</li>
+    <li>syrchalis.traitvalue</li>
   </loadAfter>
+  <loadBefore>
+    <li>Mlie.CallofCthulhuCults</li>
+  </loadBefore>
+  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
+Update of Xen and Jecrells mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=918226861
+
+- This is an unofficial port
+- This will be removed when/if Jecrell comes back
+- Added fixes to the lightsaber interaction, thanks lbmaian!
+- Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
+
+[img]https://i.imgur.com/7Gzt3Rg.png[/img]
+
+[table]
+	[tr]
+		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+		[td][url=https://github.com/emipa606/StarWarsTheForce][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+	[/tr]
+[/table]
+	
+[img]https://i.imgur.com/NOW7jU1.png[/img]
+
+[h1]Adds RPG-leveling, alignment, and force powers to RimWorld.[/h1]
+
+A17 GitHub Branch -&gt; https://github.com/jecrell/Star-Wars---The-Force/tree/A17
+
+[h1]::::: NOTICE :::::
+::::: THIS MOD REQUIRES JECSTOOLS ::::::
+Download[/h1]
+http://steamcommunity.com/sharedfiles/filedetails/?id=932008009
+
+
+[h1]::::: NOTICE :::::
+::::: LOAD ORDER ::::::
+Star Wars mods need to go below JecsTools. 
+Putting Cults below The Force fixes alignment issues.[/h1]
+
+Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
+
+[h1]Quick start notes:[/h1]
+For a character to gain force powers, they must start with the force sensitive trait. After spending time working, they will discover their force powers through gaining force XP. Low level force powers can be used by both dark and light sides of the force. Penultimate powers are restricted for pure dark or pure light force wielders.
+	
+[h1]Special thanks to all those that support me (and help me pay the rent) on Patreon (August 2017):[/h1]
+Jedi Master Ailan, Shane Malley, Dakota Pohlman, Falloutmonk, Slick Liquid, Thom Black ShotgunFace, Fredric Sundberg, Dan Winn, Toss Antilles, Sarah Banks, Undead Jackel, Michin, Chelsea, Caine Detueur, Yewty Oxman, Jerod Clayton, Arty Kubin, Ashleigh Miller, infinity421, TheDayDude, Jacob Duga, Ryan Brock, Evan Hwang, Moshat, Christopher, Don Butterblume, John Boehr, George Chong Chuang Ming, Oliver White, Helpful Bot, vincent de keijzer, roxxploxx, Legless, Christopher Abel, Karol Rybak, Mathias Broxvall, Mark, Tim Stillson, Lachlan Easton, Nemuri Hime, Sera, Christian Hermansen, NiNe Bottles of Rum, Populous25, Steven James, Marcus Siraenu, Michael Lauder, meatface.
+
+[list]
+[*]Programming by Jecrell.
+[*]Assets and XML by Xen.
+[*]Logo/Art designed by Harrison Gaushell ([url=http://www.harrisongaushell.com]Website[/url])
+[*]Nackblad (Jedi robes)
+[*]Cpt. Ohu (Code - Ability Verb)
+[*]Spanish translation by [url=http://steamcommunity.com/id/HUOAAAAAAAAAAH/]Bub[/url].
+[*]French translation by [url=http://steamcommunity.com/profiles/76561198015106010/]MrFootman[/url].
+[*]German translation by [url=http://steamcommunity.com/id/Lauri7x3/]Lauri7x3[/url]
+[/list]
+
+[h1]Known Mod Conflicts[/h1]
+[list]
+[*]Static Quality Plus -- Disables Force XP.
+[*]Step away from the medicine - Characters can&apos;t be tended after force heal.
+[*]Hand me that brick - Errors
+[*]Camping - Errors]
+[*]Leadership and Teachers - Makes Force XP go up too quickly
+[*]Cleaning area - Errors
+[/list]
+
+[h1]Problems? Questions? Comments?[/h1]
+Join us on Discord: https://discord.gg/aDjWBBk
+
+
+[img]https://i.imgur.com/Rs6T6cr.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]
+
+</description>
 </ModMetaData>

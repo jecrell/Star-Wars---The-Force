@@ -1,114 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Force Healing Self -->
-
   <PJ_PForceHeal.label>Macht Heilung</PJ_PForceHeal.label>
-
-
   <!-- Force Healing Self (Apprentice) -->
-
   <PJ_ForceHealingSelf_Apprentice.label>Selbstheilung</PJ_ForceHealingSelf_Apprentice.label>
   <PJ_ForceHealingSelf_Apprentice.description>heilt den Wirker.</PJ_ForceHealingSelf_Apprentice.description>
-
-
   <!-- Force Healing Self (Apprentice) -->
-
   <PJ_ForceHealingSelf_Apprentice.label>Selbstheilung (Lehrling)</PJ_ForceHealingSelf_Apprentice.label>
   <PJ_ForceHealingSelf_Apprentice.description>heilt den Wirker.</PJ_ForceHealingSelf_Apprentice.description>
-
-
   <!-- Force Healing Self (Master) -->
-
   <PJ_ForceHealingSelf_Master.label>Selbstheilung (Meister)</PJ_ForceHealingSelf_Master.label>
   <PJ_ForceHealingSelf_Master.description>heilt den Wirker.</PJ_ForceHealingSelf_Master.description>
-
-
   <!-- Force Heal Target (Apprentice) -->
-
   <PJ_ForceHealingOther_Apprentice.label>Andere heilen</PJ_ForceHealingOther_Apprentice.label>
   <PJ_ForceHealingOther_Apprentice.description>heilt das Ziel.</PJ_ForceHealingOther_Apprentice.description>
-
-
   <!-- Force Heal Target (Apprentice) -->
-
   <PJ_ForceHealingOther_Apprentice.label>Andere heilen (Lehrling)</PJ_ForceHealingOther_Apprentice.label>
   <PJ_ForceHealingOther_Apprentice.description>heilt das Ziel.</PJ_ForceHealingOther_Apprentice.description>
-
-
   <!-- Force Heal Target (Master) -->
-
   <PJ_ForceHealingOther_Master.label>Andere Heilen (Meister)</PJ_ForceHealingOther_Master.label>
   <PJ_ForceHealingOther_Master.description>heilt das Ziel.</PJ_ForceHealingOther_Master.description>
-
-
   <!-- Machtschild -->
-
   <PJ_PForceDefense.label>Machtschild</PJ_PForceDefense.label>
-
-
   <!-- Machtschild (Apprentice) -->
-
   <PJ_ForceDefense_Apprentice.label>Machtschild</PJ_ForceDefense_Apprentice.label>
   <PJ_ForceDefense_Apprentice.description>Schützt den Wirker kurzzeitig vor Schaden.</PJ_ForceDefense_Apprentice.description>
-
-
   <!-- Machtschild (Apprentice) -->
-
   <PJ_ForceDefense_Apprentice.label>Machtschild (Lehrling)</PJ_ForceDefense_Apprentice.label>
   <PJ_ForceDefense_Apprentice.description>Schützt den Wirker kurzzeitig vor Schaden.</PJ_ForceDefense_Apprentice.description>
-
-
   <!-- Machtschild (Master) -->
-
   <PJ_ForceDefense_Master.label>Machtschild (Meister)</PJ_ForceDefense_Master.label>
   <PJ_ForceDefense_Master.description>Schützt den Wirker kurzzeitig vor Schaden.</PJ_ForceDefense_Master.description>
-
-
   <!-- Geistestrick -->
-
   <PMindTrick.label>Geistestrick</PMindTrick.label>
-
-
   <!-- Geistestrick (Apprentice) -->
-
   <PJ_MindTrick_Apprentice.label>Geistestrick</PJ_MindTrick_Apprentice.label>
   <PJ_MindTrick_Apprentice.description>Benutzt die Macht, um die Willensschwachen zu beeinflussen und sie ziellos umherirren zu lassen.</PJ_MindTrick_Apprentice.description>
-
-
   <!-- Geistestrick (Apprentice) -->
-
   <PJ_MindTrick_Apprentice.label>Geistestrick (Lehrling)</PJ_MindTrick_Apprentice.label>
   <PJ_MindTrick_Apprentice.description>Benutzt die Macht, um die Willensschwachen zu beeinflussen und sie ziellos umherirren zu lassen.</PJ_MindTrick_Apprentice.description>
-
-
   <!-- Geistestrick (Master) -->
-
   <PJ_MindTrick_Master.label>Geistestrick (Meister)</PJ_MindTrick_Master.label>
   <PJ_MindTrick_Master.description>Benutzt die Macht, um die Willensschwachen zu beeinflussen und sie ziellos umherirren zu lassen.</PJ_MindTrick_Master.description>
-
-
   <!-- Machtgeist -->
-
   <PForceGhost.label>Machtgeist</PForceGhost.label>
-
-
   <!-- Machtgeist (Apprentice) -->
-
   <PJ_ForceGhost_Apprentice.label>Machtgeist</PJ_ForceGhost_Apprentice.label>
   <PJ_ForceGhost_Apprentice.description>Beschwört einen Geist aus alter Zeit, um dir kurzzeitig zu helfen.</PJ_ForceGhost_Apprentice.description>
-
-
   <!-- Machtgeist (Apprentice) -->
-
   <PJ_ForceGhost_Apprentice.label>Machtgeist (Lehrling)</PJ_ForceGhost_Apprentice.label>
   <PJ_ForceGhost_Apprentice.description>Beschwört einen Geist aus alter Zeit, um dir kurzzeitig zu helfen.</PJ_ForceGhost_Apprentice.description>
-
-
   <!-- Machtgeist (Master) -->
-
   <PJ_ForceGhost_Master.label>Machtgeist (Meister)</PJ_ForceGhost_Master.label>
   <PJ_ForceGhost_Master.description>Beschwört einen Geist aus alter Zeit, um dir kurzzeitig zu helfen.</PJ_ForceGhost_Master.description>
-
-
 </LanguageData>

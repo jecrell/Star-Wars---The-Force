@@ -1,12 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceSpeedHediff_One.label>Machtsprint</PJ_ForceSpeedHediff_One.label>
   <PJ_ForceSpeedHediff_Two.label>Machtsprint</PJ_ForceSpeedHediff_Two.label>
   <PJ_ForceSpeedHediff_Three.label>Machtsprint</PJ_ForceSpeedHediff_Three.label>
   <PJ_ForceDefenseHediff.label>Macht Verteidigung</PJ_ForceDefenseHediff.label>
   <PJ_MindTrick.label>Gedankentrick</PJ_MindTrick.label>
   <PJ_Rage.label>Machtwut</PJ_Rage.label>
-
-
 </LanguageData>

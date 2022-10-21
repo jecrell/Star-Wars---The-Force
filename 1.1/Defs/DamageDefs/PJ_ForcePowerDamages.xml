@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <HediffDef ParentName="InjuryBase">
+    <defName>PJ_ForceBurn</defName>
+    <label>force burn</label>
+    <labelNoun>a force burn wound</labelNoun>
+    <description>a force-burn wound</description>
+    <comps>
+      <li Class="HediffCompProperties_TendDuration">
+        <labelTendedWell>bandaged</labelTendedWell>
+        <labelTendedWellInner>sutured</labelTendedWellInner>
+        <labelSolidTendedWell>set</labelSolidTendedWell>
+      </li>
+      <li Class="HediffCompProperties_Infecter">
+        <infectionChance>0.15</infectionChance>
+      </li>
+      <li Class="HediffCompProperties_GetsPermanent">
+        <permanentLabel>scar</permanentLabel>
+      </li>
+    </comps>
+    <injuryProps>
+      <painPerSeverity>0.0125</painPerSeverity>
+      <averagePainPerSeverityPermanent>0.00625</averagePainPerSeverityPermanent>
+      <bleedRate>0.015</bleedRate>
+      <canMerge>true</canMerge>
+      <destroyedLabel>Burned</destroyedLabel>
+    </injuryProps>
+  </HediffDef>
+  <DamageDef>
+    <defName>PJ_ForceHealDamage</defName>
+    <label>force heal</label>
+    <workerClass>ProjectJedi.DamageWorker_ForceHeal</workerClass>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+  </DamageDef>
+  <DamageDef>
+    <defName>PJ_FDrainDamage</defName>
+    <label>force drain</label>
+    <workerClass>ProjectJedi.DamageWorker_ForceDrain</workerClass>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>PJ_ForceBurn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+  </DamageDef>
+  <DamageDef>
+    <defName>PJ_FLightning</defName>
+    <label>lightning</label>
+    <externalViolence>true</externalViolence>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>PJ_ForceBurn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+  </DamageDef>
+  <DamageDef>
+    <defName>PJ_FStorm</defName>
+    <label>Force storm</label>
+    <externalViolence>true</externalViolence>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>{0} was caught in a force storm.</deathMessage>
+    <hediff>PJ_ForceBurn</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <impactSoundType>Electric</impactSoundType>
+    <armorCategory>Heat</armorCategory>
+    <explosionSnowMeltAmount>0</explosionSnowMeltAmount>
+    <explosionCellMote>Mote_BlastEMP</explosionCellMote>
+    <explosionColorEdge>(0.8, 0.7, 1.0, 0.8)</explosionColorEdge>
+    <explosionInteriorMote>Mote_ElectricalSpark</explosionInteriorMote>
+    <soundExplosion>PJ_LightningSound</soundExplosion>
+  </DamageDef>
+  <DamageDef>
+    <defName>PJ_MindTrickDam</defName>
+    <label>Mind trick</label>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>{0} has succumbed to mental force damage.</deathMessage>
+    <hediff>Crack</hediff>
+    <armorCategory>Heat</armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>PJ_MindTrick</hediff>
+        <severityPerDamageDealt>1.50</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <DamageDef>
+    <defName>PJ_RageDam</defName>
+    <label>Force Rage</label>
+    <makesBlood>false</makesBlood>
+    <externalViolence>true</externalViolence>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <deathMessage>{0} has succumbed to mental force damage.</deathMessage>
+    <hediff>Crack</hediff>
+    <armorCategory>Heat</armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>PJ_Rage</hediff>
+        <severityPerDamageDealt>1.80</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <DamageDef>
+    <defName>PJ_FChoke</defName>
+    <label>choke</label>
+    <workerClass>ProjectJedi.DamageWorker_ForceChoke</workerClass>
+    <externalViolence>false</externalViolence>
+    <deathMessage>{0} has succumbed to the power of the dark side.</deathMessage>
+    <hediff>PJ_ChokeCrush</hediff>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+    <additionalHediffs>
+      <li>
+        <hediff>PJ_NoAir</hediff>
+        <severityPerDamageDealt>0.08</severityPerDamageDealt>
+      </li>
+    </additionalHediffs>
+  </DamageDef>
+  <!-- Force Pull -->
+  <DamageDef>
+    <defName>PJ_DForcePull</defName>
+    <label>pull</label>
+    <workerClass>ProjectJedi.DamageWorker_ForcePull</workerClass>
+    <externalViolence>false</externalViolence>
+    <harmsHealth>false</harmsHealth>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <armorCategory>Heat</armorCategory>
+  </DamageDef>
+  <!-- Force Push -->
+  <DamageDef>
+    <defName>PJ_DForcePush</defName>
+    <label>push</label>
+    <workerClass>ProjectJedi.DamageWorker_ForcePush</workerClass>
+    <externalViolence>false</externalViolence>
+    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <harmsHealth>false</harmsHealth>
+    <armorCategory>Heat</armorCategory>
+  </DamageDef>
+</Defs>

@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForcePool.label>フォース容量</PJ_ForcePool.label>
   <PJ_ForcePool.description>入植者のフォース容量レベル\n\n(スターウォーズ－フォース)</PJ_ForcePool.description>
-
 </LanguageData>

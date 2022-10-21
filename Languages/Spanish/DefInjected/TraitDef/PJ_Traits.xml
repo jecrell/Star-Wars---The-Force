@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceSensitive.degreeDatas.0.label>Sensible a la fuerza</PJ_ForceSensitive.degreeDatas.0.label>
   <PJ_ForceSensitive.degreeDatas.0.description>[PAWN_nameDef] Tiene la habilidad innata de sentir la fuerza que nos rodea.</PJ_ForceSensitive.degreeDatas.0.description>
   <PJ_ForceSensitive.degreeDatas.1.label>Aprendiz de la fuerza</PJ_ForceSensitive.degreeDatas.1.label>
   <PJ_ForceSensitive.degreeDatas.1.description>[PAWN_nameDef] Ya sabe controlar la fuerza, pero necesita de entrenamiento y ser guiado.</PJ_ForceSensitive.degreeDatas.1.description>
-
   <PJ_JediTrait.degreeDatas.0.label>Jedi</PJ_JediTrait.degreeDatas.0.label>
   <PJ_JediTrait.degreeDatas.0.description>[PAWN_nameDef] Ya ha sido iniciado en la senda de los caballeros Jedi.</PJ_JediTrait.degreeDatas.0.description>
   <PJ_JediTrait.degreeDatas.1.label>Caballero Jedi</PJ_JediTrait.degreeDatas.1.label>
@@ -14,7 +12,6 @@
   <PJ_JediTrait.degreeDatas.2.description>[PAWN_nameDef] Está entre los rangos mas respetados de los Jedi, un verdadero maestro de la fuerza.</PJ_JediTrait.degreeDatas.2.description>
   <PJ_JediTrait.degreeDatas.3.label>Consular Jedi</PJ_JediTrait.degreeDatas.3.label>
   <PJ_JediTrait.degreeDatas.3.description>[PAWN_nameDef] Está entre los miembros mas altos de la orden Jedi, digno de servir al consejo.</PJ_JediTrait.degreeDatas.3.description>
-
   <PJ_SithTrait.degreeDatas.0.label>Sith</PJ_SithTrait.degreeDatas.0.label>
   <PJ_SithTrait.degreeDatas.0.description>[PAWN_nameDef] Ha comenzado su camino en el lado oscuro de la fuerza.</PJ_SithTrait.degreeDatas.0.description>
   <PJ_SithTrait.degreeDatas.1.label>Inquisidor Sith</PJ_SithTrait.degreeDatas.1.label>
@@ -23,7 +20,6 @@
   <PJ_SithTrait.degreeDatas.2.description>[PAWN_nameDef] esta entre los mas temidos de la galaxia, intimidante incluso entre los mismos Sith.</PJ_SithTrait.degreeDatas.2.description>
   <PJ_SithTrait.degreeDatas.3.label>Maestro Sith</PJ_SithTrait.degreeDatas.3.label>
   <PJ_SithTrait.degreeDatas.3.description>[PAWN_nameDef] esta en completa sintonia al lado oscuro de la fuerza, logrando niveles inimaginables de poder.</PJ_SithTrait.degreeDatas.3.description>
-
   <PJ_GrayTrait.degreeDatas.0.label>Padawan Gris</PJ_GrayTrait.degreeDatas.0.label>
   <PJ_GrayTrait.degreeDatas.0.description>[PAWN_nameDef] esta explorando el balance de la fuerza.</PJ_GrayTrait.degreeDatas.0.description>
   <PJ_GrayTrait.degreeDatas.1.label>Jedi Gris</PJ_GrayTrait.degreeDatas.1.label>
@@ -32,6 +28,4 @@
   <PJ_GrayTrait.degreeDatas.2.description>[PAWN_nameDef] Es un maestro Jedi, devoto a la 'Fuerza viviente' y su balance.</PJ_GrayTrait.degreeDatas.2.description>
   <PJ_GrayTrait.degreeDatas.3.label>Sabio Gris</PJ_GrayTrait.degreeDatas.3.label>
   <PJ_GrayTrait.degreeDatas.3.description>[PAWN_nameDef] pertenece a la 'Fuerza viviente', todo lo que hace, piensa y actua es en beneficio de mantener el balance de la fuerza.</PJ_GrayTrait.degreeDatas.3.description>
-
-
 </LanguageData>

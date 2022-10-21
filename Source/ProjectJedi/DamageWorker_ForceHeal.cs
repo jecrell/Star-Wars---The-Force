@@ -1,5 +1,5 @@
-﻿using RimWorld;
-using System.Linq;
+﻿using System.Linq;
+using RimWorld;
 using Verse;
 
 namespace ProjectJedi
@@ -8,40 +8,51 @@ namespace ProjectJedi
     {
         public override DamageResult Apply(DamageInfo dinfo, Thing thing)
         {
-            DamageResult result = new DamageWorker.DamageResult();
-            result.totalDamageDealt = 0f;
-            if (thing is ProjectJedi.PawnGhost)
+            var result = new DamageResult
+            {
+                totalDamageDealt = 0f
+            };
+            if (thing is PawnGhost)
             {
                 Messages.Message("PJ_ForceGhostResisted".Translate(), MessageTypeDefOf.NegativeEvent);
                 return result;
             }
 
-            Pawn pawn = thing as Pawn;
-            if (pawn != null)
+            if (thing is not Pawn pawn)
             {
-                int maxInjuries = 6;
-                int maxInjuriesPerBodypart;
+                return result;
+            }
 
-                foreach (BodyPartRecord rec in pawn.health.hediffSet.GetInjuredParts())
+            var maxInjuries = 6;
+
+            foreach (var rec in pawn.health.hediffSet.GetInjuredParts())
+            {
+                if (maxInjuries <= 0)
                 {
-                    if (maxInjuries > 0)
+                    continue;
+                }
+
+                var maxInjuriesPerBodypart = 2;
+                foreach (var current in from injury in pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
+                    where injury.Part == rec
+                    select injury)
+                {
+                    if (maxInjuriesPerBodypart <= 0)
                     {
-                        maxInjuriesPerBodypart = 2;
-                        foreach (Hediff_Injury current in from injury in pawn.health.hediffSet.GetHediffs<Hediff_Injury>() where injury.Part == rec select injury)
-                        {
-                            if (maxInjuriesPerBodypart > 0)
-                            {
-                                if (current.CanHealNaturally() && !current.IsPermanent()) // basically check for scars and old wounds
-                                {
-                                    current.Heal((int)current.Severity + 1);
-                                    maxInjuries--;
-                                    maxInjuriesPerBodypart--;
-                                }
-                            }
-                        }
+                        continue;
                     }
+
+                    if (!current.CanHealNaturally() || current.IsPermanent())
+                    {
+                        continue;
+                    }
+
+                    current.Heal((int) current.Severity + 1);
+                    maxInjuries--;
+                    maxInjuriesPerBodypart--;
                 }
             }
+
             return result;
         }
     }

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/TraitDef[defName = "PJ_ForceSensitive"]</xpath>
+    <value>
+      <li Class="SyrTraitValue.TraitValueExtension">
+        <traitValues>
+          <li>1, 0</li>
+          <li>2, 5</li>
+        </traitValues>
+      </li>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAddModExtension">
+    <xpath>Defs/TraitDef[defName = "PJ_JediTrait" or defName = "PJ_SithTrait" or defName = "PJ_GrayTrait"]</xpath>
+    <value>
+      <li Class="SyrTraitValue.TraitValueExtension">
+        <traitValues>
+          <li>1, 10</li>
+          <li>2, 20</li>
+          <li>3, 30</li>
+          <li>4, 40</li>
+        </traitValues>
+      </li>
+    </value>
+  </Operation>
+</Patch>

@@ -1,24 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <!-- Force Healing Self -->
-
   <PJ_PForceHeal.label>フォース回復</PJ_PForceHeal.label>
-
-
   <!-- Force Defense -->
-
   <PJ_PForceDefense.label>フォース防御</PJ_PForceDefense.label>
-
-
   <!-- Mind Trick -->
-
   <PMindTrick.label>精神操作</PMindTrick.label>
-
-
   <!-- Force Ghost -->
-
   <PForceGhost.label>フォースゴースト</PForceGhost.label>
-
-
 </LanguageData>

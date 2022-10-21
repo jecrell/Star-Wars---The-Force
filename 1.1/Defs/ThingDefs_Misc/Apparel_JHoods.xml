@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>PJ_JediHood</defName>
+    <label>Jedi Hood</label>
+    <description>The humble hood worn by Jedi.\n\n(Star Wars - The Force)</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Hoods/JediHoodx</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+      <MarketValue>250</MarketValue>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.2</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
+      <AimingDelayFactor>-0.01</AimingDelayFactor>
+      <NegotiationAbility>0.01</NegotiationAbility>
+      <SocialImpact>0.05</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Hoods/JediHoodx</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>PJ_SithHood</defName>
+    <label>Sith Hood</label>
+    <description>The ominous hood worn by Sith.\n\n(Star Wars - The Force)</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Hoods/SithHood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+      <MarketValue>250</MarketValue>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.2</ArmorRating_Heat>
+      <Insulation_Cold>4</Insulation_Cold>
+      <Insulation_Heat>4</Insulation_Heat>
+    </statBases>
+    <costList>
+      <Steel>20</Steel>
+    </costList>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
+      <AimingDelayFactor>-0.01</AimingDelayFactor>
+      <NegotiationAbility>0.01</NegotiationAbility>
+      <SocialImpact>0.05</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Hoods/SithHood</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+  <ThingDef ParentName="HatMakeableBase">
+    <defName>PJ_CustomHood</defName>
+    <label>Custom Hood</label>
+    <description>A customized hood for Jedi or Sith.\n\n(Star Wars - The Force)</description>
+    <techLevel>Spacer</techLevel>
+    <graphicData>
+      <texPath>Hoods/JediHood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <statBases>
+      <Mass>0.5</Mass>
+      <MarketValue>250</MarketValue>
+      <WorkToMake>4500</WorkToMake>
+      <MaxHitPoints>350</MaxHitPoints>
+      <StuffEffectMultiplierArmor>0.25</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.5</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.5</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.2</EquipDelay>
+    </statBases>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+      <li>Leathery</li>
+    </stuffCategories>
+    <equippedStatOffsets>
+      <ShootingAccuracyPawn>0.02</ShootingAccuracyPawn>
+      <AimingDelayFactor>-0.01</AimingDelayFactor>
+      <NegotiationAbility>0.01</NegotiationAbility>
+      <SocialImpact>0.05</SocialImpact>
+    </equippedStatOffsets>
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Hoods/JediHood</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <defaultOutfitTags>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+  </ThingDef>
+</Defs>

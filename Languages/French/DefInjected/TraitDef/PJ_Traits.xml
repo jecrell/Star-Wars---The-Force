@@ -1,11 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceSensitive.degreeDatas.0.label>Sensible à la force</PJ_ForceSensitive.degreeDatas.0.label>
   <PJ_ForceSensitive.degreeDatas.0.description>[PAWN_nameDef] a la capacité de ressentir la force.</PJ_ForceSensitive.degreeDatas.0.description>
   <PJ_ForceSensitive.degreeDatas.1.label>Padawan</PJ_ForceSensitive.degreeDatas.1.label>
   <PJ_ForceSensitive.degreeDatas.1.description>[PAWN_nameDef] a commencé à contrôler la force, mais nécessite plus d'entrainement, et d'être guidé.</PJ_ForceSensitive.degreeDatas.1.description>
-
   <PJ_JediTrait.degreeDatas.0.label>Jedi</PJ_JediTrait.degreeDatas.0.label>
   <PJ_JediTrait.degreeDatas.0.description>[PAWN_nameDef] a commencé le voyage pour devenir chevalier Jedi.</PJ_JediTrait.degreeDatas.0.description>
   <PJ_JediTrait.degreeDatas.1.label>Chevalier Jedi</PJ_JediTrait.degreeDatas.1.label>
@@ -14,7 +12,6 @@
   <PJ_JediTrait.degreeDatas.2.description>[PAWN_nameDef] est parmis les plus respectés de l'Ordre Jedi, un vrai Maitre.</PJ_JediTrait.degreeDatas.2.description>
   <PJ_JediTrait.degreeDatas.3.label>Jedi Consulaire</PJ_JediTrait.degreeDatas.3.label>
   <PJ_JediTrait.degreeDatas.3.description>[PAWN_nameDef] se classe parmis l'élite Jedi, ceux assez droit pour sieger au Conseil.</PJ_JediTrait.degreeDatas.3.description>
-
   <PJ_SithTrait.degreeDatas.0.label>Sith</PJ_SithTrait.degreeDatas.0.label>
   <PJ_SithTrait.degreeDatas.0.description>[PAWN_nameDef] a commencé le periple vers le côté obscur de la force.</PJ_SithTrait.degreeDatas.0.description>
   <PJ_SithTrait.degreeDatas.1.label>Inquisiteur Sith</PJ_SithTrait.degreeDatas.1.label>
@@ -23,7 +20,6 @@
   <PJ_SithTrait.degreeDatas.2.description>[PAWN_nameDef] est parmis les plus craints dans la galaxie, un seigneur noir des Sith.</PJ_SithTrait.degreeDatas.2.description>
   <PJ_SithTrait.degreeDatas.3.label>Maitre Sith</PJ_SithTrait.degreeDatas.3.label>
   <PJ_SithTrait.degreeDatas.3.description>[PAWN_nameDef] est en phase avec le côté obscur de la Force, capable de puiser dans des réserves presque sans limite de Force.</PJ_SithTrait.degreeDatas.3.description>
-
   <PJ_GrayTrait.degreeDatas.0.label>Padawan Gris</PJ_GrayTrait.degreeDatas.0.label>
   <PJ_GrayTrait.degreeDatas.0.description>[PAWN_nameDef] explore l'équilibre de la force.</PJ_GrayTrait.degreeDatas.0.description>
   <PJ_GrayTrait.degreeDatas.1.label>Jedi Gris</PJ_GrayTrait.degreeDatas.1.label>
@@ -32,6 +28,4 @@
   <PJ_GrayTrait.degreeDatas.2.description>[PAWN_nameDef] est un Maitre Jedi, devoué à la "Force Vivante".</PJ_GrayTrait.degreeDatas.2.description>
   <PJ_GrayTrait.degreeDatas.3.label>Sage Gris</PJ_GrayTrait.degreeDatas.3.label>
   <PJ_GrayTrait.degreeDatas.3.description>[PAWN_nameDef] est en phase avec la Force. Il se voit comme une extension de sa volontée.</PJ_GrayTrait.degreeDatas.3.description>
-
-
 </LanguageData>

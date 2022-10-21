@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
-
   <PJ_ForceGhostR.label>Spectre de Force</PJ_ForceGhostR.label>
   <PJ_ForceGhostR.description>Un spectre de Force</PJ_ForceGhostR.description>
   <!-- No Leather: Butcher Products -->
@@ -8,9 +7,6 @@
   <PJ_ForceGhostR_Meat.description>ectoplasme</PJ_ForceGhostR_Meat.description>
   <PJ_ForceGhostR_Corpse.label>Reste de spectre</PJ_ForceGhostR_Corpse.label>
   <PJ_ForceGhostR_Corpse.description>Reste d'un spectre de Force</PJ_ForceGhostR_Corpse.description>
-
   <PJ_MeleeWeapon_ForceGladius.label>Glaive Spectral</PJ_MeleeWeapon_ForceGladius.label>
   <PJ_MeleeWeapon_ForceGladius.description>Un glaive spectral de fabrication antique. Bon pour poignarder et trancher.</PJ_MeleeWeapon_ForceGladius.description>
-
-
 </LanguageData>

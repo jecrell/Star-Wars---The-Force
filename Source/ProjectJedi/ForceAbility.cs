@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Text;
-using RimWorld;
-using Verse;
 using AbilityUser;
+using RimWorld;
 using UnityEngine;
+using Verse;
+using AbilityDef = AbilityUser.AbilityDef;
 
 namespace ProjectJedi
 {
     public class ForceAbility : PawnAbility
     {
-        public CompForceUser ForceUser => ForceUtility.GetForceUser(this.Pawn);
-        public ForceAbilityDef ForceDef => Def as ForceAbilityDef;
-
-        public ForceAbility() : base()
+        public ForceAbility()
         {
         }
-        
+
         public ForceAbility(CompAbilityUser abilityUser) : base(abilityUser)
         {
             this.abilityUser = abilityUser as CompForceUser;
@@ -26,175 +22,196 @@ namespace ProjectJedi
 
         public ForceAbility(AbilityData abilityData) : base(abilityData)
         {
-            this.abilityUser = abilityData.Pawn.AllComps.FirstOrDefault(x => x.GetType() == abilityData.AbilityClass) as CompForceUser;
+            abilityUser =
+                abilityData.Pawn.AllComps.FirstOrDefault(x => x.GetType() == abilityData.AbilityClass) as CompForceUser;
         }
 
 
-        public ForceAbility(Pawn user, AbilityUser.AbilityDef pdef) : base(user, pdef)
+        public ForceAbility(Pawn user, AbilityDef pdef) : base(user, pdef)
         {
-
         }
 
-        private float ActualForceCost => ForceDef.forcePoolCost - (ForceDef.forcePoolCost * (0.15f * (float)ForceUser.ForceSkillLevel("PJ_ForcePool")));
-        
+        public CompForceUser ForceUser => ForceUtility.GetForceUser(Pawn);
+        public ForceAbilityDef ForceDef => Def as ForceAbilityDef;
+
+        private float ActualForceCost => ForceDef.forcePoolCost -
+                                         (ForceDef.forcePoolCost * (0.15f * ForceUser.ForceSkillLevel("PJ_ForcePool")));
+
         public override void PostAbilityAttempt()
         {
             //Log.Message("ForceAbility :: PostAbilityAttempt Called");
             base.PostAbilityAttempt();
             if (ForceDef?.changedAlignmentType != ForceAlignmentType.None)
             {
-                ForceUser.AlignmentValue += ForceDef.changedAlignmentRate;
+                if (ForceDef != null)
+                {
+                    ForceUser.AlignmentValue += ForceDef.changedAlignmentRate;
+                }
+
                 ForceUser.UpdateAlignment();
             }
-            if (Pawn.needs.TryGetNeed<Need_ForcePool>() is Need_ForcePool fp)
+
+            if (Pawn.needs.TryGetNeed<Need_ForcePool>() is { } fp)
             {
                 fp.UseForcePower(ActualForceCost);
             }
         }
 
         /// <summary>
-        /// Shows the required alignment (optional), 
-        /// alignment change (optional),
-        /// and the force pool usage
+        ///     Shows the required alignment (optional),
+        ///     alignment change (optional),
+        ///     and the force pool usage
         /// </summary>
-        /// <param name="verb"></param>
         /// <returns></returns>
         public override string PostAbilityVerbCompDesc(VerbProperties_Ability verbDef)
         {
             //Log.Message("1");
-            string result = "";
-            if (verbDef == null) return result;
-            if (verbDef?.abilityDef is ForceAbilityDef forceDef)
+            var result = "";
+            if (verbDef == null)
             {
-                //Log.Message("2");
+                return result;
+            }
 
-                StringBuilder postDesc = new StringBuilder();
-                string alignDesc = "";
-                string changeDesc = "";
-                string pointsDesc = "";
-                //Log.Message("3");
+            if (verbDef.abilityDef is not ForceAbilityDef forceDef)
+            {
+                return result;
+            }
+            //Log.Message("2");
 
-                if (forceDef?.changedAlignmentType != ForceAlignmentType.None)
-                {
-                    //Log.Message("3a");
+            var postDesc = new StringBuilder();
+            var alignDesc = "";
+            var changeDesc = "";
+            //Log.Message("3");
 
-                    alignDesc = "ForceAbilityDescAlign".Translate(new object[]
-                    {
-                    forceDef.requiredAlignmentType.ToString(),
-                    });
-                }
-                //Log.Message("4");
+            if (forceDef.changedAlignmentType != ForceAlignmentType.None)
+            {
+                //Log.Message("3a");
 
-                if (forceDef?.changedAlignmentType != ForceAlignmentType.None)
-                {
+                alignDesc = "ForceAbilityDescAlign".Translate(forceDef.requiredAlignmentType.ToString());
+            }
+            //Log.Message("4");
+
+            if (forceDef.changedAlignmentType != ForceAlignmentType.None)
+            {
                 //Log.Message("4a");
-                    changeDesc = "ForceAbilityDescChange".Translate(new object[]
-                    {
-                    forceDef.changedAlignmentType.ToString(),
-                    Mathf.Abs(forceDef.changedAlignmentRate).ToString("0.##")
-                    });
-                }
-                //Log.Message("5");
+                changeDesc = "ForceAbilityDescChange".Translate(forceDef.changedAlignmentType.ToString(),
+                    Mathf.Abs(forceDef.changedAlignmentRate).ToString("0.##"));
+            }
 
-                if (ForceUser?.ForceSkillLevel("PJ_ForcePool") > 0)
-                {
+            string pointsDesc;
+            //Log.Message("5");
+
+            if (ForceUser?.ForceSkillLevel("PJ_ForcePool") > 0)
+            {
                 //Log.Message("5a");
-                    float poolCost = 0f;
-                    //Log.Message("PC" + forceDef.forcePoolCost.ToString());
-                    poolCost = forceDef.forcePoolCost - (forceDef.forcePoolCost * (0.15f * (float)ForceUser.ForceSkillLevel("PJ_ForcePool")));
-                    pointsDesc = "ForceAbilityDescOriginPoints".Translate(new object[]
-                    {
-                    Mathf.Abs(forceDef.forcePoolCost).ToString("0.##")
-                    })
-
+                //Log.Message("PC" + forceDef.forcePoolCost.ToString());
+                var poolCost = forceDef.forcePoolCost -
+                               (forceDef.forcePoolCost * (0.15f * ForceUser.ForceSkillLevel("PJ_ForcePool")));
+                pointsDesc =
+                    "ForceAbilityDescOriginPoints".Translate(Mathf.Abs(forceDef.forcePoolCost).ToString("0.##"))
                     + "\n" +
-
-                    "ForceAbilityDescNewPoints".Translate(new object[]
-                    {
-                    poolCost.ToString("0.##")
-                    })
+                    "ForceAbilityDescNewPoints".Translate(poolCost.ToString("0.##"))
                     ;
-                }
-                else
-                {
+            }
+            else
+            {
                 //Log.Message("6");
 
-                    pointsDesc = "ForceAbilityDescPoints".Translate(new object[]
-                    {
-                    Mathf.Abs(forceDef.forcePoolCost).ToString("0.##")
-                    });
-                }
-                //Log.Message("7");
-
-                if (alignDesc != "") postDesc.AppendLine(alignDesc);
-                if (changeDesc != "") postDesc.AppendLine(changeDesc);
-                if (pointsDesc != "") postDesc.AppendLine(pointsDesc);
-                result = postDesc.ToString();
-                //Log.Message("8");
-
+                pointsDesc = "ForceAbilityDescPoints".Translate(Mathf.Abs(forceDef.forcePoolCost).ToString("0.##"));
             }
+            //Log.Message("7");
+
+            if (alignDesc != "")
+            {
+                postDesc.AppendLine(alignDesc);
+            }
+
+            if (changeDesc != "")
+            {
+                postDesc.AppendLine(changeDesc);
+            }
+
+            if (pointsDesc != "")
+            {
+                postDesc.AppendLine(pointsDesc);
+            }
+
+            result = postDesc.ToString();
+            //Log.Message("8");
+
             return result;
         }
 
         public override bool CanCastPowerCheck(AbilityContext context, out string reason)
         {
-            if (base.CanCastPowerCheck(context, out reason))
+            if (!base.CanCastPowerCheck(context, out reason))
             {
-                reason = "";
-                if (this.Def != null && this.Def is ForceAbilityDef forceDef)
-                {
-                    if (forceDef?.requiredAlignmentType != ForceAlignmentType.None)
-                    {
-                        if (forceDef?.requiredAlignmentType != ForceUtility.GetForceAlignmentType(Pawn))
-                        {
-                            reason = "PJ_WrongAlignment".Translate(this.Pawn.LabelShort);
-                            return false;
-                        }
-                    }
-                    if (ForceUser?.ForcePool != null)
-                    {
-                        if (forceDef?.forcePoolCost > 0 &&
-                            ActualForceCost > ForceUtility.GetForcePool(this.Pawn)?.CurLevel)
-                        {
-                            reason = "PJ_DrainedForcePool".Translate(this.Pawn.LabelShort);
-                            return false;
-                        }
-                    }
-                    if (this.AbilityUser?.AbilityUser != null)
-                    {
-                        if (this.AbilityUser?.AbilityUser?.apparel != null)
-                        {
-                            if (this.AbilityUser?.AbilityUser?.apparel?.WornApparel != null && this.AbilityUser?.AbilityUser?.apparel?.WornApparelCount > 0)
-                            {
-                                if (this.AbilityUser?.AbilityUser?.apparel?.WornApparel?.FirstOrDefault((Apparel x) => x.def == ThingDefOf.Apparel_ShieldBelt) != null)
-                                {
-                                    reason = "PJ_UsingShieldBelt".Translate(this.Pawn.LabelShort);
-                                    return false;
-                                }
-                            }
-                        }
-                    }
-                }
+                return false;
+            }
+
+            reason = "";
+            if (Def == null || Def is not ForceAbilityDef forceDef)
+            {
                 return true;
             }
+
+            if (forceDef.requiredAlignmentType != ForceAlignmentType.None)
+            {
+                if (forceDef.requiredAlignmentType != ForceUtility.GetForceAlignmentType(Pawn))
+                {
+                    reason = "PJ_WrongAlignment".Translate(Pawn.LabelShort);
+                    return false;
+                }
+            }
+
+            if (ForceUser?.ForcePool != null)
+            {
+                if (forceDef.forcePoolCost > 0 &&
+                    ActualForceCost > Pawn.GetForcePool()?.CurLevel)
+                {
+                    reason = "PJ_DrainedForcePool".Translate(Pawn.LabelShort);
+                    return false;
+                }
+            }
+
+            if (AbilityUser?.AbilityUser == null)
+            {
+                return true;
+            }
+
+            if (AbilityUser?.AbilityUser?.apparel == null)
+            {
+                return true;
+            }
+
+            if (AbilityUser?.AbilityUser?.apparel?.WornApparel == null ||
+                !(AbilityUser?.AbilityUser?.apparel?.WornApparelCount > 0))
+            {
+                return true;
+            }
+
+            if (AbilityUser?.AbilityUser?.apparel?.WornApparel?.FirstOrDefault(x =>
+                x.def == ThingDefOf.Apparel_ShieldBelt) == null)
+            {
+                return true;
+            }
+
+            reason = "PJ_UsingShieldBelt".Translate(Pawn.LabelShort);
             return false;
         }
 
         public override bool CanOverpowerTarget(AbilityContext context, LocalTargetInfo target, out string reason)
         {
             reason = "";
-            if (target.Thing is ProjectJedi.PawnGhost)
+            if (target.Thing is not PawnGhost)
             {
-                Messages.Message("PJ_ForceResisted".Translate(new object[]
-                    {
-                        target.Thing.LabelShort,
-                        AbilityUser.AbilityUser.LabelShort,
-                        this.Def.label
-                        
-                    }), MessageTypeDefOf.NegativeEvent);
-                return false;
+                return base.CanOverpowerTarget(context, target, out reason);
             }
-            return base.CanOverpowerTarget(context, target, out reason);
+
+            Messages.Message(
+                "PJ_ForceResisted".Translate(target.Thing.LabelShort, AbilityUser.AbilityUser.LabelShort, Def.label),
+                MessageTypeDefOf.NegativeEvent);
+            return false;
         }
     }
 }
