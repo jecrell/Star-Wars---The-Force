@@ -26,11 +26,6 @@ namespace ProjectJedi
                 abilityData.Pawn.AllComps.FirstOrDefault(x => x.GetType() == abilityData.AbilityClass) as CompForceUser;
         }
 
-
-        public ForceAbility(Pawn user, AbilityDef pdef) : base(user, pdef)
-        {
-        }
-
         public CompForceUser ForceUser => ForceUtility.GetForceUser(Pawn);
         public ForceAbilityDef ForceDef => Def as ForceAbilityDef;
 

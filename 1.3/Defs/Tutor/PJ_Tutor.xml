@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+<!-- 1/13/17 -->
+
+  <ConceptDef>
+    <defName>PJ_TutorForceSensitive</defName>
+    <label>Star Wars : Force Sensitive</label>
+    <priority>50</priority>
+    <helpText>Your colony has a character with the force sensitive trait. After a few days working to assist your colony, they will eventually discover their force powers.</helpText>
+    <needsOpportunity>True</needsOpportunity>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>PJ_TutorForceXP</defName>
+    <label>Star Wars : Force Levels</label>
+    <priority>50</priority>
+    <helpText>Force Powers can be leveled up over time as characters spend time working to help the colony. The speed of how force levels are gained as characters work on the colony can be adjusted in the Mod Settings menu. As a force user becomes stronger, so too do the threats that the storyteller will throw at your colony. This can be changed in the Mod Settings menu by setting the multiplier to 1.</helpText>
+    <needsOpportunity>True</needsOpportunity>
+  </ConceptDef>
+
+  <ConceptDef>
+    <defName>PJ_TutorForceAlignment</defName>
+    <label>Star Wars : Force Alignment</label>
+    <priority>50</priority>
+    <helpText>Low level force powers can be used by both dark and light sides of the force. Penultimate powers are restricted for pure dark or pure light force wielders.</helpText>
+    <needsOpportunity>True</needsOpportunity>
+  </ConceptDef>
+
+</Defs>

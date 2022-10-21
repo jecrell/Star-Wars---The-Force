@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-  <name>Star Wars - The Force (Continued)</name>
-  <packageId>Mlie.StarWarsTheForce</packageId>
+  <name>Star Wars - The Force</name>
+  <packageId>jecrell.StarWarsTheForce</packageId>
   <author>Xen and Jecrell</author>
   <url>https://github.com/emipa606/StarWarsTheForce</url>
   <supportedVersions>
     <li>1.1</li>
     <li>1.2</li>
     <li>1.3</li>
+    <li>1.4</li>
   </supportedVersions>
   <modDependencies>
     <li>
@@ -28,31 +29,10 @@
     <li>syrchalis.traitvalue</li>
   </loadAfter>
   <loadBefore>
-    <li>Mlie.CallofCthulhuCults</li>
+    <li>jecrell.CallofCthulhuCults</li>
   </loadBefore>
-  <description>[img]https://i.imgur.com/WAEzk68.png[/img]
-Update of Xen and Jecrells mod
-https://steamcommunity.com/sharedfiles/filedetails/?id=918226861
-
-- This is an unofficial port
-- This will be removed when/if Jecrell comes back
-- Added fixes to the lightsaber interaction, thanks lbmaian!
-- Added support for [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2451324814][SYR] Trait Value[/url]
-
-[img]https://i.imgur.com/7Gzt3Rg.png[/img]
-
-[table]
-	[tr]
-		[td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
-		[td][url=https://github.com/emipa606/StarWarsTheForce][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
-	[/tr]
-[/table]
-	
-[img]https://i.imgur.com/NOW7jU1.png[/img]
-
+  <description>
 [h1]Adds RPG-leveling, alignment, and force powers to RimWorld.[/h1]
-
-A17 GitHub Branch -&gt; https://github.com/jecrell/Star-Wars---The-Force/tree/A17
 
 [h1]::::: NOTICE :::::
 ::::: THIS MOD REQUIRES JECSTOOLS ::::::

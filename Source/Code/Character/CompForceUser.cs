@@ -515,11 +515,25 @@ namespace ProjectJedi
                 ForceData.TabResolved = true;
             }
 
+
             base.CompTick();
             if (Find.TickManager.TicksGame % 30 != 0)
             {
                 return;
             }
+
+            //It's important to allow for concepts to be shared on how this mod works.
+            if (ModInfo.TutorLesson_Sensitive && Pawn?.story?.traits?.HasTrait(ProjectJediDefOf.PJ_ForceSensitive) == true)
+            {
+                LessonAutoActivator.TeachOpportunity(ConceptDef.Named("PJ_TutorForceSensitive"), Pawn, OpportunityType.Important);
+            }
+
+            if (ModInfo.TutorLesson_OtherForce)
+            {
+                LessonAutoActivator.TeachOpportunity(ConceptDef.Named("PJ_TutorForceXP"), Pawn, OpportunityType.Important);
+                LessonAutoActivator.TeachOpportunity(ConceptDef.Named("PJ_TutorForceAlignment"), Pawn, OpportunityType.Important);
+            }
+            
 
             if (ForceUserXP > ForceUserXPTillNextLevel)
             {

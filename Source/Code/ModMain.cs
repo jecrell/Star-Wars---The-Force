@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using RimWorld.BaseGen;
+using UnityEngine;
 using Verse;
 
 namespace ProjectJedi
@@ -17,7 +18,7 @@ namespace ProjectJedi
         {
             return "Star Wars - The Force";
         }
-
+        
         public override void DoSettingsWindowContents(Rect inRect)
         {
             var label = "PJ_SettingsForceXPDelay_Num".Translate(settings.forceXPDelayFactor);

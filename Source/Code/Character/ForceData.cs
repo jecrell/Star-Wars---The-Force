@@ -33,7 +33,7 @@ namespace ProjectJedi
 
         public ForceData(CompForceUser newUser)
         {
-            pawn = newUser.AbilityUser;
+            pawn = newUser.Pawn;
         }
 
         public bool ForcePowersInitialized
