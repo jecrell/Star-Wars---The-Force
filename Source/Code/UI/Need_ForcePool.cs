@@ -95,8 +95,8 @@ namespace ProjectJedi
         }
 
 
-        public override void DrawOnGUI(Rect rect, int maxThresholdMarkers = int.MaxValue, float customMargin = -1F,
-            bool drawArrows = true, bool doTooltip = true, Rect? rectForTooltip = null)
+        public override void DrawOnGUI(Rect rect, int maxThresholdMarkers = 2147483647, float customMargin = -1, bool drawArrows = true,
+            bool doTooltip = true, Rect? rectForTooltip = null, bool drawLabel = true)
         {
             //base.DrawOnGUI(rect, maxThresholdMarkers, customMargin, drawArrows, doTooltip);
             if (rect.height > 70f)

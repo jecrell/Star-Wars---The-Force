@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configurations>RW1.4;RW1.4Unstable</Configurations>
     <Configuration Condition=" '$(Configuration)' == '' ">RW1.4Unstable</Configuration>
-    <TargetFramework>net472</TargetFramework>
+    <TargetFramework>net48</TargetFramework>
     <NoStdLib>true</NoStdLib>
-    <LangVersion>9.0</LangVersion>
+    <LangVersion>10</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
-    <Version>1.3.0.2</Version>
+    <Version>$([System.IO.File]::ReadAllText("C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Workspace\Star-Wars---The-Force\About\Version.txt"))</Version>
     <!--
     For some reason, although SDK projects should default Deterministic to true, when importing this props file,
     builds become non-deterministic unless Deterministic is explicitly set to true here.
@@ -61,6 +61,31 @@
       <ItemGroup>
         <PackageReference Include="Krafs.Rimworld.Ref" Version="1.4.*" /> <!-- only stable versions -->
       </ItemGroup>
+
+
+      <ItemGroup>
+        <Reference Include="AbilityUser">
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\AbilityUser.dll</HintPath>
+          <Private>false</Private>
+        </Reference>
+        <Reference Include="CompActivatableEffect">
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\CompActivatableEffect.dll</HintPath>
+          <Private>false</Private>
+        </Reference>
+        <Reference Include="CompDeflector">
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\CompDeflector.dll</HintPath>
+          <Private>false</Private>
+        </Reference>
+        <Reference Include="CompOversizedWeapon">
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\CompOversizedWeapon.dll</HintPath>
+          <Private>false</Private>
+        </Reference>
+        <Reference Include="CompSlotLoadable">
+          <HintPath>..\..\..\..\mods\JecsTools\1.4\Assemblies\CompSlotLoadable.dll</HintPath>
+          <Private>false</Private>
+        </Reference>
+      </ItemGroup>
+      
     </When>
     <When Condition=" '$(Configuration)' == 'RW1.4Unstable' ">
       <PropertyGroup>
@@ -72,23 +97,23 @@
 
       <ItemGroup>
         <Reference Include="AbilityUser">
-          <HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\AbilityUser.dll</HintPath>
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\AbilityUser.dll</HintPath>
           <Private>false</Private>
         </Reference>
         <Reference Include="CompActivatableEffect">
-          <HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\CompActivatableEffect.dll</HintPath>
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\CompActivatableEffect.dll</HintPath>
           <Private>false</Private>
         </Reference>
         <Reference Include="CompDeflector">
-          <HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\CompDeflector.dll</HintPath>
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\CompDeflector.dll</HintPath>
           <Private>false</Private>
         </Reference>
         <Reference Include="CompOversizedWeapon">
-          <HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\CompOversizedWeapon.dll</HintPath>
+          <HintPath>..\..\..\mods\JecsTools\1.4\Assemblies\CompOversizedWeapon.dll</HintPath>
           <Private>false</Private>
         </Reference>
         <Reference Include="CompSlotLoadable">
-          <HintPath>..\..\..\..\..\..\workshop\content\294100\932008009\1.4\Assemblies\CompSlotLoadable.dll</HintPath>
+          <HintPath>..\..\..\..\mods\JecsTools\1.4\Assemblies\CompSlotLoadable.dll</HintPath>
           <Private>false</Private>
         </Reference>
       </ItemGroup>

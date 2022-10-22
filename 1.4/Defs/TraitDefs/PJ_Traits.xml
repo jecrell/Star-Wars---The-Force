@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <TraitDef>
+    <defName>PJ_ForceSensitive</defName>
+    <commonality>0.2</commonality>
+    <degreeDatas>
+      <li>
+        <label>Force Sensitive</label>
+        <description>[PAWN_nameDef] has the ability to feel the force that surrounds us.\n\n(Star Wars - The Force)</description>
+        <degree>1</degree>
+      </li>
+      <li>
+        <label>Force Apprentice</label>
+        <description>[PAWN_nameDef] has begun to control the force, but requires further training and guidance.\n\n(Star Wars - The Force)</description>
+        <degree>2</degree>
+      </li>
+    </degreeDatas>
+  </TraitDef>
+  <TraitDef>
+    <defName>PJ_JediTrait</defName>
+    <commonality>0.03</commonality>
+    <degreeDatas>
+      <li>
+        <label>Jedi</label>
+        <description>[PAWN_nameDef] Has begun the journey to becoming a Jedi Knight.\n\n(Star Wars - The Force)</description>
+        <degree>1</degree>
+      </li>
+      <li>
+        <label>Jedi Knight</label>
+        <description>[PAWN_nameDef] has attained the rank of Knight of the Jedi Order.\n\n(Star Wars - The Force)</description>
+        <degree>2</degree>
+      </li>
+      <li>
+        <label>Jedi Master</label>
+        <description>[PAWN_nameDef] is among the most respected of the Jedi Order, a true Master.\n\n(Star Wars - The Force)</description>
+        <degree>3</degree>
+      </li>
+      <li>
+        <label>Jedi Consular</label>
+        <description>[PAWN_nameDef] is ranked among the elite Jedi, those who are fit to serve on the Council.\n\n(Star Wars - The Force)</description>
+        <degree>4</degree>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>PJ_SithTrait</li>
+      <li>PJ_GrayTrait</li>
+      <li>PJ_ForceSensitive</li>
+    </conflictingTraits>
+  </TraitDef>
+  <TraitDef>
+    <defName>PJ_SithTrait</defName>
+    <commonality>0.03</commonality>
+    <degreeDatas>
+      <li>
+        <label>Sith</label>
+        <description>[PAWN_nameDef] Has begun the journey to the Dark side of the force.\n\n(Star Wars - The Force)</description>
+        <degree>1</degree>
+      </li>
+      <li>
+        <label>Sith Inquisitor</label>
+        <description>[PAWN_nameDef] is devoted to the dark side, spreading terror and flaring passions in their wake.\n\n(Star Wars - The Force)</description>
+        <degree>2</degree>
+      </li>
+      <li>
+        <label>Sith Lord</label>
+        <description>[PAWN_nameDef] is among the most feared in the galaxy, the Dark Lords of the Sith.\n\n(Star Wars - The Force)</description>
+        <degree>3</degree>
+      </li>
+      <li>
+        <label>Sith Master</label>
+        <description>[PAWN_nameDef] is attuned to the dark side of the force, able to tap near-limitless power.\n\n(Star Wars - The Force)</description>
+        <degree>4</degree>
+      </li>
+    </degreeDatas>
+    <requiredWorkTags>
+      <li>Violent</li>
+    </requiredWorkTags>
+    <conflictingTraits>
+      <li>PJ_JediTrait</li>
+      <li>PJ_GrayTrait</li>
+      <li>PJ_ForceSensitive</li>
+    </conflictingTraits>
+  </TraitDef>
+  <TraitDef>
+    <defName>PJ_GrayTrait</defName>
+    <commonality>0.03</commonality>
+    <degreeDatas>
+      <li>
+        <label>Gray Padawan</label>
+        <description>[PAWN_nameDef] is exploring the balance of the Force.\n\n(Star Wars - The Force)</description>
+        <degree>1</degree>
+      </li>
+      <li>
+        <label>Gray Jedi</label>
+        <description>[PAWN_nameDef] is devoted to maintaining the balance of the Force.\n\n(Star Wars - The Force)</description>
+        <degree>2</degree>
+      </li>
+      <li>
+        <label>Gray Master</label>
+        <description>[PAWN_nameDef] is a master Jedi, devoted to the 'living Force'.\n\n(Star Wars - The Force)</description>
+        <degree>3</degree>
+      </li>
+      <li>
+        <label>Gray Sage</label>
+        <description>[PAWN_nameDef] is attuned to the Living Force. [PAWN_pronoun] sees HIMself as an extension of it's will.\n\n(Star Wars - The Force)</description>
+        <degree>4</degree>
+      </li>
+    </degreeDatas>
+    <conflictingTraits>
+      <li>PJ_JediTrait</li>
+      <li>PJ_SithTrait</li>
+      <li>PJ_ForceSensitive</li>
+    </conflictingTraits>
+  </TraitDef>
+</Defs>

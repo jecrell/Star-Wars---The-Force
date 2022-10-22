@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Star Wars - The Force</name>
   <packageId>jecrell.StarWarsTheForce</packageId>
@@ -31,27 +31,19 @@
   <loadBefore>
     <li>jecrell.CallofCthulhuCults</li>
   </loadBefore>
-  <description>
+  <description>1.22.0.0 (10-22-2022)
+
+
 [h1]Adds RPG-leveling, alignment, and force powers to RimWorld.[/h1]
 
-[h1]::::: NOTICE :::::
-::::: THIS MOD REQUIRES JECSTOOLS ::::::
-Download[/h1]
-http://steamcommunity.com/sharedfiles/filedetails/?id=932008009
+[h1]Quick start notes:[/h1]
+For a character to gain force powers, they must start with the force sensitive trait. After spending time working, they will discover their force powers through gaining force XP. Low level force powers can be used by both dark and light sides of the force. Penultimate powers are restricted for pure dark or pure light force wielders.
 
-
-[h1]::::: NOTICE :::::
-::::: LOAD ORDER ::::::
+[h1]::::: Load Order:::::
 Star Wars mods need to go below JecsTools. 
 Putting Cults below The Force fixes alignment issues.[/h1]
 
 Thanks to Jedi Master Ailan for his direction and inspiration in the creation of this mod. Without his help and support this would have never happened.
-
-[h1]Quick start notes:[/h1]
-For a character to gain force powers, they must start with the force sensitive trait. After spending time working, they will discover their force powers through gaining force XP. Low level force powers can be used by both dark and light sides of the force. Penultimate powers are restricted for pure dark or pure light force wielders.
-	
-[h1]Special thanks to all those that support me (and help me pay the rent) on Patreon (August 2017):[/h1]
-Jedi Master Ailan, Shane Malley, Dakota Pohlman, Falloutmonk, Slick Liquid, Thom Black ShotgunFace, Fredric Sundberg, Dan Winn, Toss Antilles, Sarah Banks, Undead Jackel, Michin, Chelsea, Caine Detueur, Yewty Oxman, Jerod Clayton, Arty Kubin, Ashleigh Miller, infinity421, TheDayDude, Jacob Duga, Ryan Brock, Evan Hwang, Moshat, Christopher, Don Butterblume, John Boehr, George Chong Chuang Ming, Oliver White, Helpful Bot, vincent de keijzer, roxxploxx, Legless, Christopher Abel, Karol Rybak, Mathias Broxvall, Mark, Tim Stillson, Lachlan Easton, Nemuri Hime, Sera, Christian Hermansen, NiNe Bottles of Rum, Populous25, Steven James, Marcus Siraenu, Michael Lauder, meatface.
 
 [list]
 [*]Programming by Jecrell.
@@ -62,31 +54,41 @@ Jedi Master Ailan, Shane Malley, Dakota Pohlman, Falloutmonk, Slick Liquid, Thom
 [*]Spanish translation by [url=http://steamcommunity.com/id/HUOAAAAAAAAAAH/]Bub[/url].
 [*]French translation by [url=http://steamcommunity.com/profiles/76561198015106010/]MrFootman[/url].
 [*]German translation by [url=http://steamcommunity.com/id/Lauri7x3/]Lauri7x3[/url]
-[/list]
 
-[h1]Known Mod Conflicts[/h1]
-[list]
-[*]Static Quality Plus -- Disables Force XP.
-[*]Step away from the medicine - Characters can&apos;t be tended after force heal.
-[*]Hand me that brick - Errors
-[*]Camping - Errors]
-[*]Leadership and Teachers - Makes Force XP go up too quickly
-[*]Cleaning area - Errors
-[/list]
+Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
 
-[h1]Problems? Questions? Comments?[/h1]
-Join us on Discord: https://discord.gg/aDjWBBk
+These are the most excellent rim dwellers who support me: 
+Darcilyn Lynds (darci.andel), Luke Salinas, RainerWingel , Noisy Koi, Lea Stannard, David Silberstein, Matt Harris, Kiya Nicoll, Paul Fenwick, Genaeve , Populous25 , David Turner, TinyATuin, Michael Cailler, Jimes Tooper, Sharp Spook, Don Homer, roxxploxx , Alex Mederer, Dan Jones, Michael Whitehead, iknowdude00, Kaz, Alexander , Ken Birdwell, Darcilyn Lynds (darci.andel), Luke Salinas, RainerWingel , Noisy Koi, Lea Stannard, David Silberstein, Matt Harris, Kiya Nicoll, Paul Fenwick, Genaeve , Populous25 , David Turner, TinyATuin, Michael Cailler, Jimes Tooper, Sharp Spook, Don Homer, roxxploxx , Alex Mederer, Dan Jones, Michael Whitehead, iknowdude00, Kaz, Alexander , Ken Birdwell
+
+========================
+Changelog
+========================
+1.22.0.0 (10-22-2022)
+========================
+Updates Star Wars - The Force for RimWorld 1.4; Adds tutor info for new players on some mechanics
 
 
-[img]https://i.imgur.com/Rs6T6cr.png[/img]
-[list]
-[*] See if the the error persists if you just have this mod and its requirements active.
-[*] If not, try adding your other mods until it happens again.
-[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
-[*] For best support, please use the Discord-channel for error-reporting.
-[*] Do not report errors by making a discussion-thread, I get no notification of that.
-[*] If you have the solution for a problem, please post it to the GitHub repository.
-[/list]
+Mlie's Changes
+==================
+1.0.4.0 - Updated for 1.3
+
+
+1.0.3.0 - Added support for [SYR] Trait Value
+
+
+1.0.2.0 - Added harmony lightsaber-fixes by lbmaian
+
+
+1.0.1.0 - Update to 1.2
+===================
+
+1.20.0.1 (10-22-2018)
+========================
+This should address some wacky behavior.
+
+1.20.0.0 (10-19-2018)
+========================
+RimWorld 1.0 version
 
 </description>
 </ModMetaData>

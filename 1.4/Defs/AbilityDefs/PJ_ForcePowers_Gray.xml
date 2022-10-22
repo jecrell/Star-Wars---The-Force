@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ======================== GRAY POWERS ============================ -->
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ===================== Force Pull =============================== -->
+  <ThingDef ParentName="BaseBullet" Name="PJ_PFlyingObject">
+    <defName>PJ_PFlyingObject</defName>
+    <thingClass>ProjectJedi.FlyingObject</thingClass>
+    <label>flying object</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForcePull</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>10</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Name="PJ_PFlyingObject_Equipable">
+    <defName>PJ_PFlyingObject_Equipable</defName>
+    <thingClass>ProjectJedi.FlyingObject_Equipable</thingClass>
+    <label>flying object</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForcePull</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>10</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForcePull">
+    <defName>PJ_PForcePull</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>force pull</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForcePull</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>9999</speed>
+    </projectile>
+  </ThingDef>
+  <!-- ===================== Force Pull (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForcePull_Apprentice</defName>
+    <label>Force Pull</label>
+    <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
+    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.35</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForcePull</defaultProjectile>
+      <abilityDef>PJ_ForcePull_Apprentice</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>5.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_PullSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>1</damage>
+          <damageDef>PJ_DForcePull</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>true</canTargetItems>
+        <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Pull (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForcePull_Adept</defName>
+    <label>Force Pull (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
+    <description>Level 1: Pulls ground objects (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.28</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForcePull</defaultProjectile>
+      <abilityDef>PJ_ForcePull_Adept</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>5.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_PullSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>2</damage>
+          <damageDef>PJ_DForcePull</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>true</canTargetItems>
+        <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Pull (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForcePull_Master</defName>
+    <label>Force Pull (Master)</label>
+    <uiIconPath>UI/ForceUser/ForcePull</uiIconPath>
+    <description>Level 1: Pulls ground objects  (not people or animals) towards the caster.\nLevel 2: Pulls and equips weapons and apparel automatically.\nLevel 3: Can now pull weapons out of the hands of others. If unarmed, force pull now pulls people or animals towards the force wielder.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.2</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForcePull</defaultProjectile>
+      <abilityDef>PJ_ForcePull_Master</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>5.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_PullSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>3</damage>
+          <damageDef>PJ_DForcePull</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>true</canTargetItems>
+        <mapObjectTargetsMustBeAutoAttackable>false</mapObjectTargetsMustBeAutoAttackable>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Push =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForcePush">
+    <defName>PJ_PForcePush</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>force push</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForcePush</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>9999</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <!-- ===================== Force Push (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForcePush_Apprentice</defName>
+    <label>Force Push</label>
+    <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
+    <description>Level 1: Pushes characters away by 8 tiles.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.35</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForcePush</defaultProjectile>
+      <abilityDef>PJ_ForcePush_Apprentice</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>5.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_PushSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>1</damage>
+          <damageDef>PJ_DForcePush</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>false</canTargetItems>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Push (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForcePush_Adept</defName>
+    <label>Force Push (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
+    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.25</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForcePush</defaultProjectile>
+      <abilityDef>PJ_ForcePush_Adept</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>5.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_PushSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>2</damage>
+          <damageDef>PJ_DForcePush</damageDef>
+          <chance>1.0</chance>
+        </li>
+        <li>
+          <damage>20</damage>
+          <damageDef>Stun</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>false</canTargetItems>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Push (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForcePush_Master</defName>
+    <label>Force Push (Master)</label>
+    <uiIconPath>UI/ForceUser/ForcePush</uiIconPath>
+    <description>Level 1: Pushes characters away by 8 tiles.\nLevel 2: Pushes 10 tiles and stuns the target.\nLevel 3: Pushes 12 tiles, stuns the target, and adds impact damage against walls.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.15</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForcePush</defaultProjectile>
+      <abilityDef>PJ_ForcePush_Master</abilityDef>
+      <isViolent>false</isViolent>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>5.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_PushSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>3</damage>
+          <damageDef>PJ_DForcePush</damageDef>
+          <chance>1.0</chance>
+        </li>
+        <li>
+          <damage>20</damage>
+          <damageDef>Stun</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetItems>false</canTargetItems>
+        <canTargetSelf>false</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Speed =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceSpeed">
+    <defName>PJ_PForceSpeed</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>force speed</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForceSpeed</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>99999</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <!-- ===================== Force Speed (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceSpeed_Apprentice</defName>
+    <label>Force Speed</label>
+    <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
+    <description>Increases the running speed of the caster for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.35</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceSpeed</defaultProjectile>
+      <abilityDef>PJ_ForceSpeed_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>10.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_SpeedSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <hediffsToApply>
+        <li>
+          <hediffDef>PJ_ForceSpeedHediff_One</hediffDef>
+          <applyChance>1.0</applyChance>
+        </li>
+      </hediffsToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Speed (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceSpeed_Adept</defName>
+    <label>Force Speed (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
+    <description>Increases the running speed of the caster for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.25</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceSpeed</defaultProjectile>
+      <abilityDef>PJ_ForceSpeed_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>15.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_SpeedSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <hediffsToApply>
+        <li>
+          <hediffDef>PJ_ForceSpeedHediff_Two</hediffDef>
+          <applyChance>1.0</applyChance>
+        </li>
+      </hediffsToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Speed (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceSpeed_Master</defName>
+    <label>Force Speed (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceSpeed</uiIconPath>
+    <description>Increases the running speed of the caster for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass>   -->
+    <forcePoolCost>0.15</forcePoolCost>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceSpeed</defaultProjectile>
+      <abilityDef>PJ_ForceSpeed_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>30.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_SpeedSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <hediffsToApply>
+        <li>
+          <hediffDef>PJ_ForceSpeedHediff_Three</hediffDef>
+          <applyChance>1.0</applyChance>
+        </li>
+      </hediffsToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+</Defs>

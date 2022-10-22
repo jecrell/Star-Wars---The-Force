@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThingDef Name="PJ_BaseFGhost" Abstract="True">
+    <thingClass>ProjectJedi.PawnGhost</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Ground</soundImpactDefault>
+    <statBases>
+      <Mass>70</Mass>
+      <PsychicSensitivity>0</PsychicSensitivity>
+      <Flammability>1</Flammability>
+      <ComfyTemperatureMin>-450</ComfyTemperatureMin>
+      <ComfyTemperatureMax>450</ComfyTemperatureMax>
+    </statBases>
+    <race>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <predator>true</predator>
+      <foodType>OmnivoreAnimal</foodType>
+      <baseHungerRate>0.01</baseHungerRate>
+    </race>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  <ThingDef ParentName="PJ_BaseFGhost">
+    <defName>PJ_ForceGhostR</defName>
+    <label>Force ghost</label>
+    <description>A force ghost\n\n(Star Wars - The Force)</description>
+    <statBases>
+      <MoveSpeed>8.5</MoveSpeed>
+      <ArmorRating_Blunt>1.1</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.4</ArmorRating_Sharp>
+      <ArmorRating_Heat>1.6</ArmorRating_Heat>
+      <MeatAmount>1</MeatAmount>
+    </statBases>
+    <verbs>
+      <li>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
+        <defaultCooldownTime>1</defaultCooldownTime>
+        <meleeDamageBaseAmount>21</meleeDamageBaseAmount>
+        <meleeDamageDef>Cut</meleeDamageDef>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <verbClass>Verb_MeleeAttackDamage</verbClass>
+        <defaultCooldownTime>0.75</defaultCooldownTime>
+        <meleeDamageBaseAmount>6</meleeDamageBaseAmount>
+        <meleeDamageDef>Blunt</meleeDamageDef>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+      </li>
+    </verbs>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeConstant>PJ_ForceGhostAI</thinkTreeConstant>
+      <thinkTreeMain>PJ_ForceGhostAI_Constant</thinkTreeMain>
+      <body>Human</body>
+      <meatLabel>ectoplasm</meatLabel>
+      <baseBodySize>1.3</baseBodySize>
+      <baseHealthScale>50</baseHealthScale>
+      <lifeExpectancy>5000</lifeExpectancy>
+      <lifeStageAges>
+        <li>
+          <def>PJ_FGhostLifestage</def>
+          <minAge>0</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+    <butcherProducts>
+      <Plasteel>15</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+  </ThingDef>
+  <PawnKindDef>
+    <defName>PJ_ForceGhost</defName>
+    <label>Force ghost</label>
+    <race>PJ_ForceGhostR</race>
+    <combatPower>510</combatPower>
+    <defaultFactionType>PJ_GhostFaction</defaultFactionType>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/FGhost</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <shaderType>TransparentPostLight</shaderType>
+          <drawSize>1.5</drawSize>
+          <color>RGBA(1.0, 1.0, 1.0, 0.5)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9900</min>
+      <max>9900</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>PJ_GhostGlad</li>
+    </weaponTags>
+  </PawnKindDef>
+</Defs>

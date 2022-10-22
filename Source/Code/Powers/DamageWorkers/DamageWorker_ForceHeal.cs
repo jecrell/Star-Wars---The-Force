@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using RimWorld;
 using Verse;
 
@@ -33,7 +34,11 @@ namespace ProjectJedi
                 }
 
                 var maxInjuriesPerBodypart = 2;
-                foreach (var current in from injury in pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
+                
+                List<Hediff_Injury> injuries = new List<Hediff_Injury>();
+                pawn.health.hediffSet.GetHediffs<Hediff_Injury>(ref injuries, (Hediff_Injury x) => x != null && x.def.everCurableByItem && !x.IsPermanent());
+                
+                foreach (var current in from injury in injuries
                     where injury.Part == rec
                     select injury)
                 {

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <LifeStageDef>
+    <defName>PJ_FGhostLifestage</defName>
+    <label>adult stage</label>
+    <visible>false</visible>
+  </LifeStageDef>
+</Defs>

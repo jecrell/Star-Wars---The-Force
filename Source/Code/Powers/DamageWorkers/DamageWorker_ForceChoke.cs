@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Verse;
 
 namespace ProjectJedi
@@ -9,7 +10,10 @@ namespace ProjectJedi
         {
             BodyPartRecord rec = null;
             var neckRecord = pawn.def.race.body.AllParts.FirstOrDefault(x => x.def.label == "neck");
-            if (pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().All(x => x.Part != neckRecord))
+            
+            List<Hediff_MissingPart> neckMissingPart = new List<Hediff_MissingPart>();
+            pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>(ref neckMissingPart, (Hediff_MissingPart x) => x.Part == neckRecord);
+            if (neckMissingPart?.NullOrEmpty() == true)
             {
                 rec = neckRecord;
             }
@@ -17,7 +21,10 @@ namespace ProjectJedi
             {
                 var lungRecord = pawn.def.race.body.AllParts.FirstOrDefault(x =>
                     x.def.tags.Any(s => s.defName == "BreathingSource" || s.defName == "BreathingPathway"));
-                if (pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>().All(x => x.Part != lungRecord))
+                
+                List<Hediff_MissingPart> lungsMissingPart = new List<Hediff_MissingPart>();
+                pawn.health.hediffSet.GetHediffs<Hediff_MissingPart>(ref lungsMissingPart, (Hediff_MissingPart x) => x.Part == lungRecord);
+                if (lungsMissingPart.NullOrEmpty() == true)
                 {
                     rec = lungRecord;
                 }

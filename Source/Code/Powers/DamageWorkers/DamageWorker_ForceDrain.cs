@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using RimWorld;
 using UnityEngine;
@@ -91,10 +92,13 @@ namespace ProjectJedi
                 {
                     continue;
                 }
+                
+                List<Hediff_Injury> injuries = new List<Hediff_Injury>();
+                caster.health.hediffSet.GetHediffs<Hediff_Injury>(ref injuries, (Hediff_Injury x) => x != null && x.def.everCurableByItem && !x.IsPermanent());
 
                 var maxInjuriesPerBodypart = 2;
                 foreach (var current in from injury in
-                        caster.health.hediffSet.GetHediffs<Hediff_Injury>()
+                             injuries
                     where injury.Part == rec
                     select injury)
                 {

@@ -1,3 +1,7 @@
+1.22.0.0 (10-22-2022)
+========================
+Updates Star Wars - The Force for RimWorld 1.4; Adds tutor info for new players on some mechanics
+
 
 Mlie's Changes
 ==================

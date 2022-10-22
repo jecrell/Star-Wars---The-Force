@@ -14,4 +14,9 @@
     <li>/</li>
     <li IfModActive="syrchalis.traitvalue">SYRTraitValue</li>
   </v1.3>
+  <v1.4>
+    <li>1.4</li>
+    <li>/</li>
+    <li IfModActive="syrchalis.traitvalue">SYRTraitValue</li>
+  </v1.4>
 </loadFolders>
