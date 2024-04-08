@@ -1,4 +1,5 @@
-﻿using RimWorld;
+﻿using HarmonyLib;
+using RimWorld;
 using UnityEngine;
 using Verse;
 
@@ -120,7 +121,7 @@ namespace ProjectJedi
             ImpactSomething();
         }
 
-        public override void Draw()
+        protected override void DrawAt(Vector3 drawLoc, bool flip = false)
         {
             if (flyingThing == null)
             {
@@ -135,7 +136,8 @@ namespace ProjectJedi
                 }
 
                 var pawn = flyingThing as Pawn;
-                pawn?.Drawer.DrawAt(DrawPos);
+                pawn.DrawNowAt(DrawPos);
+                //pawn?.Drawer.DrawAt(DrawPos);
                 //Graphics.DrawMesh(MeshPool.plane10, this.DrawPos, this.ExactRotation, this.flyingThing.def.graphic.MatFront, 0);
             }
             else

@@ -296,10 +296,11 @@ namespace ProjectJedi
                         "PJ_ForcePowersUnlocked".Translate(parent.Label),
                         MessageTypeDefOf.SilentInput);
                     Find.LetterStack.ReceiveLetter(
-                        "PJ_ForceAwakensLabel".Translate(),
-                        "PJ_ForceAwakensDesc".Translate(parent.Label),
-                        LetterDefOf.PositiveEvent,
-                        parent);
+                        label: "PJ_ForceAwakensLabel".Translate(),
+                        text: "PJ_ForceAwakensDesc".Translate(parent.Label),
+                        textLetterDef: LetterDefOf.PositiveEvent,
+                        lookTargets: parent
+                    );
                 }
 
                 SoundDef.Named("PJ_ForcePowersUnlocked").PlayOneShotOnCamera();
@@ -310,8 +311,10 @@ namespace ProjectJedi
                 if (!hideNotification)
                 {
                     Messages.Message(
-                        "PJ_LevelUp".Translate(parent.Label),
-                        MessageTypeDefOf.PositiveEvent);
+                        text: "PJ_LevelUp".Translate(parent.Label),
+                        lookTargets: parent,
+                        def: MessageTypeDefOf.PositiveEvent
+                    );
                 }
             }
 

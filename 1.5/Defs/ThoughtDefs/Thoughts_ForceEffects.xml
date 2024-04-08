@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThoughtDef>
+    <defName>PJ_ThoughtPull</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>pulled with the force</label>
+        <description>Hey! Don't push me around!\n\n(Star Wars - The Force)</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+  <ThoughtDef>
+    <defName>PJ_ThoughtPush</defName>
+    <durationDays>0.5</durationDays>
+    <stackLimit>10</stackLimit>
+    <stages>
+      <li>
+        <label>pushed with the force</label>
+        <description>Hey! Don't push me around!\n\n(Star Wars - The Force)</description>
+        <baseMoodEffect>-5</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+</Defs>

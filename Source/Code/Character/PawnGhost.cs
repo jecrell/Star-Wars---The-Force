@@ -2,9 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using AbilityUser;
+using CompSlotLoadable;
 using HarmonyLib;
 using RimWorld;
+using UnityEngine;
 using Verse;
+using Verse.Noise;
+using SWSaber;
+using Verse.Sound;
+
 
 namespace ProjectJedi
 {
@@ -19,6 +25,58 @@ namespace ProjectJedi
             }
 
             PowersSetup();
+            WeaponSetup();
+        }
+
+        public void WeaponSetup()
+        {
+
+            // Only equip a lightsaber if SW Sabers is on
+            ///////////////////////////////////////////////////////////////////////////////////
+            {
+                try
+                {
+                    ((Action)(() =>
+                    {
+                        if (AccessTools.Method(typeof(SWSaber.Utility), nameof(SWSaber.Utility.CrystalSlotter)) != null)
+                        {
+                            if (DefDatabase<ThingDef>.GetNamedSilentFail("SWSaber_Lightsaber") is ThingDef saberDef)
+                            {
+                                //Equip a standard lightsaber
+                                var saberToEquip = (ThingWithComps)GenSpawn.Spawn(ThingMaker.MakeThing(saberDef, ThingDefOf.Steel), Position, MapHeld);
+                                saberToEquip.DeSpawn();
+                                this.equipment.MakeRoomFor(saberToEquip);
+                                this.equipment.AddEquipment(saberToEquip);
+                                if (saberToEquip.def.soundInteract != null)
+                                {
+                                    saberToEquip.def.soundInteract.PlayOneShot(new TargetInfo(this.Position, this.Map));
+                                }
+                                
+                                //Equip a random 'good jedi' crystals
+                                var lightsaberEffect = saberToEquip.TryGetComp<CompLightsaberActivatableEffect>();
+                                var crystalSlot = saberToEquip.GetComp<CompCrystalSlotLoadable>();
+                                var randomCrystals = new List<string>
+                                {
+                                    "PJ_KyberCrystal",
+                                    "PJ_KyberCrystalBlue",
+                                    "PJ_KyberCrystalCyan"
+                                };
+                                var crystalThing = (ThingWithComps)ThingMaker.MakeThing(ThingDef.Named(randomCrystals.RandomElement()));
+                                Utility.CrystalSlotter(crystalSlot, lightsaberEffect, crystalThing);
+                            }
+                        }
+
+                    })).Invoke();
+                }
+#pragma warning disable 168
+                catch (TypeLoadException ex)
+                {
+                    /*////Log.Message(ex.ToString());*/
+                }
+#pragma warning restore 168
+            }
+
+
         }
 
         public void PowersSetup()

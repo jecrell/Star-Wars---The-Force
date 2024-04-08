@@ -1,0 +1,705 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ======================== DARK POWERS ============================ -->
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ===================== Force Rage =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+    <defName>PForceRage</defName>
+    <label>force rage</label>
+    <graphicData>
+      <texPath>Weapons/Projectiles/ForceDrain</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>EMP</damageDef>
+      <damageAmountBase>0</damageAmountBase>
+      <speed>999</speed>
+    </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>10</preFiringFinalIntensity>
+    <postFiringInitialIntensity>10</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>22</preFiringDuration>
+    <postFiringDuration>45</postFiringDuration>
+    <StartFireChance>0.100</StartFireChance>
+  </ThingDef>
+  <!-- ===================== Force Rage (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceRage_Apprentice</defName>
+    <label>Force Rage</label>
+    <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.22</forcePoolCost>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.015</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceRage</defaultProjectile>
+      <abilityDef>PJ_ForceRage_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>60.0</SecondsToRecharge>
+      <range>34</range>
+      <isViolent>false</isViolent>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_RageSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <mentalStatesToApply>
+        <li>
+          <mentalStateDef>Berserk</mentalStateDef>
+          <applyChance>0.7</applyChance>
+        </li>
+      </mentalStatesToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Rage (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceRage_Adept</defName>
+    <label>Force Rage (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.18</forcePoolCost>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentRate>-0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceRage</defaultProjectile>
+      <abilityDef>PJ_ForceRage_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>20.0</SecondsToRecharge>
+      <range>44</range>
+      <isViolent>false</isViolent>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_RageSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <mentalStatesToApply>
+        <li>
+          <mentalStateDef>Berserk</mentalStateDef>
+          <applyChance>0.85</applyChance>
+        </li>
+      </mentalStatesToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Rage (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceRage_Master</defName>
+    <label>Force Rage (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceRage</uiIconPath>
+    <description>Enrage an enemy using the Dark Side of the force, causing them to attack anything they see in a blind fury.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.05</forcePoolCost>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentRate>-0.2</changedAlignmentRate>
+    <abilityPoints>3</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceRage</defaultProjectile>
+      <abilityDef>PJ_ForceRage_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>10.0</SecondsToRecharge>
+      <range>50</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_RageSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <mentalStatesToApply>
+        <li>
+          <mentalStateDef>Berserk</mentalStateDef>
+          <applyChance>0.95</applyChance>
+        </li>
+      </mentalStatesToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Choke =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <defName>PForceChoke</defName>
+    <label>force choke</label>
+    <graphicData>
+      <texPath>Weapons/Projectiles/ChokeP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>PJ_FChoke</damageDef>
+      <damageAmountBase>5</damageAmountBase>
+      <speed>999</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <defName>PForceChokeTwo</defName>
+    <label>force choke</label>
+    <graphicData>
+      <texPath>Weapons/Projectiles/ChokeP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>PJ_FChoke</damageDef>
+      <damageAmountBase>10</damageAmountBase>
+      <speed>999</speed>
+    </projectile>
+  </ThingDef>
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <defName>PForceChokeThree</defName>
+    <label>force choke</label>
+    <graphicData>
+      <texPath>Weapons/Projectiles/ChokeP</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>PJ_FChoke</damageDef>
+      <damageAmountBase>15</damageAmountBase>
+      <speed>999</speed>
+    </projectile>
+  </ThingDef>
+  <!-- ===================== Force Choke (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceChoke_Apprentice</defName>
+    <label>Force Choke</label>
+    <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
+    <description>Choke the life from your enemies.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.20</forcePoolCost>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceChoke</defaultProjectile>
+      <abilityDef>PJ_ForceChoke_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>10</SecondsToRecharge>
+      <range>34</range>
+      <soundCast>PJ_ChokeSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>10</damage>
+          <damageDef>Stun</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Choke (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceChoke_Adept</defName>
+    <label>Force Choke (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
+    <description>Choke the life from your enemies.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.18</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.1</changedAlignmentRate>
+    <abilityPoints>2</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceChokeTwo</defaultProjectile>
+      <abilityDef>PJ_ForceChoke_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>8</SecondsToRecharge>
+      <range>34</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+      <soundCast>PJ_ChokeSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>15</damage>
+          <damageDef>Stun</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Choke (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceChoke_Master</defName>
+    <label>Force Choke (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceChoke</uiIconPath>
+    <description>Choke the life from your enemies.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.15</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.15</changedAlignmentRate>
+    <abilityPoints>3</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>true</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceChokeThree</defaultProjectile>
+      <abilityDef>PJ_ForceChoke_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>4.5</SecondsToRecharge>
+      <range>34</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+      <soundCast>PJ_ChokeSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <extraDamages>
+        <li>
+          <damage>25</damage>
+          <damageDef>Stun</damageDef>
+          <chance>1.0</chance>
+        </li>
+      </extraDamages>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Drain =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+    <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass>
+    <defName>PJ_PForceDrain</defName>
+    <label>force drain</label>
+    <graphicData>
+      <texPath>Weapons/Projectiles/ForceDrain</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>PJ_FDrainDamage</damageDef>
+      <damageAmountBase>2</damageAmountBase>
+      <speed>999</speed>
+    </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>20</preFiringFinalIntensity>
+    <postFiringInitialIntensity>20</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>10</preFiringDuration>
+    <postFiringDuration>83</postFiringDuration>
+    <StartFireChance>0.000</StartFireChance>
+  </ThingDef>
+  <!-- ===================== Force Drain (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceDrain_Apprentice</defName>
+    <label>Force Drain</label>
+    <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
+    <description>Drain another entity of lifeforce.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.30</forcePoolCost>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceDrain</defaultProjectile>
+      <abilityDef>PJ_ForceDrain_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>80.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Drain (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceDrain_Adept</defName>
+    <label>Force Drain (Adept)</label>
+    <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
+    <description>Drain another entity of lifeforce.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.28</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.15</changedAlignmentRate>
+    <abilityPoints>2</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceDrain</defaultProjectile>
+      <abilityDef>PJ_ForceDrain_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>50.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Drain (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceDrain_Master</defName>
+    <label>Force Drain (Master)</label>
+    <uiIconPath>UI/ForceUser/DrainMinor</uiIconPath>
+    <description>Drain another entity of lifeforce.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.25</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.25</changedAlignmentRate>
+    <abilityPoints>3</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceDrain</defaultProjectile>
+      <abilityDef>PJ_ForceDrain_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>20.0</SecondsToRecharge>
+      <range>24</range>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Lightning =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_AbilityLaser">
+    <thingClass>ProjectJedi.Projectile_AbilityLaser_ForceLightning</thingClass>
+    <!-- <thingClass>AbilityUser.Projectile_AbilityLaser</thingClass> -->
+    <defName>PForceLightningProj</defName>
+    <label>force lightning</label>
+	<altitudeLayer>VisEffects</altitudeLayer>
+    <graphicData>
+      <texPath>Weapons/Projectiles/ForceLightningX</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>PJ_FLightning</damageDef>
+      <damageAmountBase>22</damageAmountBase>
+      <speed>999</speed>
+    </projectile>
+    <preFiringInitialIntensity>0</preFiringInitialIntensity>
+    <preFiringFinalIntensity>20</preFiringFinalIntensity>
+    <postFiringInitialIntensity>20</postFiringInitialIntensity>
+    <postFiringFinalIntensity>0</postFiringFinalIntensity>
+    <preFiringDuration>12</preFiringDuration>
+    <postFiringDuration>75</postFiringDuration>
+    <StartFireChance>0.100</StartFireChance>
+  </ThingDef>
+  <!-- ===================== Force Lightning (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceLightning_Apprentice</defName>
+    <label>Force Lightning</label>
+    <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
+    <description>Lash out with pure dark side energy.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.16</forcePoolCost>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceLightningProj</defaultProjectile>
+      <abilityDef>PJ_ForceLightning_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>15</SecondsToRecharge>
+      <range>34</range>
+      <isViolent>true</isViolent>
+      <burstShotCount>1</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_LightningSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Lightning (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceLightning_Adept</defName>
+    <label>Force Lightning (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
+    <description>Lash out with pure dark side energy.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.13</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.15</changedAlignmentRate>
+    <abilityPoints>2</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceLightningProj</defaultProjectile>
+      <abilityDef>PJ_ForceLightning_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>10</SecondsToRecharge>
+      <range>34</range>
+      <isViolent>true</isViolent>
+      <burstShotCount>2</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_LightningSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Lightning (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceLightning_Master</defName>
+    <label>Force Lightning (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceLightning</uiIconPath>
+    <description>Lash out with pure dark side energy.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.10</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.25</changedAlignmentRate>
+    <abilityPoints>3</abilityPoints>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility_TrueBurst</verbClass>
+      <tooltipShowProjectileDamage>true</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceLightningProj</defaultProjectile>
+      <abilityDef>PJ_ForceLightning_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>6.5</SecondsToRecharge>
+      <range>34</range>
+      <isViolent>true</isViolent>
+      <burstShotCount>3</burstShotCount>
+      <ticksBetweenBurstShots>2</ticksBetweenBurstShots>
+      <soundCast>PJ_LightningSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Storm ============================= -->
+  <ThingDef ParentName="BaseBullet" Class="ThingDef">
+    <thingClass>ProjectJedi.Projectile_ForceStorm</thingClass>
+    <defName>PJ_PForceStormProj</defName>
+    <label>force storm</label>
+    <graphicData>
+      <texPath>Weapons/Projectiles/Storm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <explosionRadius>7</explosionRadius>
+      <damageDef>PJ_FStorm</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>75</speed>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+    </projectile>
+  </ThingDef>
+  <!-- ===================== Force Storm (Apprentice) ============================= -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceStorm_Apprentice</defName>
+    <label>Force Storm</label>
+    <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
+    <description>Lash out with pure dark side energy at an area, causing great damage.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.26</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.07</changedAlignmentRate>
+    <abilityPoints>1</abilityPoints>
+    <darksideTreePointsRequired>9</darksideTreePointsRequired>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceStormProj</defaultProjectile>
+      <abilityDef>PJ_ForceStorm_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>60</SecondsToRecharge>
+      <range>44</range>
+      <isViolent>true</isViolent>
+      <soundCast>PJ_LightningSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+      <TargetAoEProperties>
+        <targetClass>Pawn</targetClass>
+        <showRangeOnSelect>true</showRangeOnSelect>
+        <friendlyFire>true</friendlyFire>
+        <startsFromCaster>false</startsFromCaster>
+        <maxTargets>2</maxTargets>
+        <range>10</range>
+      </TargetAoEProperties>
+      <burstShotCount>1</burstShotCount>
+      <isPrimary>false</isPrimary>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Storm (Adept) ============================= -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceStorm_Adept</defName>
+    <label>Force Storm (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
+    <description>Lash out with pure dark side energy at an area, causing great damage.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.22</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.19</changedAlignmentRate>
+    <abilityPoints>2</abilityPoints>
+    <darksideTreePointsRequired>9</darksideTreePointsRequired>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceStormProj</defaultProjectile>
+      <abilityDef>PJ_ForceStorm_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>50</SecondsToRecharge>
+      <range>44</range>
+      <isViolent>true</isViolent>
+      <soundCast>PJ_LightningSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+      <TargetAoEProperties>
+        <targetClass>Pawn</targetClass>
+        <startsFromCaster>false</startsFromCaster>
+        <showRangeOnSelect>true</showRangeOnSelect>
+        <friendlyFire>true</friendlyFire>
+        <maxTargets>3</maxTargets>
+        <range>10</range>
+      </TargetAoEProperties>
+      <burstShotCount>1</burstShotCount>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Storm (Master) ============================= -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceStorm_Master</defName>
+    <label>Force Storm (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceStorm</uiIconPath>
+    <description>Lash out with pure dark side energy at an area, causing great damage.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.18</forcePoolCost>
+    <requiredAlignmentType>Dark</requiredAlignmentType>
+    <changedAlignmentType>Dark</changedAlignmentType>
+    <changedAlignmentRate>-0.3</changedAlignmentRate>
+    <abilityPoints>5</abilityPoints>
+    <darksideTreePointsRequired>9</darksideTreePointsRequired>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PJ_PForceStormProj</defaultProjectile>
+      <abilityDef>PJ_ForceStorm_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>30</SecondsToRecharge>
+      <range>44</range>
+      <isViolent>true</isViolent>
+      <soundCast>PJ_LightningSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <AbilityTargetCategory>TargetAoE</AbilityTargetCategory>
+      <TargetAoEProperties>
+        <targetClass>Pawn</targetClass>
+        <showRangeOnSelect>true</showRangeOnSelect>
+        <startsFromCaster>false</startsFromCaster>
+        <friendlyFire>true</friendlyFire>
+        <maxTargets>5</maxTargets>
+        <range>10</range>
+      </TargetAoEProperties>
+      <burstShotCount>1</burstShotCount>
+      <isPrimary>false</isPrimary>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+</Defs>

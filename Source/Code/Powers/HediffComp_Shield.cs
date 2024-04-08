@@ -179,7 +179,7 @@ namespace ProjectJedi
 
         private void Break()
         {
-            SoundDefOf.EnergyShield_Broken.PlayOneShot(new TargetInfo(Pawn.Position, Pawn.Map));
+            SoundDefOf.EnergyShield_Reset.PlayOneShot(new TargetInfo(Pawn.Position, Pawn.Map));
             FleckMaker.Static(Pawn.TrueCenter(), Pawn.Map, FleckDefOf.ExplosionFlash, 12f);
             for (var i = 0; i < 6; i++)
             {

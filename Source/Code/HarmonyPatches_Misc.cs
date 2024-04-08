@@ -15,13 +15,29 @@ namespace ProjectJedi
         {
             harmony.Patch(AccessTools.Method(typeof(StorytellerUtility), nameof(StorytellerUtility.DefaultParmsNow)),
                 null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(DefaultParmsNow_PostFix)));
+                postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(DefaultParmsNow_PostFix)));
             harmony.Patch(AccessTools.Method(typeof(SkillRecord), nameof(SkillRecord.Learn)), null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(Learn_PostFix)));
+                postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(Learn_PostFix)));
             harmony.Patch(
                 AccessTools.Method(typeof(AttackTargetsCache),
                     nameof(AttackTargetsCache.Notify_FactionHostilityChanged)), null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(Notify_FactionHostilityChanged_PostFix)));
+                postfix: new HarmonyMethod(typeof(HarmonyPatches), nameof(Notify_FactionHostilityChanged_PostFix)));
+            harmony.Patch(
+                AccessTools.Method(typeof(LifeStageWorker_HumanlikeAdult), nameof(LifeStageWorker_HumanlikeAdult.Notify_LifeStageStarted)),
+                prefix: new HarmonyMethod(typeof(HarmonyPatches), nameof(Notify_LifeStageStarted_PreFix)));
+        }
+
+        /// <summary>
+        /// Removes lifestage start functions from force ghosts
+        /// </summary>
+        /// <param name="pawn"></param>
+        /// <param name="previousLifeStage"></param>
+        // RimWorld.LifeStageWorker_HumanlikeAdult
+        public static bool Notify_LifeStageStarted_PreFix(Pawn pawn, LifeStageDef previousLifeStage)
+        {
+            if (pawn.def.defName == "PJ_ForceGhostR")
+                return false;
+            return true;
         }
 
         // RimWorld.StorytellerUtility

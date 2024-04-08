@@ -16,8 +16,8 @@ namespace ProjectJedi
         {
             harmony.Patch(AccessTools.Method(typeof(Pawn), nameof(Pawn.GetGizmos)), null,
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(GetGizmos_PostFix)));
-            harmony.Patch(AccessTools.Method(typeof(PawnRenderer), "DrawEquipment"), null,
-                new HarmonyMethod(typeof(HarmonyPatches), nameof(DrawEquipment_PostFix)));
+            harmony.Patch(AccessTools.Method(typeof(PawnRenderUtility), nameof(PawnRenderUtility.DrawEquipmentAndApparelExtras)), null,
+                new HarmonyMethod(typeof(HarmonyPatches), nameof(DrawEquipmentAndApparelExtras_PostFix)));
             harmony.Patch(AccessTools.Method(typeof(Pawn_HealthTracker), nameof(Pawn_HealthTracker.PreApplyDamage)),
                 new HarmonyMethod(typeof(HarmonyPatches), nameof(PreApplyDamage_PreFix)));
         }
@@ -58,10 +58,10 @@ namespace ProjectJedi
 
         // Draw the Force Shield
         // Verse.PawnRenderer
-        public static void DrawEquipment_PostFix(PawnRenderer __instance, Vector3 rootLoc)
+        public static void DrawEquipmentAndApparelExtras_PostFix
+            (Pawn pawn, Vector3 drawPos, Rot4 facing, PawnRenderFlags flags)
         {
-            var pawn = (Pawn) AccessTools.Field(typeof(PawnRenderer), "pawn").GetValue(__instance);
-            if (pawn.health?.hediffSet?.hediffs == null || pawn.health.hediffSet.hediffs.Count <= 0)
+            if (pawn?.health?.hediffSet?.hediffs == null || pawn.health.hediffSet.hediffs.Count <= 0)
             {
                 return;
             }

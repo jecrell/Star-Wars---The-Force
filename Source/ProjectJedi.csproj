@@ -6,7 +6,13 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
-    <Configurations>RW1.4;RW1.4Unstable;RW1.3</Configurations>
+    <Configurations>RW1.4;RW1.4Unstable;RW1.3;RW1.5Unstable</Configurations>
     <Platforms>AnyCPU</Platforms>
   </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="SWSaber">
+      <HintPath>..\..\Star-Wars---Fully-Functional-Lightsabers\1.5\Assemblies\SWSaber.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
 </Project>

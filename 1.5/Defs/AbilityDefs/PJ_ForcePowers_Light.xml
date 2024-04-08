@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ======================== LIGHT SIDE ============================= -->
+  <!-- ================================================================= -->
+  <!-- ================================================================= -->
+  <!-- ===================== Force Healing Self ============================= -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability" Name="PJ_PForceHeal">
+    <defName>PJ_PForceHeal</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>force healing</label>
+    <graphicData>
+      <texPath>UI/ForceUser/HealMinor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>PJ_ForceHealDamage</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+      <speed>10</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <!-- ===================== Force Healing Self (Apprentice) ============================= -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceHealingSelf_Apprentice</defName>
+    <label>Heal Self</label>
+    <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
+    <description>Miraculously heal the caster.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.35</forcePoolCost>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceHealingSelf_Apprentice</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceHeal</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>120.0</SecondsToRecharge>
+      <range>2</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetable>false</targetable>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Healing Self (Adept) ============================= -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceHealingSelf_Adept</defName>
+    <label>Heal Self (Adept)</label>
+    <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
+    <description>Miraculously heal the caster.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.27</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceHealingSelf_Adept</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceHeal</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>60.0</SecondsToRecharge>
+      <range>2</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <targetable>false</targetable>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Healing Self (Master) ============================= -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceHealingSelf_Master</defName>
+    <label>Heal Self (Master)</label>
+    <uiIconPath>UI/ForceUser/HealMinor</uiIconPath>
+    <description>Miraculously heal the caster.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.20</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceHealingSelf_Master</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceHeal</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>30.0</SecondsToRecharge>
+      <range>2</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <targetable>false</targetable>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Heal Target (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceHealingOther_Apprentice</defName>
+    <label>Heal Other</label>
+    <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
+    <description>Miraculously heals the target.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.38</forcePoolCost>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceHealingOther_Apprentice</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceHeal</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>120.0</SecondsToRecharge>
+      <range>16</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Heal Target (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceHealingOther_Adept</defName>
+    <label>Heal Other (Adept)</label>
+    <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
+    <description>Miraculously heals the target.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.28</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceHealingOther_Adept</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceHeal</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>90.0</SecondsToRecharge>
+      <range>16</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Heal Target (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceHealingOther_Master</defName>
+    <label>Heal Other (Master)</label>
+    <uiIconPath>UI/ForceUser/HealOther</uiIconPath>
+    <description>Miraculously heals the target.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.20</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.10</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceHealingOther_Master</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceHeal</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>60.0</SecondsToRecharge>
+      <range>16</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Defense =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+    <defName>PJ_PForceDefense</defName>
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <label>force defense</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForceDefense</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>true</flyOverhead>
+      <damageDef>PJ_ForceHealDamage</damageDef>
+      <damageAmountBase>100</damageAmountBase>
+      <speed>10</speed>
+    </projectile>
+    <HealFailChance>0.1</HealFailChance>
+  </ThingDef>
+  <!-- ===================== Force Defense (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceDefense_Apprentice</defName>
+    <label>Force Defense</label>
+    <uiIconPath>UI/ForceUser/ForceDefense</uiIconPath>
+    <description>Protects the caster from harm for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.35</forcePoolCost>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceDefense_Apprentice</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceDefense</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>85.0</SecondsToRecharge>
+      <range>2</range>
+      <soundCast>PJ_DefSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <hediffsToApply>
+        <li>
+          <hediffDef>PJ_ForceDefenseHediff</hediffDef>
+          <applyChance>1.0</applyChance>
+          <severity>0.3</severity>
+        </li>
+      </hediffsToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Defense (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceDefense_Adept</defName>
+    <label>Force Defense (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceDefense</uiIconPath>
+    <description>Protects the caster from harm for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.25</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceDefense_Adept</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceDefense</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>55.0</SecondsToRecharge>
+      <range>2</range>
+      <soundCast>PJ_DefSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <hediffsToApply>
+        <li>
+          <hediffDef>PJ_ForceDefenseHediff</hediffDef>
+          <applyChance>1.0</applyChance>
+          <severity>0.6</severity>
+        </li>
+      </hediffsToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Defense (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceDefense_Master</defName>
+    <label>Force Defense (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceDefense</uiIconPath>
+    <description>Protects the caster from harm for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.15</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <abilityDef>PJ_ForceDefense_Master</abilityDef>
+      <isViolent>false</isViolent>
+      <defaultProjectile>PJ_PForceDefense</defaultProjectile>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>35.0</SecondsToRecharge>
+      <range>2</range>
+      <soundCast>PJ_DefSound</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <AbilityTargetCategory>TargetSelf</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>true</canTargetSelf>
+      </targetParams>
+      <hediffsToApply>
+        <li>
+          <hediffDef>PJ_ForceDefenseHediff</hediffDef>
+          <applyChance>1.0</applyChance>
+          <severity>1.0</severity>
+        </li>
+      </hediffsToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Mind Trick =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <defName>PMindTrick</defName>
+    <label>Mind trick</label>
+    <graphicData>
+      <texPath>UI/ForceUser/MindTrick</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>105</speed>
+    </projectile>
+  </ThingDef>
+  <!-- ===================== Mind Trick (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_MindTrick_Apprentice</defName>
+    <label>Mind Trick</label>
+    <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
+    <description>Use the force to influence the weak minded, causing them to wander aimlessly.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.25</forcePoolCost>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.025</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMindTrick</defaultProjectile>
+      <abilityDef>PJ_MindTrick_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>70.0</SecondsToRecharge>
+      <range>34</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <isViolent>false</isViolent>
+      <canCastInMelee>true</canCastInMelee>
+      <mentalStatesToApply>
+        <li>
+          <mentalStateDef>WanderConfused</mentalStateDef>
+          <applyChance>0.7</applyChance>
+        </li>
+      </mentalStatesToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Mind Trick (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_MindTrick_Adept</defName>
+    <label>Mind Trick (Adept)</label>
+    <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
+    <description>Use the force to influence the weak minded, causing them to wander aimlessly.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.20</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.025</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMindTrick</defaultProjectile>
+      <abilityDef>PJ_MindTrick_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>50.0</SecondsToRecharge>
+      <range>44</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <isViolent>false</isViolent>
+      <canCastInMelee>true</canCastInMelee>
+      <mentalStatesToApply>
+        <li>
+          <mentalStateDef>WanderConfused</mentalStateDef>
+          <applyChance>0.85</applyChance>
+        </li>
+      </mentalStatesToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Mind Trick (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_MindTrick_Master</defName>
+    <label>Mind Trick (Master)</label>
+    <uiIconPath>UI/ForceUser/MindTrick</uiIconPath>
+    <description>Use the force to influence the weak minded, causing them to wander aimlessly.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.15</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.025</changedAlignmentRate>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>true</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>true</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PMindTrick</defaultProjectile>
+      <abilityDef>PJ_MindTrick_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>30.0</SecondsToRecharge>
+      <isViolent>false</isViolent>
+      <range>50</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <canCastInMelee>true</canCastInMelee>
+      <mentalStatesToApply>
+        <li>
+          <mentalStateDef>WanderConfused</mentalStateDef>
+          <applyChance>0.95</applyChance>
+        </li>
+      </mentalStatesToApply>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Ghost =============================== -->
+  <ThingDef ParentName="BaseBullet" Class="AbilityUser.ProjectileDef_Ability">
+    <thingClass>AbilityUser.Projectile_Ability</thingClass>
+    <defName>PForceGhost</defName>
+    <label>Force Ghost</label>
+    <graphicData>
+      <texPath>UI/ForceUser/ForceGhost</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>Stun</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>105</speed>
+    </projectile>
+  </ThingDef>
+  <!-- ===================== Force Ghost (Apprentice) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceGhost_Apprentice</defName>
+    <label>Force Ghost</label>
+    <uiIconPath>UI/ForceUser/ForceGhost</uiIconPath>
+    <description>Summon a ghost of ages past to aid you for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.35</forcePoolCost>
+    <abilityPoints>1</abilityPoints>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <lightsideTreePointsRequired>9</lightsideTreePointsRequired>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceGhost</defaultProjectile>
+      <abilityDef>PJ_ForceGhost_Apprentice</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>120.0</SecondsToRecharge>
+      <range>34</range>
+      <stopBurstWithoutLos>false</stopBurstWithoutLos>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <isViolent>false</isViolent>
+      <AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <thingsToSpawn>
+        <li>
+          <def>PJ_ForceGhostR</def>
+          <kindDef>PJ_ForceGhost</kindDef>
+          <spawnCount>1</spawnCount>
+          <temporary>true</temporary>
+        </li>
+      </thingsToSpawn>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Ghost (Adept) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceGhost_Adept</defName>
+    <label>Force Ghost (Adept)</label>
+    <uiIconPath>UI/ForceUser/ForceGhost</uiIconPath>
+    <description>Summon a ghost of ages past to aid you for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.25</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <abilityPoints>2</abilityPoints>
+    <lightsideTreePointsRequired>9</lightsideTreePointsRequired>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceGhost</defaultProjectile>
+      <abilityDef>PJ_ForceGhost_Adept</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>120.0</SecondsToRecharge>
+      <range>34</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <stopBurstWithoutLos>false</stopBurstWithoutLos>
+      <isViolent>false</isViolent>
+      <AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <thingsToSpawn>
+        <li>
+          <def>PJ_ForceGhostR</def>
+          <kindDef>PJ_ForceGhost</kindDef>
+          <spawnCount>1</spawnCount>
+          <temporary>true</temporary>
+        </li>
+      </thingsToSpawn>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+  <!-- ===================== Force Ghost (Master) =============================== -->
+  <ProjectJedi.ForceAbilityDef ParentName="BaseForceAbility">
+    <defName>PJ_ForceGhost_Master</defName>
+    <label>Force Ghost (Master)</label>
+    <uiIconPath>UI/ForceUser/ForceGhost</uiIconPath>
+    <description>Summon a ghost of ages past to aid you for a short time.\n\n(Star Wars - The Force)</description>
+    <!--    <thingClass>ThingWithComps</thingClass> -->
+    <forcePoolCost>0.15</forcePoolCost>
+    <requiredAlignmentType>Light</requiredAlignmentType>
+    <changedAlignmentType>Light</changedAlignmentType>
+    <changedAlignmentRate>0.05</changedAlignmentRate>
+    <abilityPoints>5</abilityPoints>
+    <lightsideTreePointsRequired>9</lightsideTreePointsRequired>
+    <MainVerb Class="AbilityUser.VerbProperties_Ability">
+      <verbClass>AbilityUser.Verb_UseAbility</verbClass>
+      <tooltipShowProjectileDamage>false</tooltipShowProjectileDamage>
+      <tooltipShowExtraDamages>false</tooltipShowExtraDamages>
+      <tooltipShowHediffsToApply>false</tooltipShowHediffsToApply>
+      <tooltipShowMentalStatesToApply>false</tooltipShowMentalStatesToApply>
+      <hasStandardCommand>true</hasStandardCommand>
+      <defaultProjectile>PForceGhost</defaultProjectile>
+      <abilityDef>PJ_ForceGhost_Master</abilityDef>
+      <warmupTime>1</warmupTime>
+      <SecondsToRecharge>120.0</SecondsToRecharge>
+      <range>34</range>
+      <soundCast>Message_PositiveEvent</soundCast>
+      <muzzleFlashScale>20</muzzleFlashScale>
+      <isPrimary>false</isPrimary>
+      <isViolent>false</isViolent>
+      <stopBurstWithoutLos>false</stopBurstWithoutLos>
+      <AbilityTargetCategory>TargetLocation</AbilityTargetCategory>
+      <targetParams>
+        <canTargetPawns>false</canTargetPawns>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetLocations>true</canTargetLocations>
+      </targetParams>
+      <thingsToSpawn>
+        <li>
+          <def>PJ_ForceGhostR</def>
+          <kindDef>PJ_ForceGhost</kindDef>
+          <spawnCount>1</spawnCount>
+          <temporary>true</temporary>
+        </li>
+      </thingsToSpawn>
+    </MainVerb>
+  </ProjectJedi.ForceAbilityDef>
+</Defs>

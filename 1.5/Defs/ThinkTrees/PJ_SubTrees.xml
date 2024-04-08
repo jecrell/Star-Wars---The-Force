@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <ThinkTreeDef>
+    <defName>PJ_ForceMeditationThinkTree</defName>
+    <insertTag>Humanlike_PostMain</insertTag>
+    <insertPriority>104</insertPriority>
+    <thinkRoot Class="ProjectJedi.ThinkNode_ModNeedPercentageAbove">
+      <need>PJ_ForcePool</need>
+      <threshold>0.9</threshold>
+      <invert>true</invert>
+      <subNodes>
+        <li Class="ProjectJedi.JobGiver_ForceMeditation" />
+      </subNodes>
+    </thinkRoot>
+  </ThinkTreeDef>
+</Defs>
