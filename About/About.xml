@@ -32,7 +32,7 @@
   <loadBefore>
     <li>jecrell.CallofCthulhuCults</li>
   </loadBefore>
-  <description>1.22.0.0 (10-22-2022)
+  <description>1.5.0.0 (04-08-2024)
 
 
 [h1]Adds RPG-leveling, alignment, and force powers to RimWorld.[/h1]
@@ -59,11 +59,15 @@ Thanks to Jedi Master Ailan for his direction and inspiration in the creation of
 Thank you to my Patrons for supporting me in my efforts. Without you, none of this would be possible.
 
 These are the most excellent rim dwellers who support me: 
-Darcilyn Lynds (darci.andel), Luke Salinas, RainerWingel , Noisy Koi, Lea Stannard, David Silberstein, Matt Harris, Kiya Nicoll, Paul Fenwick, Genaeve , Populous25 , David Turner, TinyATuin, Michael Cailler, Jimes Tooper, Sharp Spook, Don Homer, roxxploxx , Alex Mederer, Dan Jones, Michael Whitehead, iknowdude00, Kaz, Alexander , Ken Birdwell, Darcilyn Lynds (darci.andel), Luke Salinas, RainerWingel , Noisy Koi, Lea Stannard, David Silberstein, Matt Harris, Kiya Nicoll, Paul Fenwick, Genaeve , Populous25 , David Turner, TinyATuin, Michael Cailler, Jimes Tooper, Sharp Spook, Don Homer, roxxploxx , Alex Mederer, Dan Jones, Michael Whitehead, iknowdude00, Kaz, Alexander , Ken Birdwell
+
 
 ========================
 Changelog
 ========================
+1.5.0.0 (04-08-2024)
+========================
+Update for 1.5
+
 1.22.0.0 (10-22-2022)
 ========================
 Updates Star Wars - The Force for RimWorld 1.4; Adds tutor info for new players on some mechanics
